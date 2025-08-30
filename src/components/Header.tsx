@@ -51,7 +51,7 @@ export function Header() {
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
             <Button variant="ghost" asChild>
-              <Link href="/contact">Contact</Link>
+              <Link href="https://app.bugal.com.au/sign-in">Sign In</Link>
             </Button>
             <Button asChild>
               <Link href="/pricing">Start Free Trial</Link>
@@ -90,8 +90,8 @@ export function Header() {
               ))}
               <div className="pt-4 space-y-2">
                 <Button variant="ghost" className="w-full justify-start" asChild>
-                  <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
-                    Contact
+                  <Link href="https://app.bugal.com.au/sign-in" onClick={() => setIsMenuOpen(false)}>
+                    Sign In
                   </Link>
                 </Button>
                 <Button className="w-full justify-start" asChild>
