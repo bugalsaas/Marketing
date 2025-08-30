@@ -54,7 +54,7 @@ export function Header() {
               <Link href="https://app.bugal.com.au/sign-in">Sign In</Link>
             </Button>
             <Button asChild>
-              <Link href="/pricing">Start Free Trial</Link>
+              <Link href="https://app.bugal.com.au/sign-up">Start Free Trial</Link>
             </Button>
           </div>
 
@@ -95,7 +95,7 @@ export function Header() {
                   </Link>
                 </Button>
                 <Button className="w-full justify-start" asChild>
-                  <Link href="/pricing" onClick={() => setIsMenuOpen(false)}>
+                  <Link href="https://app.bugal.com.au/sign-up" onClick={() => setIsMenuOpen(false)}>
                     Start Free Trial
                   </Link>
                 </Button>
