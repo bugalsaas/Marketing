@@ -1,0 +1,38 @@
+# Bugal Marketing Website - Robots.txt
+# https://bugal.com.au
+
+User-agent: *
+Allow: /
+
+# Disallow admin areas
+Disallow: /admin/
+Disallow: /api/admin/
+Disallow: /_next/
+Disallow: /api/auth/
+
+# Allow important pages
+Allow: /blog/
+Allow: /faq/
+Allow: /testimonials/
+Allow: /features/
+Allow: /pricing/
+Allow: /contact/
+
+# Sitemap
+Sitemap: https://bugal.com.au/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
