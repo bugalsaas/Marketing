@@ -6,8 +6,9 @@ import { prisma } from "@/lib/prisma";
 // GET /api/admin/blog/[id] - Get specific blog post
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
+  const { id } = await params;
   try {
     const session = await getServerSession(authOptions);
     
@@ -16,7 +17,7 @@ export async function GET(
     }
 
     const blogPost = await prisma.blogPost.findUnique({
-      where: { id: params.id },
+      where: { id: id },
       include: {
         author: {
           select: {
@@ -48,8 +49,9 @@ export async function GET(
 // PUT /api/admin/blog/[id] - Update blog post
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
+  const { id } = await params;
   try {
     const session = await getServerSession(authOptions);
     
@@ -72,7 +74,7 @@ export async function PUT(
     const existingPost = await prisma.blogPost.findFirst({
       where: {
         slug,
-        id: { not: params.id }
+        id: { not: id }
       }
     });
 
@@ -84,7 +86,7 @@ export async function PUT(
     }
 
     const updatedPost = await prisma.blogPost.update({
-      where: { id: params.id },
+      where: { id: id },
       data: {
         title,
         slug,
@@ -122,8 +124,9 @@ export async function PUT(
 // DELETE /api/admin/blog/[id] - Delete blog post
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
+  const { id } = await params;
   try {
     const session = await getServerSession(authOptions);
     
@@ -133,7 +136,7 @@ export async function DELETE(
 
     // Check if blog post exists
     const existingPost = await prisma.blogPost.findUnique({
-      where: { id: params.id }
+      where: { id: id }
     });
 
     if (!existingPost) {
@@ -144,7 +147,7 @@ export async function DELETE(
     }
 
     await prisma.blogPost.delete({
-      where: { id: params.id }
+      where: { id: id }
     });
 
     return NextResponse.json({ message: "Blog post deleted successfully" });

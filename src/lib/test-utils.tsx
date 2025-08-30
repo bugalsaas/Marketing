@@ -146,7 +146,7 @@ export const createMockKeyboardEvent = (type: string, options: any = {}) => {
 
 // Mock Intersection Observer
 export const mockIntersectionObserver = () => {
-  const mockIntersectionObserver = jest.fn()
+  const mockIntersectionObserver = (global as any).jest?.fn() || (() => {})
   mockIntersectionObserver.mockReturnValue({
     observe: () => null,
     unobserve: () => null,
@@ -157,7 +157,7 @@ export const mockIntersectionObserver = () => {
 
 // Mock Resize Observer
 export const mockResizeObserver = () => {
-  const mockResizeObserver = jest.fn()
+  const mockResizeObserver = (global as any).jest?.fn() || (() => {})
   mockResizeObserver.mockReturnValue({
     observe: () => null,
     unobserve: () => null,
@@ -170,15 +170,15 @@ export const mockResizeObserver = () => {
 export const mockMatchMedia = (matches: boolean = false) => {
   Object.defineProperty(window, 'matchMedia', {
     writable: true,
-    value: jest.fn().mockImplementation(query => ({
+    value: ((global as any).jest?.fn() || (() => {})).mockImplementation((query: any) => ({
       matches,
       media: query,
       onchange: null,
-      addListener: jest.fn(),
-      removeListener: jest.fn(),
-      addEventListener: jest.fn(),
-      removeEventListener: jest.fn(),
-      dispatchEvent: jest.fn(),
+      addListener: (global as any).jest?.fn() || (() => {}),
+      removeListener: (global as any).jest?.fn() || (() => {}),
+      addEventListener: (global as any).jest?.fn() || (() => {}),
+      removeEventListener: (global as any).jest?.fn() || (() => {}),
+      dispatchEvent: (global as any).jest?.fn() || (() => {}),
     })),
   })
 }

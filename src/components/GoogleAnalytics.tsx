@@ -29,9 +29,9 @@ export function GoogleAnalytics({ GA_MEASUREMENT_ID }: GoogleAnalyticsProps) {
     document.head.appendChild(script);
 
     // Initialize gtag
-    window.dataLayer = window.dataLayer || [];
+    (window as any).dataLayer = (window as any).dataLayer || [];
     function gtag(...args: any[]) {
-      window.dataLayer.push(args);
+      (window as any).dataLayer.push(args);
     }
     window.gtag = gtag;
 
@@ -166,8 +166,8 @@ export function useEnhancedTracking() {
     // Track external link clicks
     const handleExternalLinkClick = (e: Event) => {
       const target = e.target as HTMLElement;
-      if (target.tagName === "A" && target.hostname !== window.location.hostname) {
-        trackEvent("external_link_click", "engagement", target.hostname);
+      if (target.tagName === "A" && (target as HTMLAnchorElement).hostname !== window.location.hostname) {
+        trackEvent("external_link_click", "engagement", (target as HTMLAnchorElement).hostname);
       }
     };
 

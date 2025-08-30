@@ -6,8 +6,9 @@ import { prisma } from "@/lib/prisma";
 // GET /api/admin/faq/[id] - Get specific FAQ
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
+  const { id } = await params;
   try {
     const session = await getServerSession(authOptions);
     
@@ -16,7 +17,7 @@ export async function GET(
     }
 
     const faq = await prisma.fAQ.findUnique({
-      where: { id: params.id }
+      where: { id: id }
     });
 
     if (!faq) {
@@ -39,8 +40,9 @@ export async function GET(
 // PUT /api/admin/faq/[id] - Update FAQ
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
+  const { id } = await params;
   try {
     const session = await getServerSession(authOptions);
     
@@ -60,7 +62,7 @@ export async function PUT(
     }
 
     const updatedFaq = await prisma.fAQ.update({
-      where: { id: params.id },
+      where: { id: id },
       data: {
         question,
         answer,
@@ -84,8 +86,9 @@ export async function PUT(
 // DELETE /api/admin/faq/[id] - Delete FAQ
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
+  const { id } = await params;
   try {
     const session = await getServerSession(authOptions);
     
@@ -95,7 +98,7 @@ export async function DELETE(
 
     // Check if FAQ exists
     const existingFaq = await prisma.fAQ.findUnique({
-      where: { id: params.id }
+      where: { id: id }
     });
 
     if (!existingFaq) {
@@ -106,7 +109,7 @@ export async function DELETE(
     }
 
     await prisma.fAQ.delete({
-      where: { id: params.id }
+      where: { id: id }
     });
 
     return NextResponse.json({ message: "FAQ deleted successfully" });

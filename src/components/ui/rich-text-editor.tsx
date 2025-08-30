@@ -117,7 +117,7 @@ export function RichTextEditor({ value, onChange, placeholder, className }: Rich
               onClick={() => handleCommand(button)}
               title={button.title}
             >
-              <button.icon className="h-4 w-4" />
+              {button.icon && React.createElement(button.icon, { className: "h-4 w-4" })}
             </Button>
           )
         ))}

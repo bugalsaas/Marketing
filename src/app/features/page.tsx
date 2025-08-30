@@ -309,7 +309,7 @@ export default function FeaturesPage() {
               Trusted by NDIS Support Workers
             </h2>
             <p className="text-xl text-[#1f2937]">
-              See what our users say about Bugal's comprehensive feature set
+              See what our users say about Bugal&apos;s comprehensive feature set
             </p>
           </div>
           

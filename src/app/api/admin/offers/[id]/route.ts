@@ -6,8 +6,9 @@ import { prisma } from "@/lib/prisma";
 // GET /api/admin/offers/[id] - Get specific offer
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
+  const { id } = await params;
   try {
     const session = await getServerSession(authOptions);
     
@@ -16,7 +17,7 @@ export async function GET(
     }
 
     const offer = await prisma.offer.findUnique({
-      where: { id: params.id }
+      where: { id: id }
     });
 
     if (!offer) {
@@ -39,8 +40,9 @@ export async function GET(
 // PUT /api/admin/offers/[id] - Update offer
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
+  const { id } = await params;
   try {
     const session = await getServerSession(authOptions);
     
@@ -78,7 +80,7 @@ export async function PUT(
     }
 
     const updatedOffer = await prisma.offer.update({
-      where: { id: params.id },
+      where: { id: id },
       data: {
         title,
         description,
@@ -105,8 +107,9 @@ export async function PUT(
 // DELETE /api/admin/offers/[id] - Delete offer
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
+  const { id } = await params;
   try {
     const session = await getServerSession(authOptions);
     
@@ -116,7 +119,7 @@ export async function DELETE(
 
     // Check if offer exists
     const existingOffer = await prisma.offer.findUnique({
-      where: { id: params.id }
+      where: { id: id }
     });
 
     if (!existingOffer) {
@@ -127,7 +130,7 @@ export async function DELETE(
     }
 
     await prisma.offer.delete({
-      where: { id: params.id }
+      where: { id: id }
     });
 
     return NextResponse.json({ message: "Offer deleted successfully" });

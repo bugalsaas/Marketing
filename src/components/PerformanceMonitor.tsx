@@ -61,7 +61,8 @@ export function PerformanceMonitor() {
         const entries = list.getEntries();
         entries.forEach((entry) => {
           if (entry.entryType === "first-input") {
-            metrics.FID = entry.processingStart - entry.startTime;
+            const firstInputEntry = entry as PerformanceEventTiming;
+            metrics.FID = firstInputEntry.processingStart - firstInputEntry.startTime;
             console.log("FID:", metrics.FID, "ms");
           }
         });

@@ -6,8 +6,9 @@ import { prisma } from "@/lib/prisma";
 // GET /api/admin/homepage-highlights/[id] - Get specific homepage highlight
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
+  const { id } = await params;
   try {
     const session = await getServerSession(authOptions);
     
@@ -16,7 +17,7 @@ export async function GET(
     }
 
     const highlight = await prisma.homepageHighlight.findUnique({
-      where: { id: params.id }
+      where: { id: id }
     });
 
     if (!highlight) {
@@ -39,8 +40,9 @@ export async function GET(
 // PUT /api/admin/homepage-highlights/[id] - Update homepage highlight
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
+  const { id } = await params;
   try {
     const session = await getServerSession(authOptions);
     
@@ -60,7 +62,7 @@ export async function PUT(
     }
 
     const updatedHighlight = await prisma.homepageHighlight.update({
-      where: { id: params.id },
+      where: { id: id },
       data: {
         title,
         description,
@@ -85,8 +87,9 @@ export async function PUT(
 // DELETE /api/admin/homepage-highlights/[id] - Delete homepage highlight
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
+  const { id } = await params;
   try {
     const session = await getServerSession(authOptions);
     
@@ -96,7 +99,7 @@ export async function DELETE(
 
     // Check if homepage highlight exists
     const existingHighlight = await prisma.homepageHighlight.findUnique({
-      where: { id: params.id }
+      where: { id: id }
     });
 
     if (!existingHighlight) {
@@ -107,7 +110,7 @@ export async function DELETE(
     }
 
     await prisma.homepageHighlight.delete({
-      where: { id: params.id }
+      where: { id: id }
     });
 
     return NextResponse.json({ message: "Homepage highlight deleted successfully" });
