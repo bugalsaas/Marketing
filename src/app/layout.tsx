@@ -8,6 +8,8 @@ import { NextAuthProvider } from "@/components/NextAuthProvider";
 import { ServerStructuredData } from "@/components/StructuredData";
 import { PerformanceMonitor } from "@/components/PerformanceMonitor";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
+import AdvancedAnalytics from "@/components/AdvancedAnalytics";
+import SmartContentRecommendations from "@/components/SmartContentRecommendations";
 import { generateOrganizationSchema, generateWebsiteSchema } from "@/lib/structured-data";
 
 const geist = Geist({
@@ -58,7 +60,13 @@ export const metadata: Metadata = {
     description: "The most trusted and easiest to use practice management tool for independent NDIS support workers in Australia.",
     images: ["/Bugal_Full_Logo.png"],
   },
-  viewport: "width=device-width, initial-scale=1",
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5,
+    userScalable: true,
+    viewportFit: 'cover'
+  },
   themeColor: "#0f172a",
 };
 
@@ -103,6 +111,15 @@ export default function RootLayout({
         <link rel="icon" href="/Bugal_Full_Logo.png" />
         <link rel="apple-touch-icon" href="/Bugal_Full_Logo.png" />
         
+        {/* Font Preloading for Performance */}
+        <link
+          rel="preload"
+          href="/fonts/geist-sans.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        
         {/* Structured Data */}
         <ServerStructuredData data={organizationSchema} />
         <ServerStructuredData data={websiteSchema} />
@@ -118,6 +135,12 @@ export default function RootLayout({
           
           {/* Performance Monitoring */}
           <PerformanceMonitor />
+          
+          {/* Advanced Analytics & Tracking */}
+          <AdvancedAnalytics />
+          
+          {/* Smart Content Recommendations */}
+          <SmartContentRecommendations />
           
           {/* Google Analytics */}
           {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (

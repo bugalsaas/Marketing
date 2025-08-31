@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -62,39 +63,52 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-blue-50 py-20 sm:py-32">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden py-20 sm:py-32">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/Woman on Bus.jpeg"
+            alt="Woman on bus representing accessibility and support"
+            fill
+            className="object-cover"
+            priority
+          />
+          {/* Dark overlay for better text readability */}
+          <div className="absolute inset-0 bg-black/50"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
-            <Badge variant="secondary" className="mb-6">
+            <Badge variant="secondary" className="mb-6 bg-white/95 text-[#1e3a8a] hover:bg-white font-semibold shadow-lg">
               🚀 Trusted by 1000+ NDIS Support Workers
             </Badge>
             
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1e3a8a] mb-6 leading-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-2xl">
               The Most Trusted{" "}
-              <span className="text-[#2563eb]">NDIS Practice Management</span>{" "}
+              <span className="text-[#93c5fd] drop-shadow-2xl">NDIS Practice Management</span>{" "}
               Tool in Australia
             </h1>
             
-            <p className="text-xl text-[#1f2937] mb-8 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xl text-white mb-8 max-w-2xl mx-auto leading-relaxed drop-shadow-xl font-medium">
               Streamline your NDIS practice with our comprehensive, easy-to-use software. 
               Manage clients, track time, handle billing, and stay compliant - all in one place.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" className="text-lg px-8 py-6 bg-[#2563eb] hover:bg-[#1e3a8a]" asChild>
+              <Button size="lg" className="text-lg px-8 py-6 bg-[#2563eb] hover:bg-[#1e3a8a] shadow-2xl font-semibold" asChild>
                 <Link href="/pricing">
                   Start Free Trial - No Credit Card Required
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-6 border-[#2563eb] text-[#2563eb] hover:bg-[#2563eb] hover:text-white" asChild>
+              <Button variant="outline" size="lg" className="text-lg px-8 py-6 border-2 border-white text-white hover:bg-white hover:text-[#1e3a8a] shadow-2xl font-semibold bg-transparent" asChild>
                 <Link href="/features">
                   See How It Works
                 </Link>
               </Button>
             </div>
             
-            <p className="text-sm text-[#6b7280] mt-4">
-              ✓ 14-day free trial • ✓ No setup fees • ✓ Cancel anytime
+            <p className="text-sm text-white/90 mt-6 drop-shadow-lg font-medium">
+              ✓ 30-day free trial • ✓ No setup fees • ✓ Cancel anytime
             </p>
           </div>
         </div>
@@ -190,7 +204,7 @@ export default function Home() {
             </Button>
           </div>
           <p className="text-blue-200 mt-4 text-sm">
-            No credit card required • 14-day free trial • Cancel anytime
+            No credit card required • 30-day free trial • Cancel anytime
           </p>
         </div>
       </section>

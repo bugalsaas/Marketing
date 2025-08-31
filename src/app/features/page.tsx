@@ -1,4 +1,6 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -22,6 +24,44 @@ import {
   Car,
   Calculator
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "NDIS Practice Management Features | Complete Software Solution | Bugal",
+  description: "Discover Bugal's comprehensive NDIS practice management features: client management, invoicing, compliance, reporting, and more. Streamline your support work today.",
+  keywords: [
+    "NDIS practice management features",
+    "NDIS software features",
+    "support worker software",
+    "client management NDIS",
+    "NDIS invoicing software",
+    "compliance management",
+    "NDIS reporting tools"
+  ],
+  openGraph: {
+    title: "NDIS Practice Management Features | Complete Software Solution | Bugal",
+    description: "Discover Bugal's comprehensive NDIS practice management features: client management, invoicing, compliance, reporting, and more.",
+    type: "website",
+    url: "https://bugal.com.au/features",
+    siteName: "Bugal",
+    images: [
+      {
+        url: "/Bugal_Full_Logo.png",
+        width: 1200,
+        height: 630,
+        alt: "NDIS Practice Management Features - Bugal",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "NDIS Practice Management Features | Complete Software Solution | Bugal",
+    description: "Discover Bugal's comprehensive NDIS practice management features for support workers.",
+    images: ["/Bugal_Full_Logo.png"],
+  },
+  alternates: {
+    canonical: "https://bugal.com.au/features",
+  },
+};
 
 export default function FeaturesPage() {
   const coreFeatures = [

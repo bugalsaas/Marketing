@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -15,6 +16,44 @@ import {
   Shield,
   Zap
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Contact Bugal | NDIS Practice Management Support | Bugal",
+  description: "Get in touch with Bugal for NDIS practice management software support. Contact our team for demos, pricing, and technical assistance.",
+  keywords: [
+    "contact Bugal",
+    "NDIS software support",
+    "practice management help",
+    "Bugal contact information",
+    "NDIS software demo",
+    "practice management support",
+    "Bugal customer service"
+  ],
+  openGraph: {
+    title: "Contact Bugal | NDIS Practice Management Support | Bugal",
+    description: "Get in touch with Bugal for NDIS practice management software support. Contact our team for demos and assistance.",
+    type: "website",
+    url: "https://bugal.com.au/contact",
+    siteName: "Bugal",
+    images: [
+      {
+        url: "/Bugal_Full_Logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Contact Bugal - NDIS Practice Management Support",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Bugal | NDIS Practice Management Support | Bugal",
+    description: "Get in touch with Bugal for NDIS practice management software support.",
+    images: ["/Bugal_Full_Logo.png"],
+  },
+  alternates: {
+    canonical: "https://bugal.com.au/contact",
+  },
+};
 
 export default function ContactPage() {
   const contactMethods = [

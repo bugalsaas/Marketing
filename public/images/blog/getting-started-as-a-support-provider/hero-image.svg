@@ -1,0 +1,59 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#059669;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#047857;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="600" height="400" fill="url(#grad1)"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="100" cy="80" r="40" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="500" cy="320" r="60" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="450" cy="100" r="25" fill="rgba(255,255,255,0.1)"/>
+  
+  <!-- Main icon - Calendar/30 Days -->
+  <g transform="translate(300, 200)" filter="url(#shadow)">
+    <!-- Calendar base -->
+    <rect x="-50" y="-40" width="100" height="80" fill="white" rx="8"/>
+    
+    <!-- Calendar header -->
+    <rect x="-50" y="-40" width="100" height="25" fill="#059669"/>
+    <text x="0" y="-25" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle" font-weight="bold">30</text>
+    
+    <!-- Calendar grid -->
+    <line x1="-50" y1="-15" x2="50" y2="-15" stroke="#e5e7eb" stroke-width="2"/>
+    <line x1="-25" y1="-40" x2="-25" y2="40" stroke="#e5e7eb" stroke-width="2"/>
+    <line x1="0" y1="-40" x2="0" y2="40" stroke="#e5e7eb" stroke-width="2"/>
+    <line x1="25" y1="-40" x2="25" y2="40" stroke="#e5e7eb" stroke-width="2"/>
+    
+    <!-- Calendar days -->
+    <text x="-37" y="5" font-family="Arial, sans-serif" font-size="12" fill="#374151" text-anchor="middle">W1</text>
+    <text x="-12" y="5" font-family="Arial, sans-serif" font-size="12" fill="#374151" text-anchor="middle">W2</text>
+    <text x="13" y="5" font-family="Arial, sans-serif" font-size="12" fill="#374151" text-anchor="middle">W3</text>
+    <text x="38" y="5" font-family="Arial, sans-serif" font-size="12" fill="#374151" text-anchor="middle">W4</text>
+    
+    <!-- Progress indicators -->
+    <circle cx="-37" cy="20" r="3" fill="#10b981"/>
+    <circle cx="-12" cy="20" r="3" fill="#10b981"/>
+    <circle cx="13" cy="20" r="3" fill="#f59e0b"/>
+    <circle cx="38" cy="20" r="3" fill="#f59e0b"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="300" y="320" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle" font-weight="bold">
+    Getting Started as a Support Provider
+  </text>
+  <text x="300" y="350" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle">
+    Your First 30 Days Guide
+  </text>
+  
+  <!-- Decorative lines -->
+  <line x1="150" y1="340" x2="250" y2="340" stroke="white" stroke-width="2" opacity="0.7"/>
+  <line x1="350" y1="340" x2="450" y2="340" stroke="white" stroke-width="2" opacity="0.7"/>
+</svg>

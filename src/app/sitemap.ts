@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next';
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://bugal.com.au';
   const currentDate = new Date().toISOString();
 
@@ -56,20 +56,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // Note: For dynamic content like blog posts, testimonials, etc.
-  // you would fetch from your database and add them here
-  // Example:
-  // const blogPosts = await prisma.blogPost.findMany({
-  //   where: { published: true },
-  //   select: { slug: true, updatedAt: true }
-  // });
-  
-  // const blogSitemap = blogPosts.map((post) => ({
-  //   url: `${baseUrl}/blog/${post.slug}`,
-  //   lastModified: post.updatedAt.toISOString(),
-  //   changeFrequency: 'monthly' as const,
-  //   priority: 0.6,
-  // }));
+  // Fetch blog posts from database
+  let blogSitemap: MetadataRoute.Sitemap = [];
+  try {
+    const { PrismaClient } = require('@prisma/client');
+    const prisma = new PrismaClient();
+    
+    const blogPosts = await prisma.blogPost.findMany({
+      where: { published: true },
+      select: { slug: true, updatedAt: true, publishedAt: true }
+    });
+    
+    blogSitemap = blogPosts.map((post: { slug: string; updatedAt: Date; publishedAt: Date | null }) => ({
+      url: `${baseUrl}/blog/${post.slug}`,
+      lastModified: post.updatedAt.toISOString(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    }));
+    
+    await prisma.$disconnect();
+  } catch (error) {
+    console.log('Could not fetch blog posts for sitemap:', error);
+  }
 
-  return [...staticPages];
+  return [...staticPages, ...blogSitemap];
 }
