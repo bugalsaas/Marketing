@@ -139,8 +139,8 @@ export default function RootLayout({
           {/* Advanced Analytics & Tracking */}
           <AdvancedAnalytics />
           
-          {/* Smart Content Recommendations */}
-          <SmartContentRecommendations />
+          {/* Smart Content Recommendations - Temporarily disabled */}
+          {/* <SmartContentRecommendations /> */}
           
           {/* Google Analytics */}
           {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
