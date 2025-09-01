@@ -119,30 +119,42 @@ export default function PricingPage() {
           </p>
           
           {/* Billing Toggle */}
-          <div className="flex items-center justify-center gap-4 mb-8">
-            <span className={`text-lg ${billingCycle === 'monthly' ? 'text-[#1e3a8a] font-semibold' : 'text-[#6b7280]'}`}>
-              Monthly
-            </span>
-            <button
-              onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
-              className={`relative inline-flex h-8 w-16 items-center rounded-full transition-colors ${
-                billingCycle === 'yearly' ? 'bg-[#2563eb]' : 'bg-[#6b7280]'
-              }`}
-            >
-              <span
-                className={`inline-block h-6 w-6 transform rounded-full bg-white transition-transform ${
-                  billingCycle === 'yearly' ? 'translate-x-9' : 'translate-x-1'
+          <div className="flex items-center justify-center mb-8">
+            <div className="flex items-center gap-4 bg-gray-100 rounded-full p-1">
+              <span className={`text-lg px-4 py-2 rounded-full transition-all duration-200 ${
+                billingCycle === 'monthly' 
+                  ? 'text-[#1e3a8a] font-semibold bg-white shadow-sm' 
+                  : 'text-[#6b7280]'
+              }`}>
+                Monthly
+              </span>
+              <button
+                onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
+                className={`relative inline-flex h-8 w-16 items-center rounded-full transition-colors ${
+                  billingCycle === 'yearly' ? 'bg-[#2563eb]' : 'bg-[#6b7280]'
                 }`}
-              />
-            </button>
-            <span className={`text-lg ${billingCycle === 'yearly' ? 'text-[#1e3a8a] font-semibold' : 'text-[#6b7280]'}`}>
-              Yearly
-              {billingCycle === 'yearly' && (
-                <Badge variant="secondary" className="ml-2 bg-green-100 text-green-800">
-                  2 Months Free
-                </Badge>
-              )}
-            </span>
+              >
+                <span
+                  className={`inline-block h-6 w-6 transform rounded-full bg-white transition-transform ${
+                    billingCycle === 'yearly' ? 'translate-x-9' : 'translate-x-1'
+                  }`}
+                />
+              </button>
+              <div className="flex items-center gap-2 px-4 py-2 rounded-full transition-all duration-200">
+                <span className={`text-lg ${
+                  billingCycle === 'yearly' 
+                    ? 'text-[#1e3a8a] font-semibold' 
+                    : 'text-[#6b7280]'
+                }`}>
+                  Yearly
+                </span>
+                {billingCycle === 'yearly' && (
+                  <Badge variant="secondary" className="bg-green-100 text-green-800 text-xs">
+                    2 Months Free
+                  </Badge>
+                )}
+              </div>
+            </div>
           </div>
 
           {savings && (
