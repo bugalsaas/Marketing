@@ -134,6 +134,12 @@ export default function FeaturesPage() {
       title: "Tax Reports",
       description: "Automated tax calculations and reporting for end-of-year compliance.",
       features: ["Income summaries", "Expense breakdowns", "Deduction tracking", "Tax preparation"]
+    },
+    {
+      icon: BarChart3,
+      title: "Performance Analytics",
+      description: "Advanced analytics and insights to optimize your practice performance and outcomes.",
+      features: ["Performance metrics", "Trend analysis", "Goal tracking", "ROI insights"]
     }
   ];
 
