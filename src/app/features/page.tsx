@@ -68,38 +68,38 @@ export default function FeaturesPage() {
     {
       icon: Users,
       title: "Client Management",
-      description: "Comprehensive client database with NDIS-specific fields, support plan tracking, and goal management.",
-      features: ["Client profiles", "Support plan integration", "Goal tracking", "Communication history"]
+      description: "Seamless communication direct to Participants, their networks and plan managers. No middlemen.",
+      features: ["Direct participant communication", "Network coordination", "Plan manager integration", "No intermediaries"]
     },
     {
       icon: FileText,
       title: "Service Agreements",
-      description: "Streamlined service agreement creation with our free Service Agreement Creator tool.",
-      features: ["Template library", "Custom agreements", "Digital signatures", "Compliance checks"]
+      description: "Editable Service Agreements for Easy Client Onboarding. Who else does this?",
+      features: ["Editable templates", "Easy onboarding", "Custom agreements", "Unique offering"]
     },
     {
       icon: Clock,
       title: "Shift Management",
-      description: "Easy shift scheduling, tracking, and management with detailed notes and reports.",
-      features: ["Calendar view", "Shift templates", "Time tracking", "Notes & reports"]
+      description: "All-Inclusive Shift Management, No Upgrade Needed for a Recurring Shifts tool.",
+      features: ["All-inclusive features", "Recurring shifts", "No upgrades required", "Complete solution"]
     },
     {
       icon: CreditCard,
-      title: "Invoicing & Payments",
-      description: "Automated invoicing with NDIS compliance and expense tracking for tax purposes.",
-      features: ["NDIS compliance", "Automated billing", "Payment tracking", "Expense management"]
+      title: "Invoicing",
+      description: "Invoicing Included in Every Plan, Even Free, There is no 10% Fee on Income with Bugal!",
+      features: ["Included in all plans", "No income percentage fees", "Free plan included", "Transparent pricing"]
     },
     {
       icon: BarChart3,
-      title: "Financial Reports",
-      description: "Real-time visibility into your income, expenses, and tax obligations.",
-      features: ["Income tracking", "Expense categorization", "Tax calculations", "Profit analysis"]
+      title: "Expense Tracking",
+      description: "Effortless Expense Tracking for a Smart Tax Minimisation Strategy.",
+      features: ["Effortless tracking", "Tax minimization", "Smart strategies", "Automated categorization"]
     },
     {
       icon: Shield,
-      title: "NDIS Compliance",
-      description: "Built specifically for NDIS requirements with built-in compliance checks and validation.",
-      features: ["Regulation updates", "Compliance alerts", "Audit trails", "Best practices"]
+      title: "Shift Notes & Reports",
+      description: "Providing Participants and Teams with Detailed Shift Reports and Visuals.",
+      features: ["Detailed reports", "Visual insights", "Team collaboration", "Participant transparency"]
     }
   ];
 
@@ -145,9 +145,19 @@ export default function FeaturesPage() {
 
   const additionalFeatures = [
     {
+      icon: BarChart3,
+      title: "Financial Reports",
+      description: "Smart Dashboard with Reports for Crystal-Clear Business Performance Insights and Tax Compliance."
+    },
+    {
       icon: UserCheck,
-      title: "Staff Management",
-      description: "Manage team members, assign roles, and track performance across your practice."
+      title: "Staff Access",
+      description: "Scalable Features, Accommodating Staff Growth as Your Business Flourishes."
+    },
+    {
+      icon: DollarSign,
+      title: "Cost per Month",
+      description: "Clear-Cut Simple Pricing – No Income Percentages! No 'only $15 per person but minimum 5 people' ambiguity, just very simple pricing!"
     },
     {
       icon: FileCheck,
@@ -155,19 +165,9 @@ export default function FeaturesPage() {
       description: "Centralized document storage with version control and secure access."
     },
     {
-      icon: DollarSign,
-      title: "Rates Management",
-      description: "Flexible rate structures for different services and client types."
-    },
-    {
       icon: Hourglass,
       title: "Scheduling Tools",
       description: "Advanced scheduling with conflict detection and automated reminders."
-    },
-    {
-      icon: Wallet,
-      title: "Expense Management",
-      description: "Track and categorize all business expenses for better financial control."
     },
     {
       icon: TrendingUp,
