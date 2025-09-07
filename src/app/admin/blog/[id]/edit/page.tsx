@@ -52,6 +52,7 @@ export default function EditBlogPostPage() {
 
   const [formData, setFormData] = useState({
     title: "",
+    slug: "",
     excerpt: "",
     content: "",
     coverImage: "",
@@ -92,6 +93,7 @@ export default function EditBlogPostPage() {
         const post = response.data as BlogPost;
         setFormData({
           title: post.title || "",
+          slug: post.slug || "",
           excerpt: post.excerpt || "",
           content: post.content || "",
           coverImage: post.coverImage || "",
@@ -216,6 +218,23 @@ export default function EditBlogPostPage() {
                       className="border-[#6b7280] focus:border-[#2563eb] focus:ring-[#2563eb]"
                       required
                     />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="slug" className="block text-sm font-medium text-[#1f2937] mb-2">
+                      URL Slug *
+                    </label>
+                    <Input
+                      id="slug"
+                      value={formData.slug}
+                      onChange={(e) => handleInputChange("slug", e.target.value)}
+                      placeholder="url-friendly-slug"
+                      className="border-[#6b7280] focus:border-[#2563eb] focus:ring-[#2563eb]"
+                      required
+                    />
+                    <p className="text-sm text-[#6b7280] mt-1">
+                      This will be used in the URL: /blog/{formData.slug || "your-slug"}
+                    </p>
                   </div>
                   
                   <div>
