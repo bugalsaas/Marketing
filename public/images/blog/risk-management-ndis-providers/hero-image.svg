@@ -1,0 +1,151 @@
+<svg width="800" height="400" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="400" fill="url(#gradient)"/>
+  
+  <!-- Gradient Definition -->
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e3a8a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Risk Assessment Matrix -->
+  <rect x="100" y="120" width="200" height="200" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Matrix Header -->
+  <rect x="100" y="120" width="200" height="30" fill="#1e3a8a"/>
+  <text x="200" y="140" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">RISK ASSESSMENT MATRIX</text>
+  
+  <!-- Risk Levels -->
+  <rect x="120" y="160" width="30" height="20" fill="#10b981"/>
+  <text x="135" y="175" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="9" font-weight="bold">LOW</text>
+  
+  <rect x="160" y="160" width="30" height="20" fill="#f59e0b"/>
+  <text x="175" y="175" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="9" font-weight="bold">MED</text>
+  
+  <rect x="200" y="160" width="30" height="20" fill="#ef4444"/>
+  <text x="215" y="175" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="9" font-weight="bold">HIGH</text>
+  
+  <rect x="240" y="160" width="30" height="20" fill="#7c2d12"/>
+  <text x="255" y="175" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="9" font-weight="bold">CRIT</text>
+  
+  <!-- Risk Examples -->
+  <rect x="120" y="190" width="150" height="15" fill="#f9fafb"/>
+  <text x="130" y="202" fill="#374151" font-family="Arial, sans-serif" font-size="9">Equipment maintenance</text>
+  
+  <rect x="120" y="210" width="150" height="15" fill="white"/>
+  <text x="130" y="222" fill="#374151" font-family="Arial, sans-serif" font-size="9">Staff training gaps</text>
+  
+  <rect x="120" y="230" width="150" height="15" fill="#f9fafb"/>
+  <text x="130" y="242" fill="#374151" font-family="Arial, sans-serif" font-size="9">Client safety incidents</text>
+  
+  <rect x="120" y="250" width="150" height="15" fill="white"/>
+  <text x="130" y="262" fill="#374151" font-family="Arial, sans-serif" font-size="9">Compliance failures</text>
+  
+  <rect x="120" y="270" width="150" height="15" fill="#f9fafb"/>
+  <text x="130" y="282" fill="#374151" font-family="Arial, sans-serif" font-size="9">Data breaches</text>
+  
+  <rect x="120" y="290" width="150" height="15" fill="white"/>
+  <text x="130" y="302" fill="#374151" font-family="Arial, sans-serif" font-size="9">Financial losses</text>
+  
+  <!-- Risk Mitigation Strategies -->
+  <rect x="350" y="120" width="200" height="200" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Mitigation Header -->
+  <rect x="350" y="120" width="200" height="30" fill="#2563eb"/>
+  <text x="450" y="140" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">MITIGATION STRATEGIES</text>
+  
+  <!-- Mitigation Types -->
+  <rect x="370" y="160" width="160" height="20" fill="#f9fafb"/>
+  <text x="380" y="175" fill="#374151" font-family="Arial, sans-serif" font-size="10">Risk Avoidance</text>
+  <text x="520" y="175" fill="#10b981" font-family="Arial, sans-serif" font-size="9">✓</text>
+  
+  <rect x="370" y="185" width="160" height="20" fill="white"/>
+  <text x="380" y="200" fill="#374151" font-family="Arial, sans-serif" font-size="10">Risk Reduction</text>
+  <text x="520" y="200" fill="#10b981" font-family="Arial, sans-serif" font-size="9">✓</text>
+  
+  <rect x="370" y="210" width="160" height="20" fill="#f9fafb"/>
+  <text x="380" y="225" fill="#374151" font-family="Arial, sans-serif" font-size="10">Risk Transfer</text>
+  <text x="520" y="225" fill="#10b981" font-family="Arial, sans-serif" font-size="9">✓</text>
+  
+  <rect x="370" y="235" width="160" height="20" fill="white"/>
+  <text x="380" y="250" fill="#374151" font-family="Arial, sans-serif" font-size="10">Risk Acceptance</text>
+  <text x="520" y="250" fill="#10b981" font-family="Arial, sans-serif" font-size="9">✓</text>
+  
+  <rect x="370" y="260" width="160" height="20" fill="#f9fafb"/>
+  <text x="380" y="275" fill="#374151" font-family="Arial, sans-serif" font-size="10">Insurance Coverage</text>
+  <text x="520" y="275" fill="#10b981" font-family="Arial, sans-serif" font-size="9">✓</text>
+  
+  <rect x="370" y="285" width="160" height="20" fill="white"/>
+  <text x="380" y="300" fill="#374151" font-family="Arial, sans-serif" font-size="10">Training Programs</text>
+  <text x="520" y="300" fill="#10b981" font-family="Arial, sans-serif" font-size="9">✓</text>
+  
+  <!-- Insurance Coverage -->
+  <rect x="600" y="120" width="150" height="200" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Insurance Header -->
+  <rect x="600" y="120" width="150" height="30" fill="#10b981"/>
+  <text x="675" y="140" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">INSURANCE</text>
+  
+  <!-- Insurance Types -->
+  <rect x="610" y="160" width="130" height="15" fill="#f9fafb"/>
+  <text x="620" y="172" fill="#374151" font-family="Arial, sans-serif" font-size="9">Professional Indemnity</text>
+  
+  <rect x="610" y="180" width="130" height="15" fill="white"/>
+  <text x="620" y="192" fill="#374151" font-family="Arial, sans-serif" font-size="9">Public Liability</text>
+  
+  <rect x="610" y="200" width="130" height="15" fill="#f9fafb"/>
+  <text x="620" y="212" fill="#374151" font-family="Arial, sans-serif" font-size="9">Workers Compensation</text>
+  
+  <rect x="610" y="220" width="130" height="15" fill="white"/>
+  <text x="620" y="232" fill="#374151" font-family="Arial, sans-serif" font-size="9">Business Insurance</text>
+  
+  <rect x="610" y="240" width="130" height="15" fill="#f9fafb"/>
+  <text x="620" y="252" fill="#374151" font-family="Arial, sans-serif" font-size="9">Cyber Insurance</text>
+  
+  <rect x="610" y="260" width="130" height="15" fill="white"/>
+  <text x="620" y="272" fill="#374151" font-family="Arial, sans-serif" font-size="9">Directors & Officers</text>
+  
+  <rect x="610" y="280" width="130" height="15" fill="#f9fafb"/>
+  <text x="620" y="292" fill="#374151" font-family="Arial, sans-serif" font-size="9">Employment Practices</text>
+  
+  <!-- Risk Monitoring -->
+  <rect x="100" y="350" width="200" height="40" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Monitoring Header -->
+  <rect x="100" y="350" width="200" height="20" fill="#f59e0b"/>
+  <text x="200" y="365" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">RISK MONITORING</text>
+  
+  <!-- Monitoring Items -->
+  <text x="110" y="380" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Key Risk Indicators • Incident Tracking • Performance Metrics</text>
+  
+  <!-- Crisis Management -->
+  <rect x="350" y="350" width="200" height="40" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Crisis Header -->
+  <rect x="350" y="350" width="200" height="20" fill="#ef4444"/>
+  <text x="450" y="365" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">CRISIS MANAGEMENT</text>
+  
+  <!-- Crisis Items -->
+  <text x="360" y="380" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Crisis Planning • Response Procedures • Recovery Plans</text>
+  
+  <!-- Business Continuity -->
+  <rect x="600" y="350" width="150" height="40" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Continuity Header -->
+  <rect x="600" y="350" width="150" height="20" fill="#8b5cf6"/>
+  <text x="675" y="365" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">CONTINUITY</text>
+  
+  <!-- Continuity Items -->
+  <text x="610" y="380" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Backup Systems • Alternative Arrangements</text>
+  
+  <!-- Main Title -->
+  <text x="400" y="50" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="bold">Risk Management for NDIS Providers</text>
+  
+  <!-- Subtitle -->
+  <text x="400" y="75" text-anchor="middle" fill="#93c5fd" font-family="Arial, sans-serif" font-size="16">Complete Guide to Business Protection</text>
+  
+  <!-- Bottom Text -->
+  <text x="400" y="380" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14">Risk Assessment • Mitigation Strategies • Insurance • Crisis Management • Business Continuity</text>
+</svg>
