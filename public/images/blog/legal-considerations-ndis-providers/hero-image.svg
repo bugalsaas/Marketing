@@ -1,0 +1,114 @@
+<svg width="800" height="400" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="400" fill="url(#gradient)"/>
+  
+  <!-- Gradient Definition -->
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e3a8a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Legal Scales -->
+  <path d="M 150 120 L 150 80 L 200 80 L 200 120 L 250 120 L 250 200 L 200 200 L 200 240 L 150 240 L 150 200 L 100 200 L 100 120 Z" fill="white" stroke="#e5e7eb" stroke-width="3"/>
+  
+  <!-- Scale Balance -->
+  <line x1="175" y1="120" x2="175" y2="200" stroke="#374151" stroke-width="3"/>
+  <line x1="150" y1="160" x2="200" y2="160" stroke="#374151" stroke-width="2"/>
+  
+  <!-- Scale Pans -->
+  <ellipse cx="150" cy="160" rx="20" ry="8" fill="#f3f4f6" stroke="#d1d5db"/>
+  <ellipse cx="200" cy="160" rx="20" ry="8" fill="#f3f4f6" stroke="#d1d5db"/>
+  
+  <!-- Legal Documents -->
+  <rect x="300" y="120" width="180" height="200" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Document Header -->
+  <rect x="300" y="120" width="180" height="30" fill="#1e3a8a"/>
+  <text x="390" y="140" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">LEGAL FRAMEWORK</text>
+  
+  <!-- Document Sections -->
+  <rect x="320" y="160" width="140" height="20" fill="#f9fafb"/>
+  <text x="330" y="175" fill="#374151" font-family="Arial, sans-serif" font-size="10">NDIS Act & Rules</text>
+  
+  <rect x="320" y="185" width="140" height="20" fill="white"/>
+  <text x="330" y="200" fill="#374151" font-family="Arial, sans-serif" font-size="10">Practice Standards</text>
+  
+  <rect x="320" y="210" width="140" height="20" fill="#f9fafb"/>
+  <text x="330" y="225" fill="#374151" font-family="Arial, sans-serif" font-size="10">Quality & Safeguards</text>
+  
+  <rect x="320" y="235" width="140" height="20" fill="white"/>
+  <text x="330" y="250" fill="#374151" font-family="Arial, sans-serif" font-size="10">Registration Requirements</text>
+  
+  <rect x="320" y="260" width="140" height="20" fill="#f9fafb"/>
+  <text x="330" y="275" fill="#374151" font-family="Arial, sans-serif" font-size="10">Compliance Obligations</text>
+  
+  <rect x="320" y="285" width="140" height="20" fill="white"/>
+  <text x="330" y="300" fill="#374151" font-family="Arial, sans-serif" font-size="10">Legal Documentation</text>
+  
+  <!-- Insurance Policy -->
+  <rect x="520" y="120" width="180" height="200" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Insurance Header -->
+  <rect x="520" y="120" width="180" height="30" fill="#10b981"/>
+  <text x="610" y="140" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">INSURANCE COVERAGE</text>
+  
+  <!-- Insurance Types -->
+  <rect x="540" y="160" width="140" height="20" fill="#f9fafb"/>
+  <text x="550" y="175" fill="#374151" font-family="Arial, sans-serif" font-size="10">Professional Indemnity</text>
+  
+  <rect x="540" y="185" width="140" height="20" fill="white"/>
+  <text x="550" y="200" fill="#374151" font-family="Arial, sans-serif" font-size="10">Public Liability</text>
+  
+  <rect x="540" y="210" width="140" height="20" fill="#f9fafb"/>
+  <text x="550" y="225" fill="#374151" font-family="Arial, sans-serif" font-size="10">Workers Compensation</text>
+  
+  <rect x="540" y="235" width="140" height="20" fill="white"/>
+  <text x="550" y="250" fill="#374151" font-family="Arial, sans-serif" font-size="10">Business Insurance</text>
+  
+  <rect x="540" y="260" width="140" height="20" fill="#f9fafb"/>
+  <text x="550" y="275" fill="#374151" font-family="Arial, sans-serif" font-size="10">Cyber Insurance</text>
+  
+  <rect x="540" y="285" width="140" height="20" fill="white"/>
+  <text x="550" y="300" fill="#374151" font-family="Arial, sans-serif" font-size="10">Directors & Officers</text>
+  
+  <!-- Compliance Checklist -->
+  <rect x="100" y="350" width="200" height="40" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Compliance Header -->
+  <rect x="100" y="350" width="200" height="20" fill="#f59e0b"/>
+  <text x="200" y="365" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">COMPLIANCE CHECKLIST</text>
+  
+  <!-- Compliance Items -->
+  <text x="110" y="380" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Registration • Standards • Documentation • Training</text>
+  
+  <!-- Risk Management -->
+  <rect x="350" y="350" width="200" height="40" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Risk Header -->
+  <rect x="350" y="350" width="200" height="20" fill="#ef4444"/>
+  <text x="450" y="365" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">RISK MANAGEMENT</text>
+  
+  <!-- Risk Items -->
+  <text x="360" y="380" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Assessment • Mitigation • Monitoring • Insurance</text>
+  
+  <!-- Legal Support -->
+  <rect x="600" y="350" width="180" height="40" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Legal Support Header -->
+  <rect x="600" y="350" width="180" height="20" fill="#8b5cf6"/>
+  <text x="690" y="365" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">LEGAL SUPPORT</text>
+  
+  <!-- Legal Support Items -->
+  <text x="610" y="380" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Legal Advice • Contract Review • Compliance • Training</text>
+  
+  <!-- Main Title -->
+  <text x="400" y="50" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="bold">Legal Considerations for NDIS Providers</text>
+  
+  <!-- Subtitle -->
+  <text x="400" y="75" text-anchor="middle" fill="#93c5fd" font-family="Arial, sans-serif" font-size="16">Complete Guide to Legal Compliance</text>
+  
+  <!-- Bottom Text -->
+  <text x="400" y="380" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14">Compliance • Liability • Contracts • Insurance • Risk Management</text>
+</svg>
