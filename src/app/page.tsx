@@ -126,7 +126,7 @@ export default function Home() {
               Everything You Need to Run Your NDIS Practice
             </h2>
             <p className="text-xl text-[#1f2937] max-w-2xl mx-auto">
-              Powerful features designed specifically for NDIS support workers, 
+              Powerful features designed specifically for NDIS indpendent support workers, 
               helping you focus on what matters most - supporting your clients.
             </p>
           </div>
