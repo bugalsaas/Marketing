@@ -1,0 +1,129 @@
+<svg width="800" height="400" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="400" fill="url(#gradient)"/>
+  
+  <!-- Gradient Definition -->
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e3a8a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Financial Planning Chart -->
+  <rect x="100" y="120" width="200" height="200" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Chart Header -->
+  <rect x="100" y="120" width="200" height="30" fill="#1e3a8a"/>
+  <text x="200" y="140" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">FINANCIAL PLANNING</text>
+  
+  <!-- Chart Bars -->
+  <rect x="120" y="200" width="20" height="80" fill="#10b981"/>
+  <text x="130" y="295" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="9">Revenue</text>
+  
+  <rect x="150" y="180" width="20" height="100" fill="#2563eb"/>
+  <text x="160" y="295" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="9">Expenses</text>
+  
+  <rect x="180" y="160" width="20" height="120" fill="#f59e0b"/>
+  <text x="190" y="295" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="9">Profit</text>
+  
+  <rect x="210" y="140" width="20" height="140" fill="#ef4444"/>
+  <text x="220" y="295" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="9">Growth</text>
+  
+  <rect x="240" y="120" width="20" height="160" fill="#8b5cf6"/>
+  <text x="250" y="295" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="9">Investment</text>
+  
+  <!-- Budget Planning -->
+  <rect x="350" y="120" width="180" height="200" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Budget Header -->
+  <rect x="350" y="120" width="180" height="30" fill="#2563eb"/>
+  <text x="440" y="140" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">BUDGET PLANNING</text>
+  
+  <!-- Budget Categories -->
+  <rect x="370" y="160" width="140" height="20" fill="#f9fafb"/>
+  <text x="380" y="175" fill="#374151" font-family="Arial, sans-serif" font-size="10">Revenue: $120,000</text>
+  
+  <rect x="370" y="185" width="140" height="20" fill="white"/>
+  <text x="380" y="200" fill="#374151" font-family="Arial, sans-serif" font-size="10">Operating: $60,000</text>
+  
+  <rect x="370" y="210" width="140" height="20" fill="#f9fafb"/>
+  <text x="380" y="225" fill="#374151" font-family="Arial, sans-serif" font-size="10">Staff: $40,000</text>
+  
+  <rect x="370" y="235" width="140" height="20" fill="white"/>
+  <text x="380" y="250" fill="#374151" font-family="Arial, sans-serif" font-size="10">Equipment: $10,000</text>
+  
+  <rect x="370" y="260" width="140" height="20" fill="#f9fafb"/>
+  <text x="380" y="275" fill="#374151" font-family="Arial, sans-serif" font-size="10">Marketing: $5,000</text>
+  
+  <rect x="370" y="285" width="140" height="20" fill="white"/>
+  <text x="380" y="300" fill="#374151" font-family="Arial, sans-serif" font-size="10">Net Profit: $5,000</text>
+  
+  <!-- Cash Flow Management -->
+  <rect x="580" y="120" width="180" height="200" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Cash Flow Header -->
+  <rect x="580" y="120" width="180" height="30" fill="#10b981"/>
+  <text x="670" y="140" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">CASH FLOW</text>
+  
+  <!-- Cash Flow Timeline -->
+  <rect x="600" y="160" width="140" height="15" fill="#f9fafb"/>
+  <text x="610" y="172" fill="#374151" font-family="Arial, sans-serif" font-size="9">Jan: $8,000</text>
+  
+  <rect x="600" y="180" width="140" height="15" fill="white"/>
+  <text x="610" y="192" fill="#374151" font-family="Arial, sans-serif" font-size="9">Feb: $9,500</text>
+  
+  <rect x="600" y="200" width="140" height="15" fill="#f9fafb"/>
+  <text x="610" y="212" fill="#374151" font-family="Arial, sans-serif" font-size="9">Mar: $7,200</text>
+  
+  <rect x="600" y="220" width="140" height="15" fill="white"/>
+  <text x="610" y="232" fill="#374151" font-family="Arial, sans-serif" font-size="9">Apr: $10,800</text>
+  
+  <rect x="600" y="240" width="140" height="15" fill="#f9fafb"/>
+  <text x="610" y="252" fill="#374151" font-family="Arial, sans-serif" font-size="9">May: $9,100</text>
+  
+  <rect x="600" y="260" width="140" height="15" fill="white"/>
+  <text x="610" y="272" fill="#374151" font-family="Arial, sans-serif" font-size="9">Jun: $11,200</text>
+  
+  <rect x="600" y="280" width="140" height="15" fill="#f9fafb"/>
+  <text x="610" y="292" fill="#374151" font-family="Arial, sans-serif" font-size="9">Jul: $8,900</text>
+  
+  <!-- Investment Planning -->
+  <rect x="100" y="350" width="200" height="40" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Investment Header -->
+  <rect x="100" y="350" width="200" height="20" fill="#f59e0b"/>
+  <text x="200" y="365" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">INVESTMENT PLANNING</text>
+  
+  <!-- Investment Items -->
+  <text x="110" y="380" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Equipment • Technology • Staff Development • Marketing</text>
+  
+  <!-- Risk Management -->
+  <rect x="350" y="350" width="200" height="40" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Risk Header -->
+  <rect x="350" y="350" width="200" height="20" fill="#ef4444"/>
+  <text x="450" y="365" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">RISK MANAGEMENT</text>
+  
+  <!-- Risk Items -->
+  <text x="360" y="380" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Insurance • Diversification • Reserves • Contingency</text>
+  
+  <!-- Retirement Planning -->
+  <rect x="600" y="350" width="180" height="40" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Retirement Header -->
+  <rect x="600" y="350" width="180" height="20" fill="#8b5cf6"/>
+  <text x="690" y="365" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">RETIREMENT PLANNING</text>
+  
+  <!-- Retirement Items -->
+  <text x="610" y="380" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Superannuation • Investments • Succession • Estate</text>
+  
+  <!-- Main Title -->
+  <text x="400" y="50" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="bold">Financial Planning for NDIS Providers</text>
+  
+  <!-- Subtitle -->
+  <text x="400" y="75" text-anchor="middle" fill="#93c5fd" font-family="Arial, sans-serif" font-size="16">Complete Guide to Business Financial Success</text>
+  
+  <!-- Bottom Text -->
+  <text x="400" y="380" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14">Budgeting • Cash Flow • Investment • Risk Management • Retirement Planning</text>
+</svg>
