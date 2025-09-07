@@ -1,0 +1,165 @@
+<svg width="800" height="400" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="400" fill="url(#gradient)"/>
+  
+  <!-- Gradient Definition -->
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0891b2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0e7490;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Business Growth Framework -->
+  <rect x="50" y="100" width="700" height="250" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Framework Header -->
+  <rect x="50" y="100" width="700" height="30" fill="#0891b2"/>
+  <text x="400" y="120" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">BUSINESS GROWTH STRATEGY FRAMEWORK</text>
+  
+  <!-- Central Growth Hub -->
+  <circle cx="400" cy="200" r="35" fill="#ecfeff" stroke="#0891b2" stroke-width="3"/>
+  <text x="400" y="195" text-anchor="middle" fill="#0891b2" font-family="Arial, sans-serif" font-size="10" font-weight="bold">GROWTH</text>
+  <text x="400" y="210" text-anchor="middle" fill="#0891b2" font-family="Arial, sans-serif" font-size="10" font-weight="bold">STRATEGY</text>
+  
+  <!-- Service Capacity Expansion -->
+  <rect x="150" y="140" width="100" height="60" rx="6" fill="#ecfeff" stroke="#0891b2" stroke-width="2"/>
+  <text x="200" y="160" text-anchor="middle" fill="#0891b2" font-family="Arial, sans-serif" font-size="11" font-weight="bold">SERVICE</text>
+  <text x="200" y="175" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="8">• Capacity Expansion</text>
+  <text x="200" y="185" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="8">• Staff Growth</text>
+  <text x="200" y="195" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="8">• Infrastructure</text>
+  
+  <!-- Geographic Expansion -->
+  <rect x="550" y="140" width="100" height="60" rx="6" fill="#ecfeff" stroke="#0891b2" stroke-width="2"/>
+  <text x="600" y="160" text-anchor="middle" fill="#0891b2" font-family="Arial, sans-serif" font-size="11" font-weight="bold">GEOGRAPHIC</text>
+  <text x="600" y="175" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="8">• Market Expansion</text>
+  <text x="600" y="185" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="8">• New Locations</text>
+  <text x="600" y="195" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="8">• Regional Development</text>
+  
+  <!-- Service Diversification -->
+  <rect x="150" y="220" width="100" height="60" rx="6" fill="#ecfeff" stroke="#0891b2" stroke-width="2"/>
+  <text x="200" y="240" text-anchor="middle" fill="#0891b2" font-family="Arial, sans-serif" font-size="11" font-weight="bold">SERVICE</text>
+  <text x="200" y="255" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="8">• Diversification</text>
+  <text x="200" y="265" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="8">• Innovation</text>
+  <text x="200" y="275" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="8">• Specialization</text>
+  
+  <!-- Financial Growth -->
+  <rect x="550" y="220" width="100" height="60" rx="6" fill="#ecfeff" stroke="#0891b2" stroke-width="2"/>
+  <text x="600" y="240" text-anchor="middle" fill="#0891b2" font-family="Arial, sans-serif" font-size="11" font-weight="bold">FINANCIAL</text>
+  <text x="600" y="255" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="8">• Revenue Growth</text>
+  <text x="600" y="265" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="8">• Diversification</text>
+  <text x="600" y="275" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="8">• Investment</text>
+  
+  <!-- Technology Integration -->
+  <rect x="300" y="120" width="100" height="60" rx="6" fill="#ecfeff" stroke="#0891b2" stroke-width="2"/>
+  <text x="350" y="140" text-anchor="middle" fill="#0891b2" font-family="Arial, sans-serif" font-size="11" font-weight="bold">TECHNOLOGY</text>
+  <text x="350" y="155" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="8">• Digital Transformation</text>
+  <text x="350" y="165" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="8">• Automation</text>
+  <text x="350" y="175" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="8">• Innovation</text>
+  
+  <!-- Partnership Development -->
+  <rect x="300" y="260" width="100" height="60" rx="6" fill="#ecfeff" stroke="#0891b2" stroke-width="2"/>
+  <text x="350" y="280" text-anchor="middle" fill="#0891b2" font-family="Arial, sans-serif" font-size="11" font-weight="bold">PARTNERSHIP</text>
+  <text x="350" y="295" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="8">• Strategic Alliances</text>
+  <text x="350" y="305" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="8">• Collaboration</text>
+  <text x="350" y="315" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="8">• Networks</text>
+  
+  <!-- Connection Lines -->
+  <line x1="400" y1="200" x2="250" y2="170" stroke="#0891b2" stroke-width="2"/>
+  <line x1="400" y1="200" x2="550" y2="170" stroke="#0891b2" stroke-width="2"/>
+  <line x1="400" y1="200" x2="250" y2="250" stroke="#0891b2" stroke-width="2"/>
+  <line x1="400" y1="200" x2="550" y2="250" stroke="#0891b2" stroke-width="2"/>
+  <line x1="400" y1="200" x2="350" y2="150" stroke="#0891b2" stroke-width="2"/>
+  <line x1="400" y1="200" x2="350" y2="290" stroke="#0891b2" stroke-width="2"/>
+  
+  <!-- Growth Strategies -->
+  <rect x="80" y="250" width="150" height="80" rx="6" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Growth Strategies Header -->
+  <rect x="80" y="250" width="150" height="20" fill="#0891b2"/>
+  <text x="155" y="265" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">GROWTH STRATEGIES</text>
+  
+  <!-- Growth Strategies Items -->
+  <text x="90" y="280" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Market Analysis</text>
+  <text x="90" y="295" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Strategic Planning</text>
+  <text x="90" y="310" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Resource Allocation</text>
+  <text x="90" y="325" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Performance Monitoring</text>
+  
+  <!-- Quality Management -->
+  <rect x="250" y="250" width="150" height="80" rx="6" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Quality Management Header -->
+  <rect x="250" y="250" width="150" height="20" fill="#10b981"/>
+  <text x="325" y="265" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">QUALITY MANAGEMENT</text>
+  
+  <!-- Quality Management Items -->
+  <text x="260" y="280" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Quality Standards</text>
+  <text x="260" y="295" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Compliance Assurance</text>
+  <text x="260" y="310" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Risk Management</text>
+  <text x="260" y="325" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Continuous Improvement</text>
+  
+  <!-- Performance Measurement -->
+  <rect x="420" y="250" width="150" height="80" rx="6" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Performance Measurement Header -->
+  <rect x="420" y="250" width="150" height="20" fill="#f59e0b"/>
+  <text x="495" y="265" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">PERFORMANCE MEASUREMENT</text>
+  
+  <!-- Performance Measurement Items -->
+  <text x="430" y="280" fill="#374151" font-family="Arial, sans-serif" font-size="9">• KPI Tracking</text>
+  <text x="430" y="295" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Growth Metrics</text>
+  <text x="430" y="310" fill="#374151" font-family="Arial, sans-serif" font-size="9">• ROI Analysis</text>
+  <text x="430" y="325" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Success Evaluation</text>
+  
+  <!-- Innovation Development -->
+  <rect x="590" y="250" width="150" height="80" rx="6" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Innovation Development Header -->
+  <rect x="590" y="250" width="150" height="20" fill="#ef4444"/>
+  <text x="665" y="265" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">INNOVATION DEVELOPMENT</text>
+  
+  <!-- Innovation Development Items -->
+  <text x="600" y="280" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Service Innovation</text>
+  <text x="600" y="295" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Process Innovation</text>
+  <text x="600" y="310" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Technology Innovation</text>
+  <text x="600" y="325" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Future Readiness</text>
+  
+  <!-- Growth Benefits -->
+  <rect x="80" y="350" width="200" height="40" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Benefits Header -->
+  <rect x="80" y="350" width="200" height="20" fill="#0891b2"/>
+  <text x="180" y="365" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">GROWTH BENEFITS</text>
+  
+  <!-- Benefits Items -->
+  <text x="90" y="380" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Increased Impact • Financial Stability • Market Leadership • Sustainability</text>
+  
+  <!-- Implementation Strategy -->
+  <rect x="300" y="350" width="200" height="40" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Strategy Header -->
+  <rect x="300" y="350" width="200" height="20" fill="#10b981"/>
+  <text x="400" y="365" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">IMPLEMENTATION STRATEGY</text>
+  
+  <!-- Strategy Items -->
+  <text x="310" y="380" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Strategic Planning • Resource Investment • Partnership Development • Performance Monitoring</text>
+  
+  <!-- Future Vision -->
+  <rect x="520" y="350" width="200" height="40" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Future Vision Header -->
+  <rect x="520" y="350" width="200" height="20" fill="#f59e0b"/>
+  <text x="620" y="365" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">FUTURE VISION</text>
+  
+  <!-- Future Vision Items -->
+  <text x="530" y="380" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Long-term Planning • Innovation Strategy • Market Leadership • Sustainable Growth</text>
+  
+  <!-- Main Title -->
+  <text x="400" y="40" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="bold">Business Growth Strategies for NDIS Support Providers</text>
+  
+  <!-- Subtitle -->
+  <text x="400" y="65" text-anchor="middle" fill="#a5f3fc" font-family="Arial, sans-serif" font-size="16">Complete Guide to Scaling Your Support Practice</text>
+  
+  <!-- Bottom Text -->
+  <text x="400" y="390" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14">Service Capacity • Geographic Expansion • Service Diversification • Financial Growth • Technology Integration • Partnership Development</text>
+</svg>
