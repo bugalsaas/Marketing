@@ -32,10 +32,12 @@ export const metadata: Metadata = {
   robots: "index, follow",
   icons: {
     icon: [
-      { url: "/Bugal_Full_Logo.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.svg", sizes: "any", type: "image/svg+xml" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
     ],
     apple: [
-      { url: "/Bugal_Full_Logo.png", sizes: "180x180", type: "image/png" },
+      { url: "/favicon.svg", sizes: "180x180", type: "image/svg+xml" },
     ],
   },
   openGraph: {
@@ -108,8 +110,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geist.variable} ${geistMono.variable}`}>
       <head>
-        <link rel="icon" href="/Bugal_Full_Logo.png" />
-        <link rel="apple-touch-icon" href="/Bugal_Full_Logo.png" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />
+        <link rel="apple-touch-icon" href="/favicon.svg" />
         
         {/* Font Preloading for Performance */}
         <link
