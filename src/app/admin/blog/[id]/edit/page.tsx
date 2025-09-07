@@ -26,6 +26,25 @@ import {
 import { blogApi } from "@/lib/api";
 import { toast } from "sonner";
 
+interface BlogPost {
+  id: string;
+  title: string;
+  excerpt: string;
+  content: string;
+  coverImage: string;
+  author: string;
+  category: string;
+  readTime: string;
+  featured: boolean;
+  status: string;
+  tags: string[];
+  publishedAt?: string;
+  createdAt?: string;
+  updatedAt?: string;
+  slug?: string;
+  metaDescription?: string;
+}
+
 export default function EditBlogPostPage() {
   const params = useParams();
   const router = useRouter();
@@ -77,7 +96,7 @@ export default function EditBlogPostPage() {
       setLoading(true);
       const response = await blogApi.getById(postId);
       if (response.data) {
-        const post = response.data;
+        const post = response.data as BlogPost;
         setFormData({
           title: post.title || "",
           excerpt: post.excerpt || "",

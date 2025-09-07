@@ -22,11 +22,30 @@ import {
 import { blogApi } from "@/lib/api";
 import { toast } from "sonner";
 
+interface BlogPost {
+  id: string;
+  title: string;
+  excerpt: string;
+  content: string;
+  coverImage: string;
+  author: string;
+  category: string;
+  readTime: string;
+  featured: boolean;
+  status: string;
+  tags: string[];
+  publishedAt?: string;
+  createdAt?: string;
+  updatedAt?: string;
+  slug?: string;
+  metaDescription?: string;
+}
+
 export default function ViewBlogPostPage() {
   const params = useParams();
   const postId = params.id as string;
 
-  const [post, setPost] = useState<any>(null);
+  const [post, setPost] = useState<BlogPost | null>(null);
   const [loading, setLoading] = useState(true);
 
   // Load blog post data
@@ -41,7 +60,7 @@ export default function ViewBlogPostPage() {
       setLoading(true);
       const response = await blogApi.getById(postId);
       if (response.data) {
-        setPost(response.data);
+        setPost(response.data as BlogPost);
       } else if (response.error) {
         toast.error("Failed to load blog post");
         console.error("Error loading blog post:", response.error);
