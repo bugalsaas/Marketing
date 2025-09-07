@@ -1,6 +1,6 @@
 # Blog Migration Tasks - Complete Implementation Guide
 
-## Migration Progress: 22/35 posts completed
+## Migration Progress: 23/35 posts completed
 
 ## Quick Reference Checklist
 
@@ -14,7 +14,7 @@
 - [x] 7. Time Management Strategies for Support Workers
 
 ### Priority 2 Posts (🟡 Medium Priority - 12 posts)
-- [ ] 8. Understanding GST for Independent Support Providers
+- [x] 8. Understanding GST for Independent Support Providers
 - [ ] 9. Business Structure Options
 - [ ] 10. NDIS Pricing and Rate Setting
 - [ ] 11. Superannuation for Independent Support Providers
