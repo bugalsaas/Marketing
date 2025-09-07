@@ -276,8 +276,8 @@ export default function PricingPage() {
               },
               {
                 icon: Clock,
-                title: "Shift Management",
-                description: "Easy shift scheduling, tracking, and management with detailed notes and reports."
+                title: "Shift & Time Tracking",
+                description: "Track shifts accurately with automatic billing and recurring shift tools—no upgrade needed."
               },
               {
                 icon: CreditCard,

@@ -79,8 +79,8 @@ export default function FeaturesPage() {
     },
     {
       icon: Clock,
-      title: "Shift Management",
-      description: "All-Inclusive Shift Management, No Upgrade Needed for a Recurring Shifts tool.",
+      title: "Shift & Time Tracking",
+      description: "Track shifts accurately with automatic billing and recurring shift tools—no upgrade needed.",
       features: ["All-inclusive features", "Recurring shifts", "No upgrades required", "Complete solution"]
     },
     {

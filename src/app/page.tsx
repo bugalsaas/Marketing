@@ -14,8 +14,8 @@ export default function Home() {
     },
     {
       icon: Clock,
-      title: "Time Tracking",
-      description: "Accurate time tracking for support sessions with automatic billing calculations.",
+      title: "Shift & Time Tracking",
+      description: "Track shifts accurately with automatic billing and recurring shift tools—no upgrade needed.",
     },
     {
       icon: FileText,
