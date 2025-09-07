@@ -1,0 +1,156 @@
+<svg width="800" height="400" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="400" fill="url(#gradient)"/>
+  
+  <!-- Gradient Definition -->
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#dc2626;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b91c1c;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Network Diagram -->
+  <rect x="50" y="100" width="700" height="250" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Network Header -->
+  <rect x="50" y="100" width="700" height="30" fill="#dc2626"/>
+  <text x="400" y="120" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">SUPPORT NETWORK ECOSYSTEM</text>
+  
+  <!-- Central Hub -->
+  <circle cx="400" cy="200" r="40" fill="#fef2f2" stroke="#dc2626" stroke-width="3"/>
+  <text x="400" y="205" text-anchor="middle" fill="#dc2626" font-family="Arial, sans-serif" font-size="10" font-weight="bold">YOUR PRACTICE</text>
+  
+  <!-- Professional Network -->
+  <circle cx="200" cy="150" r="25" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="200" y="155" text-anchor="middle" fill="#dc2626" font-family="Arial, sans-serif" font-size="8" font-weight="bold">PROFESSIONAL</text>
+  
+  <!-- Community Network -->
+  <circle cx="600" cy="150" r="25" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="600" y="155" text-anchor="middle" fill="#dc2626" font-family="Arial, sans-serif" font-size="8" font-weight="bold">COMMUNITY</text>
+  
+  <!-- Service Network -->
+  <circle cx="200" cy="250" r="25" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="200" y="255" text-anchor="middle" fill="#dc2626" font-family="Arial, sans-serif" font-size="8" font-weight="bold">SERVICES</text>
+  
+  <!-- Resource Network -->
+  <circle cx="600" cy="250" r="25" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="600" y="255" text-anchor="middle" fill="#dc2626" font-family="Arial, sans-serif" font-size="8" font-weight="bold">RESOURCES</text>
+  
+  <!-- Knowledge Network -->
+  <circle cx="300" cy="120" r="25" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="300" y="125" text-anchor="middle" fill="#dc2626" font-family="Arial, sans-serif" font-size="8" font-weight="bold">KNOWLEDGE</text>
+  
+  <!-- Technology Network -->
+  <circle cx="500" cy="120" r="25" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="500" y="125" text-anchor="middle" fill="#dc2626" font-family="Arial, sans-serif" font-size="8" font-weight="bold">TECHNOLOGY</text>
+  
+  <!-- Support Network -->
+  <circle cx="300" cy="280" r="25" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="300" y="285" text-anchor="middle" fill="#dc2626" font-family="Arial, sans-serif" font-size="8" font-weight="bold">SUPPORT</text>
+  
+  <!-- Mentorship Network -->
+  <circle cx="500" cy="280" r="25" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="500" y="285" text-anchor="middle" fill="#dc2626" font-family="Arial, sans-serif" font-size="8" font-weight="bold">MENTORSHIP</text>
+  
+  <!-- Connection Lines -->
+  <line x1="400" y1="200" x2="200" y2="150" stroke="#dc2626" stroke-width="2"/>
+  <line x1="400" y1="200" x2="600" y2="150" stroke="#dc2626" stroke-width="2"/>
+  <line x1="400" y1="200" x2="200" y2="250" stroke="#dc2626" stroke-width="2"/>
+  <line x1="400" y1="200" x2="600" y2="250" stroke="#dc2626" stroke-width="2"/>
+  <line x1="400" y1="200" x2="300" y2="120" stroke="#dc2626" stroke-width="2"/>
+  <line x1="400" y1="200" x2="500" y2="120" stroke="#dc2626" stroke-width="2"/>
+  <line x1="400" y1="200" x2="300" y2="280" stroke="#dc2626" stroke-width="2"/>
+  <line x1="400" y1="200" x2="500" y2="280" stroke="#dc2626" stroke-width="2"/>
+  
+  <!-- Network Categories -->
+  <rect x="80" y="250" width="150" height="80" rx="6" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Professional Network Header -->
+  <rect x="80" y="250" width="150" height="20" fill="#dc2626"/>
+  <text x="155" y="265" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">PROFESSIONAL NETWORK</text>
+  
+  <!-- Professional Network Items -->
+  <text x="90" y="280" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Industry Associations</text>
+  <text x="90" y="295" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Professional Peers</text>
+  <text x="90" y="310" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Mentors & Coaches</text>
+  <text x="90" y="325" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Industry Experts</text>
+  
+  <!-- Community Network -->
+  <rect x="250" y="250" width="150" height="80" rx="6" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Community Network Header -->
+  <rect x="250" y="250" width="150" height="20" fill="#10b981"/>
+  <text x="325" y="265" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">COMMUNITY NETWORK</text>
+  
+  <!-- Community Network Items -->
+  <text x="260" y="280" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Local Organizations</text>
+  <text x="260" y="295" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Support Groups</text>
+  <text x="260" y="310" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Community Events</text>
+  <text x="260" y="325" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Advocacy Groups</text>
+  
+  <!-- Service Network -->
+  <rect x="420" y="250" width="150" height="80" rx="6" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Service Network Header -->
+  <rect x="420" y="250" width="150" height="20" fill="#f59e0b"/>
+  <text x="495" y="265" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">SERVICE NETWORK</text>
+  
+  <!-- Service Network Items -->
+  <text x="430" y="280" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Allied Health</text>
+  <text x="430" y="295" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Support Services</text>
+  <text x="430" y="310" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Service Partners</text>
+  <text x="430" y="325" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Collaborative Delivery</text>
+  
+  <!-- Resource Network -->
+  <rect x="590" y="250" width="150" height="80" rx="6" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Resource Network Header -->
+  <rect x="590" y="250" width="150" height="20" fill="#8b5cf6"/>
+  <text x="665" y="265" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">RESOURCE NETWORK</text>
+  
+  <!-- Resource Network Items -->
+  <text x="600" y="280" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Equipment Providers</text>
+  <text x="600" y="295" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Professional Services</text>
+  <text x="600" y="310" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Resource Sharing</text>
+  <text x="600" y="325" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Cost Optimization</text>
+  
+  <!-- Network Benefits -->
+  <rect x="80" y="350" width="200" height="40" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Benefits Header -->
+  <rect x="80" y="350" width="200" height="20" fill="#dc2626"/>
+  <text x="180" y="365" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">NETWORK BENEFITS</text>
+  
+  <!-- Benefits Items -->
+  <text x="90" y="380" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Resource Access • Knowledge Sharing • Collaboration • Referrals</text>
+  
+  <!-- Building Strategies -->
+  <rect x="300" y="350" width="200" height="40" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Strategies Header -->
+  <rect x="300" y="350" width="200" height="20" fill="#10b981"/>
+  <text x="400" y="365" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">BUILDING STRATEGIES</text>
+  
+  <!-- Strategies Items -->
+  <text x="310" y="380" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Networking Events • Professional Associations • Community Engagement • Online Platforms</text>
+  
+  <!-- Technology Support -->
+  <rect x="520" y="350" width="200" height="40" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Technology Header -->
+  <rect x="520" y="350" width="200" height="20" fill="#f59e0b"/>
+  <text x="620" y="365" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">TECHNOLOGY SUPPORT</text>
+  
+  <!-- Technology Items -->
+  <text x="530" y="380" fill="#374151" font-family="Arial, sans-serif" font-size="9">• CRM Systems • Communication Tools • Network Management • Analytics</text>
+  
+  <!-- Main Title -->
+  <text x="400" y="40" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="bold">Building a Support Network for NDIS Support Providers</text>
+  
+  <!-- Subtitle -->
+  <text x="400" y="65" text-anchor="middle" fill="#fecaca" font-family="Arial, sans-serif" font-size="16">Complete Guide to Professional Networking and Collaboration</text>
+  
+  <!-- Bottom Text -->
+  <text x="400" y="390" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14">Professional Networks • Community Connections • Service Partnerships • Resource Networks • Knowledge Sharing • Technology Support</text>
+</svg>
