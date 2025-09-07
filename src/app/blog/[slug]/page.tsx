@@ -29,9 +29,9 @@ interface BlogPost {
 }
 
 interface BlogPostPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {
@@ -59,12 +59,13 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
+  const { slug } = await params;
   try {
     // During development, allow access to unpublished posts
     const isDevelopment = process.env.NODE_ENV === 'development';
     
     const post = await prisma.blogPost.findUnique({
-      where: { slug: params.slug, ...(isDevelopment ? {} : { published: true }) }
+      where: { slug: slug, ...(isDevelopment ? {} : { published: true }) }
     });
 
     if (!post) {
@@ -113,6 +114,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
 }
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
+  const { slug } = await params;
   let post: BlogPost | null = null;
   let isUnpublished = false;
 
@@ -122,13 +124,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     
     // First try to find a published post
     post = await prisma.blogPost.findUnique({
-      where: { slug: params.slug, published: true }
+      where: { slug: slug, published: true }
     });
 
     // If no published post found and in development, try to find unpublished post
     if (!post && isDevelopment) {
       post = await prisma.blogPost.findUnique({
-        where: { slug: params.slug, published: false }
+        where: { slug: slug, published: false }
       });
       if (post) {
         isUnpublished = true;

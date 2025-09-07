@@ -16,14 +16,32 @@ import {
   Calendar, 
   User, 
   FileText,
-  Filter,
-  MoreHorizontal
+  Filter
 } from "lucide-react";
 import { blogApi } from "@/lib/api";
 import { toast } from "sonner";
 
+interface BlogPost {
+  id: string;
+  title: string;
+  excerpt: string;
+  content: string;
+  coverImage: string;
+  author: string;
+  category: string;
+  readTime: string;
+  featured: boolean;
+  status: string;
+  tags: string[];
+  publishedAt?: string;
+  createdAt?: string;
+  updatedAt?: string;
+  slug?: string;
+  metaDescription?: string;
+}
+
 export default function AdminBlogPage() {
-  const [blogPosts, setBlogPosts] = useState<any[]>([]);
+  const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
     const [filterStatus, setFilterStatus] = useState("all");
@@ -267,7 +285,7 @@ export default function AdminBlogPage() {
                           <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
                             <User className="w-4 h-4 text-[#2563eb]" />
                           </div>
-                          <span className="text-[#1f2937]">{post.author?.name || post.author}</span>
+                          <span className="text-[#1f2937]">{post.author}</span>
                         </div>
                       </td>
                       <td className="py-4 px-4">

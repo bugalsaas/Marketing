@@ -5,7 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import Image from "next/image";
+import { useState, useEffect, useCallback } from "react";
 import { useParams } from "next/navigation";
 import { 
   ArrowLeft, 
@@ -16,8 +17,7 @@ import {
   Tag,
   Clock,
   Star,
-  ExternalLink,
-  Eye
+  ExternalLink
 } from "lucide-react";
 import { blogApi } from "@/lib/api";
 import { toast } from "sonner";
@@ -48,14 +48,7 @@ export default function ViewBlogPostPage() {
   const [post, setPost] = useState<BlogPost | null>(null);
   const [loading, setLoading] = useState(true);
 
-  // Load blog post data
-  useEffect(() => {
-    if (postId) {
-      loadBlogPost();
-    }
-  }, [postId]);
-
-  const loadBlogPost = async () => {
+  const loadBlogPost = useCallback(async () => {
     try {
       setLoading(true);
       const response = await blogApi.getById(postId);
@@ -71,7 +64,14 @@ export default function ViewBlogPostPage() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [postId]);
+
+  // Load blog post data
+  useEffect(() => {
+    if (postId) {
+      loadBlogPost();
+    }
+  }, [postId, loadBlogPost]);
 
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -111,7 +111,7 @@ export default function ViewBlogPostPage() {
           <div className="text-center">
             <FileText className="w-12 h-12 text-[#9ca3af] mx-auto mb-4" />
             <h2 className="text-xl font-semibold text-[#1f2937] mb-2">Blog Post Not Found</h2>
-            <p className="text-[#6b7280] mb-4">The blog post you're looking for doesn't exist or has been deleted.</p>
+            <p className="text-[#6b7280] mb-4">The blog post you&apos;re looking for doesn&apos;t exist or has been deleted.</p>
             <Button asChild>
               <Link href="/admin/blog">
                 <ArrowLeft className="w-4 h-4 mr-2" />
@@ -223,11 +223,12 @@ export default function ViewBlogPostPage() {
             {post.coverImage && (
               <Card className="border-0 shadow-lg">
                 <CardContent className="p-0">
-                  <div className="aspect-video overflow-hidden rounded-lg">
-                    <img
+                  <div className="aspect-video overflow-hidden rounded-lg relative">
+                    <Image
                       src={post.coverImage}
                       alt={post.title}
-                      className="w-full h-full object-cover"
+                      fill
+                      className="object-cover"
                     />
                   </div>
                 </CardContent>
@@ -248,7 +249,7 @@ export default function ViewBlogPostPage() {
                     <div className="text-center py-12 text-[#6b7280]">
                       <FileText className="w-12 h-12 mx-auto mb-4 text-[#9ca3af]" />
                       <p className="text-lg font-medium">No content available</p>
-                      <p className="text-sm">This blog post doesn't have any content yet.</p>
+                      <p className="text-sm">This blog post doesn&apos;t have any content yet.</p>
                     </div>
                   )}
                 </div>

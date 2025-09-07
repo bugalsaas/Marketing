@@ -14,33 +14,6 @@ const nextConfig: NextConfig = {
     minimumCacheTTL: 60,
   },
   
-  // Bundle optimization
-  webpack: (config, { dev, isServer }) => {
-    if (!dev && !isServer) {
-      // Enable tree shaking and minification
-      config.optimization = {
-        ...config.optimization,
-        splitChunks: {
-          chunks: 'all',
-          cacheGroups: {
-            vendor: {
-              test: /[\\/]node_modules[\\/]/,
-              name: 'vendors',
-              chunks: 'all',
-            },
-            common: {
-              name: 'common',
-              minChunks: 2,
-              chunks: 'all',
-              enforce: true,
-            },
-          },
-        },
-      };
-    }
-    return config;
-  },
-  
   // Compression
   compress: true,
   

@@ -9,19 +9,15 @@ import { Textarea } from "@/components/ui/textarea";
 import { ImageUpload } from "@/components/ui/image-upload";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { 
   ArrowLeft, 
   Save, 
   Eye, 
-  Upload, 
-  Calendar,
   User,
   FileText,
-  Tag,
-  Clock,
-  Star
+  Clock
 } from "lucide-react";
 import { blogApi } from "@/lib/api";
 import { toast } from "sonner";
@@ -84,14 +80,7 @@ export default function EditBlogPostPage() {
     "innovation"
   ];
 
-  // Load blog post data
-  useEffect(() => {
-    if (postId) {
-      loadBlogPost();
-    }
-  }, [postId]);
-
-  const loadBlogPost = async () => {
+  const loadBlogPost = useCallback(async () => {
     try {
       setLoading(true);
       const response = await blogApi.getById(postId);
@@ -119,7 +108,14 @@ export default function EditBlogPostPage() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [postId]);
+
+  // Load blog post data
+  useEffect(() => {
+    if (postId) {
+      loadBlogPost();
+    }
+  }, [postId, loadBlogPost]);
 
   const handleInputChange = (field: string, value: string | boolean) => {
     setFormData(prev => ({
