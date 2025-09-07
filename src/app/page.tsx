@@ -84,10 +84,14 @@ export default function Home() {
             </Badge> */}
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-2xl">
-              The Most Trusted{" "}
-              <span className="text-[#93c5fd] drop-shadow-2xl">NDIS Practice Management</span>{" "}
-              Tool in Australia
+              Less Time on Admin, More Time{" "}
+              <span className="text-[#93c5fd] drop-shadow-2xl">Making a Difference</span>
             </h1>
+            
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-white mb-8 leading-tight drop-shadow-xl">
+              NDIS Practice Management Tool for{" "}
+              <span className="text-[#93c5fd] drop-shadow-xl">Independent Support Workers</span>
+            </h2>
             
             <p className="text-xl text-white mb-8 max-w-2xl mx-auto leading-relaxed drop-shadow-xl font-medium">
               Streamline your NDIS practice with our comprehensive, easy-to-use software. 
