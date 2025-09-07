@@ -1,0 +1,165 @@
+<svg width="800" height="400" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="400" fill="url(#gradient)"/>
+  
+  <!-- Gradient Definition -->
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0891b2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0e7490;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Sustainability Framework -->
+  <rect x="50" y="100" width="700" height="250" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Framework Header -->
+  <rect x="50" y="100" width="700" height="30" fill="#0891b2"/>
+  <text x="400" y="120" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">SUSTAINABILITY FRAMEWORK FOR NDIS PRACTICE</text>
+  
+  <!-- Central Sustainability Hub -->
+  <circle cx="400" cy="200" r="35" fill="#ecfeff" stroke="#0891b2" stroke-width="3"/>
+  <text x="400" y="195" text-anchor="middle" fill="#0891b2" font-family="Arial, sans-serif" font-size="10" font-weight="bold">SUSTAINABLE</text>
+  <text x="400" y="210" text-anchor="middle" fill="#0891b2" font-family="Arial, sans-serif" font-size="10" font-weight="bold">PRACTICE</text>
+  
+  <!-- Environmental Sustainability -->
+  <rect x="150" y="140" width="100" height="60" rx="6" fill="#ecfeff" stroke="#0891b2" stroke-width="2"/>
+  <text x="200" y="160" text-anchor="middle" fill="#0891b2" font-family="Arial, sans-serif" font-size="11" font-weight="bold">ENVIRONMENTAL</text>
+  <text x="200" y="175" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="8">• Resource Conservation</text>
+  <text x="200" y="185" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="8">• Energy Efficiency</text>
+  <text x="200" y="195" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="8">• Waste Reduction</text>
+  
+  <!-- Social Sustainability -->
+  <rect x="550" y="140" width="100" height="60" rx="6" fill="#ecfeff" stroke="#0891b2" stroke-width="2"/>
+  <text x="600" y="160" text-anchor="middle" fill="#0891b2" font-family="Arial, sans-serif" font-size="11" font-weight="bold">SOCIAL</text>
+  <text x="600" y="175" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="8">• Community Impact</text>
+  <text x="600" y="185" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="8">• Staff Wellbeing</text>
+  <text x="600" y="195" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="8">• Client Outcomes</text>
+  
+  <!-- Economic Sustainability -->
+  <rect x="150" y="220" width="100" height="60" rx="6" fill="#ecfeff" stroke="#0891b2" stroke-width="2"/>
+  <text x="200" y="240" text-anchor="middle" fill="#0891b2" font-family="Arial, sans-serif" font-size="11" font-weight="bold">ECONOMIC</text>
+  <text x="200" y="255" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="8">• Financial Viability</text>
+  <text x="200" y="265" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="8">• Resource Efficiency</text>
+  <text x="200" y="275" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="8">• Long-term Planning</text>
+  
+  <!-- Green Technology -->
+  <rect x="550" y="220" width="100" height="60" rx="6" fill="#ecfeff" stroke="#0891b2" stroke-width="2"/>
+  <text x="600" y="240" text-anchor="middle" fill="#0891b2" font-family="Arial, sans-serif" font-size="11" font-weight="bold">GREEN</text>
+  <text x="600" y="255" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="8">• Technology</text>
+  <text x="600" y="265" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="8">• Digital Solutions</text>
+  <text x="600" y="275" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="8">• Innovation</text>
+  
+  <!-- Sustainable Service Delivery -->
+  <rect x="300" y="120" width="100" height="60" rx="6" fill="#ecfeff" stroke="#0891b2" stroke-width="2"/>
+  <text x="350" y="140" text-anchor="middle" fill="#0891b2" font-family="Arial, sans-serif" font-size="11" font-weight="bold">SERVICE</text>
+  <text x="350" y="155" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="8">• Delivery</text>
+  <text x="350" y="165" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="8">• Quality</text>
+  <text x="350" y="175" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="8">• Outcomes</text>
+  
+  <!-- Stakeholder Engagement -->
+  <rect x="300" y="260" width="100" height="60" rx="6" fill="#ecfeff" stroke="#0891b2" stroke-width="2"/>
+  <text x="350" y="280" text-anchor="middle" fill="#0891b2" font-family="Arial, sans-serif" font-size="11" font-weight="bold">STAKEHOLDER</text>
+  <text x="350" y="295" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="8">• Engagement</text>
+  <text x="350" y="305" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="8">• Value Creation</text>
+  <text x="350" y="315" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="8">• Partnerships</text>
+  
+  <!-- Connection Lines -->
+  <line x1="400" y1="200" x2="250" y2="170" stroke="#0891b2" stroke-width="2"/>
+  <line x1="400" y1="200" x2="550" y2="170" stroke="#0891b2" stroke-width="2"/>
+  <line x1="400" y1="200" x2="250" y2="250" stroke="#0891b2" stroke-width="2"/>
+  <line x1="400" y1="200" x2="550" y2="250" stroke="#0891b2" stroke-width="2"/>
+  <line x1="400" y1="200" x2="350" y2="150" stroke="#0891b2" stroke-width="2"/>
+  <line x1="400" y1="200" x2="350" y2="290" stroke="#0891b2" stroke-width="2"/>
+  
+  <!-- Environmental Practices -->
+  <rect x="80" y="250" width="150" height="80" rx="6" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Environmental Practices Header -->
+  <rect x="80" y="250" width="150" height="20" fill="#10b981"/>
+  <text x="155" y="265" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">ENVIRONMENTAL PRACTICES</text>
+  
+  <!-- Environmental Practices Items -->
+  <text x="90" y="280" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Energy Efficiency</text>
+  <text x="90" y="295" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Water Conservation</text>
+  <text x="90" y="310" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Waste Reduction</text>
+  <text x="90" y="325" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Green Procurement</text>
+  
+  <!-- Social Impact -->
+  <rect x="250" y="250" width="150" height="80" rx="6" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Social Impact Header -->
+  <rect x="250" y="250" width="150" height="20" fill="#0891b2"/>
+  <text x="325" y="265" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">SOCIAL IMPACT</text>
+  
+  <!-- Social Impact Items -->
+  <text x="260" y="280" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Community Engagement</text>
+  <text x="260" y="295" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Staff Wellbeing</text>
+  <text x="260" y="310" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Client Outcomes</text>
+  <text x="260" y="325" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Social Inclusion</text>
+  
+  <!-- Economic Viability -->
+  <rect x="420" y="250" width="150" height="80" rx="6" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Economic Viability Header -->
+  <rect x="420" y="250" width="150" height="20" fill="#f59e0b"/>
+  <text x="495" y="265" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">ECONOMIC VIABILITY</text>
+  
+  <!-- Economic Viability Items -->
+  <text x="430" y="280" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Financial Planning</text>
+  <text x="430" y="295" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Revenue Diversification</text>
+  <text x="430" y="310" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Operational Efficiency</text>
+  <text x="430" y="325" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Stakeholder Value</text>
+  
+  <!-- Technology Integration -->
+  <rect x="590" y="250" width="150" height="80" rx="6" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Technology Integration Header -->
+  <rect x="590" y="250" width="150" height="20" fill="#ef4444"/>
+  <text x="665" y="265" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">TECHNOLOGY INTEGRATION</text>
+  
+  <!-- Technology Integration Items -->
+  <text x="600" y="280" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Digital Solutions</text>
+  <text x="600" y="295" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Green Technology</text>
+  <text x="600" y="310" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Innovation</text>
+  <text x="600" y="325" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Automation</text>
+  
+  <!-- Sustainability Benefits -->
+  <rect x="80" y="350" width="200" height="40" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Benefits Header -->
+  <rect x="80" y="350" width="200" height="20" fill="#10b981"/>
+  <text x="180" y="365" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">SUSTAINABILITY BENEFITS</text>
+  
+  <!-- Benefits Items -->
+  <text x="90" y="380" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Long-term Viability • Cost Savings • Reputation Enhancement • Regulatory Compliance</text>
+  
+  <!-- Implementation Strategy -->
+  <rect x="300" y="350" width="200" height="40" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Strategy Header -->
+  <rect x="300" y="350" width="200" height="20" fill="#0891b2"/>
+  <text x="400" y="365" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">IMPLEMENTATION STRATEGY</text>
+  
+  <!-- Strategy Items -->
+  <text x="310" y="380" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Strategic Planning • Phased Implementation • Change Management • Continuous Monitoring</text>
+  
+  <!-- Future Trends -->
+  <rect x="520" y="350" width="200" height="40" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Future Trends Header -->
+  <rect x="520" y="350" width="200" height="20" fill="#f59e0b"/>
+  <text x="620" y="365" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">FUTURE TRENDS</text>
+  
+  <!-- Future Trends Items -->
+  <text x="530" y="380" fill="#374151" font-family="Arial, sans-serif" font-size="9">• AI Integration • IoT Solutions • Circular Economy • Green Technology</text>
+  
+  <!-- Main Title -->
+  <text x="400" y="40" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="bold">Sustainability in NDIS Practice</text>
+  
+  <!-- Subtitle -->
+  <text x="400" y="65" text-anchor="middle" fill="#a5f3fc" font-family="Arial, sans-serif" font-size="16">Complete Guide for Support Providers</text>
+  
+  <!-- Bottom Text -->
+  <text x="400" y="390" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14">Environmental • Social • Economic • Green Technology • Sustainable Service Delivery • Stakeholder Engagement</text>
+</svg>
