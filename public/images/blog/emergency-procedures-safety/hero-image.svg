@@ -1,0 +1,100 @@
+<svg width="800" height="400" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="400" fill="url(#gradient)"/>
+  
+  <!-- Gradient Definition -->
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e3a8a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Safety Shield -->
+  <path d="M 150 120 L 150 80 L 200 80 L 200 120 L 250 120 L 250 200 L 200 200 L 200 240 L 150 240 L 150 200 L 100 200 L 100 120 Z" fill="white" stroke="#e5e7eb" stroke-width="3"/>
+  
+  <!-- Shield Cross -->
+  <path d="M 150 140 L 200 140 L 200 160 L 220 160 L 220 180 L 200 180 L 200 200 L 150 200 L 150 180 L 130 180 L 130 160 L 150 160 Z" fill="#ef4444"/>
+  
+  <!-- Emergency Phone -->
+  <rect x="300" y="120" width="80" height="120" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Phone Screen -->
+  <rect x="310" y="130" width="60" height="40" rx="4" fill="#1f2937"/>
+  <text x="340" y="155" text-anchor="middle" fill="#ef4444" font-family="Arial, sans-serif" font-size="16" font-weight="bold">000</text>
+  
+  <!-- Phone Buttons -->
+  <rect x="320" y="180" width="15" height="15" rx="2" fill="#10b981"/>
+  <rect x="345" y="180" width="15" height="15" rx="2" fill="#10b981"/>
+  <rect x="320" y="205" width="15" height="15" rx="2" fill="#10b981"/>
+  <rect x="345" y="205" width="15" height="15" rx="2" fill="#10b981"/>
+  
+  <!-- First Aid Kit -->
+  <rect x="450" y="120" width="100" height="80" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- First Aid Cross -->
+  <rect x="480" y="140" width="40" height="40" fill="#ef4444"/>
+  <rect x="490" y="150" width="20" height="20" fill="white"/>
+  <rect x="495" y="155" width="10" height="10" fill="#ef4444"/>
+  
+  <!-- First Aid Label -->
+  <text x="500" y="220" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="10" font-weight="bold">FIRST AID</text>
+  
+  <!-- Safety Checklist -->
+  <rect x="100" y="250" width="200" height="120" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Checklist Header -->
+  <rect x="100" y="250" width="200" height="25" fill="#1e3a8a"/>
+  <text x="200" y="268" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">SAFETY CHECKLIST</text>
+  
+  <!-- Checklist Items -->
+  <rect x="110" y="285" width="15" height="15" rx="2" fill="#10b981"/>
+  <text x="115" y="295" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10">✓</text>
+  <text x="135" y="295" fill="#374151" font-family="Arial, sans-serif" font-size="10">Risk assessment completed</text>
+  
+  <rect x="110" y="305" width="15" height="15" rx="2" fill="#10b981"/>
+  <text x="115" y="315" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10">✓</text>
+  <text x="135" y="315" fill="#374151" font-family="Arial, sans-serif" font-size="10">Emergency procedures reviewed</text>
+  
+  <rect x="110" y="325" width="15" height="15" rx="2" fill="#10b981"/>
+  <text x="115" y="335" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10">✓</text>
+  <text x="135" y="335" fill="#374151" font-family="Arial, sans-serif" font-size="10">First aid kit checked</text>
+  
+  <rect x="110" y="345" width="15" height="15" rx="2" fill="#10b981"/>
+  <text x="115" y="355" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10">✓</text>
+  <text x="135" y="355" fill="#374151" font-family="Arial, sans-serif" font-size="10">Emergency contacts updated</text>
+  
+  <!-- Incident Report -->
+  <rect x="350" y="250" width="200" height="120" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Report Header -->
+  <rect x="350" y="250" width="200" height="25" fill="#1e3a8a"/>
+  <text x="450" y="268" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">INCIDENT REPORT</text>
+  
+  <!-- Report Fields -->
+  <text x="360" y="285" fill="#374151" font-family="Arial, sans-serif" font-size="10">Date: 15/06/2024</text>
+  <text x="360" y="300" fill="#374151" font-family="Arial, sans-serif" font-size="10">Time: 14:30</text>
+  <text x="360" y="315" fill="#374151" font-family="Arial, sans-serif" font-size="10">Location: Client Home</text>
+  <text x="360" y="330" fill="#374151" font-family="Arial, sans-serif" font-size="10">Type: Medical Emergency</text>
+  <text x="360" y="345" fill="#374151" font-family="Arial, sans-serif" font-size="10">Status: Resolved</text>
+  <text x="360" y="360" fill="#374151" font-family="Arial, sans-serif" font-size="10">Follow-up: Required</text>
+  
+  <!-- Safety Icons -->
+  <circle cx="600" cy="150" r="25" fill="white" stroke="#10b981" stroke-width="3"/>
+  <text x="600" y="160" text-anchor="middle" fill="#10b981" font-family="Arial, sans-serif" font-size="16" font-weight="bold">✓</text>
+  
+  <circle cx="600" cy="200" r="25" fill="white" stroke="#f59e0b" stroke-width="3"/>
+  <text x="600" y="210" text-anchor="middle" fill="#f59e0b" font-family="Arial, sans-serif" font-size="16" font-weight="bold">!</text>
+  
+  <circle cx="600" cy="250" r="25" fill="white" stroke="#ef4444" stroke-width="3"/>
+  <text x="600" y="260" text-anchor="middle" fill="#ef4444" font-family="Arial, sans-serif" font-size="16" font-weight="bold">⚠</text>
+  
+  <!-- Main Title -->
+  <text x="400" y="50" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="bold">Emergency Procedures and Safety</text>
+  
+  <!-- Subtitle -->
+  <text x="400" y="75" text-anchor="middle" fill="#93c5fd" font-family="Arial, sans-serif" font-size="16">Complete Guide for NDIS Support Workers</text>
+  
+  <!-- Bottom Text -->
+  <text x="400" y="380" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14">Risk Assessment • Emergency Response • Incident Management • Safety Protocols</text>
+</svg>
