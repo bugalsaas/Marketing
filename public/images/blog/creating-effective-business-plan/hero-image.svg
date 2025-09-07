@@ -1,0 +1,66 @@
+<svg width="800" height="400" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="400" fill="url(#gradient)"/>
+  
+  <!-- Gradient Definition -->
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e3a8a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Business Plan Document -->
+  <rect x="100" y="80" width="200" height="260" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Document Lines -->
+  <rect x="120" y="120" width="160" height="3" rx="1.5" fill="#6b7280"/>
+  <rect x="120" y="140" width="140" height="3" rx="1.5" fill="#6b7280"/>
+  <rect x="120" y="160" width="150" height="3" rx="1.5" fill="#6b7280"/>
+  <rect x="120" y="180" width="130" height="3" rx="1.5" fill="#6b7280"/>
+  <rect x="120" y="200" width="145" height="3" rx="1.5" fill="#6b7280"/>
+  <rect x="120" y="220" width="135" height="3" rx="1.5" fill="#6b7280"/>
+  <rect x="120" y="240" width="155" height="3" rx="1.5" fill="#6b7280"/>
+  <rect x="120" y="260" width="125" height="3" rx="1.5" fill="#6b7280"/>
+  <rect x="120" y="280" width="140" height="3" rx="1.5" fill="#6b7280"/>
+  <rect x="120" y="300" width="150" height="3" rx="1.5" fill="#6b7280"/>
+  
+  <!-- Chart/Graph -->
+  <rect x="350" y="100" width="300" height="200" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Chart Bars -->
+  <rect x="380" y="250" width="30" height="30" fill="#2563eb"/>
+  <rect x="420" y="220" width="30" height="60" fill="#1e3a8a"/>
+  <rect x="460" y="190" width="30" height="90" fill="#2563eb"/>
+  <rect x="500" y="160" width="30" height="120" fill="#1e3a8a"/>
+  <rect x="540" y="130" width="30" height="150" fill="#2563eb"/>
+  <rect x="580" y="100" width="30" height="180" fill="#1e3a8a"/>
+  
+  <!-- Chart Labels -->
+  <text x="395" y="290" text-anchor="middle" fill="#6b7280" font-family="Arial, sans-serif" font-size="12">Q1</text>
+  <text x="435" y="290" text-anchor="middle" fill="#6b7280" font-family="Arial, sans-serif" font-size="12">Q2</text>
+  <text x="475" y="290" text-anchor="middle" fill="#6b7280" font-family="Arial, sans-serif" font-size="12">Q3</text>
+  <text x="515" y="290" text-anchor="middle" fill="#6b7280" font-family="Arial, sans-serif" font-size="12">Q4</text>
+  <text x="555" y="290" text-anchor="middle" fill="#6b7280" font-family="Arial, sans-serif" font-size="12">Q5</text>
+  <text x="595" y="290" text-anchor="middle" fill="#6b7280" font-family="Arial, sans-serif" font-size="12">Q6</text>
+  
+  <!-- Growth Arrow -->
+  <path d="M 320 200 L 340 180 L 340 190 L 360 190 L 360 200 L 340 200 L 340 210 Z" fill="#10b981"/>
+  
+  <!-- Strategy Icons -->
+  <!-- Target Icon -->
+  <circle cx="150" cy="320" r="20" fill="white" stroke="#2563eb" stroke-width="2"/>
+  <circle cx="150" cy="320" r="12" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <circle cx="150" cy="320" r="4" fill="#2563eb"/>
+  
+  <!-- Lightbulb Icon -->
+  <circle cx="250" cy="320" r="20" fill="white" stroke="#2563eb" stroke-width="2"/>
+  <path d="M 240 310 Q 250 300 260 310 Q 250 320 240 310" fill="#2563eb"/>
+  <rect x="245" y="320" width="10" height="8" fill="#2563eb"/>
+  
+  <!-- Main Title -->
+  <text x="400" y="50" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="28" font-weight="bold">Creating an Effective Business Plan</text>
+  
+  <!-- Subtitle -->
+  <text x="400" y="75" text-anchor="middle" fill="#93c5fd" font-family="Arial, sans-serif" font-size="16">Strategic Planning for NDIS Success</text>
+</svg>
