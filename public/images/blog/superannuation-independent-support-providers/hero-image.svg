@@ -1,0 +1,122 @@
+<svg width="800" height="400" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="400" fill="url(#gradient)"/>
+  
+  <!-- Gradient Definition -->
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e3a8a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Superannuation Fund Building -->
+  <rect x="100" y="200" width="120" height="150" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Building Windows -->
+  <rect x="110" y="220" width="15" height="15" fill="#2563eb"/>
+  <rect x="130" y="220" width="15" height="15" fill="#2563eb"/>
+  <rect x="150" y="220" width="15" height="15" fill="#2563eb"/>
+  <rect x="170" y="220" width="15" height="15" fill="#2563eb"/>
+  
+  <rect x="110" y="245" width="15" height="15" fill="#2563eb"/>
+  <rect x="130" y="245" width="15" height="15" fill="#2563eb"/>
+  <rect x="150" y="245" width="15" height="15" fill="#2563eb"/>
+  <rect x="170" y="245" width="15" height="15" fill="#2563eb"/>
+  
+  <rect x="110" y="270" width="15" height="15" fill="#2563eb"/>
+  <rect x="130" y="270" width="15" height="15" fill="#2563eb"/>
+  <rect x="150" y="270" width="15" height="15" fill="#2563eb"/>
+  <rect x="170" y="270" width="15" height="15" fill="#2563eb"/>
+  
+  <!-- Building Sign -->
+  <rect x="120" y="300" width="80" height="20" fill="#1e3a8a"/>
+  <text x="160" y="315" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">SUPER FUND</text>
+  
+  <!-- Growth Chart -->
+  <rect x="280" y="150" width="200" height="200" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Chart Header -->
+  <rect x="280" y="150" width="200" height="30" fill="#1e3a8a"/>
+  <text x="380" y="170" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">SUPER GROWTH</text>
+  
+  <!-- Chart Grid -->
+  <line x1="300" y1="200" x2="460" y2="200" stroke="#e5e7eb" stroke-width="1"/>
+  <line x1="300" y1="250" x2="460" y2="250" stroke="#e5e7eb" stroke-width="1"/>
+  <line x1="300" y1="300" x2="460" y2="300" stroke="#e5e7eb" stroke-width="1"/>
+  <line x1="300" y1="350" x2="460" y2="350" stroke="#e5e7eb" stroke-width="1"/>
+  
+  <!-- Growth Line -->
+  <path d="M 320 320 L 340 300 L 360 280 L 380 260 L 400 240 L 420 220 L 440 200" stroke="#10b981" stroke-width="3" fill="none"/>
+  
+  <!-- Data Points -->
+  <circle cx="320" cy="320" r="4" fill="#10b981"/>
+  <circle cx="340" cy="300" r="4" fill="#10b981"/>
+  <circle cx="360" cy="280" r="4" fill="#10b981"/>
+  <circle cx="380" cy="260" r="4" fill="#10b981"/>
+  <circle cx="400" cy="240" r="4" fill="#10b981"/>
+  <circle cx="420" cy="220" r="4" fill="#10b981"/>
+  <circle cx="440" cy="200" r="4" fill="#10b981"/>
+  
+  <!-- Chart Labels -->
+  <text x="300" y="370" fill="#6b7280" font-family="Arial, sans-serif" font-size="9">Year 1</text>
+  <text x="440" y="370" fill="#6b7280" font-family="Arial, sans-serif" font-size="9">Year 7</text>
+  
+  <!-- Contribution Calculator -->
+  <rect x="520" y="150" width="180" height="200" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Calculator Header -->
+  <rect x="520" y="150" width="180" height="30" fill="#2563eb"/>
+  <text x="610" y="170" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">CONTRIBUTIONS</text>
+  
+  <!-- Calculator Display -->
+  <rect x="540" y="190" width="140" height="30" rx="4" fill="#1f2937"/>
+  <text x="610" y="210" text-anchor="middle" fill="#10b981" font-family="Arial, sans-serif" font-size="14" font-weight="bold">$27,500</text>
+  
+  <!-- Contribution Types -->
+  <rect x="540" y="240" width="140" height="20" fill="#f9fafb"/>
+  <text x="550" y="255" fill="#374151" font-family="Arial, sans-serif" font-size="10">Concessional: $27,500</text>
+  
+  <rect x="540" y="270" width="140" height="20" fill="white"/>
+  <text x="550" y="285" fill="#374151" font-family="Arial, sans-serif" font-size="10">Non-Concessional: $110,000</text>
+  
+  <rect x="540" y="300" width="140" height="20" fill="#f9fafb"/>
+  <text x="550" y="315" fill="#374151" font-family="Arial, sans-serif" font-size="10">SG Rate: 11%</text>
+  
+  <!-- Retirement Planning -->
+  <rect x="100" y="100" width="200" height="80" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Planning Header -->
+  <rect x="100" y="100" width="200" height="25" fill="#1e3a8a"/>
+  <text x="200" y="118" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="11" font-weight="bold">RETIREMENT PLANNING</text>
+  
+  <!-- Planning Items -->
+  <text x="110" y="140" fill="#374151" font-family="Arial, sans-serif" font-size="10">• Set retirement goals</text>
+  <text x="110" y="155" fill="#374151" font-family="Arial, sans-serif" font-size="10">• Calculate income needs</text>
+  <text x="110" y="170" fill="#374151" font-family="Arial, sans-serif" font-size="10">• Review investment options</text>
+  
+  <!-- Insurance Coverage -->
+  <rect x="350" y="100" width="200" height="80" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Insurance Header -->
+  <rect x="350" y="100" width="200" height="25" fill="#1e3a8a"/>
+  <text x="450" y="118" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="11" font-weight="bold">INSURANCE COVERAGE</text>
+  
+  <!-- Insurance Items -->
+  <text x="360" y="140" fill="#374151" font-family="Arial, sans-serif" font-size="10">• Life Insurance</text>
+  <text x="360" y="155" fill="#374151" font-family="Arial, sans-serif" font-size="10">• TPD Insurance</text>
+  <text x="360" y="170" fill="#374151" font-family="Arial, sans-serif" font-size="10">• Income Protection</text>
+  
+  <!-- Dollar Sign Icon -->
+  <circle cx="600" cy="320" r="25" fill="white" stroke="#10b981" stroke-width="3"/>
+  <text x="600" y="330" text-anchor="middle" fill="#10b981" font-family="Arial, sans-serif" font-size="20" font-weight="bold">$</text>
+  
+  <!-- Main Title -->
+  <text x="400" y="50" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="bold">Superannuation for Independent Support Providers</text>
+  
+  <!-- Subtitle -->
+  <text x="400" y="75" text-anchor="middle" fill="#93c5fd" font-family="Arial, sans-serif" font-size="16">Complete Guide to Retirement Planning</text>
+  
+  <!-- Bottom Text -->
+  <text x="400" y="380" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14">SG Contributions • Investment Options • Retirement Planning • Insurance Coverage</text>
+</svg>
