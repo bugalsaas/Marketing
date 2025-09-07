@@ -156,7 +156,7 @@ export default function Home() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-[#1e3a8a] mb-4">
-              Loved by NDIS Support Workers
+              Loved by NDIS Independent Support Workers
             </h2>
             <p className="text-xl text-[#1f2937]">
               Join thousands of satisfied users who trust Bugal with their practice
