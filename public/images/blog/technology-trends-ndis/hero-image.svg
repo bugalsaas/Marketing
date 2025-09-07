@@ -1,0 +1,173 @@
+<svg width="800" height="400" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="400" fill="url(#gradient)"/>
+  
+  <!-- Gradient Definition -->
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e40af;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e3a8a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Technology Ecosystem -->
+  <rect x="50" y="100" width="700" height="250" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Ecosystem Header -->
+  <rect x="50" y="100" width="700" height="30" fill="#1e40af"/>
+  <text x="400" y="120" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">NDIS TECHNOLOGY ECOSYSTEM</text>
+  
+  <!-- Central Hub -->
+  <circle cx="400" cy="200" r="35" fill="#eff6ff" stroke="#1e40af" stroke-width="3"/>
+  <text x="400" y="205" text-anchor="middle" fill="#1e40af" font-family="Arial, sans-serif" font-size="10" font-weight="bold">DIGITAL</text>
+  <text x="400" y="220" text-anchor="middle" fill="#1e40af" font-family="Arial, sans-serif" font-size="10" font-weight="bold">PLATFORM</text>
+  
+  <!-- AI and Machine Learning -->
+  <rect x="100" y="140" width="80" height="50" rx="6" fill="#f0f9ff" stroke="#1e40af" stroke-width="2"/>
+  <text x="140" y="155" text-anchor="middle" fill="#1e40af" font-family="Arial, sans-serif" font-size="9" font-weight="bold">AI & ML</text>
+  <text x="140" y="170" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="7">Predictive</text>
+  <text x="140" y="180" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="7">Analytics</text>
+  
+  <!-- IoT Devices -->
+  <rect x="620" y="140" width="80" height="50" rx="6" fill="#f0f9ff" stroke="#1e40af" stroke-width="2"/>
+  <text x="660" y="155" text-anchor="middle" fill="#1e40af" font-family="Arial, sans-serif" font-size="9" font-weight="bold">IoT</text>
+  <text x="660" y="170" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="7">Smart</text>
+  <text x="660" y="180" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="7">Devices</text>
+  
+  <!-- Assistive Technology -->
+  <rect x="100" y="220" width="80" height="50" rx="6" fill="#f0f9ff" stroke="#1e40af" stroke-width="2"/>
+  <text x="140" y="235" text-anchor="middle" fill="#1e40af" font-family="Arial, sans-serif" font-size="9" font-weight="bold">ASSISTIVE</text>
+  <text x="140" y="250" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="7">Technology</text>
+  <text x="140" y="260" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="7">Solutions</text>
+  
+  <!-- VR/AR -->
+  <rect x="620" y="220" width="80" height="50" rx="6" fill="#f0f9ff" stroke="#1e40af" stroke-width="2"/>
+  <text x="660" y="235" text-anchor="middle" fill="#1e40af" font-family="Arial, sans-serif" font-size="9" font-weight="bold">VR/AR</text>
+  <text x="660" y="250" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="7">Immersive</text>
+  <text x="660" y="260" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="7">Experiences</text>
+  
+  <!-- Cloud Computing -->
+  <rect x="250" y="120" width="80" height="50" rx="6" fill="#f0f9ff" stroke="#1e40af" stroke-width="2"/>
+  <text x="290" y="135" text-anchor="middle" fill="#1e40af" font-family="Arial, sans-serif" font-size="9" font-weight="bold">CLOUD</text>
+  <text x="290" y="150" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="7">Computing</text>
+  <text x="290" y="160" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="7">Platforms</text>
+  
+  <!-- Mobile Apps -->
+  <rect x="470" y="120" width="80" height="50" rx="6" fill="#f0f9ff" stroke="#1e40af" stroke-width="2"/>
+  <text x="510" y="135" text-anchor="middle" fill="#1e40af" font-family="Arial, sans-serif" font-size="9" font-weight="bold">MOBILE</text>
+  <text x="510" y="150" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="7">Applications</text>
+  <text x="510" y="160" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="7">& Services</text>
+  
+  <!-- Data Analytics -->
+  <rect x="250" y="240" width="80" height="50" rx="6" fill="#f0f9ff" stroke="#1e40af" stroke-width="2"/>
+  <text x="290" y="255" text-anchor="middle" fill="#1e40af" font-family="Arial, sans-serif" font-size="9" font-weight="bold">DATA</text>
+  <text x="290" y="270" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="7">Analytics</text>
+  <text x="290" y="280" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="7">& Insights</text>
+  
+  <!-- Automation -->
+  <rect x="470" y="240" width="80" height="50" rx="6" fill="#f0f9ff" stroke="#1e40af" stroke-width="2"/>
+  <text x="510" y="255" text-anchor="middle" fill="#1e40af" font-family="Arial, sans-serif" font-size="9" font-weight="bold">AUTOMATION</text>
+  <text x="510" y="270" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="7">Process</text>
+  <text x="510" y="280" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="7">Efficiency</text>
+  
+  <!-- Connection Lines -->
+  <line x1="400" y1="200" x2="180" y2="165" stroke="#1e40af" stroke-width="2"/>
+  <line x1="400" y1="200" x2="620" y2="165" stroke="#1e40af" stroke-width="2"/>
+  <line x1="400" y1="200" x2="180" y2="245" stroke="#1e40af" stroke-width="2"/>
+  <line x1="400" y1="200" x2="620" y2="245" stroke="#1e40af" stroke-width="2"/>
+  <line x1="400" y1="200" x2="330" y2="145" stroke="#1e40af" stroke-width="2"/>
+  <line x1="400" y1="200" x2="470" y2="145" stroke="#1e40af" stroke-width="2"/>
+  <line x1="400" y1="200" x2="330" y2="265" stroke="#1e40af" stroke-width="2"/>
+  <line x1="400" y1="200" x2="470" y2="265" stroke="#1e40af" stroke-width="2"/>
+  
+  <!-- Technology Categories -->
+  <rect x="80" y="250" width="150" height="80" rx="6" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Digital Transformation Header -->
+  <rect x="80" y="250" width="150" height="20" fill="#1e40af"/>
+  <text x="155" y="265" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">DIGITAL TRANSFORMATION</text>
+  
+  <!-- Digital Transformation Items -->
+  <text x="90" y="280" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Online Platforms</text>
+  <text x="90" y="295" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Digital Workflows</text>
+  <text x="90" y="310" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Cloud Services</text>
+  <text x="90" y="325" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Virtual Services</text>
+  
+  <!-- Emerging Technologies -->
+  <rect x="250" y="250" width="150" height="80" rx="6" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Emerging Technologies Header -->
+  <rect x="250" y="250" width="150" height="20" fill="#10b981"/>
+  <text x="325" y="265" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">EMERGING TECHNOLOGIES</text>
+  
+  <!-- Emerging Technologies Items -->
+  <text x="260" y="280" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Artificial Intelligence</text>
+  <text x="260" y="295" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Internet of Things</text>
+  <text x="260" y="310" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Virtual Reality</text>
+  <text x="260" y="325" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Blockchain</text>
+  
+  <!-- Implementation -->
+  <rect x="420" y="250" width="150" height="80" rx="6" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Implementation Header -->
+  <rect x="420" y="250" width="150" height="20" fill="#f59e0b"/>
+  <text x="495" y="265" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">IMPLEMENTATION</text>
+  
+  <!-- Implementation Items -->
+  <text x="430" y="280" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Change Management</text>
+  <text x="430" y="295" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Staff Training</text>
+  <text x="430" y="310" fill="#374151" font-family="Arial, sans-serif" font-size="9">• System Integration</text>
+  <text x="430" y="325" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Continuous Support</text>
+  
+  <!-- Future Trends -->
+  <rect x="590" y="250" width="150" height="80" rx="6" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Future Trends Header -->
+  <rect x="590" y="250" width="150" height="20" fill="#8b5cf6"/>
+  <text x="665" y="265" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">FUTURE TRENDS</text>
+  
+  <!-- Future Trends Items -->
+  <text x="600" y="280" fill="#374151" font-family="Arial, sans-serif" font-size="9">• 5G Connectivity</text>
+  <text x="600" y="295" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Edge Computing</text>
+  <text x="600" y="310" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Quantum Computing</text>
+  <text x="600" y="325" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Biotechnology</text>
+  
+  <!-- Technology Benefits -->
+  <rect x="80" y="350" width="200" height="40" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Benefits Header -->
+  <rect x="80" y="350" width="200" height="20" fill="#1e40af"/>
+  <text x="180" y="365" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">TECHNOLOGY BENEFITS</text>
+  
+  <!-- Benefits Items -->
+  <text x="90" y="380" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Enhanced Service Delivery • Increased Efficiency • Better Client Experience • Data-Driven Decisions</text>
+  
+  <!-- Implementation Strategy -->
+  <rect x="300" y="350" width="200" height="40" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Strategy Header -->
+  <rect x="300" y="350" width="200" height="20" fill="#10b981"/>
+  <text x="400" y="365" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">IMPLEMENTATION STRATEGY</text>
+  
+  <!-- Strategy Items -->
+  <text x="310" y="380" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Gradual Implementation • Pilot Programs • Staff Training • Change Management</text>
+  
+  <!-- Technology Challenges -->
+  <rect x="520" y="350" width="200" height="40" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Challenges Header -->
+  <rect x="520" y="350" width="200" height="20" fill="#f59e0b"/>
+  <text x="620" y="365" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">TECHNOLOGY CHALLENGES</text>
+  
+  <!-- Challenges Items -->
+  <text x="530" y="380" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Implementation Costs • System Complexity • Staff Training • Data Security</text>
+  
+  <!-- Main Title -->
+  <text x="400" y="40" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="bold">Technology Trends in NDIS</text>
+  
+  <!-- Subtitle -->
+  <text x="400" y="65" text-anchor="middle" fill="#93c5fd" font-family="Arial, sans-serif" font-size="16">Complete Guide for Support Providers</text>
+  
+  <!-- Bottom Text -->
+  <text x="400" y="390" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14">Digital Transformation • Emerging Technologies • Implementation Strategy • Future Trends • Technology Benefits • Innovation</text>
+</svg>
