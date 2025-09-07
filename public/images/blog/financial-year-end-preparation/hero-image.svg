@@ -1,0 +1,151 @@
+<svg width="800" height="400" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="400" fill="url(#gradient)"/>
+  
+  <!-- Gradient Definition -->
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e3a8a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Calendar -->
+  <rect x="100" y="120" width="200" height="180" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Calendar Header -->
+  <rect x="100" y="120" width="200" height="30" fill="#1e3a8a"/>
+  <text x="200" y="140" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">JUNE 2024</text>
+  
+  <!-- Calendar Days -->
+  <rect x="110" y="160" width="20" height="20" fill="#f9fafb" stroke="#e5e7eb"/>
+  <text x="120" y="175" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="10">S</text>
+  
+  <rect x="140" y="160" width="20" height="20" fill="#f9fafb" stroke="#e5e7eb"/>
+  <text x="150" y="175" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="10">M</text>
+  
+  <rect x="170" y="160" width="20" height="20" fill="#f9fafb" stroke="#e5e7eb"/>
+  <text x="180" y="175" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="10">T</text>
+  
+  <rect x="200" y="160" width="20" height="20" fill="#f9fafb" stroke="#e5e7eb"/>
+  <text x="210" y="175" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="10">W</text>
+  
+  <rect x="230" y="160" width="20" height="20" fill="#f9fafb" stroke="#e5e7eb"/>
+  <text x="240" y="175" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="10">T</text>
+  
+  <rect x="260" y="160" width="20" height="20" fill="#f9fafb" stroke="#e5e7eb"/>
+  <text x="270" y="175" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="10">F</text>
+  
+  <rect x="290" y="160" width="20" height="20" fill="#f9fafb" stroke="#e5e7eb"/>
+  <text x="300" y="175" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="10">S</text>
+  
+  <!-- Calendar Dates -->
+  <rect x="110" y="190" width="20" height="20" fill="white" stroke="#e5e7eb"/>
+  <text x="120" y="205" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="10">1</text>
+  
+  <rect x="140" y="190" width="20" height="20" fill="white" stroke="#e5e7eb"/>
+  <text x="150" y="205" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="10">2</text>
+  
+  <rect x="170" y="190" width="20" height="20" fill="white" stroke="#e5e7eb"/>
+  <text x="180" y="205" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="10">3</text>
+  
+  <rect x="200" y="190" width="20" height="20" fill="white" stroke="#e5e7eb"/>
+  <text x="210" y="205" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="10">4</text>
+  
+  <rect x="230" y="190" width="20" height="20" fill="white" stroke="#e5e7eb"/>
+  <text x="240" y="205" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="10">5</text>
+  
+  <rect x="260" y="190" width="20" height="20" fill="white" stroke="#e5e7eb"/>
+  <text x="270" y="205" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="10">6</text>
+  
+  <rect x="290" y="190" width="20" height="20" fill="white" stroke="#e5e7eb"/>
+  <text x="300" y="205" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="10">7</text>
+  
+  <!-- Highlight June 30 -->
+  <rect x="200" y="250" width="20" height="20" fill="#ef4444" stroke="#ef4444"/>
+  <text x="210" y="265" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">30</text>
+  
+  <!-- Financial Documents -->
+  <rect x="350" y="120" width="180" height="200" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Document Header -->
+  <rect x="350" y="120" width="180" height="30" fill="#2563eb"/>
+  <text x="440" y="140" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">FINANCIAL DOCUMENTS</text>
+  
+  <!-- Document List -->
+  <rect x="360" y="160" width="160" height="20" fill="#f9fafb"/>
+  <text x="370" y="175" fill="#374151" font-family="Arial, sans-serif" font-size="10">✓ Income Tax Return</text>
+  
+  <rect x="360" y="185" width="160" height="20" fill="white"/>
+  <text x="370" y="200" fill="#374151" font-family="Arial, sans-serif" font-size="10">✓ BAS Preparation</text>
+  
+  <rect x="360" y="210" width="160" height="20" fill="#f9fafb"/>
+  <text x="370" y="225" fill="#374151" font-family="Arial, sans-serif" font-size="10">✓ Superannuation</text>
+  
+  <rect x="360" y="235" width="160" height="20" fill="white"/>
+  <text x="370" y="250" fill="#374151" font-family="Arial, sans-serif" font-size="10">✓ Asset Depreciation</text>
+  
+  <rect x="360" y="260" width="160" height="20" fill="#f9fafb"/>
+  <text x="370" y="275" fill="#374151" font-family="Arial, sans-serif" font-size="10">✓ Expense Records</text>
+  
+  <rect x="360" y="285" width="160" height="20" fill="white"/>
+  <text x="370" y="300" fill="#374151" font-family="Arial, sans-serif" font-size="10">✓ Bank Reconciliation</text>
+  
+  <!-- Calculator -->
+  <rect x="100" y="320" width="120" height="60" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Calculator Screen -->
+  <rect x="110" y="330" width="100" height="20" rx="4" fill="#1f2937"/>
+  <text x="160" y="345" text-anchor="middle" fill="#10b981" font-family="Arial, sans-serif" font-size="12" font-weight="bold">$45,000</text>
+  
+  <!-- Calculator Buttons -->
+  <rect x="110" y="360" width="20" height="15" rx="2" fill="#f3f4f6" stroke="#d1d5db"/>
+  <rect x="140" y="360" width="20" height="15" rx="2" fill="#f3f4f6" stroke="#d1d5db"/>
+  <rect x="170" y="360" width="20" height="15" rx="2" fill="#f3f4f6" stroke="#d1d5db"/>
+  <rect x="200" y="360" width="20" height="15" rx="2" fill="#10b981" stroke="#10b981"/>
+  
+  <!-- Tax Planning -->
+  <rect x="250" y="320" width="120" height="60" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Tax Planning Header -->
+  <rect x="250" y="320" width="120" height="20" fill="#f59e0b"/>
+  <text x="310" y="335" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">TAX PLANNING</text>
+  
+  <!-- Tax Planning Items -->
+  <text x="260" y="350" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Prepay expenses</text>
+  <text x="260" y="365" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Asset purchases</text>
+  <text x="260" y="380" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Super contributions</text>
+  
+  <!-- Compliance -->
+  <rect x="400" y="320" width="120" height="60" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Compliance Header -->
+  <rect x="400" y="320" width="120" height="20" fill="#10b981"/>
+  <text x="460" y="335" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">COMPLIANCE</text>
+  
+  <!-- Compliance Items -->
+  <text x="410" y="350" fill="#374151" font-family="Arial, sans-serif" font-size="9">• ATO obligations</text>
+  <text x="410" y="365" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Record keeping</text>
+  <text x="410" y="380" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Deadlines</text>
+  
+  <!-- Professional Support -->
+  <rect x="550" y="320" width="120" height="60" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Professional Support Header -->
+  <rect x="550" y="320" width="120" height="20" fill="#8b5cf6"/>
+  <text x="610" y="335" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">PROFESSIONAL</text>
+  
+  <!-- Professional Support Items -->
+  <text x="560" y="350" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Accountant</text>
+  <text x="560" y="365" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Tax agent</text>
+  <text x="560" y="380" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Financial advisor</text>
+  
+  <!-- Main Title -->
+  <text x="400" y="50" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="bold">Financial Year End Preparation</text>
+  
+  <!-- Subtitle -->
+  <text x="400" y="75" text-anchor="middle" fill="#93c5fd" font-family="Arial, sans-serif" font-size="16">Complete Guide for NDIS Support Providers</text>
+  
+  <!-- Bottom Text -->
+  <text x="400" y="380" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14">Tax Preparation • BAS • Record Keeping • Compliance • Professional Support</text>
+</svg>
