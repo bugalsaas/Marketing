@@ -1,0 +1,152 @@
+<svg width="800" height="400" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="400" fill="url(#gradient)"/>
+  
+  <!-- Gradient Definition -->
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5b21b6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Marketing Funnel -->
+  <rect x="50" y="100" width="700" height="250" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Funnel Header -->
+  <rect x="50" y="100" width="700" height="30" fill="#7c3aed"/>
+  <text x="400" y="120" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">NDIS MARKETING FUNNEL</text>
+  
+  <!-- Awareness Stage -->
+  <rect x="80" y="150" width="150" height="60" rx="6" fill="#f3e8ff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="155" y="170" text-anchor="middle" fill="#7c3aed" font-family="Arial, sans-serif" font-size="12" font-weight="bold">AWARENESS</text>
+  <text x="155" y="185" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Social Media</text>
+  <text x="155" y="200" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Content Marketing</text>
+  
+  <!-- Interest Stage -->
+  <rect x="250" y="150" width="150" height="60" rx="6" fill="#f3e8ff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="325" y="170" text-anchor="middle" fill="#7c3aed" font-family="Arial, sans-serif" font-size="12" font-weight="bold">INTEREST</text>
+  <text x="325" y="185" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Website Content</text>
+  <text x="325" y="200" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Email Marketing</text>
+  
+  <!-- Consideration Stage -->
+  <rect x="420" y="150" width="150" height="60" rx="6" fill="#f3e8ff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="495" y="170" text-anchor="middle" fill="#7c3aed" font-family="Arial, sans-serif" font-size="12" font-weight="bold">CONSIDERATION</text>
+  <text x="495" y="185" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Testimonials</text>
+  <text x="495" y="200" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Case Studies</text>
+  
+  <!-- Decision Stage -->
+  <rect x="590" y="150" width="150" height="60" rx="6" fill="#f3e8ff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="665" y="170" text-anchor="middle" fill="#7c3aed" font-family="Arial, sans-serif" font-size="12" font-weight="bold">DECISION</text>
+  <text x="665" y="185" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Consultations</text>
+  <text x="665" y="200" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Service Agreements</text>
+  
+  <!-- Marketing Channels -->
+  <rect x="80" y="230" width="120" height="100" rx="6" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Digital Marketing Header -->
+  <rect x="80" y="230" width="120" height="20" fill="#7c3aed"/>
+  <text x="140" y="245" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">DIGITAL MARKETING</text>
+  
+  <!-- Digital Marketing Items -->
+  <text x="90" y="260" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Website SEO</text>
+  <text x="90" y="275" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Social Media</text>
+  <text x="90" y="290" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Email Marketing</text>
+  <text x="90" y="305" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Content Marketing</text>
+  <text x="90" y="320" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Paid Advertising</text>
+  
+  <!-- Traditional Marketing -->
+  <rect x="220" y="230" width="120" height="100" rx="6" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Traditional Marketing Header -->
+  <rect x="220" y="230" width="120" height="20" fill="#10b981"/>
+  <text x="280" y="245" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">TRADITIONAL MARKETING</text>
+  
+  <!-- Traditional Marketing Items -->
+  <text x="230" y="260" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Networking Events</text>
+  <text x="230" y="275" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Referral Programs</text>
+  <text x="230" y="290" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Community Involvement</text>
+  <text x="230" y="305" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Print Advertising</text>
+  <text x="230" y="320" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Direct Outreach</text>
+  
+  <!-- Brand Building -->
+  <rect x="360" y="230" width="120" height="100" rx="6" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Brand Building Header -->
+  <rect x="360" y="230" width="120" height="20" fill="#f59e0b"/>
+  <text x="420" y="245" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">BRAND BUILDING</text>
+  
+  <!-- Brand Building Items -->
+  <text x="370" y="260" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Brand Identity</text>
+  <text x="370" y="275" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Professional Image</text>
+  <text x="370" y="290" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Reputation Management</text>
+  <text x="370" y="305" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Thought Leadership</text>
+  <text x="370" y="320" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Industry Recognition</text>
+  
+  <!-- Client Acquisition -->
+  <rect x="500" y="230" width="120" height="100" rx="6" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Client Acquisition Header -->
+  <rect x="500" y="230" width="120" height="20" fill="#ef4444"/>
+  <text x="560" y="245" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">CLIENT ACQUISITION</text>
+  
+  <!-- Client Acquisition Items -->
+  <text x="510" y="260" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Lead Generation</text>
+  <text x="510" y="275" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Sales Process</text>
+  <text x="510" y="290" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Conversion Optimization</text>
+  <text x="510" y="305" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Client Onboarding</text>
+  <text x="510" y="320" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Relationship Building</text>
+  
+  <!-- Client Retention -->
+  <rect x="640" y="230" width="120" height="100" rx="6" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Client Retention Header -->
+  <rect x="640" y="230" width="120" height="20" fill="#8b5cf6"/>
+  <text x="700" y="245" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">CLIENT RETENTION</text>
+  
+  <!-- Client Retention Items -->
+  <text x="650" y="260" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Service Excellence</text>
+  <text x="650" y="275" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Regular Communication</text>
+  <text x="650" y="290" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Feedback Collection</text>
+  <text x="650" y="305" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Loyalty Programs</text>
+  <text x="650" y="320" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Continuous Improvement</text>
+  
+  <!-- Marketing Metrics -->
+  <rect x="80" y="350" width="200" height="40" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Metrics Header -->
+  <rect x="80" y="350" width="200" height="20" fill="#7c3aed"/>
+  <text x="180" y="365" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">MARKETING METRICS</text>
+  
+  <!-- Metrics Items -->
+  <text x="90" y="380" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Cost per Lead • Conversion Rates • ROI • Client Lifetime Value</text>
+  
+  <!-- Technology Tools -->
+  <rect x="300" y="350" width="200" height="40" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Technology Header -->
+  <rect x="300" y="350" width="200" height="20" fill="#10b981"/>
+  <text x="400" y="365" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">TECHNOLOGY TOOLS</text>
+  
+  <!-- Technology Items -->
+  <text x="310" y="380" fill="#374151" font-family="Arial, sans-serif" font-size="9">• CRM Systems • Email Marketing • Social Media Management • Analytics</text>
+  
+  <!-- Compliance -->
+  <rect x="520" y="350" width="200" height="40" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Compliance Header -->
+  <rect x="520" y="350" width="200" height="20" fill="#f59e0b"/>
+  <text x="620" y="365" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">COMPLIANCE & ETHICS</text>
+  
+  <!-- Compliance Items -->
+  <text x="530" y="380" fill="#374151" font-family="Arial, sans-serif" font-size="9">• NDIS Guidelines • Privacy Law • Advertising Standards • Ethical Marketing</text>
+  
+  <!-- Main Title -->
+  <text x="400" y="40" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="bold">Marketing Your NDIS Services</text>
+  
+  <!-- Subtitle -->
+  <text x="400" y="65" text-anchor="middle" fill="#c4b5fd" font-family="Arial, sans-serif" font-size="16">Complete Guide for Support Providers</text>
+  
+  <!-- Bottom Text -->
+  <text x="400" y="390" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14">Digital Marketing • Brand Building • Client Acquisition • Client Retention • Performance Measurement • Compliance</text>
+</svg>
