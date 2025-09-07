@@ -89,14 +89,8 @@ export default function Home() {
             </h1>
             
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-white mb-8 leading-tight drop-shadow-xl">
-              NDIS Practice Management Tool for{" "}
-              <span className="text-[#93c5fd] drop-shadow-xl">Independent Support Workers</span>
+              All-in-one NDIS software for independent support workers. Manage clients, shifts, billing and compliance.
             </h2>
-            
-            <p className="text-xl text-white mb-8 max-w-2xl mx-auto leading-relaxed drop-shadow-xl font-medium">
-              Streamline your NDIS practice with our comprehensive, easy-to-use software. 
-              Manage clients, track time, handle billing, and stay compliant - all in one place.
-            </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button size="lg" className="text-lg px-8 py-6 bg-[#2563eb] hover:bg-[#1e3a8a] shadow-2xl font-semibold" asChild>
