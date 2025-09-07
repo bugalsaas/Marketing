@@ -1,0 +1,155 @@
+<svg width="800" height="400" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="400" fill="url(#gradient)"/>
+  
+  <!-- Gradient Definition -->
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#059669;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#047857;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Quality Assurance Framework -->
+  <rect x="50" y="100" width="700" height="250" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Framework Header -->
+  <rect x="50" y="100" width="700" height="30" fill="#059669"/>
+  <text x="400" y="120" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">QUALITY ASSURANCE FRAMEWORK</text>
+  
+  <!-- Quality Cycle -->
+  <!-- Plan -->
+  <rect x="100" y="150" width="120" height="80" rx="6" fill="#f0fdf4" stroke="#059669" stroke-width="2"/>
+  <text x="160" y="170" text-anchor="middle" fill="#059669" font-family="Arial, sans-serif" font-size="12" font-weight="bold">PLAN</text>
+  <text x="160" y="185" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Quality Standards</text>
+  <text x="160" y="200" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Objectives</text>
+  <text x="160" y="215" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Strategies</text>
+  
+  <!-- Arrow 1 -->
+  <path d="M 230 190 L 260 190" stroke="#059669" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Do -->
+  <rect x="280" y="150" width="120" height="80" rx="6" fill="#f0fdf4" stroke="#059669" stroke-width="2"/>
+  <text x="340" y="170" text-anchor="middle" fill="#059669" font-family="Arial, sans-serif" font-size="12" font-weight="bold">DO</text>
+  <text x="340" y="185" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Implementation</text>
+  <text x="340" y="200" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Service Delivery</text>
+  <text x="340" y="215" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Training</text>
+  
+  <!-- Arrow 2 -->
+  <path d="M 410 190 L 440 190" stroke="#059669" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Check -->
+  <rect x="460" y="150" width="120" height="80" rx="6" fill="#f0fdf4" stroke="#059669" stroke-width="2"/>
+  <text x="520" y="170" text-anchor="middle" fill="#059669" font-family="Arial, sans-serif" font-size="12" font-weight="bold">CHECK</text>
+  <text x="520" y="185" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Monitoring</text>
+  <text x="520" y="200" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Assessment</text>
+  <text x="520" y="215" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Evaluation</text>
+  
+  <!-- Arrow 3 -->
+  <path d="M 590 190 L 620 190" stroke="#059669" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Act -->
+  <rect x="640" y="150" width="120" height="80" rx="6" fill="#f0fdf4" stroke="#059669" stroke-width="2"/>
+  <text x="700" y="170" text-anchor="middle" fill="#059669" font-family="Arial, sans-serif" font-size="12" font-weight="bold">ACT</text>
+  <text x="700" y="185" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Improvement</text>
+  <text x="700" y="200" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Adjustment</text>
+  <text x="700" y="215" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Enhancement</text>
+  
+  <!-- Quality Elements -->
+  <rect x="100" y="250" width="150" height="80" rx="6" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Standards Header -->
+  <rect x="100" y="250" width="150" height="20" fill="#059669"/>
+  <text x="175" y="265" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">QUALITY STANDARDS</text>
+  
+  <!-- Standards Items -->
+  <text x="110" y="280" fill="#374151" font-family="Arial, sans-serif" font-size="9">• NDIS Standards</text>
+  <text x="110" y="295" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Service Criteria</text>
+  <text x="110" y="310" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Performance Indicators</text>
+  <text x="110" y="325" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Compliance Requirements</text>
+  
+  <!-- Monitoring -->
+  <rect x="270" y="250" width="150" height="80" rx="6" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Monitoring Header -->
+  <rect x="270" y="250" width="150" height="20" fill="#10b981"/>
+  <text x="345" y="265" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">QUALITY MONITORING</text>
+  
+  <!-- Monitoring Items -->
+  <text x="280" y="280" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Continuous Monitoring</text>
+  <text x="280" y="295" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Performance Tracking</text>
+  <text x="280" y="310" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Quality Metrics</text>
+  <text x="280" y="325" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Trend Analysis</text>
+  
+  <!-- Improvement -->
+  <rect x="440" y="250" width="150" height="80" rx="6" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Improvement Header -->
+  <rect x="440" y="250" width="150" height="20" fill="#f59e0b"/>
+  <text x="515" y="265" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">CONTINUOUS IMPROVEMENT</text>
+  
+  <!-- Improvement Items -->
+  <text x="450" y="280" fill="#374151" font-family="Arial, sans-serif" font-size="9">• PDCA Cycle</text>
+  <text x="450" y="295" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Root Cause Analysis</text>
+  <text x="450" y="310" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Process Optimization</text>
+  <text x="450" y="325" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Innovation</text>
+  
+  <!-- Compliance -->
+  <rect x="610" y="250" width="150" height="80" rx="6" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Compliance Header -->
+  <rect x="610" y="250" width="150" height="20" fill="#ef4444"/>
+  <text x="685" y="265" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">COMPLIANCE</text>
+  
+  <!-- Compliance Items -->
+  <text x="620" y="280" fill="#374151" font-family="Arial, sans-serif" font-size="9">• NDIS Compliance</text>
+  <text x="620" y="295" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Regulatory Requirements</text>
+  <text x="620" y="310" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Audit Management</text>
+  <text x="620" y="325" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Documentation</text>
+  
+  <!-- Quality Tools -->
+  <rect x="100" y="350" width="200" height="40" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Tools Header -->
+  <rect x="100" y="350" width="200" height="20" fill="#059669"/>
+  <text x="200" y="365" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">QUALITY TOOLS</text>
+  
+  <!-- Tools Items -->
+  <text x="110" y="380" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Quality Management Software • Performance Dashboards • Analytics • Reporting</text>
+  
+  <!-- Staff Training -->
+  <rect x="320" y="350" width="200" height="40" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Training Header -->
+  <rect x="320" y="350" width="200" height="20" fill="#10b981"/>
+  <text x="420" y="365" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">STAFF TRAINING</text>
+  
+  <!-- Training Items -->
+  <text x="330" y="380" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Quality Awareness • Standards Training • Process Training • Competency Development</text>
+  
+  <!-- Client Feedback -->
+  <rect x="540" y="350" width="200" height="40" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Feedback Header -->
+  <rect x="540" y="350" width="200" height="20" fill="#f59e0b"/>
+  <text x="640" y="365" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">CLIENT FEEDBACK</text>
+  
+  <!-- Feedback Items -->
+  <text x="550" y="380" fill="#374151" font-family="Arial, sans-serif" font-size="9">• Satisfaction Surveys • Feedback Systems • Complaint Management • Improvement Actions</text>
+  
+  <!-- Arrow Definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#059669"/>
+    </marker>
+  </defs>
+  
+  <!-- Main Title -->
+  <text x="400" y="40" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="bold">Quality Assurance in NDIS Services</text>
+  
+  <!-- Subtitle -->
+  <text x="400" y="65" text-anchor="middle" fill="#a7f3d0" font-family="Arial, sans-serif" font-size="16">Complete Guide for Support Providers</text>
+  
+  <!-- Bottom Text -->
+  <text x="400" y="390" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14">Quality Standards • Monitoring • Continuous Improvement • Compliance • Staff Training • Client Feedback</text>
+</svg>
