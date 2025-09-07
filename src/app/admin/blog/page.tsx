@@ -291,11 +291,25 @@ export default function AdminBlogPage() {
 
                       <td className="py-4 px-4">
                         <div className="flex items-center gap-2">
-                          <Button size="sm" variant="outline" className="border-[#6b7280] text-[#1f2937] hover:border-[#2563eb] hover:text-[#2563eb]">
-                            <Eye className="w-4 h-4" />
+                          <Button 
+                            size="sm" 
+                            variant="outline" 
+                            className="border-[#6b7280] text-[#1f2937] hover:border-[#2563eb] hover:text-[#2563eb]"
+                            asChild
+                          >
+                            <Link href={`/admin/blog/${post.id}/view`}>
+                              <Eye className="w-4 h-4" />
+                            </Link>
                           </Button>
-                          <Button size="sm" variant="outline" className="border-[#6b7280] text-[#1f2937] hover:border-[#2563eb] hover:text-[#2563eb]">
-                            <Edit className="w-4 h-4" />
+                          <Button 
+                            size="sm" 
+                            variant="outline" 
+                            className="border-[#6b7280] text-[#1f2937] hover:border-[#2563eb] hover:text-[#2563eb]"
+                            asChild
+                          >
+                            <Link href={`/admin/blog/${post.id}/edit`}>
+                              <Edit className="w-4 h-4" />
+                            </Link>
                           </Button>
                           <Button 
                             size="sm" 
