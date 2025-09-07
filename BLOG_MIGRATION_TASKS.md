@@ -1,6 +1,6 @@
 # Blog Migration Tasks - Complete Implementation Guide
 
-## Migration Progress: 19/35 posts completed
+## Migration Progress: 20/35 posts completed
 
 ## Quick Reference Checklist
 
@@ -9,7 +9,7 @@
 - [x] 2. Creating an Effective Business Plan ⭐
 - [x] 3. Financial Management for NDIS Support Workers ⭐
 - [x] 4. Digital Tools for NDIS Providers ⭐
-- [ ] 5. Essential Certifications and Checks
+- [x] 5. Essential Certifications and Checks
 - [ ] 6. The Importance of Being Insured
 - [ ] 7. Time Management Strategies for Support Workers
 
