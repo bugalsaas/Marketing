@@ -159,7 +159,7 @@ export default function Home() {
               Loved by NDIS Independent Support Workers
             </h2>
             <p className="text-xl text-[#1f2937]">
-              Join thousands of satisfied users who trust Bugal with their practice
+              Join the growing community of NDIS providers across Australia who trust Bugal with their practice
             </p>
           </div>
           
