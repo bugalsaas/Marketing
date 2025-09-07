@@ -267,7 +267,7 @@ export default function PricingPage() {
               {
                 icon: Users,
                 title: "Client Management",
-                description: "Comprehensive client database with NDIS-specific fields and support plan tracking."
+                description: "Manage NDIS participants, support plans and goals with direct communication—no middlemen or confusion."
               },
               {
                 icon: FileText,

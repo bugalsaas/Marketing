@@ -68,7 +68,7 @@ export default function FeaturesPage() {
     {
       icon: Users,
       title: "Client Management",
-      description: "Seamless communication direct to Participants, their networks and plan managers. No middlemen.",
+      description: "Manage NDIS participants, support plans and goals with direct communication—no middlemen or confusion.",
       features: ["Direct participant communication", "Network coordination", "Plan manager integration", "No intermediaries"]
     },
     {

@@ -10,7 +10,7 @@ export default function Home() {
     {
       icon: Users,
       title: "Client Management",
-      description: "Easily manage your NDIS clients, their goals, and support plans in one centralized system.",
+      description: "Manage NDIS participants, support plans and goals with direct communication—no middlemen or confusion.",
     },
     {
       icon: Clock,
