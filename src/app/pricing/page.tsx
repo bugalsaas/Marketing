@@ -271,8 +271,8 @@ export default function PricingPage() {
               },
               {
                 icon: FileText,
-                title: "Service Agreements",
-                description: "Streamlined service agreement creation with our free Service Agreement Creator tool."
+                title: "Documentation & Service Agreements",
+                description: "Streamline NDIS documentation and onboarding with editable service agreements and compliance-ready reporting tools."
               },
               {
                 icon: Clock,

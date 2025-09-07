@@ -19,8 +19,8 @@ export default function Home() {
     },
     {
       icon: FileText,
-      title: "Documentation",
-      description: "Streamlined documentation and reporting for NDIS compliance and client progress tracking.",
+      title: "Documentation & Service Agreements",
+      description: "Streamline NDIS documentation and onboarding with editable service agreements and compliance-ready reporting tools.",
     },
     {
       icon: BarChart3,

@@ -73,8 +73,8 @@ export default function FeaturesPage() {
     },
     {
       icon: FileText,
-      title: "Service Agreements",
-      description: "Editable Service Agreements for Easy Client Onboarding. Who else does this?",
+      title: "Documentation & Service Agreements",
+      description: "Streamline NDIS documentation and onboarding with editable service agreements and compliance-ready reporting tools.",
       features: ["Editable templates", "Easy onboarding", "Custom agreements", "Unique offering"]
     },
     {
