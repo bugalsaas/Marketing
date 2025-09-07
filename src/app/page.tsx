@@ -79,9 +79,9 @@ export default function Home() {
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
-            <Badge variant="secondary" className="mb-6 bg-white/95 text-[#1e3a8a] hover:bg-white font-semibold shadow-lg">
+            {/* <Badge variant="secondary" className="mb-6 bg-white/95 text-[#1e3a8a] hover:bg-white font-semibold shadow-lg">
               🚀 Trusted by 1000+ NDIS Support Workers
-            </Badge>
+            </Badge> */}
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-2xl">
               The Most Trusted{" "}
