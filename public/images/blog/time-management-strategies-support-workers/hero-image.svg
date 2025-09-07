@@ -1,0 +1,105 @@
+<svg width="800" height="400" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="400" fill="url(#gradient)"/>
+  
+  <!-- Gradient Definition -->
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e3a8a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Clock/Time Icon -->
+  <circle cx="150" cy="150" r="60" fill="white" stroke="#e5e7eb" stroke-width="3"/>
+  <circle cx="150" cy="150" r="4" fill="#2563eb"/>
+  <line x1="150" y1="150" x2="150" y2="120" stroke="#2563eb" stroke-width="3" stroke-linecap="round"/>
+  <line x1="150" y1="150" x2="170" y2="150" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Clock Numbers -->
+  <text x="150" y="100" text-anchor="middle" fill="#6b7280" font-family="Arial, sans-serif" font-size="12" font-weight="bold">12</text>
+  <text x="200" y="155" text-anchor="middle" fill="#6b7280" font-family="Arial, sans-serif" font-size="12" font-weight="bold">3</text>
+  <text x="150" y="210" text-anchor="middle" fill="#6b7280" font-family="Arial, sans-serif" font-size="12" font-weight="bold">6</text>
+  <text x="100" y="155" text-anchor="middle" fill="#6b7280" font-family="Arial, sans-serif" font-size="12" font-weight="bold">9</text>
+  
+  <!-- Calendar/Schedule -->
+  <rect x="300" y="100" width="200" height="150" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Calendar Header -->
+  <rect x="300" y="100" width="200" height="30" fill="#2563eb"/>
+  <text x="400" y="120" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Schedule</text>
+  
+  <!-- Calendar Days -->
+  <rect x="310" y="140" width="20" height="20" fill="#f9fafb" stroke="#e5e7eb"/>
+  <text x="320" y="155" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="10">Mon</text>
+  
+  <rect x="340" y="140" width="20" height="20" fill="#f9fafb" stroke="#e5e7eb"/>
+  <text x="350" y="155" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="10">Tue</text>
+  
+  <rect x="370" y="140" width="20" height="20" fill="#f9fafb" stroke="#e5e7eb"/>
+  <text x="380" y="155" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="10">Wed</text>
+  
+  <rect x="400" y="140" width="20" height="20" fill="#f9fafb" stroke="#e5e7eb"/>
+  <text x="410" y="155" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="10">Thu</text>
+  
+  <rect x="430" y="140" width="20" height="20" fill="#f9fafb" stroke="#e5e7eb"/>
+  <text x="440" y="155" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="10">Fri</text>
+  
+  <!-- Time Blocks -->
+  <rect x="310" y="170" width="180" height="15" fill="#10b981" rx="2"/>
+  <text x="400" y="182" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="9">Client Visit 9:00-10:00</text>
+  
+  <rect x="310" y="190" width="180" height="15" fill="#2563eb" rx="2"/>
+  <text x="400" y="202" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="9">Documentation 10:00-10:30</text>
+  
+  <rect x="310" y="210" width="180" height="15" fill="#f59e0b" rx="2"/>
+  <text x="400" y="222" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="9">Travel 10:30-11:00</text>
+  
+  <!-- Productivity Icons -->
+  <circle cx="600" cy="120" r="25" fill="white" stroke="#10b981" stroke-width="3"/>
+  <path d="M 590 120 L 595 125 L 610 110" stroke="#10b981" stroke-width="3" fill="none"/>
+  
+  <circle cx="600" cy="170" r="25" fill="white" stroke="#2563eb" stroke-width="3"/>
+  <path d="M 590 170 L 595 175 L 610 160" stroke="#2563eb" stroke-width="3" fill="none"/>
+  
+  <circle cx="600" cy="220" r="25" fill="white" stroke="#f59e0b" stroke-width="3"/>
+  <path d="M 590 220 L 595 225 L 610 210" stroke="#f59e0b" stroke-width="3" fill="none"/>
+  
+  <!-- Productivity Labels -->
+  <text x="600" y="155" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10">Efficiency</text>
+  <text x="600" y="205" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10">Balance</text>
+  <text x="600" y="255" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10">Focus</text>
+  
+  <!-- Task List -->
+  <rect x="100" y="250" width="150" height="120" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Task List Header -->
+  <rect x="100" y="250" width="150" height="25" fill="#1e3a8a"/>
+  <text x="175" y="267" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Tasks</text>
+  
+  <!-- Task Items -->
+  <rect x="110" y="285" width="130" height="15" fill="#f9fafb"/>
+  <circle cx="115" cy="292" r="3" fill="#10b981"/>
+  <text x="125" y="295" fill="#374151" font-family="Arial, sans-serif" font-size="9">Client documentation</text>
+  
+  <rect x="110" y="305" width="130" height="15" fill="#f9fafb"/>
+  <circle cx="115" cy="312" r="3" fill="#10b981"/>
+  <text x="125" y="315" fill="#374151" font-family="Arial, sans-serif" font-size="9">Schedule next week</text>
+  
+  <rect x="110" y="325" width="130" height="15" fill="#f9fafb"/>
+  <circle cx="115" cy="332" r="3" fill="#6b7280"/>
+  <text x="125" y="335" fill="#6b7280" font-family="Arial, sans-serif" font-size="9">Update client files</text>
+  
+  <rect x="110" y="345" width="130" height="15" fill="#f9fafb"/>
+  <circle cx="115" cy="352" r="3" fill="#6b7280"/>
+  <text x="125" y="355" fill="#6b7280" font-family="Arial, sans-serif" font-size="9">Plan training session</text>
+  
+  <!-- Main Title -->
+  <text x="400" y="50" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="bold">Time Management Strategies</text>
+  
+  <!-- Subtitle -->
+  <text x="400" y="75" text-anchor="middle" fill="#93c5fd" font-family="Arial, sans-serif" font-size="16">Maximize Productivity and Work-Life Balance</text>
+  
+  <!-- Bottom Text -->
+  <text x="400" y="380" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14">Scheduling • Efficiency • Balance • Focus</text>
+</svg>
