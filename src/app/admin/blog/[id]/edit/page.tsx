@@ -28,12 +28,16 @@ interface BlogPost {
   excerpt: string;
   content: string;
   coverImage: string;
-  author: string;
+  author: {
+    id: string;
+    name: string;
+    email: string;
+  };
   category: string;
   readTime: string;
   featured: boolean;
-  status: string;
-  tags: string[];
+  published: boolean;
+  tags: string;
   publishedAt?: string;
   createdAt?: string;
   updatedAt?: string;
@@ -55,7 +59,7 @@ export default function EditBlogPostPage() {
     category: "",
     readTime: "",
     featured: false,
-    status: "draft"
+    published: false
   });
 
   const [tags, setTags] = useState<string[]>([]);
@@ -91,13 +95,13 @@ export default function EditBlogPostPage() {
           excerpt: post.excerpt || "",
           content: post.content || "",
           coverImage: post.coverImage || "",
-          author: post.author || "",
+          author: post.author?.name || "",
           category: post.category || "",
           readTime: post.readTime || "",
           featured: post.featured || false,
-          status: post.status || "draft"
+          published: post.published || false
         });
-        setTags(post.tags || []);
+        setTags(post.tags ? post.tags.split(',').map(tag => tag.trim()) : []);
       } else if (response.error) {
         toast.error("Failed to load blog post");
         console.error("Error loading blog post:", response.error);
@@ -140,7 +144,10 @@ export default function EditBlogPostPage() {
     setSaving(true);
     
     try {
-      const response = await blogApi.update(postId, { ...formData, tags });
+      const response = await blogApi.update(postId, { 
+        ...formData, 
+        tags: tags.join(',') 
+      });
       if (response.data) {
         toast.success("Blog post updated successfully");
         router.push("/admin/blog");
@@ -325,20 +332,17 @@ export default function EditBlogPostPage() {
                   <CardDescription>Configure when and how your post will be published</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <div>
-                    <label htmlFor="status" className="block text-sm font-medium text-[#1f2937] mb-2">
-                      Status
+                  <div className="flex items-center gap-2">
+                    <input
+                      type="checkbox"
+                      id="published"
+                      checked={formData.published}
+                      onChange={(e) => handleInputChange("published", e.target.checked)}
+                      className="w-4 h-4 text-[#2563eb] border-[#6b7280] rounded focus:ring-[#2563eb]"
+                    />
+                    <label htmlFor="published" className="text-sm font-medium text-[#1f2937]">
+                      Published
                     </label>
-                    <select
-                      id="status"
-                      value={formData.status}
-                      onChange={(e) => handleInputChange("status", e.target.value)}
-                      className="w-full px-3 py-2 border border-[#6b7280] rounded-md focus:border-[#2563eb] focus:ring-[#2563eb]"
-                    >
-                      <option value="draft">Draft</option>
-                      <option value="published">Published</option>
-                      <option value="archived">Archived</option>
-                    </select>
                   </div>
 
                   <div className="flex items-center gap-2">

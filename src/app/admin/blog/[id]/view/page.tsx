@@ -28,12 +28,16 @@ interface BlogPost {
   excerpt: string;
   content: string;
   coverImage: string;
-  author: string;
+  author: {
+    id: string;
+    name: string;
+    email: string;
+  };
   category: string;
   readTime: string;
   featured: boolean;
-  status: string;
-  tags: string[];
+  published: boolean;
+  tags: string;
   publishedAt?: string;
   createdAt?: string;
   updatedAt?: string;
@@ -73,22 +77,12 @@ export default function ViewBlogPostPage() {
     }
   }, [postId, loadBlogPost]);
 
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case "published": return "bg-green-100 text-green-800";
-      case "draft": return "bg-yellow-100 text-yellow-800";
-      case "archived": return "bg-gray-100 text-gray-800";
-      default: return "bg-gray-100 text-gray-800";
-    }
+  const getStatusColor = (published: boolean) => {
+    return published ? "bg-green-100 text-green-800" : "bg-yellow-100 text-yellow-800";
   };
 
-  const getStatusLabel = (status: string) => {
-    switch (status) {
-      case "published": return "Published";
-      case "draft": return "Draft";
-      case "archived": return "Archived";
-      default: return status;
-    }
+  const getStatusLabel = (published: boolean) => {
+    return published ? "Published" : "Draft";
   };
 
   if (loading) {
@@ -149,7 +143,7 @@ export default function ViewBlogPostPage() {
                 Edit Post
               </Link>
             </Button>
-            {post.status === "published" && (
+            {post.published && (
               <Button variant="outline" asChild>
                 <Link href={`/blog/${post.slug || postId}`} target="_blank">
                   <ExternalLink className="w-4 h-4 mr-2" />
@@ -169,8 +163,8 @@ export default function ViewBlogPostPage() {
               <CardContent className="p-6">
                 <div className="space-y-4">
                   <div className="flex items-center gap-2">
-                    <Badge className={getStatusColor(post.status)}>
-                      {getStatusLabel(post.status)}
+                    <Badge className={getStatusColor(post.published)}>
+                      {getStatusLabel(post.published)}
                     </Badge>
                     {post.featured && (
                       <Badge className="bg-yellow-100 text-yellow-800">
@@ -193,7 +187,7 @@ export default function ViewBlogPostPage() {
                   <div className="flex items-center gap-6 text-sm text-[#6b7280]">
                     <div className="flex items-center gap-2">
                       <User className="w-4 h-4" />
-                      <span>{post.author || "Unknown Author"}</span>
+                      <span>{post.author?.name || "Unknown Author"}</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <Calendar className="w-4 h-4" />
@@ -283,7 +277,7 @@ export default function ViewBlogPostPage() {
                     <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
                       <User className="w-4 h-4 text-[#2563eb]" />
                     </div>
-                    <span className="text-[#1f2937]">{post.author || "Unknown Author"}</span>
+                    <span className="text-[#1f2937]">{post.author?.name || "Unknown Author"}</span>
                   </div>
                 </div>
 
@@ -291,8 +285,8 @@ export default function ViewBlogPostPage() {
                   <label className="block text-sm font-medium text-[#1f2937] mb-1">
                     Status
                   </label>
-                  <Badge className={getStatusColor(post.status)}>
-                    {getStatusLabel(post.status)}
+                  <Badge className={getStatusColor(post.published)}>
+                    {getStatusLabel(post.published)}
                   </Badge>
                 </div>
 
@@ -348,7 +342,7 @@ export default function ViewBlogPostPage() {
             </Card>
 
             {/* Tags */}
-            {post.tags && post.tags.length > 0 && (
+            {post.tags && post.tags.trim() && (
               <Card className="border-0 shadow-lg">
                 <CardHeader>
                   <CardTitle className="text-[#1e3a8a]">Tags</CardTitle>
@@ -356,14 +350,14 @@ export default function ViewBlogPostPage() {
                 </CardHeader>
                 <CardContent>
                   <div className="flex flex-wrap gap-2">
-                    {post.tags.map((tag: string) => (
+                    {post.tags.split(',').map((tag: string) => (
                       <Badge 
-                        key={tag} 
+                        key={tag.trim()} 
                         variant="secondary"
                         className="bg-gray-100 text-gray-800"
                       >
                         <Tag className="w-3 h-3 mr-1" />
-                        {tag}
+                        {tag.trim()}
                       </Badge>
                     ))}
                   </div>

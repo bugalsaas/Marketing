@@ -27,12 +27,16 @@ interface BlogPost {
   excerpt: string;
   content: string;
   coverImage: string;
-  author: string;
+  author: {
+    id: string;
+    name: string;
+    email: string;
+  };
   category: string;
   readTime: string;
   featured: boolean;
-  status: string;
-  tags: string[];
+  published: boolean;
+  tags: string;
   publishedAt?: string;
   createdAt?: string;
   updatedAt?: string;
@@ -92,27 +96,19 @@ export default function AdminBlogPage() {
                          post.excerpt?.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          post.category?.toLowerCase().includes(searchTerm.toLowerCase());
     
-    const matchesStatus = filterStatus === "all" || post.status === filterStatus;
+    const matchesStatus = filterStatus === "all" || 
+                         (filterStatus === "published" && post.published) ||
+                         (filterStatus === "draft" && !post.published);
     
     return matchesSearch && matchesStatus;
   });
 
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case "published": return "bg-green-100 text-green-800";
-      case "draft": return "bg-yellow-100 text-yellow-800";
-      case "archived": return "bg-gray-100 text-gray-800";
-      default: return "bg-gray-100 text-gray-800";
-    }
+  const getStatusColor = (published: boolean) => {
+    return published ? "bg-green-100 text-green-800" : "bg-yellow-100 text-yellow-800";
   };
 
-  const getStatusLabel = (status: string) => {
-    switch (status) {
-      case "published": return "Published";
-      case "draft": return "Draft";
-      case "archived": return "Archived";
-      default: return status;
-    }
+  const getStatusLabel = (published: boolean) => {
+    return published ? "Published" : "Draft";
   };
 
   return (
@@ -154,7 +150,7 @@ export default function AdminBlogPage() {
                 <div>
                   <p className="text-sm font-medium text-[#6b7280]">Published</p>
                   <p className="text-2xl font-bold text-[#1e3a8a]">
-                    {blogPosts.filter(post => post.status === "published").length}
+                    {blogPosts.filter(post => post.published).length}
                   </p>
                 </div>
                 <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
@@ -170,7 +166,7 @@ export default function AdminBlogPage() {
                 <div>
                   <p className="text-sm font-medium text-[#6b7280]">Drafts</p>
                   <p className="text-2xl font-bold text-[#1e3a8a]">
-                    {blogPosts.filter(post => post.status === "draft").length}
+                    {blogPosts.filter(post => !post.published).length}
                   </p>
                 </div>
                 <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center">
@@ -285,7 +281,7 @@ export default function AdminBlogPage() {
                           <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
                             <User className="w-4 h-4 text-[#2563eb]" />
                           </div>
-                          <span className="text-[#1f2937]">{post.author}</span>
+                          <span className="text-[#1f2937]">{post.author?.name || 'Unknown Author'}</span>
                         </div>
                       </td>
                       <td className="py-4 px-4">
@@ -294,8 +290,8 @@ export default function AdminBlogPage() {
                         </Badge>
                       </td>
                       <td className="py-4 px-4">
-                        <Badge className={getStatusColor(post.status)}>
-                          {getStatusLabel(post.status)}
+                        <Badge className={getStatusColor(post.published)}>
+                          {getStatusLabel(post.published)}
                         </Badge>
                       </td>
                       <td className="py-4 px-4">
