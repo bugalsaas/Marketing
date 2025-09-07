@@ -1,6 +1,6 @@
 # Blog Migration Tasks - Complete Implementation Guide
 
-## Migration Progress: 25/34 posts completed
+## Migration Progress: 26/34 posts completed
 
 ## Quick Reference Checklist
 
@@ -34,7 +34,7 @@
 - [x] 23. Building a Support Network
 - [x] 24. Technology Trends in NDIS
 - [x] 25. Mental Health and Wellbeing for Support Workers
-- [ ] 26. Cultural Competency in NDIS
+- [x] 26. Cultural Competency in NDIS
 - [ ] 27. Remote Service Delivery
 - [ ] 28. Business Growth Strategies
 - [ ] 29. Client Feedback and Improvement
