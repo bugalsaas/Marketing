@@ -48,7 +48,8 @@ export default function AdminBlogPage() {
   const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
-    const [filterStatus, setFilterStatus] = useState("all");
+  const [filterStatus, setFilterStatus] = useState("all");
+  const [activeCardFilter, setActiveCardFilter] = useState<string | null>(null);
 
   // Load blog posts on component mount
   useEffect(() => {
@@ -90,6 +91,18 @@ export default function AdminBlogPage() {
     }
   };
 
+  const handleCardFilter = (filterType: string) => {
+    if (activeCardFilter === filterType) {
+      // If clicking the same card, clear the filter
+      setActiveCardFilter(null);
+      setFilterStatus("all");
+    } else {
+      // Set new filter
+      setActiveCardFilter(filterType);
+      setFilterStatus(filterType);
+    }
+  };
+
   // Filter and search blog posts
   const filteredPosts = blogPosts.filter(post => {
     const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -98,7 +111,8 @@ export default function AdminBlogPage() {
     
     const matchesStatus = filterStatus === "all" || 
                          (filterStatus === "published" && post.published) ||
-                         (filterStatus === "draft" && !post.published);
+                         (filterStatus === "draft" && !post.published) ||
+                         (filterStatus === "featured" && post.featured);
     
     return matchesSearch && matchesStatus;
   });
@@ -130,7 +144,12 @@ export default function AdminBlogPage() {
 
         {/* Stats Cards */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-          <Card className="border-0 shadow-lg">
+          <Card 
+            className={`border-0 shadow-lg cursor-pointer transition-all duration-200 hover:shadow-xl hover:scale-105 ${
+              activeCardFilter === "all" ? "ring-2 ring-[#2563eb] bg-blue-50" : ""
+            }`}
+            onClick={() => handleCardFilter("all")}
+          >
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>
@@ -144,7 +163,12 @@ export default function AdminBlogPage() {
             </CardContent>
           </Card>
 
-          <Card className="border-0 shadow-lg">
+          <Card 
+            className={`border-0 shadow-lg cursor-pointer transition-all duration-200 hover:shadow-xl hover:scale-105 ${
+              activeCardFilter === "published" ? "ring-2 ring-green-500 bg-green-50" : ""
+            }`}
+            onClick={() => handleCardFilter("published")}
+          >
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>
@@ -160,7 +184,12 @@ export default function AdminBlogPage() {
             </CardContent>
           </Card>
 
-          <Card className="border-0 shadow-lg">
+          <Card 
+            className={`border-0 shadow-lg cursor-pointer transition-all duration-200 hover:shadow-xl hover:scale-105 ${
+              activeCardFilter === "draft" ? "ring-2 ring-yellow-500 bg-yellow-50" : ""
+            }`}
+            onClick={() => handleCardFilter("draft")}
+          >
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>
@@ -176,7 +205,12 @@ export default function AdminBlogPage() {
             </CardContent>
           </Card>
 
-          <Card className="border-0 shadow-lg">
+          <Card 
+            className={`border-0 shadow-lg cursor-pointer transition-all duration-200 hover:shadow-xl hover:scale-105 ${
+              activeCardFilter === "featured" ? "ring-2 ring-purple-500 bg-purple-50" : ""
+            }`}
+            onClick={() => handleCardFilter("featured")}
+          >
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>
@@ -192,6 +226,27 @@ export default function AdminBlogPage() {
             </CardContent>
           </Card>
         </div>
+
+        {/* Active Filter Indicator */}
+        {activeCardFilter && (
+          <div className="flex items-center justify-center">
+            <div className="bg-[#2563eb] text-white px-4 py-2 rounded-full text-sm font-medium">
+              Showing: {activeCardFilter === "all" ? "All Posts" : 
+                       activeCardFilter === "published" ? "Published Posts" :
+                       activeCardFilter === "draft" ? "Draft Posts" :
+                       activeCardFilter === "featured" ? "Featured Posts" : ""}
+              <button 
+                onClick={() => {
+                  setActiveCardFilter(null);
+                  setFilterStatus("all");
+                }}
+                className="ml-2 text-white hover:text-gray-200"
+              >
+                ×
+              </button>
+            </div>
+          </div>
+        )}
 
         {/* Search and Filters */}
         <Card className="border-0 shadow-lg">
@@ -215,13 +270,16 @@ export default function AdminBlogPage() {
                 </Button>
                 <select
                   value={filterStatus}
-                  onChange={(e) => setFilterStatus(e.target.value)}
+                  onChange={(e) => {
+                    setFilterStatus(e.target.value);
+                    setActiveCardFilter(null); // Clear card filter when using dropdown
+                  }}
                   className="border border-[#6b7280] rounded-md px-3 py-2 text-[#1f2937] focus:border-[#2563eb] focus:ring-[#2563eb] focus:outline-none"
                 >
                   <option value="all">All Statuses</option>
                   <option value="published">Published</option>
                   <option value="draft">Draft</option>
-                  <option value="archived">Archived</option>
+                  <option value="featured">Featured</option>
                 </select>
               </div>
             </div>
