@@ -73,7 +73,7 @@ export default function FeaturesPage() {
     },
     {
       icon: FileText,
-      title: "Documentation & Service Agreements",
+      title: "Documentation",
       description: "Streamline NDIS documentation and onboarding with editable service agreements and compliance-ready reporting tools.",
       features: ["Editable templates", "Easy onboarding", "Custom agreements", "Unique offering"]
     },

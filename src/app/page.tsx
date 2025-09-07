@@ -19,7 +19,7 @@ export default function Home() {
     },
     {
       icon: FileText,
-      title: "Documentation & Service Agreements",
+      title: "Documentation",
       description: "Streamline NDIS documentation and onboarding with editable service agreements and compliance-ready reporting tools.",
     },
     {
