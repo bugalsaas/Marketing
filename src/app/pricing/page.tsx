@@ -103,7 +103,7 @@ export default function PricingPage() {
     }
   ];
 
-  const savings = billingCycle === 'yearly' ? "Save 2 months (20% off)" : "";
+  const savings = billingCycle === 'yearly' ? "2 Months Free" : "";
 
   return (
     <div className="min-h-screen bg-[#f9fafb]">
@@ -140,20 +140,13 @@ export default function PricingPage() {
                   }`}
                 />
               </button>
-              <div className="flex items-center gap-2 px-4 py-2 rounded-full transition-all duration-200">
-                <span className={`text-lg ${
-                  billingCycle === 'yearly' 
-                    ? 'text-[#1e3a8a] font-semibold' 
-                    : 'text-[#6b7280]'
-                }`}>
-                  Yearly
-                </span>
-                {billingCycle === 'yearly' && (
-                  <Badge variant="secondary" className="bg-green-100 text-green-800 text-xs">
-                    2 Months Free
-                  </Badge>
-                )}
-              </div>
+              <span className={`text-lg px-4 py-2 rounded-full transition-all duration-200 ${
+                billingCycle === 'yearly' 
+                  ? 'text-[#1e3a8a] font-semibold' 
+                  : 'text-[#6b7280]'
+              }`}>
+                Yearly
+              </span>
             </div>
           </div>
 
