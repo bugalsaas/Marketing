@@ -219,7 +219,7 @@ export default function BlogPage() {
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {featuredArticles.map((article) => (
-              <Card key={article.id} className="border-0 shadow-lg hover:shadow-xl transition-shadow overflow-hidden">
+              <Card key={article.id} className="border-0 shadow-lg hover:shadow-xl transition-shadow overflow-hidden flex flex-col h-full">
                 <div className="aspect-video relative overflow-hidden">
                   {article.coverImage ? (
                     <>
@@ -241,44 +241,44 @@ export default function BlogPage() {
                     </div>
                   )}
                 </div>
-                <CardHeader className="pb-4">
+                <div className="flex flex-col flex-grow p-6">
                   <div className="flex items-center gap-2 mb-3">
                     <Badge className={getCategoryColor(article.category)}>
                       {getCategoryName(article.category)}
                     </Badge>
                     <span className="text-sm text-[#6b7280]">Featured</span>
                   </div>
-                  <CardTitle className="text-2xl text-[#1e3a8a] leading-tight">
+                  <h3 className="text-2xl text-[#1e3a8a] leading-tight font-semibold mb-3">
                     {article.title}
-                  </CardTitle>
-                  <CardDescription className="text-base text-[#1f2937] leading-relaxed">
+                  </h3>
+                  <p className="text-base text-[#1f2937] leading-relaxed flex-grow mb-6">
                     {article.excerpt}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="pt-0">
-                  <div className="flex items-center justify-between text-sm text-[#6b7280] mb-4">
-                    <div className="flex items-center gap-4">
+                  </p>
+                  <div className="mt-auto">
+                    <div className="flex items-center justify-between text-sm text-[#6b7280] mb-4">
+                      <div className="flex items-center gap-4">
+                        <span className="flex items-center gap-1">
+                          <User className="w-4 h-4" />
+                          {article.author}
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <Calendar className="w-4 h-4" />
+                          {new Date(article.publishedAt).toLocaleDateString()}
+                        </span>
+                      </div>
                       <span className="flex items-center gap-1">
-                        <User className="w-4 h-4" />
-                        {article.author}
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <Calendar className="w-4 h-4" />
-                        {new Date(article.publishedAt).toLocaleDateString()}
+                        <Clock className="w-4 h-4" />
+                        {article.readTime}
                       </span>
                     </div>
-                    <span className="flex items-center gap-1">
-                      <Clock className="w-4 h-4" />
-                      {article.readTime}
-                    </span>
+                    <Button className="w-full bg-[#2563eb] hover:bg-[#1e3a8a]" asChild>
+                      <Link href={`/blog/${article.slug}`}>
+                        Read Full Article
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                      </Link>
+                    </Button>
                   </div>
-                  <Button className="w-full bg-[#2563eb] hover:bg-[#1e3a8a]" asChild>
-                    <Link href={`/blog/${article.slug}`}>
-                      Read Full Article
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </Link>
-                  </Button>
-                </CardContent>
+                </div>
               </Card>
             ))}
           </div>
@@ -334,68 +334,68 @@ export default function BlogPage() {
           {filteredArticles.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
               {filteredArticles.map((article) => (
-                <Card key={article.id} className="border-0 shadow-lg hover:shadow-xl transition-shadow overflow-hidden">
-                                     <div className="aspect-video relative overflow-hidden">
-                     {article.coverImage ? (
-                       <>
-                         <Image
-                           src={article.coverImage}
-                           alt={article.title}
-                           fill
-                           className="object-cover"
-                           priority={article.featured}
-                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                           onError={() => {
-                             // Fallback handled by Next.js Image component
-                           }}
-                         />
-                         <div className="absolute inset-0 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center fallback-placeholder" style={{ display: 'none' }}>
-                           <FileText className="w-12 h-12 text-[#2563eb]" />
-                         </div>
-                       </>
-                     ) : (
-                       <div className="w-full h-full bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
-                         <FileText className="w-12 h-12 text-[#2563eb]" />
-                       </div>
-                     )}
-                   </div>
-                  <CardHeader className="pb-4">
+                <Card key={article.id} className="border-0 shadow-lg hover:shadow-xl transition-shadow overflow-hidden flex flex-col h-full">
+                  <div className="aspect-video relative overflow-hidden">
+                    {article.coverImage ? (
+                      <>
+                        <Image
+                          src={article.coverImage}
+                          alt={article.title}
+                          fill
+                          className="object-cover"
+                          priority={article.featured}
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          onError={() => {
+                            // Fallback handled by Next.js Image component
+                          }}
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center fallback-placeholder" style={{ display: 'none' }}>
+                          <FileText className="w-12 h-12 text-[#2563eb]" />
+                        </div>
+                      </>
+                    ) : (
+                      <div className="w-full h-full bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
+                        <FileText className="w-12 h-12 text-[#2563eb]" />
+                      </div>
+                    )}
+                  </div>
+                  <div className="flex flex-col flex-grow p-6">
                     <div className="flex items-center gap-2 mb-3">
                       <Badge className={getCategoryColor(article.category)}>
                         {getCategoryName(article.category)}
                       </Badge>
                     </div>
-                    <CardTitle className="text-xl text-[#1e3a8a] leading-tight">
+                    <h3 className="text-xl text-[#1e3a8a] leading-tight font-semibold mb-3">
                       {article.title}
-                    </CardTitle>
-                    <CardDescription className="text-sm text-[#1f2937] leading-relaxed">
+                    </h3>
+                    <p className="text-sm text-[#1f2937] leading-relaxed flex-grow mb-6">
                       {article.excerpt}
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="pt-0">
-                    <div className="flex items-center justify-between text-sm text-[#6b7280] mb-4">
-                      <div className="flex items-center gap-4">
+                    </p>
+                    <div className="mt-auto">
+                      <div className="flex items-center justify-between text-sm text-[#6b7280] mb-4">
+                        <div className="flex items-center gap-4">
+                          <span className="flex items-center gap-1">
+                            <User className="w-4 h-4" />
+                            {article.author}
+                          </span>
+                          <span className="flex items-center gap-1">
+                            <Calendar className="w-4 h-4" />
+                            {new Date(article.publishedAt).toLocaleDateString()}
+                          </span>
+                        </div>
                         <span className="flex items-center gap-1">
-                          <User className="w-4 h-4" />
-                          {article.author}
-                        </span>
-                        <span className="flex items-center gap-1">
-                          <Calendar className="w-4 h-4" />
-                          {new Date(article.publishedAt).toLocaleDateString()}
+                          <Clock className="w-4 h-4" />
+                          {article.readTime}
                         </span>
                       </div>
-                      <span className="flex items-center gap-1">
-                        <Clock className="w-4 h-4" />
-                        {article.readTime}
-                      </span>
+                      <Button variant="outline" className="w-full border-[#2563eb] text-[#2563eb] hover:bg-[#2563eb] hover:text-white" asChild>
+                        <Link href={`/blog/${article.slug}`}>
+                          Read More
+                          <ArrowRight className="w-4 h-4 ml-2" />
+                        </Link>
+                      </Button>
                     </div>
-                    <Button variant="outline" className="w-full border-[#2563eb] text-[#2563eb] hover:bg-[#2563eb] hover:text-white" asChild>
-                      <Link href={`/blog/${article.slug}`}>
-                        Read More
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </Link>
-                    </Button>
-                  </CardContent>
+                  </div>
                 </Card>
               ))}
             </div>
