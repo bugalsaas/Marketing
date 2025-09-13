@@ -22,7 +22,7 @@ export default async function AdminDashboardPage() {
     const blogCount = await prisma.blogPost.count();
     const publishedBlogCount = await prisma.blogPost.count({ where: { published: true } });
     const testimonialCount = await prisma.testimonial.count();
-    const faqCount = await prisma.faq.count();
+    const faqCount = await prisma.fAQ.count();
 
     const stats = [
       {
@@ -60,6 +60,68 @@ export default async function AdminDashboardPage() {
         href: "/admin/offers",
         color: "text-orange-600",
         bgColor: "bg-orange-100"
+      }
+    ];
+
+    const quickActions = [
+      {
+        title: "Create Blog Post",
+        description: "Write a new blog post for your audience",
+        icon: FileText,
+        href: "/admin/blog/new",
+        color: "text-blue-600",
+        bgColor: "bg-blue-100"
+      },
+      {
+        title: "Add Testimonial",
+        description: "Add a new customer testimonial",
+        icon: MessageSquare,
+        href: "/admin/testimonials/new",
+        color: "text-green-600",
+        bgColor: "bg-green-100"
+      },
+      {
+        title: "Create FAQ",
+        description: "Add a new frequently asked question",
+        icon: HelpCircle,
+        href: "/admin/faq/new",
+        color: "text-purple-600",
+        bgColor: "bg-purple-100"
+      },
+      {
+        title: "New Offer",
+        description: "Create a promotional offer",
+        icon: Gift,
+        href: "/admin/offers/new",
+        color: "text-orange-600",
+        bgColor: "bg-orange-100"
+      }
+    ];
+
+    const recentActivity = [
+      {
+        action: "Blog post published",
+        item: "How to Streamline NDIS Documentation",
+        time: "2 hours ago",
+        type: "blog"
+      },
+      {
+        action: "Testimonial added",
+        item: "Sarah Johnson - Support Worker",
+        time: "1 day ago",
+        type: "testimonial"
+      },
+      {
+        action: "FAQ updated",
+        item: "What is included in the free plan?",
+        time: "2 days ago",
+        type: "faq"
+      },
+      {
+        action: "Offer created",
+        item: "BOFY2024 - 50% off first 3 months",
+        time: "3 days ago",
+        type: "offer"
       }
     ];
 
