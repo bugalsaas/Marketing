@@ -16,7 +16,9 @@ import {
   Heading3,
   Code,
   Undo,
-  Redo
+  Redo,
+  FileText,
+  Paste
 } from "lucide-react";
 
 interface RichTextEditorProps {
@@ -68,8 +70,19 @@ export function RichTextEditor({ value, onChange, placeholder, className }: Rich
 
   const handlePaste = (e: React.ClipboardEvent) => {
     e.preventDefault();
-    const text = e.clipboardData.getData('text/plain');
-    document.execCommand('insertText', false, text);
+    
+    // Check if HTML content is available
+    const htmlData = e.clipboardData.getData('text/html');
+    const textData = e.clipboardData.getData('text/plain');
+    
+    if (htmlData) {
+      // If HTML is available, insert it directly
+      document.execCommand('insertHTML', false, htmlData);
+    } else if (textData) {
+      // Fallback to plain text
+      document.execCommand('insertText', false, textData);
+    }
+    
     updateValue();
   };
 
@@ -90,6 +103,8 @@ export function RichTextEditor({ value, onChange, placeholder, className }: Rich
     { icon: Link, command: 'createLink', title: 'Insert Link' },
     { icon: Unlink, command: 'unlink', title: 'Remove Link' },
     { separator: true },
+    { icon: Paste, command: 'htmlPaste', title: 'Paste HTML' },
+    { separator: true },
     { icon: Undo, command: 'undo', title: 'Undo (Ctrl+Z)' },
     { icon: Redo, command: 'redo', title: 'Redo (Ctrl+Y)' },
   ];
@@ -101,9 +116,25 @@ export function RichTextEditor({ value, onChange, placeholder, className }: Rich
     }
   };
 
+  const handleHtmlPaste = () => {
+    const htmlContent = prompt('Paste your HTML content here:');
+    if (htmlContent) {
+      // Clean and sanitize the HTML (basic sanitization)
+      const cleanHtml = htmlContent
+        .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '') // Remove scripts
+        .replace(/<iframe\b[^<]*(?:(?!<\/iframe>)<[^<]*)*<\/iframe>/gi, '') // Remove iframes
+        .replace(/on\w+="[^"]*"/gi, ''); // Remove event handlers
+      
+      document.execCommand('insertHTML', false, cleanHtml);
+      updateValue();
+    }
+  };
+
   const handleCommand = (button: any) => {
     if (button.command === 'createLink') {
       handleLink();
+    } else if (button.command === 'htmlPaste') {
+      handleHtmlPaste();
     } else if (button.value) {
       execCommand(button.command, button.value);
     } else {
