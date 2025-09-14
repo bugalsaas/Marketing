@@ -41,12 +41,10 @@ export default function NewBlogPostPage() {
   const [activeTab, setActiveTab] = useState<"edit" | "preview">("edit");
 
   const categories = [
-    "NDIS Guides",
-    "Practice Management", 
-    "Compliance",
-    "Tips & Tricks",
-    "Industry News",
-    "Case Studies"
+    "Starting Out",
+    "Best Practice", 
+    "Education",
+    "Growth"
   ];
 
   const handleInputChange = (field: string, value: string | boolean) => {

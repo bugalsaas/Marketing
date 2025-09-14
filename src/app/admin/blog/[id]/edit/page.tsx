@@ -70,19 +70,10 @@ export default function EditBlogPostPage() {
   const [saving, setSaving] = useState(false);
 
   const categories = [
-    "NDIS Guides",
-    "Practice Management", 
-    "Compliance",
-    "Tips & Tricks",
-    "Industry News",
-    "Case Studies",
-    "business",
-    "technology",
-    "quality",
-    "career",
-    "community",
-    "stories",
-    "innovation"
+    "Starting Out",
+    "Best Practice", 
+    "Education",
+    "Growth"
   ];
 
   const loadBlogPost = useCallback(async () => {
