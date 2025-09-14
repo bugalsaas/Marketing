@@ -105,16 +105,25 @@ export async function GET(request: NextRequest) {
 
     console.log('🔍 Fetching category counts...');
     
-    // Get category counts
-    let categoryCounts: any[] = [];
+    // Get category counts using a simpler approach
+    let categoryCounts: Array<{ category: string; count: number }> = [];
     try {
-      categoryCounts = await prisma.blogPost.groupBy({
+      const categoryGroups = await prisma.blogPost.groupBy({
         by: ['category'],
-        where: { published: true },
+        where: { 
+          published: true,
+          category: { not: null } // Exclude posts with null categories
+        },
         _count: {
           id: true
         }
       });
+      
+      categoryCounts = categoryGroups.map(group => ({
+        category: group.category || 'Unknown',
+        count: group._count.id
+      }));
+      
       console.log(`✅ Fetched category counts for ${categoryCounts.length} categories`);
     } catch (categoryError) {
       console.error('❌ Error fetching category counts:', categoryError);
@@ -158,7 +167,7 @@ export async function GET(request: NextRequest) {
       categories: (categoryCounts || []).map(cat => ({
         id: cat.category || 'unknown',
         name: formatCategoryName(cat.category || 'unknown'),
-        count: cat._count.id
+        count: cat.count
       })),
       total: posts.length
     };
