@@ -29,12 +29,14 @@ interface RichTextEditorProps {
 export function RichTextEditor({ value, onChange, placeholder, className }: RichTextEditorProps) {
   const editorRef = useRef<HTMLDivElement>(null);
   const [isFocused, setIsFocused] = useState(false);
+  const [isUpdating, setIsUpdating] = useState(false);
 
+  // Only update the editor content if it's different from the current value
   useEffect(() => {
-    if (editorRef.current) {
+    if (editorRef.current && !isUpdating && editorRef.current.innerHTML !== value) {
       editorRef.current.innerHTML = value;
     }
-  }, [value]);
+  }, [value, isUpdating]);
 
   const execCommand = (command: string, value?: string) => {
     document.execCommand(command, false, value);
@@ -43,8 +45,12 @@ export function RichTextEditor({ value, onChange, placeholder, className }: Rich
   };
 
   const updateValue = () => {
-    if (editorRef.current) {
-      onChange(editorRef.current.innerHTML);
+    if (editorRef.current && !isUpdating) {
+      setIsUpdating(true);
+      const newValue = editorRef.current.innerHTML;
+      onChange(newValue);
+      // Reset the updating flag after a short delay
+      setTimeout(() => setIsUpdating(false), 0);
     }
   };
 
@@ -53,6 +59,11 @@ export function RichTextEditor({ value, onChange, placeholder, className }: Rich
       e.preventDefault();
       execCommand('insertLineBreak');
     }
+  };
+
+  const handleInput = (e: React.FormEvent) => {
+    e.preventDefault();
+    updateValue();
   };
 
   const handlePaste = (e: React.ClipboardEvent) => {
@@ -132,7 +143,7 @@ export function RichTextEditor({ value, onChange, placeholder, className }: Rich
         }`}
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
-        onInput={updateValue}
+        onInput={handleInput}
         onKeyDown={handleKeyDown}
         onPaste={handlePaste}
         data-placeholder={placeholder}

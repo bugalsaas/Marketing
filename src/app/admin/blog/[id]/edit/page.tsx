@@ -299,6 +299,7 @@ export default function EditBlogPostPage() {
                   <div className="border-b border-[#e5e7eb] mb-4">
                     <nav className="-mb-px flex space-x-8">
                       <button
+                        type="button"
                         onClick={() => setActiveTab("edit")}
                         className={`py-2 px-1 border-b-2 font-medium text-sm ${
                           activeTab === "edit"
@@ -309,6 +310,7 @@ export default function EditBlogPostPage() {
                         Edit
                       </button>
                       <button
+                        type="button"
                         onClick={() => setActiveTab("preview")}
                         className={`py-2 px-1 border-b-2 font-medium text-sm ${
                           activeTab === "preview"
