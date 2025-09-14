@@ -20,6 +20,11 @@ interface BlogPost {
   publishedAt: Date | null;
   updatedAt: Date;
   authorId: string;
+  author?: {
+    id: string;
+    name: string;
+    email: string;
+  };
   readTime?: string;
   category: string | null;
   tags: string;
@@ -65,7 +70,16 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     const isDevelopment = process.env.NODE_ENV === 'development';
     
     const post = await prisma.blogPost.findUnique({
-      where: { slug: slug, ...(isDevelopment ? {} : { published: true }) }
+      where: { slug: slug, ...(isDevelopment ? {} : { published: true }) },
+      include: {
+        author: {
+          select: {
+            id: true,
+            name: true,
+            email: true
+          }
+        }
+      }
     });
 
     if (!post) {
@@ -84,7 +98,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
         type: 'article',
         publishedTime: post.publishedAt?.toISOString() || post.updatedAt.toISOString(),
         modifiedTime: post.updatedAt.toISOString(),
-        authors: [post.authorId],
+        authors: [post.author?.name || 'Bugal Admin'],
         tags: post.tags ? post.tags.split(',').map(tag => tag.trim()) : [],
         images: [
           {
@@ -124,13 +138,31 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     
     // First try to find a published post
     post = await prisma.blogPost.findUnique({
-      where: { slug: slug, published: true }
+      where: { slug: slug, published: true },
+      include: {
+        author: {
+          select: {
+            id: true,
+            name: true,
+            email: true
+          }
+        }
+      }
     });
 
     // If no published post found and in development, try to find unpublished post
     if (!post && isDevelopment) {
       post = await prisma.blogPost.findUnique({
-        where: { slug: slug, published: false }
+        where: { slug: slug, published: false },
+        include: {
+          author: {
+            select: {
+              id: true,
+              name: true,
+              email: true
+            }
+          }
+        }
       });
       if (post) {
         isUnpublished = true;
@@ -155,7 +187,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const blogPostSchema = {
     title: post.title,
     description: post.excerpt || post.title,
-    author: post.authorId,
+    author: post.author?.name || 'Bugal Admin',
     publishedAt: post.publishedAt?.toISOString() || post.updatedAt.toISOString(),
     updatedAt: post.updatedAt.toISOString(),
     image: post.coverImage || '/api/placeholder/1200/630',
@@ -222,7 +254,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 <div className="flex flex-wrap items-center gap-4 text-sm text-[#6b7280]">
                   <div className="flex items-center gap-2">
                     <User className="w-4 h-4" />
-                    <span>{post.authorId}</span>
+                    <span>{post.author?.name || 'Bugal Admin'}</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <Calendar className="w-4 h-4" />
