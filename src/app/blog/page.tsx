@@ -151,11 +151,33 @@ export default function BlogPage() {
 
   const getCategoryColor = (category: string) => {
     switch (category) {
-      case "ndis": return "bg-blue-100 text-blue-800";
-      case "practice": return "bg-green-100 text-green-800";
-      case "compliance": return "bg-purple-100 text-purple-800";
-      case "tips": return "bg-orange-100 text-orange-800";
-      default: return "bg-gray-100 text-gray-800";
+      case "Starting Out": return "bg-emerald-100 text-emerald-800 border-emerald-200";
+      case "Best Practice": return "bg-blue-100 text-blue-800 border-blue-200";
+      case "Education": return "bg-purple-100 text-purple-800 border-purple-200";
+      case "Growth": return "bg-orange-100 text-orange-800 border-orange-200";
+      default: return "bg-gray-100 text-gray-800 border-gray-200";
+    }
+  };
+
+  const getCategoryButtonColor = (category: string, isSelected: boolean) => {
+    const baseClasses = "px-6 py-3 h-auto font-medium transition-all duration-200";
+    
+    if (isSelected) {
+      switch (category) {
+        case "Starting Out": return `${baseClasses} bg-emerald-600 text-white hover:bg-emerald-700 shadow-md border-emerald-600`;
+        case "Best Practice": return `${baseClasses} bg-blue-600 text-white hover:bg-blue-700 shadow-md border-blue-600`;
+        case "Education": return `${baseClasses} bg-purple-600 text-white hover:bg-purple-700 shadow-md border-purple-600`;
+        case "Growth": return `${baseClasses} bg-orange-600 text-white hover:bg-orange-700 shadow-md border-orange-600`;
+        default: return `${baseClasses} bg-gray-600 text-white hover:bg-gray-700 shadow-md border-gray-600`;
+      }
+    } else {
+      switch (category) {
+        case "Starting Out": return `${baseClasses} border-emerald-300 text-emerald-700 hover:border-emerald-500 hover:text-emerald-800 hover:bg-emerald-50`;
+        case "Best Practice": return `${baseClasses} border-blue-300 text-blue-700 hover:border-blue-500 hover:text-blue-800 hover:bg-blue-50`;
+        case "Education": return `${baseClasses} border-purple-300 text-purple-700 hover:border-purple-500 hover:text-purple-800 hover:bg-purple-50`;
+        case "Growth": return `${baseClasses} border-orange-300 text-orange-700 hover:border-orange-500 hover:text-orange-800 hover:bg-orange-50`;
+        default: return `${baseClasses} border-gray-300 text-gray-700 hover:border-gray-500 hover:text-gray-800 hover:bg-gray-50`;
+      }
     }
   };
 
@@ -243,8 +265,8 @@ export default function BlogPage() {
                 </div>
                 <div className="flex flex-col flex-grow p-6">
                   <div className="flex items-center gap-2 mb-3">
-                    <Badge className={getCategoryColor(article.category)}>
-                      {getCategoryName(article.category)}
+                    <Badge className={`${getCategoryColor(article.category)} border`}>
+                      {article.category}
                     </Badge>
                     <span className="text-sm text-[#6b7280]">Featured</span>
                   </div>
@@ -309,12 +331,8 @@ export default function BlogPage() {
                 <Button
                   key={category.id}
                   onClick={() => toggleCategory(category.id)}
-                  variant={selectedCategories.includes(category.id) ? "default" : "outline"}
-                  className={`px-6 py-3 h-auto font-medium transition-all duration-200 ${
-                    selectedCategories.includes(category.id)
-                      ? "bg-[#2563eb] text-white hover:bg-[#1e3a8a] shadow-md"
-                      : "border-[#6b7280] text-[#6b7280] hover:border-[#2563eb] hover:text-[#2563eb] hover:bg-[#f8fafc]"
-                  }`}
+                  variant="outline"
+                  className={getCategoryButtonColor(category.name, selectedCategories.includes(category.id))}
                 >
                   {category.name} ({category.count})
                 </Button>
@@ -379,8 +397,8 @@ export default function BlogPage() {
                   </div>
                   <div className="flex flex-col flex-grow p-6">
                     <div className="flex items-center gap-2 mb-3">
-                      <Badge className={getCategoryColor(article.category)}>
-                        {getCategoryName(article.category)}
+                      <Badge className={`${getCategoryColor(article.category)} border`}>
+                        {article.category}
                       </Badge>
                     </div>
                     <h3 className="text-xl text-[#1e3a8a] leading-tight font-semibold mb-3">
