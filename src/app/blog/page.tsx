@@ -476,7 +476,7 @@ export default function BlogPage() {
                 Start Your Free Trial
               </Link>
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-white text-white hover:bg-white hover:text-[#2563eb]" asChild>
+            <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-white text-white bg-transparent hover:bg-white hover:text-[#2563eb]" asChild>
               <Link href="/contact">
                 Schedule Demo
               </Link>
