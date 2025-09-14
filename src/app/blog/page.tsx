@@ -13,7 +13,6 @@ import {
   User, 
   Clock, 
   ArrowRight, 
-  Filter,
   BookOpen,
   TrendingUp,
   Lightbulb,
@@ -21,23 +20,12 @@ import {
   Users,
   FileText
 } from "lucide-react";
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect } from "react";
 
-// Performance optimization: Efficient filtering with useMemo
-const useFilteredArticles = (articles: any[], searchTerm: string, selectedCategory: string) => {
-  return useMemo(() => {
-    return articles.filter(article => {
-      const matchesSearch = article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           article.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
-      const matchesCategory = selectedCategory === 'all' || article.category === selectedCategory;
-      return matchesSearch && matchesCategory;
-    });
-  }, [articles, searchTerm, selectedCategory]);
-};
 
 export default function BlogPage() {
   const [searchTerm, setSearchTerm] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   interface BlogPost {
     id: string;
     title: string;
@@ -94,25 +82,37 @@ export default function BlogPage() {
     fetchBlogData();
   }, []);
 
-  // Use database categories if available, fallback to static categories
-  const categories = blogData.categories.length > 0 ? blogData.categories : [
-    { id: "all", name: "All Posts", count: blogData.total || 0 },
-    { id: "ndis", name: "NDIS Guides", count: 0 },
-    { id: "practice", name: "Practice Management", count: 0 },
-    { id: "compliance", name: "Compliance", count: 0 },
-    { id: "tips", name: "Tips & Tricks", count: 0 }
+  // Standardized categories with post counts
+  const getCategoryCount = (categoryName: string) => {
+    return blogData.posts.filter(post => post.category === categoryName).length;
+  };
+
+  const categories = [
+    { id: "Starting Out", name: "Starting Out", count: getCategoryCount("Starting Out") },
+    { id: "Best Practice", name: "Best Practice", count: getCategoryCount("Best Practice") },
+    { id: "Education", name: "Education", count: getCategoryCount("Education") },
+    { id: "Growth", name: "Growth", count: getCategoryCount("Growth") }
   ];
+
+  // Toggle category selection
+  const toggleCategory = (categoryId: string) => {
+    setSelectedCategories(prev => 
+      prev.includes(categoryId) 
+        ? prev.filter(id => id !== categoryId)
+        : [...prev, categoryId]
+    );
+  };
 
   // Get featured and latest articles from database
   const featuredArticles = blogData.posts.filter(post => post.featured).slice(0, 2);
   const latestArticles = blogData.posts.filter(post => !post.featured).slice(0, 6);
 
-  // Filter articles based on search and category
+  // Filter articles based on search and categories
   const filteredArticles = latestArticles.filter(article => {
     const matchesSearch = article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          article.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          article.author.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === "all" || article.category === selectedCategory;
+    const matchesCategory = selectedCategories.length === 0 || selectedCategories.includes(article.category);
     return matchesSearch && matchesCategory;
   });
 
@@ -288,9 +288,10 @@ export default function BlogPage() {
       {/* Search and Filter Section */}
       <section className="py-12 bg-[#f9fafb]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-2xl mx-auto">
-            <div className="flex flex-col sm:flex-row gap-4">
-              <div className="relative flex-1">
+          <div className="max-w-4xl mx-auto">
+            {/* Search Bar */}
+            <div className="mb-8">
+              <div className="relative max-w-md mx-auto">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#6b7280] w-5 h-5" />
                 <Input
                   type="text"
@@ -300,21 +301,38 @@ export default function BlogPage() {
                   className="pl-10 pr-4 py-3 w-full border-[#6b7280] focus:border-[#2563eb] focus:ring-[#2563eb] h-12"
                 />
               </div>
-              <div className="relative">
-                <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#6b7280] w-4 h-4" />
-                <select
-                  value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="pl-10 pr-8 py-3 h-12 border border-[#6b7280] rounded-md focus:border-[#2563eb] focus:ring-[#2563eb] bg-white appearance-none cursor-pointer"
-                >
-                  {categories.map((category) => (
-                    <option key={category.id} value={category.id}>
-                      {category.name} ({category.count})
-                    </option>
-                  ))}
-                </select>
-              </div>
             </div>
+
+            {/* Category Filter Buttons */}
+            <div className="flex flex-wrap justify-center gap-3">
+              {categories.map((category) => (
+                <Button
+                  key={category.id}
+                  onClick={() => toggleCategory(category.id)}
+                  variant={selectedCategories.includes(category.id) ? "default" : "outline"}
+                  className={`px-6 py-3 h-auto font-medium transition-all duration-200 ${
+                    selectedCategories.includes(category.id)
+                      ? "bg-[#2563eb] text-white hover:bg-[#1e3a8a] shadow-md"
+                      : "border-[#6b7280] text-[#6b7280] hover:border-[#2563eb] hover:text-[#2563eb] hover:bg-[#f8fafc]"
+                  }`}
+                >
+                  {category.name} ({category.count})
+                </Button>
+              ))}
+            </div>
+
+            {/* Clear Filters */}
+            {selectedCategories.length > 0 && (
+              <div className="text-center mt-4">
+                <Button
+                  variant="ghost"
+                  onClick={() => setSelectedCategories([])}
+                  className="text-[#6b7280] hover:text-[#2563eb] text-sm"
+                >
+                  Clear all filters
+                </Button>
+              </div>
+            )}
           </div>
         </div>
       </section>
@@ -404,7 +422,7 @@ export default function BlogPage() {
               <Search className="w-16 h-16 text-[#6b7280] mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-[#1e3a8a] mb-2">No articles found</h3>
               <p className="text-[#1f2937] mb-6">Try adjusting your search terms or category filter.</p>
-              <Button onClick={() => { setSearchTerm(""); setSelectedCategory("all"); }} variant="outline" className="border-[#2563eb] text-[#2563eb] hover:bg-[#2563eb] hover:text-white">
+              <Button onClick={() => { setSearchTerm(""); setSelectedCategories([]); }} variant="outline" className="border-[#2563eb] text-[#2563eb] hover:bg-[#2563eb] hover:text-white">
                 Clear Filters
               </Button>
             </div>
