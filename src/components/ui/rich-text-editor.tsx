@@ -18,7 +18,7 @@ import {
   Undo,
   Redo,
   FileText,
-  Paste
+  Clipboard
 } from "lucide-react";
 
 interface RichTextEditorProps {
@@ -103,7 +103,7 @@ export function RichTextEditor({ value, onChange, placeholder, className }: Rich
     { icon: Link, command: 'createLink', title: 'Insert Link' },
     { icon: Unlink, command: 'unlink', title: 'Remove Link' },
     { separator: true },
-    { icon: Paste, command: 'htmlPaste', title: 'Paste HTML' },
+    { icon: Clipboard, command: 'htmlPaste', title: 'Paste HTML' },
     { separator: true },
     { icon: Undo, command: 'undo', title: 'Undo (Ctrl+Z)' },
     { icon: Redo, command: 'redo', title: 'Redo (Ctrl+Y)' },
