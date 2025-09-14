@@ -1,0 +1,15 @@
+---
+title: "New Financial Year: What to do as an Independent Support Providers."
+excerpt: "Start your new financial year right as an independent support provider. Essential tasks, planning strategies, and compliance requirements for success."
+slug: "new-financial-year-what-to-do-as-an-independent-support-providers"
+category: "Education"
+tags: "new financial year, planning, NDIS, support providers, financial management"
+featured: false
+published: true
+publishedAt: "2025-09-14"
+author: "undefined"
+readTime: "undefined"
+coverImage: "/images/blog/new-financial-year-independent-support-providers/hero-image.svg"
+---
+
+<p>As we usher in the new financial year, independent support providers under the National Disability Insurance Scheme (NDIS) in Australia must navigate key changes to ensure compliance and optimise their services. With the recent release of the NDIS Pricing Arrangements and the increase in the superannuation rate to 11.5%, here are some best practices to help you stay ahead.</p><p>‍</p><h4><strong>1. Familiarise Yourself with the New NDIS Pricing Arrangements</strong></h4><p>The NDIS has updated its <a href="https://www.ndis.gov.au/media/7150/download?">pricing arrangements</a>, which directly impact the rates you can charge for your services. It’s crucial to thoroughly review the new document to understand the changes and adjust your billing accordingly. Ensuring your rates in Bugal are up-to-date if required as this will help you avoid any financial discrepancies.</p><p>‍</p><h4><strong>2. Update Your Financial Plans</strong></h4><p>With the superannuation rate now at 11.5%, it’s essential to incorporate this increase into your financial planning. Bugal has already implemented this on your dashboard, however, you may wish to adjust any budgets to accommodate the higher superannuation contributions for yourself and any employees you may have. This proactive approach will help you manage cash flow effectively and avoid any last-minute financial stress.</p><p>‍</p><h4><strong>3. Enhance Your Record-Keeping</strong></h4><p>Accurate and up-to-date record-keeping is more important than ever. Ensure all your financial transactions, including NDIS claims and superannuation payments, are meticulously documented. This practice not only aids in compliance but also provides clear insights into your business performance, helping you make informed decisions.</p><p>‍</p><h4><strong>4. Continuous Professional Development</strong></h4><p>Stay informed about industry changes and continuously seek professional development opportunities. Attending workshops, webinars, and training sessions can keep you updated on best practices and regulatory changes, ensuring your services remain top-notch.</p><p>‍</p><p>By staying informed and adapting to these changes, you can continue to provide exceptional support while ensuring your business remains compliant and financially healthy. Here’s to a successful new financial year!</p><p>‍</p>
