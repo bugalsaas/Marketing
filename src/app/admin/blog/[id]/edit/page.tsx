@@ -145,20 +145,34 @@ export default function EditBlogPostPage() {
     e.preventDefault();
     setSaving(true);
     
+    console.log("🔄 Submitting blog post update...");
+    console.log("📝 Form data:", formData);
+    console.log("🏷️ Tags:", tags);
+    console.log("🆔 Post ID:", postId);
+    
     try {
-      const response = await blogApi.update(postId, { 
+      const updateData = { 
         ...formData, 
         tags: tags.join(',') 
-      });
+      };
+      
+      console.log("📤 Sending update data:", updateData);
+      
+      const response = await blogApi.update(postId, updateData);
+      
+      console.log("📥 API response:", response);
+      
       if (response.data) {
         toast.success("Blog post updated successfully");
+        console.log("✅ Update successful");
         router.push("/admin/blog");
       } else if (response.error) {
-        toast.error("Failed to update blog post");
+        toast.error(`Failed to update blog post: ${response.error}`);
+        console.error("❌ Update failed:", response.error);
       }
     } catch (error) {
       toast.error("Failed to update blog post");
-      console.error("Error updating blog post:", error);
+      console.error("❌ Error updating blog post:", error);
     } finally {
       setSaving(false);
     }

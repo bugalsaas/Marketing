@@ -53,13 +53,18 @@ export async function PUT(
 ) {
   const { id } = await params;
   try {
+    console.log("🔄 Blog update API called for ID:", id);
+    
     const session = await getServerSession(authOptions);
     
     if (!session?.user || session.user.role !== "admin") {
+      console.log("❌ Unauthorized access attempt");
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
     const body = await request.json();
+    console.log("📝 Request body:", body);
+    
     const { title, slug, excerpt, content, coverImage, category, tags, published, featured } = body;
 
     // Validate required fields
@@ -84,6 +89,18 @@ export async function PUT(
         { status: 400 }
       );
     }
+
+    console.log("💾 Updating database with data:", {
+      title,
+      slug,
+      excerpt,
+      content: content ? `${content.substring(0, 100)}...` : 'empty',
+      coverImage,
+      category,
+      tags,
+      published,
+      featured
+    });
 
     const updatedPost = await prisma.blogPost.update({
       where: { id: id },
@@ -111,6 +128,7 @@ export async function PUT(
       }
     });
 
+    console.log("✅ Database update successful:", updatedPost.id);
     return NextResponse.json(updatedPost);
   } catch (error) {
     console.error("Error updating blog post:", error);
