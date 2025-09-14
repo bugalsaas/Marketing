@@ -195,7 +195,7 @@ export default function Home() {
                 Start Your Free Trial Today
               </Link>
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-white text-white hover:bg-white hover:text-[#2563eb]" asChild>
+            <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-white text-white bg-transparent hover:bg-white hover:text-[#2563eb]" asChild>
               <Link href="/contact">
                 Talk to Our Team
               </Link>
