@@ -4,7 +4,9 @@
       "maxDuration": 30
     }
   },
-  "env": {
-    "VERCEL_BYPASS_FALLBACK_OVERSIZED_ERROR": "1"
+  "build": {
+    "env": {
+      "VERCEL_BYPASS_FALLBACK_OVERSIZED_ERROR": "1"
+    }
   }
 }
