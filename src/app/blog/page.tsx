@@ -20,12 +20,13 @@ import {
   Users,
   FileText
 } from "lucide-react";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useLayoutEffect } from "react";
 
 
 export default function BlogPage() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+  const [isFiltering, setIsFiltering] = useState(false);
   interface BlogPost {
     id: string;
     title: string;
@@ -94,13 +95,32 @@ export default function BlogPage() {
     { id: "Growth", name: "Growth", count: getCategoryCount("Growth") }
   ];
 
-  // Toggle category selection
+  // Toggle category selection with scroll position preservation
   const toggleCategory = (categoryId: string) => {
+    // Store current scroll position
+    const currentScrollY = window.scrollY;
+    
+    // Set filtering state
+    setIsFiltering(true);
+    
     setSelectedCategories(prev => 
       prev.includes(categoryId) 
         ? prev.filter(id => id !== categoryId)
         : [...prev, categoryId]
     );
+    
+    // Use requestAnimationFrame for smoother scroll restoration
+    requestAnimationFrame(() => {
+      window.scrollTo({
+        top: currentScrollY,
+        behavior: 'instant'
+      });
+      
+      // Reset filtering state after a short delay
+      setTimeout(() => {
+        setIsFiltering(false);
+      }, 100);
+    });
   };
 
   // Filter ALL articles based on search and categories
@@ -368,7 +388,7 @@ export default function BlogPage() {
           </div>
           
           {filteredArticles.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto min-h-[600px] transition-all duration-300 ease-in-out ${isFiltering ? 'opacity-75' : 'opacity-100'}`}>
               {filteredArticles.map((article) => (
                 <Card key={article.id} className="border-0 shadow-lg hover:shadow-xl transition-shadow overflow-hidden flex flex-col h-full">
                   <div className="aspect-video relative overflow-hidden">
