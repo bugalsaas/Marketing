@@ -112,7 +112,7 @@ export async function GET(request: NextRequest) {
         by: ['category'],
         where: { published: true },
         _count: {
-          category: true
+          id: true
         }
       });
       console.log(`✅ Fetched category counts for ${categoryCounts.length} categories`);
@@ -158,7 +158,7 @@ export async function GET(request: NextRequest) {
       categories: (categoryCounts || []).map(cat => ({
         id: cat.category || 'unknown',
         name: formatCategoryName(cat.category || 'unknown'),
-        count: cat._count.category
+        count: cat._count.id
       })),
       total: posts.length
     };
