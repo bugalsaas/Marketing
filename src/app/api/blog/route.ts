@@ -33,7 +33,9 @@ export async function GET(request: NextRequest) {
     console.log('📋 API Parameters:', { category, search, featured, limit });
     
     // Build where clause
-    const where: any = {};
+    const where: any = {
+      published: true // Only get published posts
+    };
     
     if (category && category !== 'all') {
       where.category = category;
@@ -103,9 +105,21 @@ export async function GET(request: NextRequest) {
 
     console.log('🔍 Fetching category counts...');
     
-    // Skip category counts for now to avoid type issues
-    console.log('⏭️ Skipping category counts to avoid type issues');
-    const categoryCounts: any[] = [];
+    // Get category counts
+    let categoryCounts: any[] = [];
+    try {
+      categoryCounts = await prisma.blogPost.groupBy({
+        by: ['category'],
+        where: { published: true },
+        _count: {
+          category: true
+        }
+      });
+      console.log(`✅ Fetched category counts for ${categoryCounts.length} categories`);
+    } catch (categoryError) {
+      console.error('❌ Error fetching category counts:', categoryError);
+      categoryCounts = [];
+    }
 
     // Format response with safer author handling
     let formattedPosts;
@@ -187,6 +201,10 @@ function calculateReadTime(text: string): string {
 
 function formatCategoryName(category: string): string {
   const categoryMap: { [key: string]: string } = {
+    'Starting Out': 'Starting Out',
+    'Best Practice': 'Best Practice',
+    'Education': 'Education',
+    'Growth': 'Growth',
     'business-setup': 'Business Setup',
     'compliance': 'Compliance',
     'financial': 'Financial',

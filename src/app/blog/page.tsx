@@ -103,18 +103,18 @@ export default function BlogPage() {
     );
   };
 
-  // Get featured and latest articles from database
-  const featuredArticles = blogData.posts.filter(post => post.featured).slice(0, 2);
-  const latestArticles = blogData.posts.filter(post => !post.featured).slice(0, 6);
-
-  // Filter articles based on search and categories
-  const filteredArticles = latestArticles.filter(article => {
+  // Filter ALL articles based on search and categories
+  const filteredArticles = blogData.posts.filter(article => {
     const matchesSearch = article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          article.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          article.author.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategories.length === 0 || selectedCategories.includes(article.category);
     return matchesSearch && matchesCategory;
   });
+
+  // Get featured and latest articles from filtered results
+  const featuredArticles = filteredArticles.filter(post => post.featured).slice(0, 2);
+  const latestArticles = filteredArticles.filter(post => !post.featured);
 
   // Show loading state
   if (loading) {
