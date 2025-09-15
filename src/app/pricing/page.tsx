@@ -260,7 +260,7 @@ export default function PricingPage() {
               {
                 icon: Users,
                 title: "Client Management",
-                description: "Manage NDIS participants, support plans and goals with direct communication—no middlemen or confusion."
+                description: "Manage NDIS participants, track informal supports, and send invoices directly to plan managers—no middlemen, no confusion"
               },
               {
                 icon: FileText,
