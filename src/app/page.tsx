@@ -15,7 +15,7 @@ export default function Home() {
     {
       icon: Clock,
       title: "Shift & Time Tracking",
-      description: "Track shifts accurately with automatic billing and recurring shift tools—no upgrade needed.",
+      description: "Record support worker shifts with built-in Kms tracking, simplified billing, and recurring shift scheduling. No upgrade required.",
     },
     {
       icon: FileText,
