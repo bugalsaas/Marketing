@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle, Users, Shield, Clock, FileText, BarChart3, Zap, Star } from "lucide-react";
+import { CheckCircle, Users, Shield, Clock, FileText, BarChart3, Zap, Star, Smartphone } from "lucide-react";
 
 export default function Home() {
   const features = [
@@ -28,9 +28,9 @@ export default function Home() {
       description: "Comprehensive reports and insights to help you optimize your support services.",
     },
     {
-      icon: Shield,
-      title: "NDIS Compliant",
-      description: "Built specifically for NDIS requirements with built-in compliance checks and validation.",
+      icon: Smartphone,
+      title: "Easy to Use, Accessible Anywhere",
+      description: "Bugal is simple to learn, easy to train staff on, and works on any device—wherever you are. Built for NDIS providers, so your team can focus on support, not systems.",
     },
     {
       icon: Zap,
