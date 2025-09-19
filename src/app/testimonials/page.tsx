@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import SchemaMarkup from "@/components/SchemaMarkup";
 import BreadcrumbNavigation from "@/components/BreadcrumbNavigation";
 import { BREADCRUMB_CONFIGS } from "@/components/BreadcrumbNavigation";
+import { TestimonialCarousel } from "@/components/TestimonialCarousel";
 import {
   Search,
   Star,
@@ -346,59 +347,11 @@ export default function TestimonialsPage() {
                 </Button>
               </div>
             ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-                {filteredTestimonials.map((testimonial) => (
-                  <Card key={testimonial.id} className="border-0 shadow-lg hover:shadow-xl transition-shadow">
-                    <CardHeader className="pb-4">
-                      <div className="flex items-start gap-3">
-                        <div className="flex-shrink-0">
-                          <div className="w-12 h-12 bg-gradient-to-br from-[#2563eb] to-[#1e3a8a] rounded-full flex items-center justify-center text-white font-bold">
-                            {testimonial.name.charAt(0)}
-                          </div>
-                        </div>
-                        <div className="flex-1">
-                          <CardTitle className="text-lg text-[#1e3a8a] mb-1">
-                            {testimonial.name}
-                          </CardTitle>
-                          <CardDescription className="text-[#1f2937] font-medium text-sm">
-                            {testimonial.role}
-                          </CardDescription>
-                          {testimonial.company && (
-                            <CardDescription className="text-[#6b7280] text-sm">
-                              {testimonial.company}
-                            </CardDescription>
-                          )}
-                        </div>
-                      </div>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="flex items-center mb-3">
-                        {[...Array(5)].map((_, i) => (
-                          <Star
-                            key={i}
-                            className={`w-4 h-4 ${
-                              i < testimonial.rating ? "text-yellow-400 fill-current" : "text-gray-300"
-                            }`}
-                          />
-                        ))}
-                        <span className="ml-2 text-xs text-gray-600">
-                          {testimonial.rating}/5
-                        </span>
-                      </div>
-                      <blockquote className="text-[#1f2937] leading-relaxed text-sm">
-                        "{testimonial.content.length > 150 
-                          ? `${testimonial.content.substring(0, 150)}...` 
-                          : testimonial.content
-                        }"
-                      </blockquote>
-                      <div className="mt-3 pt-3 border-t border-gray-100">
-                        <Badge variant="outline" className="text-xs">
-                          {getCategoryName(testimonial.category)}
-                        </Badge>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
+              <div className="max-w-4xl mx-auto">
+                <TestimonialCarousel 
+                  testimonials={filteredTestimonials}
+                  className="w-full"
+                />
               </div>
             )}
           </div>
