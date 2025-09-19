@@ -1,11 +1,51 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle, Users, Shield, Clock, FileText, BarChart3, Zap, Star, Smartphone } from "lucide-react";
+import { useState, useEffect } from "react";
+
+interface Testimonial {
+  id: string;
+  name: string;
+  role: string;
+  company: string;
+  content: string;
+  rating: number;
+  photo: string | null;
+  category: string;
+  visible: boolean;
+  featured: boolean;
+  createdAt: string;
+}
 
 export default function Home() {
+  const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  // Fetch featured testimonials from database
+  useEffect(() => {
+    const fetchTestimonials = async () => {
+      try {
+        const response = await fetch('/api/testimonials');
+        if (response.ok) {
+          const data = await response.json();
+          // Get only the first 3 featured testimonials
+          const featuredTestimonials = data.filter((t: Testimonial) => t.featured).slice(0, 3);
+          setTestimonials(featuredTestimonials);
+        }
+      } catch (error) {
+        console.error('Error fetching testimonials:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchTestimonials();
+  }, []);
   const features = [
     {
       icon: Users,
@@ -39,26 +79,33 @@ export default function Home() {
     },
   ];
 
-  const testimonials = [
+  // Fallback testimonials if database is empty
+  const fallbackTestimonials = [
     {
-      quote: "Bugal has transformed how I manage my NDIS practice. It's intuitive, reliable, and saves me hours every week.",
-      author: "Sarah Johnson",
+      id: "fallback-1",
+      name: "Sarah Johnson",
       role: "Independent Support Worker",
+      content: "Bugal has transformed how I manage my NDIS practice. It's intuitive, reliable, and saves me hours every week.",
       rating: 5,
     },
     {
-      quote: "The best NDIS software I've used. Simple to use but powerful enough for all my needs.",
-      author: "Michael Chen",
-      role: "Support Coordinator",
+      id: "fallback-2",
+      name: "Michael Chen",
+      role: "Support Coordinator", 
+      content: "The best NDIS software I've used. Simple to use but powerful enough for all my needs.",
       rating: 5,
     },
     {
-      quote: "Finally, a practice management tool that understands NDIS workers. Highly recommended!",
-      author: "Emma Davis",
+      id: "fallback-3",
+      name: "Emma Davis",
       role: "Occupational Therapist",
+      content: "Finally, a practice management tool that understands NDIS workers. Highly recommended!",
       rating: 5,
     },
   ];
+
+  // Use database testimonials or fallback
+  const displayTestimonials = testimonials.length > 0 ? testimonials : fallbackTestimonials;
 
   return (
     <div className="min-h-screen">
@@ -158,24 +205,44 @@ export default function Home() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="text-center border-0 shadow-lg">
-                <CardContent className="pt-8 pb-6">
-                  <div className="flex justify-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                    ))}
-                  </div>
-                  <blockquote className="text-[#1f2937] mb-4 italic">
-                    "{testimonial.quote}"
-                  </blockquote>
-                  <div>
-                    <p className="font-semibold text-[#1e3a8a]">{testimonial.author}</p>
-                    <p className="text-sm text-[#6b7280]">{testimonial.role}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+            {loading ? (
+              // Loading state
+              Array.from({ length: 3 }).map((_, index) => (
+                <Card key={index} className="text-center border-0 shadow-lg">
+                  <CardContent className="pt-8 pb-6">
+                    <div className="animate-pulse">
+                      <div className="flex justify-center mb-4">
+                        {[...Array(5)].map((_, i) => (
+                          <div key={i} className="w-5 h-5 bg-gray-200 rounded mr-1"></div>
+                        ))}
+                      </div>
+                      <div className="h-16 bg-gray-200 rounded mb-4"></div>
+                      <div className="h-4 bg-gray-200 rounded mb-2"></div>
+                      <div className="h-3 bg-gray-200 rounded w-2/3 mx-auto"></div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))
+            ) : (
+              displayTestimonials.map((testimonial, index) => (
+                <Card key={testimonial.id || index} className="text-center border-0 shadow-lg">
+                  <CardContent className="pt-8 pb-6">
+                    <div className="flex justify-center mb-4">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                      ))}
+                    </div>
+                    <blockquote className="text-[#1f2937] mb-4 italic">
+                      "{testimonial.content}"
+                    </blockquote>
+                    <div>
+                      <p className="font-semibold text-[#1e3a8a]">{testimonial.name}</p>
+                      <p className="text-sm text-[#6b7280]">{testimonial.role}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))
+            )}
           </div>
         </div>
       </section>
