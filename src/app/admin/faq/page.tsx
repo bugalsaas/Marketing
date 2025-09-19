@@ -1,10 +1,13 @@
-import React from "react";
+"use client";
+
+import React, { useState, useEffect } from "react";
 import { AdminLayout } from "@/components/AdminLayout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { 
   Plus, 
   Search, 
@@ -18,106 +21,127 @@ import {
   ChevronDown,
   ChevronRight,
   GripVertical,
-  Star
+  Star,
+  Loader2,
+  AlertCircle
 } from "lucide-react";
 
+interface FAQ {
+  id: string;
+  question: string;
+  answer: string;
+  category: string;
+  order: number;
+  visible: boolean;
+  featured: boolean;
+  createdAt: string;
+  updatedAt: string;
+}
+
 export default function AdminFAQPage() {
-  // Mock data - replace with actual data from database
-  const faqs = [
-    {
-      id: 1,
-      question: "How do I get started with Bugal?",
-      answer: "Getting started is easy! Simply sign up for a free trial, complete your profile setup, and start managing your NDIS practice. Our onboarding wizard will guide you through each step.",
-      category: "Getting Started",
-      status: "published",
-      featured: true,
-      order: 1,
-      createdAt: "2025-01-15",
-      updatedAt: "2025-01-15"
-    },
-    {
-      id: 2,
-      question: "What payment methods do you accept?",
-      answer: "We accept all major credit cards (Visa, Mastercard, American Express) and direct bank transfers. All payments are processed securely through Stripe.",
-      category: "Billing & Payments",
-      status: "published",
-      featured: false,
-      order: 2,
-      createdAt: "2025-01-12",
-      updatedAt: "2025-01-12"
-    },
-    {
-      id: 3,
-      question: "Can I cancel my subscription at any time?",
-      answer: "Yes, you can cancel your subscription at any time. There are no long-term contracts or cancellation fees. You'll continue to have access until the end of your current billing period.",
-      category: "Billing & Payments",
-      status: "published",
-      featured: false,
-      order: 3,
-      createdAt: "2025-01-10",
-      updatedAt: "2025-01-10"
-    },
-    {
-      id: 4,
-      question: "How does Bugal ensure NDIS compliance?",
-      answer: "Bugal is built specifically for NDIS requirements. We regularly update our system to reflect the latest NDIS guidelines and provide built-in compliance checks and reporting tools.",
-      category: "Compliance",
-      status: "published",
-      featured: true,
-      order: 4,
-      createdAt: "2025-01-08",
-      updatedAt: "2025-01-08"
-    },
-    {
-      id: 5,
-      question: "Is my data secure?",
-      answer: "Absolutely. We use enterprise-grade security measures including end-to-end encryption, regular security audits, and compliance with Australian privacy laws. Your data is stored securely in Australian data centers.",
-      category: "Security & Privacy",
-      status: "published",
-      featured: false,
-      order: 5,
-      createdAt: "2025-01-05",
-      updatedAt: "2025-01-05"
-    },
-    {
-      id: 6,
-      question: "Do you offer training and support?",
-      answer: "Yes! We provide comprehensive onboarding, video tutorials, live webinars, and dedicated customer support. Our team is available via email, phone, and live chat during business hours.",
-      category: "Support & Training",
-      status: "draft",
-      featured: false,
-      order: 6,
-      createdAt: "2025-01-03",
-      updatedAt: "2025-01-03"
+  const router = useRouter();
+  const [faqs, setFaqs] = useState<FAQ[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState<string>("all");
+
+  // Fetch FAQs from database
+  useEffect(() => {
+    const fetchFAQs = async () => {
+      try {
+        setLoading(true);
+        const response = await fetch('/api/admin/faq');
+        if (response.ok) {
+          const data = await response.json();
+          setFaqs(data);
+        } else {
+          setError('Failed to fetch FAQs');
+        }
+      } catch (err) {
+        setError('Error fetching FAQs');
+        console.error('Error fetching FAQs:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchFAQs();
+  }, []);
+
+  // Filter FAQs based on search and category
+  const filteredFaqs = faqs.filter(faq => {
+    const matchesSearch = searchTerm === "" || 
+      faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      faq.answer.toLowerCase().includes(searchTerm.toLowerCase());
+    
+    const matchesCategory = selectedCategory === "all" || faq.category === selectedCategory;
+    
+    return matchesSearch && matchesCategory;
+  });
+
+  // Get unique categories for filter
+  const categories = Array.from(new Set(faqs.map(f => f.category).filter(Boolean))) as string[];
+
+  // Delete FAQ function
+  const handleDelete = async (id: string) => {
+    if (!confirm('Are you sure you want to delete this FAQ?')) {
+      return;
     }
-  ];
 
-  const categories = [
-    "Getting Started",
-    "Billing & Payments", 
-    "Compliance",
-    "Security & Privacy",
-    "Support & Training",
-    "Features & Functionality"
-  ];
+    try {
+      const response = await fetch(`/api/admin/faq/${id}`, {
+        method: 'DELETE',
+      });
 
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case "published": return "bg-green-100 text-green-800";
-      case "draft": return "bg-yellow-100 text-yellow-800";
-      case "archived": return "bg-gray-100 text-gray-800";
-      default: return "bg-gray-100 text-gray-800";
+      if (response.ok) {
+        setFaqs(faqs.filter(f => f.id !== id));
+      } else {
+        alert('Failed to delete FAQ');
+      }
+    } catch (error) {
+      console.error('Error deleting FAQ:', error);
+      alert('Error deleting FAQ');
     }
   };
 
-  const getStatusLabel = (status: string) => {
-    switch (status) {
-      case "published": return "Published";
-      case "draft": return "Draft";
-      case "archived": return "Archived";
-      default: return status;
-    }
+  const getStatusColor = (faq: FAQ) => {
+    if (faq.visible) return "bg-green-100 text-green-800";
+    return "bg-yellow-100 text-yellow-800";
   };
+
+  const getStatusLabel = (faq: FAQ) => {
+    if (faq.visible) return "Published";
+    return "Draft";
+  };
+
+  if (loading) {
+    return (
+      <AdminLayout>
+        <div className="flex items-center justify-center min-h-[400px]">
+          <div className="text-center">
+            <Loader2 className="w-8 h-8 animate-spin mx-auto mb-4 text-[#2563eb]" />
+            <p className="text-[#1f2937]">Loading FAQs...</p>
+          </div>
+        </div>
+      </AdminLayout>
+    );
+  }
+
+  if (error) {
+    return (
+      <AdminLayout>
+        <div className="flex items-center justify-center min-h-[400px]">
+          <div className="text-center">
+            <p className="text-red-600 mb-4">{error}</p>
+            <Button onClick={() => window.location.reload()}>
+              Try Again
+            </Button>
+          </div>
+        </div>
+      </AdminLayout>
+    );
+  }
 
   const getCategoryColor = (category: string) => {
     switch (category) {
@@ -182,7 +206,7 @@ export default function AdminFAQPage() {
                 <div>
                   <p className="text-sm font-medium text-[#6b7280]">Published</p>
                   <p className="text-2xl font-bold text-[#1e3a8a]">
-                    {faqs.filter(faq => faq.status === "published").length}
+                    {faqs.filter(faq => faq.visible).length}
                   </p>
                 </div>
                 <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
@@ -232,19 +256,23 @@ export default function AdminFAQPage() {
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#6b7280] w-4 h-4" />
                   <Input
                     placeholder="Search FAQs..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
                     className="pl-10 border-[#6b7280] focus:border-[#2563eb] focus:ring-[#2563eb]"
                   />
                 </div>
               </div>
               <div className="flex gap-2">
-                <Button variant="outline" className="border-[#6b7280] text-[#1f2937] hover:border-[#2563eb] hover:text-[#2563eb]">
-                  <Filter className="w-4 h-4 mr-2" />
-                  All Categories
-                </Button>
-                <Button variant="outline" className="border-[#6b7280] text-[#1f2937] hover:border-[#2563eb] hover:text-[#2563eb]">
-                  <Filter className="w-4 h-4 mr-2" />
-                  All Statuses
-                </Button>
+                <select
+                  value={selectedCategory}
+                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  className="px-3 py-2 border border-[#6b7280] rounded-md focus:border-[#2563eb] focus:ring-[#2563eb]"
+                >
+                  <option value="all">All Categories</option>
+                  {categories.map(category => (
+                    <option key={category} value={category}>{category}</option>
+                  ))}
+                </select>
               </div>
             </div>
           </CardContent>
@@ -253,7 +281,7 @@ export default function AdminFAQPage() {
         {/* FAQs by Category */}
         <div className="space-y-6">
           {categories.map((category) => {
-            const categoryFaqs = faqs.filter(faq => faq.category === category);
+            const categoryFaqs = filteredFaqs.filter(faq => faq.category === category);
             if (categoryFaqs.length === 0) return null;
 
             return (
@@ -295,8 +323,8 @@ export default function AdminFAQPage() {
                                 {faq.featured && (
                                   <Badge className="bg-yellow-100 text-yellow-800 text-xs">Featured</Badge>
                                 )}
-                                <Badge className={getStatusColor(faq.status)}>
-                                  {getStatusLabel(faq.status)}
+                                <Badge className={getStatusColor(faq)}>
+                                  {getStatusLabel(faq)}
                                 </Badge>
                               </div>
                               <p className="text-sm text-[#6b7280] line-clamp-2 ml-9">
@@ -309,14 +337,29 @@ export default function AdminFAQPage() {
                               </div>
                             </div>
                             <div className="flex items-center gap-2">
-                              <Button size="sm" variant="outline" className="border-[#6b7280] text-[#1f2937] hover:border-[#2563eb] hover:text-[#2563eb]">
+                              <Button 
+                                size="sm" 
+                                variant="outline" 
+                                className="border-[#6b7280] text-[#1f2937] hover:border-[#2563eb] hover:text-[#2563eb]"
+                                onClick={() => router.push(`/admin/faq/${faq.id}/view`)}
+                              >
                                 <Eye className="w-4 h-4" />
                               </Button>
-                              <Button size="sm" variant="outline" className="border-[#6b7280] text-[#1f2937] hover:border-[#2563eb] hover:text-[#2563eb]">
+                              <Button 
+                                size="sm" 
+                                variant="outline" 
+                                className="border-[#6b7280] text-[#1f2937] hover:border-[#2563eb] hover:text-[#2563eb]"
+                                onClick={() => router.push(`/admin/faq/${faq.id}/edit`)}
+                              >
                                 <Edit className="w-4 h-4" />
                               </Button>
-                              <Button size="sm" variant="outline" className="border-[#6b7280] text-[#1f2937] hover:border-[#2563eb] hover:text-[#2563eb]">
-                                <MoreHorizontal className="w-4 h-4" />
+                              <Button 
+                                size="sm" 
+                                variant="outline" 
+                                className="border-[#6b7280] text-[#1f2937] hover:border-[#2563eb] hover:text-[#2563eb]"
+                                onClick={() => handleDelete(faq.id)}
+                              >
+                                <Trash2 className="w-4 h-4" />
                               </Button>
                             </div>
                           </div>
