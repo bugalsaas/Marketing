@@ -298,8 +298,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   )}
                   
                   {/* Blog Content */}
-                  <div className="prose prose-lg max-w-none prose-headings:text-[#1e3a8a] prose-a:text-[#2563eb] prose-a:underline prose-strong:text-[#1e3a8a] prose-a:hover:text-[#1e3a8a]">
-                    <div dangerouslySetInnerHTML={{ __html: post.content }} />
+                  <div className="prose prose-lg max-w-none prose-headings:text-[#1e3a8a] prose-strong:text-[#1e3a8a]">
+                    <div 
+                      className="[&_a]:text-[#2563eb] [&_a]:underline [&_a:hover]:text-[#1e3a8a]"
+                      dangerouslySetInnerHTML={{ __html: post.content }} 
+                    />
                   </div>
                   
                   {/* Tags */}

@@ -202,9 +202,12 @@ export default function NewBlogPostPage() {
                     </div>
                   ) : (
                     <div className="min-h-[400px] p-4 border border-[#e5e7eb] rounded-md bg-white">
-                      <div className="prose max-w-none prose-headings:text-[#1e3a8a] prose-a:text-[#2563eb] prose-a:underline prose-strong:text-[#1e3a8a] prose-a:hover:text-[#1e3a8a]">
+                      <div className="prose max-w-none prose-headings:text-[#1e3a8a] prose-strong:text-[#1e3a8a]">
                         {formData.content ? (
-                          <div dangerouslySetInnerHTML={{ __html: formData.content }} />
+                          <div 
+                            className="[&_a]:text-[#2563eb] [&_a]:underline [&_a:hover]:text-[#1e3a8a]"
+                            dangerouslySetInnerHTML={{ __html: formData.content }} 
+                          />
                         ) : (
                           <div className="text-[#6b7280] text-center py-20">
                             <FileText className="w-12 h-12 mx-auto mb-4 text-[#9ca3af]" />

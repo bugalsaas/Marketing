@@ -236,9 +236,12 @@ export default function ViewBlogPostPage() {
                 <CardDescription>Blog post content preview</CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="prose max-w-none prose-headings:text-[#1e3a8a] prose-a:text-[#2563eb] prose-a:underline prose-strong:text-[#1e3a8a] prose-a:hover:text-[#1e3a8a]">
+                <div className="prose max-w-none prose-headings:text-[#1e3a8a] prose-strong:text-[#1e3a8a]">
                   {post.content ? (
-                    <div dangerouslySetInnerHTML={{ __html: post.content }} />
+                    <div 
+                      className="[&_a]:text-[#2563eb] [&_a]:underline [&_a:hover]:text-[#1e3a8a]"
+                      dangerouslySetInnerHTML={{ __html: post.content }} 
+                    />
                   ) : (
                     <div className="text-center py-12 text-[#6b7280]">
                       <FileText className="w-12 h-12 mx-auto mb-4 text-[#9ca3af]" />
