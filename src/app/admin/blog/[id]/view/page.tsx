@@ -236,7 +236,7 @@ export default function ViewBlogPostPage() {
                 <CardDescription>Blog post content preview</CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="prose max-w-none">
+                <div className="prose max-w-none prose-headings:text-[#1e3a8a] prose-a:text-[#2563eb] prose-a:underline prose-strong:text-[#1e3a8a] prose-a:hover:text-[#1e3a8a]">
                   {post.content ? (
                     <div dangerouslySetInnerHTML={{ __html: post.content }} />
                   ) : (

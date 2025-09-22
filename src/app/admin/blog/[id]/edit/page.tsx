@@ -332,7 +332,7 @@ export default function EditBlogPostPage() {
                     </div>
                   ) : (
                     <div className="min-h-[400px] p-4 border border-[#e5e7eb] rounded-md bg-white">
-                      <div className="prose max-w-none">
+                      <div className="prose max-w-none prose-headings:text-[#1e3a8a] prose-a:text-[#2563eb] prose-a:underline prose-strong:text-[#1e3a8a] prose-a:hover:text-[#1e3a8a]">
                         {formData.content ? (
                           <div dangerouslySetInnerHTML={{ __html: formData.content }} />
                         ) : (

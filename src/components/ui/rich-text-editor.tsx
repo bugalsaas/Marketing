@@ -41,7 +41,18 @@ export function RichTextEditor({ value, onChange, placeholder, className }: Rich
   }, [value, isUpdating]);
 
   const execCommand = (command: string, value?: string) => {
-    document.execCommand(command, false, value);
+    if (command === 'formatBlock' && value) {
+      // Handle heading formatting properly
+      document.execCommand('formatBlock', false, value);
+    } else if (command === 'createLink') {
+      // Handle link creation
+      const url = prompt('Enter URL:');
+      if (url) {
+        document.execCommand('createLink', false, url);
+      }
+    } else {
+      document.execCommand(command, false, value);
+    }
     editorRef.current?.focus();
     updateValue();
   };
@@ -112,7 +123,10 @@ export function RichTextEditor({ value, onChange, placeholder, className }: Rich
   const handleLink = () => {
     const url = prompt('Enter URL:');
     if (url) {
-      execCommand('createLink', url);
+      // Validate URL format
+      const urlPattern = /^(https?:\/\/|www\.|mailto:)/i;
+      const fullUrl = urlPattern.test(url) ? url : `https://${url}`;
+      execCommand('createLink', fullUrl);
     }
   };
 
@@ -135,6 +149,9 @@ export function RichTextEditor({ value, onChange, placeholder, className }: Rich
       handleLink();
     } else if (button.command === 'htmlPaste') {
       handleHtmlPaste();
+    } else if (button.command === 'formatBlock' && button.value) {
+      // Handle heading formatting
+      execCommand(button.command, button.value);
     } else if (button.value) {
       execCommand(button.command, button.value);
     } else {
@@ -182,6 +199,56 @@ export function RichTextEditor({ value, onChange, placeholder, className }: Rich
           backgroundImage: !value ? `url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='smallGrid' width='10' height='10' patternUnits='userSpaceOnUse'%3E%3Cpath d='M 10 0 L 0 0 0 10' fill='none' stroke='%23f3f4f6' stroke-width='0.5'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23smallGrid)'/%3E%3C/svg%3E")` : 'none'
         }}
       />
+      
+      {/* Add CSS styles for proper link and heading display */}
+      <style jsx>{`
+        div[contenteditable] a {
+          color: #2563eb !important;
+          text-decoration: underline !important;
+        }
+        div[contenteditable] a:hover {
+          color: #1e3a8a !important;
+        }
+        div[contenteditable] h1 {
+          font-size: 1.875rem !important;
+          font-weight: bold !important;
+          margin: 1rem 0 !important;
+          color: #1e3a8a !important;
+        }
+        div[contenteditable] h2 {
+          font-size: 1.5rem !important;
+          font-weight: bold !important;
+          margin: 0.875rem 0 !important;
+          color: #1e3a8a !important;
+        }
+        div[contenteditable] h3 {
+          font-size: 1.25rem !important;
+          font-weight: bold !important;
+          margin: 0.75rem 0 !important;
+          color: #1e3a8a !important;
+        }
+        div[contenteditable] blockquote {
+          border-left: 4px solid #e5e7eb !important;
+          padding-left: 1rem !important;
+          margin: 1rem 0 !important;
+          font-style: italic !important;
+          color: #6b7280 !important;
+        }
+        div[contenteditable] pre {
+          background-color: #f9fafb !important;
+          padding: 1rem !important;
+          border-radius: 0.375rem !important;
+          font-family: monospace !important;
+          overflow-x: auto !important;
+        }
+        div[contenteditable] ul, div[contenteditable] ol {
+          margin: 0.5rem 0 !important;
+          padding-left: 1.5rem !important;
+        }
+        div[contenteditable] li {
+          margin: 0.25rem 0 !important;
+        }
+      `}</style>
     </div>
   );
 }
