@@ -60,7 +60,29 @@ export function RichTextEditor({ value, onChange, placeholder, className }: Rich
         
         if (command === 'formatBlock' && value) {
           // Handle heading and block formatting
-          success = document.execCommand('formatBlock', false, value);
+          // For headings, we need to use the tag name without brackets
+          const tagName = value.replace(/[<>]/g, '');
+          console.log('Executing formatBlock with tag:', tagName);
+          success = document.execCommand('formatBlock', false, tagName);
+          console.log('formatBlock success:', success);
+          
+          // If formatBlock fails, try alternative method
+          if (!success && (tagName === 'h1' || tagName === 'h2' || tagName === 'h3')) {
+            console.log('Trying alternative heading method');
+            const selection = window.getSelection();
+            if (selection && selection.rangeCount > 0) {
+              const range = selection.getRangeAt(0);
+              const selectedText = range.toString();
+              if (selectedText) {
+                const headingElement = document.createElement(tagName);
+                headingElement.textContent = selectedText;
+                range.deleteContents();
+                range.insertNode(headingElement);
+                success = true;
+                console.log('Alternative heading method success:', success);
+              }
+            }
+          }
         } else if (command === 'createLink') {
           // Handle link creation
           const url = prompt('Enter URL:');
