@@ -67,33 +67,80 @@ export function RichTextEditor({ value, onChange, placeholder, className }: Rich
           console.log('formatBlock success:', success);
           
           // If formatBlock fails, try alternative method
-          if (!success && (tagName === 'h1' || tagName === 'h2' || tagName === 'h3')) {
-            console.log('Trying alternative heading method');
+          if (!success && (tagName === 'h1' || tagName === 'h2' || tagName === 'h3' || tagName === 'blockquote')) {
+            console.log('Trying alternative formatting method for:', tagName);
             const selection = window.getSelection();
             if (selection && selection.rangeCount > 0) {
               const range = selection.getRangeAt(0);
               const selectedText = range.toString();
               if (selectedText) {
-                const headingElement = document.createElement(tagName);
-                headingElement.textContent = selectedText;
+                const element = document.createElement(tagName);
+                element.textContent = selectedText;
                 range.deleteContents();
-                range.insertNode(headingElement);
+                range.insertNode(element);
                 success = true;
-                console.log('Alternative heading method success:', success);
+                console.log('Alternative formatting method success:', success);
               }
             }
           }
         } else if (command === 'createLink') {
           // Handle link creation
+          console.log('Executing createLink');
           const url = prompt('Enter URL:');
           if (url) {
             const urlPattern = /^(https?:\/\/|www\.|mailto:)/i;
             const fullUrl = urlPattern.test(url) ? url : `https://${url}`;
             success = document.execCommand('createLink', false, fullUrl);
+            console.log('createLink success:', success);
+            
+            // If command fails, try alternative method
+            if (!success) {
+              console.log('Trying alternative link method');
+              const selection = window.getSelection();
+              if (selection && selection.rangeCount > 0) {
+                const range = selection.getRangeAt(0);
+                const selectedText = range.toString();
+                if (selectedText) {
+                  const linkElement = document.createElement('a');
+                  linkElement.href = fullUrl;
+                  linkElement.textContent = selectedText;
+                  linkElement.target = '_blank';
+                  linkElement.rel = 'noopener noreferrer';
+                  range.deleteContents();
+                  range.insertNode(linkElement);
+                  success = true;
+                  console.log('Alternative link method success:', success);
+                }
+              }
+            }
           }
         } else if (command === 'unlink') {
           // Handle link removal
+          console.log('Executing unlink');
           success = document.execCommand('unlink', false);
+          console.log('unlink success:', success);
+          
+          // If command fails, try alternative method
+          if (!success) {
+            console.log('Trying alternative unlink method');
+            const selection = window.getSelection();
+            if (selection && selection.rangeCount > 0) {
+              const range = selection.getRangeAt(0);
+              const linkElement = range.commonAncestorContainer.nodeType === Node.ELEMENT_NODE 
+                ? range.commonAncestorContainer as Element
+                : range.commonAncestorContainer.parentElement;
+              
+              if (linkElement && linkElement.tagName === 'A') {
+                const textContent = linkElement.textContent;
+                const parent = linkElement.parentNode;
+                if (parent && textContent) {
+                  parent.replaceChild(document.createTextNode(textContent), linkElement);
+                  success = true;
+                  console.log('Alternative unlink method success:', success);
+                }
+              }
+            }
+          }
         } else if (command === 'insertUnorderedList') {
           // Handle bullet list
           console.log('Executing insertUnorderedList');
