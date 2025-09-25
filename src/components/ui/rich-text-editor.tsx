@@ -41,20 +41,40 @@ export function RichTextEditor({ value, onChange, placeholder, className }: Rich
   }, [value, isUpdating]);
 
   const execCommand = (command: string, value?: string) => {
-    if (command === 'formatBlock' && value) {
-      // Handle heading formatting properly
-      document.execCommand('formatBlock', false, value);
-    } else if (command === 'createLink') {
-      // Handle link creation
-      const url = prompt('Enter URL:');
-      if (url) {
-        document.execCommand('createLink', false, url);
-      }
-    } else {
-      document.execCommand(command, false, value);
-    }
+    // Ensure the editor is focused before executing commands
     editorRef.current?.focus();
-    updateValue();
+    
+    try {
+      if (command === 'formatBlock' && value) {
+        // Handle heading and block formatting
+        document.execCommand('formatBlock', false, value);
+      } else if (command === 'createLink') {
+        // Handle link creation
+        const url = prompt('Enter URL:');
+        if (url) {
+          const urlPattern = /^(https?:\/\/|www\.|mailto:)/i;
+          const fullUrl = urlPattern.test(url) ? url : `https://${url}`;
+          document.execCommand('createLink', false, fullUrl);
+        }
+      } else if (command === 'unlink') {
+        // Handle link removal
+        document.execCommand('unlink', false);
+      } else if (command === 'insertUnorderedList') {
+        // Handle bullet list
+        document.execCommand('insertUnorderedList', false);
+      } else if (command === 'insertOrderedList') {
+        // Handle numbered list
+        document.execCommand('insertOrderedList', false);
+      } else {
+        // Handle all other commands
+        document.execCommand(command, false, value);
+      }
+    } catch (error) {
+      console.error('Error executing command:', command, error);
+    }
+    
+    // Update the value after command execution
+    setTimeout(() => updateValue(), 0);
   };
 
   const updateValue = () => {
@@ -71,6 +91,32 @@ export function RichTextEditor({ value, onChange, placeholder, className }: Rich
     if (e.key === 'Enter' && e.shiftKey) {
       e.preventDefault();
       execCommand('insertLineBreak');
+    }
+    
+    // Handle keyboard shortcuts
+    if (e.ctrlKey || e.metaKey) {
+      switch (e.key) {
+        case 'b':
+          e.preventDefault();
+          execCommand('bold');
+          break;
+        case 'i':
+          e.preventDefault();
+          execCommand('italic');
+          break;
+        case 'u':
+          e.preventDefault();
+          execCommand('underline');
+          break;
+        case 'z':
+          e.preventDefault();
+          execCommand('undo');
+          break;
+        case 'y':
+          e.preventDefault();
+          execCommand('redo');
+          break;
+      }
     }
   };
 
@@ -120,15 +166,6 @@ export function RichTextEditor({ value, onChange, placeholder, className }: Rich
     { icon: Redo, command: 'redo', title: 'Redo (Ctrl+Y)' },
   ];
 
-  const handleLink = () => {
-    const url = prompt('Enter URL:');
-    if (url) {
-      // Validate URL format
-      const urlPattern = /^(https?:\/\/|www\.|mailto:)/i;
-      const fullUrl = urlPattern.test(url) ? url : `https://${url}`;
-      execCommand('createLink', fullUrl);
-    }
-  };
 
   const handleHtmlPaste = () => {
     const htmlContent = prompt('Paste your HTML content here:');
@@ -145,17 +182,11 @@ export function RichTextEditor({ value, onChange, placeholder, className }: Rich
   };
 
   const handleCommand = (button: any) => {
-    if (button.command === 'createLink') {
-      handleLink();
-    } else if (button.command === 'htmlPaste') {
+    if (button.command === 'htmlPaste') {
       handleHtmlPaste();
-    } else if (button.command === 'formatBlock' && button.value) {
-      // Handle heading formatting
-      execCommand(button.command, button.value);
-    } else if (button.value) {
-      execCommand(button.command, button.value);
     } else {
-      execCommand(button.command);
+      // For all other commands, use the execCommand function
+      execCommand(button.command, button.value);
     }
   };
 
@@ -247,6 +278,13 @@ export function RichTextEditor({ value, onChange, placeholder, className }: Rich
         }
         div[contenteditable] li {
           margin: 0.25rem 0 !important;
+          display: list-item !important;
+        }
+        div[contenteditable] ul li {
+          list-style-type: disc !important;
+        }
+        div[contenteditable] ol li {
+          list-style-type: decimal !important;
         }
       `}</style>
     </div>
