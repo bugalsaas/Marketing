@@ -40,177 +40,228 @@ export function RichTextEditor({ value, onChange, placeholder, className }: Rich
     }
   }, [value, isUpdating]);
 
-  const execCommand = (command: string, value?: string) => {
-    // Ensure the editor is focused before executing commands
-    if (editorRef.current) {
-      editorRef.current.focus();
+  // Modern text formatting using Selection API
+  const formatText = (command: string, value?: string) => {
+    if (!editorRef.current) return;
+
+    editorRef.current.focus();
+    const selection = window.getSelection();
+    
+    if (!selection || selection.rangeCount === 0) {
+      // If no selection, create a range at the end of the editor
+      const range = document.createRange();
+      range.selectNodeContents(editorRef.current);
+      range.collapse(false);
+      selection?.removeAllRanges();
+      selection?.addRange(range);
+    }
+
+    try {
+      const range = selection.getRangeAt(0);
       
-      // Ensure there's a selection or create one
-      const selection = window.getSelection();
-      if (!selection || selection.rangeCount === 0) {
-        // If no selection, select all text in the editor
-        const range = document.createRange();
-        range.selectNodeContents(editorRef.current);
-        selection?.removeAllRanges();
-        selection?.addRange(range);
+      switch (command) {
+        case 'bold':
+          wrapWithTag('strong');
+          break;
+        case 'italic':
+          wrapWithTag('em');
+          break;
+        case 'underline':
+          wrapWithTag('u');
+          break;
+        case 'formatBlock':
+          if (value) {
+            const tagName = value.replace(/[<>]/g, '');
+            formatBlock(tagName);
+          }
+          break;
+        case 'insertUnorderedList':
+          createList('ul');
+          break;
+        case 'insertOrderedList':
+          createList('ol');
+          break;
+        case 'createLink':
+          createLink();
+          break;
+        case 'unlink':
+          removeLink();
+          break;
+        case 'undo':
+          // Note: Modern browsers don't support programmatic undo
+          console.warn('Undo is not supported in modern browsers');
+          break;
+        case 'redo':
+          // Note: Modern browsers don't support programmatic redo
+          console.warn('Redo is not supported in modern browsers');
+          break;
+        default:
+          console.warn(`Command ${command} not implemented`);
       }
       
-      try {
-        let success = false;
-        
-        if (command === 'formatBlock' && value) {
-          // Handle heading and block formatting
-          // For headings, we need to use the tag name without brackets
-          const tagName = value.replace(/[<>]/g, '');
-          console.log('Executing formatBlock with tag:', tagName);
-          success = document.execCommand('formatBlock', false, tagName);
-          console.log('formatBlock success:', success);
-          
-          // If formatBlock fails, try alternative method
-          if (!success && (tagName === 'h1' || tagName === 'h2' || tagName === 'h3' || tagName === 'blockquote')) {
-            console.log('Trying alternative formatting method for:', tagName);
-            const selection = window.getSelection();
-            if (selection && selection.rangeCount > 0) {
-              const range = selection.getRangeAt(0);
-              const selectedText = range.toString();
-              if (selectedText) {
-                const element = document.createElement(tagName);
-                element.textContent = selectedText;
-                range.deleteContents();
-                range.insertNode(element);
-                success = true;
-                console.log('Alternative formatting method success:', success);
-              }
-            }
+      updateValue();
+    } catch (error) {
+      console.error('Error executing command:', command, error);
+    }
+  };
+
+  const wrapWithTag = (tagName: string) => {
+    const selection = window.getSelection();
+    if (!selection || selection.rangeCount === 0) return;
+
+    const range = selection.getRangeAt(0);
+    const selectedText = range.toString();
+    
+    if (selectedText) {
+      // Check if the selection is already wrapped with this tag
+      const container = range.commonAncestorContainer;
+      const element = container.nodeType === Node.ELEMENT_NODE 
+        ? container as Element
+        : container.parentElement;
+      
+      if (element && element.tagName.toLowerCase() === tagName) {
+        // Unwrap the tag
+        const parent = element.parentNode;
+        if (parent) {
+          while (element.firstChild) {
+            parent.insertBefore(element.firstChild, element);
           }
-        } else if (command === 'createLink') {
-          // Handle link creation
-          console.log('Executing createLink');
-          const url = prompt('Enter URL:');
-          if (url) {
-            const urlPattern = /^(https?:\/\/|www\.|mailto:)/i;
-            const fullUrl = urlPattern.test(url) ? url : `https://${url}`;
-            success = document.execCommand('createLink', false, fullUrl);
-            console.log('createLink success:', success);
-            
-            // If command fails, try alternative method
-            if (!success) {
-              console.log('Trying alternative link method');
-              const selection = window.getSelection();
-              if (selection && selection.rangeCount > 0) {
-                const range = selection.getRangeAt(0);
-                const selectedText = range.toString();
-                if (selectedText) {
-                  const linkElement = document.createElement('a');
-                  linkElement.href = fullUrl;
-                  linkElement.textContent = selectedText;
-                  linkElement.target = '_blank';
-                  linkElement.rel = 'noopener noreferrer';
-                  range.deleteContents();
-                  range.insertNode(linkElement);
-                  success = true;
-                  console.log('Alternative link method success:', success);
-                }
-              }
-            }
-          }
-        } else if (command === 'unlink') {
-          // Handle link removal
-          console.log('Executing unlink');
-          success = document.execCommand('unlink', false);
-          console.log('unlink success:', success);
-          
-          // If command fails, try alternative method
-          if (!success) {
-            console.log('Trying alternative unlink method');
-            const selection = window.getSelection();
-            if (selection && selection.rangeCount > 0) {
-              const range = selection.getRangeAt(0);
-              const linkElement = range.commonAncestorContainer.nodeType === Node.ELEMENT_NODE 
-                ? range.commonAncestorContainer as Element
-                : range.commonAncestorContainer.parentElement;
-              
-              if (linkElement && linkElement.tagName === 'A') {
-                const textContent = linkElement.textContent;
-                const parent = linkElement.parentNode;
-                if (parent && textContent) {
-                  parent.replaceChild(document.createTextNode(textContent), linkElement);
-                  success = true;
-                  console.log('Alternative unlink method success:', success);
-                }
-              }
-            }
-          }
-        } else if (command === 'insertUnorderedList') {
-          // Handle bullet list
-          console.log('Executing insertUnorderedList');
-          success = document.execCommand('insertUnorderedList', false);
-          console.log('insertUnorderedList success:', success);
-          
-          // If command fails, try alternative method
-          if (!success) {
-            console.log('Trying alternative unordered list method');
-            const selection = window.getSelection();
-            if (selection && selection.rangeCount > 0) {
-              const range = selection.getRangeAt(0);
-              const selectedText = range.toString();
-              if (selectedText) {
-                const lines = selectedText.split('\n').filter(line => line.trim());
-                const ul = document.createElement('ul');
-                lines.forEach(line => {
-                  const li = document.createElement('li');
-                  li.textContent = line.trim();
-                  ul.appendChild(li);
-                });
-                range.deleteContents();
-                range.insertNode(ul);
-                success = true;
-                console.log('Alternative unordered list method success:', success);
-              }
-            }
-          }
-        } else if (command === 'insertOrderedList') {
-          // Handle numbered list
-          console.log('Executing insertOrderedList');
-          success = document.execCommand('insertOrderedList', false);
-          console.log('insertOrderedList success:', success);
-          
-          // If command fails, try alternative method
-          if (!success) {
-            console.log('Trying alternative ordered list method');
-            const selection = window.getSelection();
-            if (selection && selection.rangeCount > 0) {
-              const range = selection.getRangeAt(0);
-              const selectedText = range.toString();
-              if (selectedText) {
-                const lines = selectedText.split('\n').filter(line => line.trim());
-                const ol = document.createElement('ol');
-                lines.forEach(line => {
-                  const li = document.createElement('li');
-                  li.textContent = line.trim();
-                  ol.appendChild(li);
-                });
-                range.deleteContents();
-                range.insertNode(ol);
-                success = true;
-                console.log('Alternative ordered list method success:', success);
-              }
-            }
-          }
-        } else {
-          // Handle all other commands
-          success = document.execCommand(command, false, value);
+          parent.removeChild(element);
         }
-        
-        if (!success) {
-          console.warn(`Command ${command} failed to execute`);
+      } else {
+        // Wrap with the tag
+        const wrapper = document.createElement(tagName);
+        try {
+          range.surroundContents(wrapper);
+        } catch (e) {
+          // If surroundContents fails, use extractContents
+          const contents = range.extractContents();
+          wrapper.appendChild(contents);
+          range.insertNode(wrapper);
         }
-        
-        // Force a re-render by updating the value
-        updateValue();
-        
-      } catch (error) {
-        console.error('Error executing command:', command, error);
+      }
+    } else {
+      // No selection, insert the tag and place cursor inside
+      const wrapper = document.createElement(tagName);
+      wrapper.textContent = 'Text';
+      range.insertNode(wrapper);
+      
+      // Place cursor inside the wrapper
+      const newRange = document.createRange();
+      newRange.setStart(wrapper, 0);
+      newRange.setEnd(wrapper, 0);
+      selection.removeAllRanges();
+      selection.addRange(newRange);
+    }
+  };
+
+  const formatBlock = (tagName: string) => {
+    const selection = window.getSelection();
+    if (!selection || selection.rangeCount === 0) return;
+
+    const range = selection.getRangeAt(0);
+    const selectedText = range.toString();
+    
+    if (selectedText) {
+      const element = document.createElement(tagName);
+      element.textContent = selectedText;
+      range.deleteContents();
+      range.insertNode(element);
+    } else {
+      // No selection, create a new block element
+      const element = document.createElement(tagName);
+      element.textContent = 'Heading';
+      range.insertNode(element);
+      
+      // Place cursor inside the element
+      const newRange = document.createRange();
+      newRange.setStart(element, 0);
+      newRange.setEnd(element, 0);
+      selection.removeAllRanges();
+      selection.addRange(newRange);
+    }
+  };
+
+  const createList = (listType: 'ul' | 'ol') => {
+    const selection = window.getSelection();
+    if (!selection || selection.rangeCount === 0) return;
+
+    const range = selection.getRangeAt(0);
+    const selectedText = range.toString();
+    
+    if (selectedText) {
+      const lines = selectedText.split('\n').filter(line => line.trim());
+      const list = document.createElement(listType);
+      
+      lines.forEach(line => {
+        const li = document.createElement('li');
+        li.textContent = line.trim();
+        list.appendChild(li);
+      });
+      
+      range.deleteContents();
+      range.insertNode(list);
+    } else {
+      // No selection, create a new list with one item
+      const list = document.createElement(listType);
+      const li = document.createElement('li');
+      li.textContent = 'List item';
+      list.appendChild(li);
+      
+      range.insertNode(list);
+      
+      // Place cursor inside the first list item
+      const newRange = document.createRange();
+      newRange.setStart(li, 0);
+      newRange.setEnd(li, 0);
+      selection.removeAllRanges();
+      selection.addRange(newRange);
+    }
+  };
+
+  const createLink = () => {
+    const selection = window.getSelection();
+    if (!selection || selection.rangeCount === 0) return;
+
+    const range = selection.getRangeAt(0);
+    const selectedText = range.toString();
+    
+    if (!selectedText) {
+      alert('Please select text to create a link');
+      return;
+    }
+
+    const url = prompt('Enter URL:');
+    if (!url) return;
+
+    const urlPattern = /^(https?:\/\/|www\.|mailto:)/i;
+    const fullUrl = urlPattern.test(url) ? url : `https://${url}`;
+    
+    const linkElement = document.createElement('a');
+    linkElement.href = fullUrl;
+    linkElement.textContent = selectedText;
+    linkElement.target = '_blank';
+    linkElement.rel = 'noopener noreferrer';
+    
+    range.deleteContents();
+    range.insertNode(linkElement);
+  };
+
+  const removeLink = () => {
+    const selection = window.getSelection();
+    if (!selection || selection.rangeCount === 0) return;
+
+    const range = selection.getRangeAt(0);
+    const container = range.commonAncestorContainer;
+    const element = container.nodeType === Node.ELEMENT_NODE 
+      ? container as Element
+      : container.parentElement;
+    
+    if (element && element.tagName === 'A') {
+      const textContent = element.textContent;
+      const parent = element.parentNode;
+      if (parent && textContent) {
+        parent.replaceChild(document.createTextNode(textContent), element);
       }
     }
   };
@@ -228,7 +279,17 @@ export function RichTextEditor({ value, onChange, placeholder, className }: Rich
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter' && e.shiftKey) {
       e.preventDefault();
-      execCommand('insertLineBreak');
+      // Insert line break
+      const selection = window.getSelection();
+      if (selection && selection.rangeCount > 0) {
+        const range = selection.getRangeAt(0);
+        const br = document.createElement('br');
+        range.insertNode(br);
+        range.setStartAfter(br);
+        range.setEndAfter(br);
+        selection.removeAllRanges();
+        selection.addRange(range);
+      }
     }
     
     // Handle keyboard shortcuts
@@ -236,23 +297,15 @@ export function RichTextEditor({ value, onChange, placeholder, className }: Rich
       switch (e.key) {
         case 'b':
           e.preventDefault();
-          execCommand('bold');
+          formatText('bold');
           break;
         case 'i':
           e.preventDefault();
-          execCommand('italic');
+          formatText('italic');
           break;
         case 'u':
           e.preventDefault();
-          execCommand('underline');
-          break;
-        case 'z':
-          e.preventDefault();
-          execCommand('undo');
-          break;
-        case 'y':
-          e.preventDefault();
-          execCommand('redo');
+          formatText('underline');
           break;
       }
     }
@@ -271,11 +324,35 @@ export function RichTextEditor({ value, onChange, placeholder, className }: Rich
     const textData = e.clipboardData.getData('text/plain');
     
     if (htmlData) {
-      // If HTML is available, insert it directly
-      document.execCommand('insertHTML', false, htmlData);
+      // Clean and sanitize the HTML
+      const cleanHtml = htmlData
+        .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '') // Remove scripts
+        .replace(/<iframe\b[^<]*(?:(?!<\/iframe>)<[^<]*)*<\/iframe>/gi, '') // Remove iframes
+        .replace(/on\w+="[^"]*"/gi, ''); // Remove event handlers
+      
+      const selection = window.getSelection();
+      if (selection && selection.rangeCount > 0) {
+        const range = selection.getRangeAt(0);
+        range.deleteContents();
+        
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = cleanHtml;
+        
+        const fragment = document.createDocumentFragment();
+        while (tempDiv.firstChild) {
+          fragment.appendChild(tempDiv.firstChild);
+        }
+        
+        range.insertNode(fragment);
+      }
     } else if (textData) {
-      // Fallback to plain text
-      document.execCommand('insertText', false, textData);
+      // Insert plain text
+      const selection = window.getSelection();
+      if (selection && selection.rangeCount > 0) {
+        const range = selection.getRangeAt(0);
+        range.deleteContents();
+        range.insertNode(document.createTextNode(textData));
+      }
     }
     
     updateValue();
@@ -304,7 +381,6 @@ export function RichTextEditor({ value, onChange, placeholder, className }: Rich
     { icon: Redo, command: 'redo', title: 'Redo (Ctrl+Y)' },
   ];
 
-
   const handleHtmlPaste = () => {
     const htmlContent = prompt('Paste your HTML content here:');
     if (htmlContent) {
@@ -314,8 +390,22 @@ export function RichTextEditor({ value, onChange, placeholder, className }: Rich
         .replace(/<iframe\b[^<]*(?:(?!<\/iframe>)<[^<]*)*<\/iframe>/gi, '') // Remove iframes
         .replace(/on\w+="[^"]*"/gi, ''); // Remove event handlers
       
-      document.execCommand('insertHTML', false, cleanHtml);
-      updateValue();
+      const selection = window.getSelection();
+      if (selection && selection.rangeCount > 0) {
+        const range = selection.getRangeAt(0);
+        range.deleteContents();
+        
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = cleanHtml;
+        
+        const fragment = document.createDocumentFragment();
+        while (tempDiv.firstChild) {
+          fragment.appendChild(tempDiv.firstChild);
+        }
+        
+        range.insertNode(fragment);
+        updateValue();
+      }
     }
   };
 
@@ -332,8 +422,8 @@ export function RichTextEditor({ value, onChange, placeholder, className }: Rich
         }, 150);
       }
       
-      // For all other commands, use the execCommand function
-      execCommand(button.command, button.value);
+      // For all other commands, use the formatText function
+      formatText(button.command, button.value);
     }
   };
 
