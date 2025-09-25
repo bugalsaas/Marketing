@@ -42,39 +42,58 @@ export function RichTextEditor({ value, onChange, placeholder, className }: Rich
 
   const execCommand = (command: string, value?: string) => {
     // Ensure the editor is focused before executing commands
-    editorRef.current?.focus();
-    
-    try {
-      if (command === 'formatBlock' && value) {
-        // Handle heading and block formatting
-        document.execCommand('formatBlock', false, value);
-      } else if (command === 'createLink') {
-        // Handle link creation
-        const url = prompt('Enter URL:');
-        if (url) {
-          const urlPattern = /^(https?:\/\/|www\.|mailto:)/i;
-          const fullUrl = urlPattern.test(url) ? url : `https://${url}`;
-          document.execCommand('createLink', false, fullUrl);
-        }
-      } else if (command === 'unlink') {
-        // Handle link removal
-        document.execCommand('unlink', false);
-      } else if (command === 'insertUnorderedList') {
-        // Handle bullet list
-        document.execCommand('insertUnorderedList', false);
-      } else if (command === 'insertOrderedList') {
-        // Handle numbered list
-        document.execCommand('insertOrderedList', false);
-      } else {
-        // Handle all other commands
-        document.execCommand(command, false, value);
+    if (editorRef.current) {
+      editorRef.current.focus();
+      
+      // Ensure there's a selection or create one
+      const selection = window.getSelection();
+      if (!selection || selection.rangeCount === 0) {
+        // If no selection, select all text in the editor
+        const range = document.createRange();
+        range.selectNodeContents(editorRef.current);
+        selection?.removeAllRanges();
+        selection?.addRange(range);
       }
-    } catch (error) {
-      console.error('Error executing command:', command, error);
+      
+      try {
+        let success = false;
+        
+        if (command === 'formatBlock' && value) {
+          // Handle heading and block formatting
+          success = document.execCommand('formatBlock', false, value);
+        } else if (command === 'createLink') {
+          // Handle link creation
+          const url = prompt('Enter URL:');
+          if (url) {
+            const urlPattern = /^(https?:\/\/|www\.|mailto:)/i;
+            const fullUrl = urlPattern.test(url) ? url : `https://${url}`;
+            success = document.execCommand('createLink', false, fullUrl);
+          }
+        } else if (command === 'unlink') {
+          // Handle link removal
+          success = document.execCommand('unlink', false);
+        } else if (command === 'insertUnorderedList') {
+          // Handle bullet list
+          success = document.execCommand('insertUnorderedList', false);
+        } else if (command === 'insertOrderedList') {
+          // Handle numbered list
+          success = document.execCommand('insertOrderedList', false);
+        } else {
+          // Handle all other commands
+          success = document.execCommand(command, false, value);
+        }
+        
+        if (!success) {
+          console.warn(`Command ${command} failed to execute`);
+        }
+        
+        // Force a re-render by updating the value
+        updateValue();
+        
+      } catch (error) {
+        console.error('Error executing command:', command, error);
+      }
     }
-    
-    // Update the value after command execution
-    setTimeout(() => updateValue(), 0);
   };
 
   const updateValue = () => {
@@ -185,6 +204,15 @@ export function RichTextEditor({ value, onChange, placeholder, className }: Rich
     if (button.command === 'htmlPaste') {
       handleHtmlPaste();
     } else {
+      // Add visual feedback for button press
+      const buttonElement = document.querySelector(`[data-command="${button.command}"]`);
+      if (buttonElement) {
+        buttonElement.classList.add('bg-blue-100', 'scale-95');
+        setTimeout(() => {
+          buttonElement.classList.remove('bg-blue-100', 'scale-95');
+        }, 150);
+      }
+      
       // For all other commands, use the execCommand function
       execCommand(button.command, button.value);
     }
@@ -203,7 +231,8 @@ export function RichTextEditor({ value, onChange, placeholder, className }: Rich
               type="button"
               variant="ghost"
               size="sm"
-              className="h-8 w-8 p-0 hover:bg-[#e5e7eb] text-[#6b7280] hover:text-[#1f2937]"
+              data-command={button.command}
+              className="h-8 w-8 p-0 hover:bg-[#e5e7eb] text-[#6b7280] hover:text-[#1f2937] transition-all duration-150"
               onClick={() => handleCommand(button)}
               title={button.title}
             >
@@ -233,6 +262,9 @@ export function RichTextEditor({ value, onChange, placeholder, className }: Rich
       
       {/* Add CSS styles for proper link and heading display */}
       <style jsx>{`
+        div[contenteditable] {
+          line-height: 1.6 !important;
+        }
         div[contenteditable] a {
           color: #2563eb !important;
           text-decoration: underline !important;
@@ -240,23 +272,38 @@ export function RichTextEditor({ value, onChange, placeholder, className }: Rich
         div[contenteditable] a:hover {
           color: #1e3a8a !important;
         }
-        div[contenteditable] h1 {
-          font-size: 1.875rem !important;
+        div[contenteditable] strong, div[contenteditable] b {
           font-weight: bold !important;
-          margin: 1rem 0 !important;
+          color: #1f2937 !important;
+        }
+        div[contenteditable] em, div[contenteditable] i {
+          font-style: italic !important;
+          color: #1f2937 !important;
+        }
+        div[contenteditable] u {
+          text-decoration: underline !important;
+          color: #1f2937 !important;
+        }
+        div[contenteditable] h1 {
+          font-size: 2rem !important;
+          font-weight: bold !important;
+          margin: 1.5rem 0 1rem 0 !important;
           color: #1e3a8a !important;
+          line-height: 1.2 !important;
         }
         div[contenteditable] h2 {
           font-size: 1.5rem !important;
           font-weight: bold !important;
-          margin: 0.875rem 0 !important;
+          margin: 1.25rem 0 0.75rem 0 !important;
           color: #1e3a8a !important;
+          line-height: 1.3 !important;
         }
         div[contenteditable] h3 {
           font-size: 1.25rem !important;
           font-weight: bold !important;
-          margin: 0.75rem 0 !important;
+          margin: 1rem 0 0.5rem 0 !important;
           color: #1e3a8a !important;
+          line-height: 1.4 !important;
         }
         div[contenteditable] blockquote {
           border-left: 4px solid #e5e7eb !important;
@@ -264,27 +311,38 @@ export function RichTextEditor({ value, onChange, placeholder, className }: Rich
           margin: 1rem 0 !important;
           font-style: italic !important;
           color: #6b7280 !important;
+          background-color: #f9fafb !important;
+          padding: 0.75rem 1rem !important;
         }
         div[contenteditable] pre {
           background-color: #f9fafb !important;
           padding: 1rem !important;
           border-radius: 0.375rem !important;
-          font-family: monospace !important;
+          font-family: 'Courier New', monospace !important;
           overflow-x: auto !important;
+          border: 1px solid #e5e7eb !important;
         }
         div[contenteditable] ul, div[contenteditable] ol {
-          margin: 0.5rem 0 !important;
+          margin: 0.75rem 0 !important;
           padding-left: 1.5rem !important;
         }
         div[contenteditable] li {
           margin: 0.25rem 0 !important;
           display: list-item !important;
+          line-height: 1.5 !important;
         }
         div[contenteditable] ul li {
           list-style-type: disc !important;
         }
         div[contenteditable] ol li {
           list-style-type: decimal !important;
+        }
+        div[contenteditable] ul li::marker {
+          color: #6b7280 !important;
+        }
+        div[contenteditable] ol li::marker {
+          color: #6b7280 !important;
+          font-weight: bold !important;
         }
       `}</style>
     </div>
