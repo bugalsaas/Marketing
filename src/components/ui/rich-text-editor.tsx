@@ -56,36 +56,40 @@ export function RichTextEditor({ value, onChange, placeholder, className }: Rich
       selection?.addRange(range);
     }
 
+    // Re-get selection after potential creation
+    const currentSelection = window.getSelection();
+    if (!currentSelection || currentSelection.rangeCount === 0) return;
+
     try {
-      const range = selection.getRangeAt(0);
+      const range = currentSelection.getRangeAt(0);
       
       switch (command) {
         case 'bold':
-          wrapWithTag('strong');
+          wrapWithTag('strong', currentSelection);
           break;
         case 'italic':
-          wrapWithTag('em');
+          wrapWithTag('em', currentSelection);
           break;
         case 'underline':
-          wrapWithTag('u');
+          wrapWithTag('u', currentSelection);
           break;
         case 'formatBlock':
           if (value) {
             const tagName = value.replace(/[<>]/g, '');
-            formatBlock(tagName);
+            formatBlock(tagName, currentSelection);
           }
           break;
         case 'insertUnorderedList':
-          createList('ul');
+          createList('ul', currentSelection);
           break;
         case 'insertOrderedList':
-          createList('ol');
+          createList('ol', currentSelection);
           break;
         case 'createLink':
-          createLink();
+          createLink(currentSelection);
           break;
         case 'unlink':
-          removeLink();
+          removeLink(currentSelection);
           break;
         case 'undo':
           // Note: Modern browsers don't support programmatic undo
@@ -105,8 +109,7 @@ export function RichTextEditor({ value, onChange, placeholder, className }: Rich
     }
   };
 
-  const wrapWithTag = (tagName: string) => {
-    const selection = window.getSelection();
+  const wrapWithTag = (tagName: string, selection: Selection) => {
     if (!selection || selection.rangeCount === 0) return;
 
     const range = selection.getRangeAt(0);
@@ -155,8 +158,7 @@ export function RichTextEditor({ value, onChange, placeholder, className }: Rich
     }
   };
 
-  const formatBlock = (tagName: string) => {
-    const selection = window.getSelection();
+  const formatBlock = (tagName: string, selection: Selection) => {
     if (!selection || selection.rangeCount === 0) return;
 
     const range = selection.getRangeAt(0);
@@ -182,8 +184,7 @@ export function RichTextEditor({ value, onChange, placeholder, className }: Rich
     }
   };
 
-  const createList = (listType: 'ul' | 'ol') => {
-    const selection = window.getSelection();
+  const createList = (listType: 'ul' | 'ol', selection: Selection) => {
     if (!selection || selection.rangeCount === 0) return;
 
     const range = selection.getRangeAt(0);
@@ -219,8 +220,7 @@ export function RichTextEditor({ value, onChange, placeholder, className }: Rich
     }
   };
 
-  const createLink = () => {
-    const selection = window.getSelection();
+  const createLink = (selection: Selection) => {
     if (!selection || selection.rangeCount === 0) return;
 
     const range = selection.getRangeAt(0);
@@ -247,8 +247,7 @@ export function RichTextEditor({ value, onChange, placeholder, className }: Rich
     range.insertNode(linkElement);
   };
 
-  const removeLink = () => {
-    const selection = window.getSelection();
+  const removeLink = (selection: Selection) => {
     if (!selection || selection.rangeCount === 0) return;
 
     const range = selection.getRangeAt(0);
