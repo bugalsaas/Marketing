@@ -165,10 +165,33 @@ export function RichTextEditor({ value, onChange, placeholder, className }: Rich
     const selectedText = range.toString();
     
     if (selectedText) {
-      const element = document.createElement(tagName);
-      element.textContent = selectedText;
-      range.deleteContents();
-      range.insertNode(element);
+      // Check if the selection is already wrapped with this tag
+      const container = range.commonAncestorContainer;
+      const element = container.nodeType === Node.ELEMENT_NODE 
+        ? container as Element
+        : container.parentElement;
+      
+      if (element && element.tagName.toLowerCase() === tagName) {
+        // Unwrap the tag - convert back to normal text
+        const parent = element.parentNode;
+        if (parent) {
+          while (element.firstChild) {
+            parent.insertBefore(element.firstChild, element);
+          }
+          parent.removeChild(element);
+        }
+      } else {
+        // Wrap the selected text with the heading tag
+        const wrapper = document.createElement(tagName);
+        try {
+          range.surroundContents(wrapper);
+        } catch (e) {
+          // If surroundContents fails, use extractContents
+          const contents = range.extractContents();
+          wrapper.appendChild(contents);
+          range.insertNode(wrapper);
+        }
+      }
     } else {
       // No selection, create a new block element
       const element = document.createElement(tagName);
