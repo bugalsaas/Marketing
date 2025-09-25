@@ -96,10 +96,60 @@ export function RichTextEditor({ value, onChange, placeholder, className }: Rich
           success = document.execCommand('unlink', false);
         } else if (command === 'insertUnorderedList') {
           // Handle bullet list
+          console.log('Executing insertUnorderedList');
           success = document.execCommand('insertUnorderedList', false);
+          console.log('insertUnorderedList success:', success);
+          
+          // If command fails, try alternative method
+          if (!success) {
+            console.log('Trying alternative unordered list method');
+            const selection = window.getSelection();
+            if (selection && selection.rangeCount > 0) {
+              const range = selection.getRangeAt(0);
+              const selectedText = range.toString();
+              if (selectedText) {
+                const lines = selectedText.split('\n').filter(line => line.trim());
+                const ul = document.createElement('ul');
+                lines.forEach(line => {
+                  const li = document.createElement('li');
+                  li.textContent = line.trim();
+                  ul.appendChild(li);
+                });
+                range.deleteContents();
+                range.insertNode(ul);
+                success = true;
+                console.log('Alternative unordered list method success:', success);
+              }
+            }
+          }
         } else if (command === 'insertOrderedList') {
           // Handle numbered list
+          console.log('Executing insertOrderedList');
           success = document.execCommand('insertOrderedList', false);
+          console.log('insertOrderedList success:', success);
+          
+          // If command fails, try alternative method
+          if (!success) {
+            console.log('Trying alternative ordered list method');
+            const selection = window.getSelection();
+            if (selection && selection.rangeCount > 0) {
+              const range = selection.getRangeAt(0);
+              const selectedText = range.toString();
+              if (selectedText) {
+                const lines = selectedText.split('\n').filter(line => line.trim());
+                const ol = document.createElement('ol');
+                lines.forEach(line => {
+                  const li = document.createElement('li');
+                  li.textContent = line.trim();
+                  ol.appendChild(li);
+                });
+                range.deleteContents();
+                range.insertNode(ol);
+                success = true;
+                console.log('Alternative ordered list method success:', success);
+              }
+            }
+          }
         } else {
           // Handle all other commands
           success = document.execCommand(command, false, value);
@@ -347,24 +397,34 @@ export function RichTextEditor({ value, onChange, placeholder, className }: Rich
         div[contenteditable] ul, div[contenteditable] ol {
           margin: 0.75rem 0 !important;
           padding-left: 1.5rem !important;
+          list-style-position: outside !important;
         }
         div[contenteditable] li {
           margin: 0.25rem 0 !important;
           display: list-item !important;
           line-height: 1.5 !important;
+          padding-left: 0.25rem !important;
+        }
+        div[contenteditable] ul {
+          list-style-type: disc !important;
         }
         div[contenteditable] ul li {
           list-style-type: disc !important;
+        }
+        div[contenteditable] ol {
+          list-style-type: decimal !important;
         }
         div[contenteditable] ol li {
           list-style-type: decimal !important;
         }
         div[contenteditable] ul li::marker {
           color: #6b7280 !important;
+          font-size: 1.1em !important;
         }
         div[contenteditable] ol li::marker {
           color: #6b7280 !important;
           font-weight: bold !important;
+          font-size: 1em !important;
         }
       `}</style>
     </div>
