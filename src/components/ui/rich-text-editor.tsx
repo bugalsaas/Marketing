@@ -214,7 +214,39 @@ export function RichTextEditor({ value, onChange, placeholder, className }: Rich
     const selectedText = range.toString();
     
     if (selectedText) {
-      const lines = selectedText.split('\n').filter(line => line.trim());
+      // Check if we're already in a list of the same type
+      const container = range.commonAncestorContainer;
+      const listElement = container.nodeType === Node.ELEMENT_NODE 
+        ? container as Element
+        : container.parentElement;
+      
+      // Find the closest list element
+      let currentElement = listElement;
+      while (currentElement && currentElement.tagName.toLowerCase() !== 'ul' && currentElement.tagName.toLowerCase() !== 'ol') {
+        currentElement = currentElement.parentElement;
+      }
+      
+      if (currentElement && currentElement.tagName.toLowerCase() === listType) {
+        // Already in the correct list type, remove the list formatting
+        const parent = currentElement.parentNode;
+        if (parent) {
+          while (currentElement.firstChild) {
+            parent.insertBefore(currentElement.firstChild, currentElement);
+          }
+          parent.removeChild(currentElement);
+        }
+        return;
+      }
+      
+      // Split text by line breaks or create single item
+      let lines: string[];
+      if (selectedText.includes('\n')) {
+        lines = selectedText.split('\n').filter(line => line.trim());
+      } else {
+        // If no newlines, treat the entire selection as one item
+        lines = [selectedText.trim()];
+      }
+      
       const list = document.createElement(listType);
       
       lines.forEach(line => {
@@ -225,6 +257,13 @@ export function RichTextEditor({ value, onChange, placeholder, className }: Rich
       
       range.deleteContents();
       range.insertNode(list);
+      
+      // Place cursor at the end of the list
+      const newRange = document.createRange();
+      newRange.setStartAfter(list);
+      newRange.setEndAfter(list);
+      selection.removeAllRanges();
+      selection.addRange(newRange);
     } else {
       // No selection, create a new list with one item
       const list = document.createElement(listType);
