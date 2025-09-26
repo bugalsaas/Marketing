@@ -239,7 +239,7 @@ export default function ViewBlogPostPage() {
                 <div className="prose max-w-none prose-headings:text-[#1e3a8a] prose-strong:text-[#1e3a8a]">
                   {post.content ? (
                     <div 
-                      className="[&_a]:text-[#2563eb] [&_a]:underline [&_a:hover]:text-[#1e3a8a]"
+                      className="[&_a]:text-[#2563eb] [&_a]:underline [&_a:hover]:text-[#1e3a8a] [&_ul]:ml-6 [&_ol]:ml-6 [&_li]:my-1 [&_ol]:list-decimal [&_ul]:list-disc [&_ol]:list-outside [&_ul]:list-outside"
                       dangerouslySetInnerHTML={{ __html: post.content }} 
                     />
                   ) : (
