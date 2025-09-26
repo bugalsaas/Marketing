@@ -38,7 +38,7 @@ export default function BlogPage() {
     featured: boolean;
     publishedAt: string;
     author: string;
-    readTime: string;
+    readTime: string | null;
     image: string;
   }
 
@@ -305,12 +305,16 @@ export default function BlogPage() {
                         </span>
                         <span className="flex items-center gap-1">
                           <Calendar className="w-4 h-4" />
-                          {new Date(article.publishedAt).toLocaleDateString()}
+                          {new Date(article.publishedAt).toLocaleDateString('en-GB', {
+                            year: 'numeric',
+                            month: 'short',
+                            day: 'numeric'
+                          })}
                         </span>
                       </div>
                       <span className="flex items-center gap-1">
                         <Clock className="w-4 h-4" />
-                        {article.readTime}
+                        {article.readTime || '1 min read'}
                       </span>
                     </div>
                     <Button className="w-full bg-[#2563eb] hover:bg-[#1e3a8a]" asChild>
@@ -436,12 +440,16 @@ export default function BlogPage() {
                           </span>
                           <span className="flex items-center gap-1">
                             <Calendar className="w-4 h-4" />
-                            {new Date(article.publishedAt).toLocaleDateString()}
+                            {new Date(article.publishedAt).toLocaleDateString('en-GB', {
+                              year: 'numeric',
+                              month: 'short',
+                              day: 'numeric'
+                            })}
                           </span>
                         </div>
                         <span className="flex items-center gap-1">
                           <Clock className="w-4 h-4" />
-                          {article.readTime}
+                          {article.readTime || '1 min read'}
                         </span>
                       </div>
                       <Button variant="outline" className="w-full border-[#2563eb] text-[#2563eb] hover:bg-[#2563eb] hover:text-white" asChild>

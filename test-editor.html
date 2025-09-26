@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RichTextEditor Test</title>
+    <style>
+        .editor-container {
+            border: 1px solid #6b7280;
+            border-radius: 6px;
+            margin: 20px;
+        }
+        .toolbar {
+            display: flex;
+            gap: 8px;
+            padding: 8px;
+            border-bottom: 1px solid #e5e7eb;
+            background-color: #f9fafb;
+        }
+        .toolbar button {
+            padding: 4px 8px;
+            border: 1px solid #d1d5db;
+            background: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .toolbar button:hover {
+            background-color: #e5e7eb;
+        }
+        .editor {
+            min-height: 200px;
+            padding: 12px;
+            outline: none;
+        }
+        .editor a {
+            color: #2563eb !important;
+            text-decoration: underline !important;
+        }
+        .editor a:hover {
+            color: #1e3a8a !important;
+        }
+        .editor h1 {
+            font-size: 1.875rem !important;
+            font-weight: bold !important;
+            margin: 1rem 0 !important;
+            color: #1e3a8a !important;
+        }
+        .editor h2 {
+            font-size: 1.5rem !important;
+            font-weight: bold !important;
+            margin: 0.875rem 0 !important;
+            color: #1e3a8a !important;
+        }
+        .editor h3 {
+            font-size: 1.25rem !important;
+            font-weight: bold !important;
+            margin: 0.75rem 0 !important;
+            color: #1e3a8a !important;
+        }
+    </style>
+</head>
+<body>
+    <h1>RichTextEditor Test</h1>
+    <p>This is a test page to verify the RichTextEditor functionality.</p>
+    
+    <div class="editor-container">
+        <div class="toolbar">
+            <button onclick="execCommand('bold')">Bold</button>
+            <button onclick="execCommand('italic')">Italic</button>
+            <button onclick="execCommand('underline')">Underline</button>
+            <div style="width: 1px; height: 24px; background: #d1d5db; margin: 0 4px;"></div>
+            <button onclick="execCommand('formatBlock', '<h1>')">H1</button>
+            <button onclick="execCommand('formatBlock', '<h2>')">H2</button>
+            <button onclick="execCommand('formatBlock', '<h3>')">H3</button>
+            <div style="width: 1px; height: 24px; background: #d1d5db; margin: 0 4px;"></div>
+            <button onclick="createLink()">Link</button>
+            <button onclick="execCommand('unlink')">Unlink</button>
+        </div>
+        <div class="editor" contenteditable="true" id="editor">
+            <h1>Test Heading 1</h1>
+            <h2>Test Heading 2</h2>
+            <h3>Test Heading 3</h3>
+            <p>This is a test paragraph with <a href="https://example.com">a test link</a> to verify hyperlink functionality.</p>
+            <p>You can select text and click the Link button to create new hyperlinks.</p>
+        </div>
+    </div>
+
+    <script>
+        function execCommand(command, value) {
+            if (command === 'formatBlock' && value) {
+                document.execCommand('formatBlock', false, value);
+            } else {
+                document.execCommand(command, false, value);
+            }
+            document.getElementById('editor').focus();
+        }
+
+        function createLink() {
+            const url = prompt('Enter URL:');
+            if (url) {
+                const urlPattern = /^(https?:\/\/|www\.|mailto:)/i;
+                const fullUrl = urlPattern.test(url) ? url : `https://${url}`;
+                document.execCommand('createLink', false, fullUrl);
+            }
+            document.getElementById('editor').focus();
+        }
+    </script>
+</body>
+</html>

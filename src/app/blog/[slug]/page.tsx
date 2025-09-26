@@ -25,7 +25,7 @@ interface BlogPost {
     name: string;
     email: string;
   };
-  readTime?: string;
+  readTime: string | null;
   category: string | null;
   tags: string;
   coverImage: string | null;
@@ -258,13 +258,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   </div>
                   <div className="flex items-center gap-2">
                     <Calendar className="w-4 h-4" />
-                    <span>{post.publishedAt ? new Date(post.publishedAt).toLocaleDateString('en-AU', {
+                    <span>{post.publishedAt ? new Date(post.publishedAt).toLocaleDateString('en-GB', {
                       year: 'numeric',
-                      month: 'long',
+                      month: 'short',
                       day: 'numeric'
-                    }) : new Date(post.updatedAt).toLocaleDateString('en-AU', {
+                    }) : new Date(post.updatedAt).toLocaleDateString('en-GB', {
                       year: 'numeric',
-                      month: 'long',
+                      month: 'short',
                       day: 'numeric'
                     })}</span>
                   </div>

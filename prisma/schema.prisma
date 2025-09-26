@@ -39,6 +39,7 @@ model BlogPost {
   coverImage  String?
   category    String?
   tags        String
+  readTime    String?
   published   Boolean  @default(false)
   featured    Boolean  @default(false)
   authorId    String
