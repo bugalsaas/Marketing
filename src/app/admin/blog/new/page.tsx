@@ -33,7 +33,8 @@ export default function NewBlogPostPage() {
     category: "",
     readTime: "",
     featured: false,
-    status: "draft"
+    status: "draft",
+    publishedAt: ""
   });
 
   const [tags, setTags] = useState<string[]>([]);
@@ -258,6 +259,25 @@ export default function NewBlogPostPage() {
                     <label htmlFor="featured" className="text-sm font-medium text-[#1f2937]">
                       Feature this post
                     </label>
+                  </div>
+
+                  <div>
+                    <label htmlFor="publishedAt" className="block text-sm font-medium text-[#1f2937] mb-2">
+                      Published Date
+                    </label>
+                    <div className="relative">
+                      <Calendar className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#6b7280] w-4 h-4" />
+                      <Input
+                        id="publishedAt"
+                        type="date"
+                        value={formData.publishedAt}
+                        onChange={(e) => handleInputChange("publishedAt", e.target.value)}
+                        className="pl-10 border-[#6b7280] focus:border-[#2563eb] focus:ring-[#2563eb]"
+                      />
+                    </div>
+                    <p className="text-sm text-[#6b7280] mt-1">
+                      Set the publication date for this blog post
+                    </p>
                   </div>
                 </CardContent>
               </Card>
