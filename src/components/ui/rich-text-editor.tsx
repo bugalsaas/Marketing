@@ -247,11 +247,20 @@ export function RichTextEditor({ value, onChange, placeholder, className }: Rich
         lines = [selectedText.trim()];
       }
       
+      // Create the list element with proper attributes
       const list = document.createElement(listType);
+      
+      // Add proper styling attributes for ordered lists
+      if (listType === 'ol') {
+        list.setAttribute('style', 'list-style-type: decimal; padding-left: 1.5rem; margin: 0.75rem 0;');
+      } else {
+        list.setAttribute('style', 'list-style-type: disc; padding-left: 1.5rem; margin: 0.75rem 0;');
+      }
       
       lines.forEach(line => {
         const li = document.createElement('li');
         li.textContent = line.trim();
+        li.setAttribute('style', 'margin: 0.25rem 0; display: list-item; line-height: 1.5; padding-left: 0.25rem;');
         list.appendChild(li);
       });
       
@@ -267,8 +276,17 @@ export function RichTextEditor({ value, onChange, placeholder, className }: Rich
     } else {
       // No selection, create a new list with one item
       const list = document.createElement(listType);
+      
+      // Add proper styling attributes for ordered lists
+      if (listType === 'ol') {
+        list.setAttribute('style', 'list-style-type: decimal; padding-left: 1.5rem; margin: 0.75rem 0;');
+      } else {
+        list.setAttribute('style', 'list-style-type: disc; padding-left: 1.5rem; margin: 0.75rem 0;');
+      }
+      
       const li = document.createElement('li');
       li.textContent = 'List item';
+      li.setAttribute('style', 'margin: 0.25rem 0; display: list-item; line-height: 1.5; padding-left: 0.25rem;');
       list.appendChild(li);
       
       range.insertNode(list);
@@ -596,28 +614,35 @@ export function RichTextEditor({ value, onChange, placeholder, className }: Rich
           margin: 0.75rem 0 !important;
           padding-left: 1.5rem !important;
           list-style-position: outside !important;
+          display: block !important;
         }
         div[contenteditable] li {
           margin: 0.25rem 0 !important;
           display: list-item !important;
           line-height: 1.5 !important;
           padding-left: 0.25rem !important;
+          position: relative !important;
         }
         div[contenteditable] ul {
           list-style-type: disc !important;
+          list-style-position: outside !important;
         }
         div[contenteditable] ul li {
           list-style-type: disc !important;
+          list-style-position: outside !important;
         }
         div[contenteditable] ol {
           list-style-type: decimal !important;
+          list-style-position: outside !important;
         }
         div[contenteditable] ol li {
           list-style-type: decimal !important;
+          list-style-position: outside !important;
         }
         div[contenteditable] ul li::marker {
           color: #6b7280 !important;
           font-size: 1.1em !important;
+          content: "•" !important;
         }
         div[contenteditable] ol li::marker {
           color: #6b7280 !important;
