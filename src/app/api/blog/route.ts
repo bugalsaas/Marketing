@@ -82,9 +82,11 @@ export async function GET(request: NextRequest) {
           title: true,
           slug: true,
           excerpt: true,
+          content: true,
           coverImage: true,
           category: true,
           tags: true,
+          readTime: true,
           featured: true,
           publishedAt: true,
           createdAt: true,
@@ -136,7 +138,7 @@ export async function GET(request: NextRequest) {
       formattedPosts = posts.map(post => ({
         ...post,
         author: post.author?.name || 'Bugal Team', // Fallback if author relation fails
-        readTime: calculateReadTime(post.excerpt || ''),
+        readTime: post.readTime || calculateReadTime(post.content || ''),
         image: post.coverImage || '/api/placeholder/600/400'
       }));
       
@@ -156,7 +158,7 @@ export async function GET(request: NextRequest) {
         publishedAt: post.publishedAt,
         createdAt: post.createdAt,
         author: 'Bugal Team',
-        readTime: '2 min read',
+        readTime: post.readTime || '2 min read',
         image: post.coverImage || '/api/placeholder/600/400'
       }));
     }
@@ -202,9 +204,9 @@ export async function GET(request: NextRequest) {
 }
 
 function calculateReadTime(text: string): string {
-  const wordsPerMinute = 200;
-  const words = text.split(' ').length;
-  const minutes = Math.ceil(words / wordsPerMinute);
+  const wordsPerMinute = 225;
+  const words = text.split(/\s+/).filter(word => word.length > 0).length;
+  const minutes = Math.max(1, Math.ceil(words / wordsPerMinute));
   return `${minutes} min read`;
 }
 
