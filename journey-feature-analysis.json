@@ -1,0 +1,1813 @@
+{
+  "timestamp": "2025-09-28T03:49:57.823Z",
+  "totalPages": 14,
+  "successfulPages": 14,
+  "failedPages": 0,
+  "overallStats": {
+    "avgWordCount": 138,
+    "avgQualityScore": 17,
+    "totalImages": 30,
+    "totalLinks": 333
+  },
+  "seoStats": {
+    "pagesWithMetaDesc": 14,
+    "pagesWithH1": 14,
+    "pagesWithH2": 0,
+    "pagesWithImages": 14,
+    "pagesWithAltText": 14
+  },
+  "issues": {
+    "shortContentPages": [
+      {
+        "title": "Introduction",
+        "wordCount": 106
+      },
+      {
+        "title": "Tax File Number",
+        "wordCount": 72
+      },
+      {
+        "title": "Australian Business Number (ABN)",
+        "wordCount": 78
+      },
+      {
+        "title": "Goods and Services Tax (GST)",
+        "wordCount": 69
+      },
+      {
+        "title": "Bookkeeping Best Practices",
+        "wordCount": 80
+      },
+      {
+        "title": "Support Provider Qualifications",
+        "wordCount": 111
+      },
+      {
+        "title": "Support Provider Insurance",
+        "wordCount": 46
+      },
+      {
+        "title": "Marketing for Support Provider",
+        "wordCount": 116
+      },
+      {
+        "title": "Taking on New Participants",
+        "wordCount": 130
+      },
+      {
+        "title": "Financial Management for Support Providers",
+        "wordCount": 132
+      },
+      {
+        "title": "Superannuation for Support Providers",
+        "wordCount": 75
+      },
+      {
+        "title": "NDIS Registration",
+        "wordCount": 124
+      },
+      {
+        "title": "Growing Your Support Business",
+        "wordCount": 123
+      }
+    ],
+    "noMetaDescPages": [],
+    "noH1Pages": [],
+    "lowQualityPages": [
+      {
+        "title": "Introduction",
+        "qualityScore": 10
+      },
+      {
+        "title": "Tax File Number",
+        "qualityScore": 20
+      },
+      {
+        "title": "Australian Business Number (ABN)",
+        "qualityScore": 20
+      },
+      {
+        "title": "Goods and Services Tax (GST)",
+        "qualityScore": 20
+      },
+      {
+        "title": "Bookkeeping Best Practices",
+        "qualityScore": 20
+      },
+      {
+        "title": "Support Provider Certifications",
+        "qualityScore": 30
+      },
+      {
+        "title": "Support Provider Qualifications",
+        "qualityScore": 10
+      },
+      {
+        "title": "Support Provider Insurance",
+        "qualityScore": 20
+      },
+      {
+        "title": "Marketing for Support Provider",
+        "qualityScore": 20
+      },
+      {
+        "title": "Taking on New Participants",
+        "qualityScore": 20
+      },
+      {
+        "title": "Financial Management for Support Providers",
+        "qualityScore": 20
+      },
+      {
+        "title": "Superannuation for Support Providers",
+        "qualityScore": 10
+      },
+      {
+        "title": "NDIS Registration",
+        "qualityScore": 10
+      },
+      {
+        "title": "Growing Your Support Business",
+        "qualityScore": 10
+      }
+    ]
+  },
+  "detailedAnalysis": [
+    {
+      "url": "https://www.bugal.com.au/starting-a-support-provider-journey/intro",
+      "title": "Introduction",
+      "slug": "intro",
+      "status": "success",
+      "pageTitle": "Startup",
+      "metaDescription": "Embark on a rewarding journey as a support provider in Australia with Bugal's comprehensive explainer video series. Learn from industry experts about launching your business as an NDIS Support Provider.",
+      "h1": "Starting-Out Series",
+      "h2Count": 0,
+      "h3Count": 0,
+      "wordCount": 106,
+      "imageCount": 2,
+      "imageAltCount": 2,
+      "linkCount": 16,
+      "internalLinkCount": 11,
+      "externalLinkCount": 1,
+      "hasTableOfContents": false,
+      "hasCallToAction": false,
+      "hasFAQ": false,
+      "hasSchema": false,
+      "hasBreadcrumbs": false,
+      "hasLists": false,
+      "hasImages": true,
+      "hasVideos": true,
+      "mainContent": "Starting-Out Series1 of 14TFN<>From our BlogThinking of being an Independent Support Provider?First steps to getting started as a Support ProviderUseful LinksBugal's Free VersionEmail UsAt Bugal, our mission is to empower Independent Support Providers with essential tools for starting, operating, and growing successful businesses. Our step-by-step series offers vital insights to ensure you begin your journey effectively, with our unwavering support at every stage.Disclaimer: all information provided is of a general nature and not personalised advice. For specific advice we recommend consulting a professional.AboutfeaturesPricingContactBlogLog Infree trial\n\n;(function(o,l,a,r,k,y){if(o.olark)return;\nr=\"script\";y=l.createElement(r);r=l.getElementsByTagName(r)[0];\ny.async=1;y.src=\"//\"+a;r.parentNode.insertBefore(y,r);\ny=o.olark=function(){k.s.push(arguments);k.t.push(+new Date)};\ny.extend=function(i,j){y(\"extend\",i,j)};\ny.identify=function(i){y(\"identify\",k.i=i)};\ny.configure=function(i,j){y(\"configure\",i,j);k.c[i]=j};\nk=y._={s:[],t:[+new Date],c:{},l:a};\n})(window,document,\"static.olark.com/jsclient/loader.js\");\n/* Add configuration calls below this comment */\nolark.identify('9249-420-10-4842');",
+      "headings": {
+        "h1": [
+          "Starting-Out Series"
+        ],
+        "h2": [],
+        "h3": []
+      },
+      "links": {
+        "internal": [
+          {
+            "text": "TFN",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/tax-file-number"
+          },
+          {
+            "text": ">",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/tax-file-number"
+          },
+          {
+            "text": "Thinking of being an Independent Support Provider?",
+            "href": "https://www.bugal.com.au/post/how-to-start-independent-support-provider"
+          },
+          {
+            "text": "First steps to getting started as a Support Provider",
+            "href": "https://www.bugal.com.au/post/getting-started-as-a-support-provider"
+          },
+          {
+            "text": "Bugal's Free Version",
+            "href": "https://www.bugal.com.au/free"
+          },
+          {
+            "text": "Email Us",
+            "href": "mailto:info@bugal.com.au?subject=Bugal%20Enquiry%20"
+          },
+          {
+            "text": "Pricing",
+            "href": "https://www.bugal.com.au/#pricing"
+          },
+          {
+            "text": "Contact",
+            "href": "https://www.bugal.com.au/#contact"
+          },
+          {
+            "text": "Blog",
+            "href": "https://www.bugal.com.au/category/support-provider-starting-out"
+          },
+          {
+            "text": "Log In",
+            "href": "https://app.bugal.com.au/sign-in"
+          },
+          {
+            "text": "free trial",
+            "href": "https://app.bugal.com.au/sign-up"
+          }
+        ],
+        "external": [
+          {
+            "text": "",
+            "href": "https://www.facebook.com/BugalSupportSoftware"
+          }
+        ]
+      },
+      "qualityScore": 10
+    },
+    {
+      "url": "https://www.bugal.com.au/starting-a-support-provider-journey/tax-file-number",
+      "title": "Tax File Number",
+      "slug": "tax-file-number",
+      "status": "success",
+      "pageTitle": "Tax File Number for Independent Support Workers",
+      "metaDescription": "Discover the importance of your Tax File Number (TFN) in Australia, a vital identifier for various financial and employment tasks. Whether you're a newcomer to being an Independent Support Worker or need to apply for one, the TFN application process is straightforward.",
+      "h1": "Tax File Number (TFN)",
+      "h2Count": 0,
+      "h3Count": 0,
+      "wordCount": 72,
+      "imageCount": 4,
+      "imageAltCount": 4,
+      "linkCount": 25,
+      "internalLinkCount": 15,
+      "externalLinkCount": 4,
+      "hasTableOfContents": false,
+      "hasCallToAction": false,
+      "hasFAQ": false,
+      "hasSchema": false,
+      "hasBreadcrumbs": false,
+      "hasLists": true,
+      "hasImages": true,
+      "hasVideos": true,
+      "mainContent": "Tax File Number (TFN)Intro2 of 14ABN<>From our BlogA Beginner's Guide to ABN and TFN Registration for Support Providers in AustraliaUseful LinksDocuments required for TFNATO - Apply for a TFNA Tax File Number (TFN) issued by the Australian Taxation Office (ATO) Example 123 456 789Required for Taxation purposes.AboutfeaturesPricingContactBlogLog Infree trialAboutfeaturesPricingContactBlogLog Infree trial\n\n;(function(o,l,a,r,k,y){if(o.olark)return;\nr=\"script\";y=l.createElement(r);r=l.getElementsByTagName(r)[0];\ny.async=1;y.src=\"//\"+a;r.parentNode.insertBefore(y,r);\ny=o.olark=function(){k.s.push(arguments);k.t.push(+new Date)};\ny.extend=function(i,j){y(\"extend\",i,j)};\ny.identify=function(i){y(\"identify\",k.i=i)};\ny.configure=function(i,j){y(\"configure\",i,j);k.c[i]=j};\nk=y._={s:[],t:[+new Date],c:{},l:a};\n})(window,document,\"static.olark.com/jsclient/loader.js\");\n/* Add configuration calls below this comment */\nolark.identify('9249-420-10-4842');",
+      "headings": {
+        "h1": [
+          "Tax File Number (TFN)"
+        ],
+        "h2": [],
+        "h3": []
+      },
+      "links": {
+        "internal": [
+          {
+            "text": "Intro",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/intro"
+          },
+          {
+            "text": "ABN",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/australian-business-number-abn"
+          },
+          {
+            "text": "<",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/intro"
+          },
+          {
+            "text": ">",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/australian-business-number-abn"
+          },
+          {
+            "text": "A Beginner's Guide to ABN and TFN Registration for Support Providers in Australia",
+            "href": "https://www.bugal.com.au/post/abn-and-tfn-registration-for-support-providers-in-australia"
+          },
+          {
+            "text": "Pricing",
+            "href": "https://www.bugal.com.au/#pricing"
+          },
+          {
+            "text": "Contact",
+            "href": "https://www.bugal.com.au/#contact"
+          },
+          {
+            "text": "Blog",
+            "href": "https://www.bugal.com.au/category/support-provider-starting-out"
+          },
+          {
+            "text": "Log In",
+            "href": "https://app.bugal.com.au/sign-in"
+          },
+          {
+            "text": "free trial",
+            "href": "https://app.bugal.com.au/sign-up"
+          },
+          {
+            "text": "Pricing",
+            "href": "https://www.bugal.com.au/#pricing"
+          },
+          {
+            "text": "Contact",
+            "href": "https://www.bugal.com.au/#contact"
+          },
+          {
+            "text": "Blog",
+            "href": "https://www.bugal.com.au/category/support-provider-starting-out"
+          },
+          {
+            "text": "Log In",
+            "href": "https://app.bugal.com.au/sign-in"
+          },
+          {
+            "text": "free trial",
+            "href": "https://app.bugal.com.au/sign-up"
+          }
+        ],
+        "external": [
+          {
+            "text": "Documents required for TFN",
+            "href": "https://www.ato.gov.au/Individuals/Tax-file-number/Identity-documents/"
+          },
+          {
+            "text": "ATO - Apply for a TFN",
+            "href": "https://www.ato.gov.au/Individuals/Tax-file-number/Apply-for-a-TFN/"
+          },
+          {
+            "text": "",
+            "href": "https://www.facebook.com/BugalSupportSoftware"
+          },
+          {
+            "text": "",
+            "href": "https://www.facebook.com/BugalSupportSoftware"
+          }
+        ]
+      },
+      "qualityScore": 20
+    },
+    {
+      "url": "https://www.bugal.com.au/starting-a-support-provider-journey/australian-business-number-abn",
+      "title": "Australian Business Number (ABN)",
+      "slug": "australian-business-number-abn",
+      "status": "success",
+      "pageTitle": "Australian Business Number ABN",
+      "metaDescription": "Learn about the significance of an Australian Business Number (ABN) for independent support providers and businesses in Australia. Discover how an ABN is essential for legal operations, GST registration, and professional relationships. Applying for or reactivating your ABN is a straightforward process. Access the application form, provide accurate business information, and receive your ABN instantly, ensuring compliance with Australian business regulations.",
+      "h1": "Australian Business Number(ABN)",
+      "h2Count": 0,
+      "h3Count": 0,
+      "wordCount": 78,
+      "imageCount": 2,
+      "imageAltCount": 2,
+      "linkCount": 17,
+      "internalLinkCount": 11,
+      "externalLinkCount": 3,
+      "hasTableOfContents": false,
+      "hasCallToAction": false,
+      "hasFAQ": false,
+      "hasSchema": false,
+      "hasBreadcrumbs": false,
+      "hasLists": true,
+      "hasImages": true,
+      "hasVideos": true,
+      "mainContent": "Australian Business Number(ABN)TFN3 of 14GST<>From our BlogA Beginner's Guide to ABN and TFN Registration for Support Providers in AustraliaSole Trader, Partnership or Company?Useful LinksABN LookupApply for an ABNAustralian Business Number (ABN) issued via Australian Business Register (ABR)Example of an ABN: 40 652 123 218ABN is essential for Sole Traders, Partnerships and Companies undertaking business activities.AboutfeaturesPricingContactBlogLog Infree trial\n\n;(function(o,l,a,r,k,y){if(o.olark)return;\nr=\"script\";y=l.createElement(r);r=l.getElementsByTagName(r)[0];\ny.async=1;y.src=\"//\"+a;r.parentNode.insertBefore(y,r);\ny=o.olark=function(){k.s.push(arguments);k.t.push(+new Date)};\ny.extend=function(i,j){y(\"extend\",i,j)};\ny.identify=function(i){y(\"identify\",k.i=i)};\ny.configure=function(i,j){y(\"configure\",i,j);k.c[i]=j};\nk=y._={s:[],t:[+new Date],c:{},l:a};\n})(window,document,\"static.olark.com/jsclient/loader.js\");\n/* Add configuration calls below this comment */\nolark.identify('9249-420-10-4842');",
+      "headings": {
+        "h1": [
+          "Australian Business Number(ABN)"
+        ],
+        "h2": [],
+        "h3": []
+      },
+      "links": {
+        "internal": [
+          {
+            "text": "TFN",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/tax-file-number"
+          },
+          {
+            "text": "GST",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/goods-and-services-tax-gst"
+          },
+          {
+            "text": "<",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/tax-file-number"
+          },
+          {
+            "text": ">",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/goods-and-services-tax-gst"
+          },
+          {
+            "text": "A Beginner's Guide to ABN and TFN Registration for Support Providers in Australia",
+            "href": "https://www.bugal.com.au/post/abn-and-tfn-registration-for-support-providers-in-australia"
+          },
+          {
+            "text": "Sole Trader, Partnership or Company?",
+            "href": "https://www.bugal.com.au/post/sole-trader-or-partnership-or-company"
+          },
+          {
+            "text": "Pricing",
+            "href": "https://www.bugal.com.au/#pricing"
+          },
+          {
+            "text": "Contact",
+            "href": "https://www.bugal.com.au/#contact"
+          },
+          {
+            "text": "Blog",
+            "href": "https://www.bugal.com.au/category/support-provider-starting-out"
+          },
+          {
+            "text": "Log In",
+            "href": "https://app.bugal.com.au/sign-in"
+          },
+          {
+            "text": "free trial",
+            "href": "https://app.bugal.com.au/sign-up"
+          }
+        ],
+        "external": [
+          {
+            "text": "ABN Lookup",
+            "href": "https://abr.business.gov.au/"
+          },
+          {
+            "text": "Apply for an ABN",
+            "href": "https://www.abr.gov.au/business-super-funds-charities/applying-abn"
+          },
+          {
+            "text": "",
+            "href": "https://www.facebook.com/BugalSupportSoftware"
+          }
+        ]
+      },
+      "qualityScore": 20
+    },
+    {
+      "url": "https://www.bugal.com.au/starting-a-support-provider-journey/goods-and-services-tax-gst",
+      "title": "Goods and Services Tax (GST)",
+      "slug": "goods-and-services-tax-gst",
+      "status": "success",
+      "pageTitle": "Goods and Services Tax GST",
+      "metaDescription": "Discover why Independent Support Providers often consider the pros and cons of GST registration, especially when many services within the NDIS Framework are GST-free. Learn when and how to register for GST and the potential benefits and complexities involved. Seek guidance from financial advisors or accountants to make an informed decision that aligns with your business circumstances",
+      "h1": "Goods and Service Tax (GST)",
+      "h2Count": 0,
+      "h3Count": 0,
+      "wordCount": 69,
+      "imageCount": 2,
+      "imageAltCount": 2,
+      "linkCount": 15,
+      "internalLinkCount": 10,
+      "externalLinkCount": 2,
+      "hasTableOfContents": false,
+      "hasCallToAction": false,
+      "hasFAQ": false,
+      "hasSchema": false,
+      "hasBreadcrumbs": false,
+      "hasLists": true,
+      "hasImages": true,
+      "hasVideos": true,
+      "mainContent": "Goods and Service Tax (GST)ABN4 of 14Financials<>From our BlogUnderstanding GST for Independent Support Providers in the NDISUseful LinksRegistering for GST (ATO)Most services provided within the NDIS are GST-freeIndependent Support Providers commonly do not register for GSTBe sure to understand the requirements before registering for voluntary GSTAboutfeaturesPricingContactBlogLog Infree trial\n\n;(function(o,l,a,r,k,y){if(o.olark)return;\nr=\"script\";y=l.createElement(r);r=l.getElementsByTagName(r)[0];\ny.async=1;y.src=\"//\"+a;r.parentNode.insertBefore(y,r);\ny=o.olark=function(){k.s.push(arguments);k.t.push(+new Date)};\ny.extend=function(i,j){y(\"extend\",i,j)};\ny.identify=function(i){y(\"identify\",k.i=i)};\ny.configure=function(i,j){y(\"configure\",i,j);k.c[i]=j};\nk=y._={s:[],t:[+new Date],c:{},l:a};\n})(window,document,\"static.olark.com/jsclient/loader.js\");\n/* Add configuration calls below this comment */\nolark.identify('9249-420-10-4842');",
+      "headings": {
+        "h1": [
+          "Goods and Service Tax (GST)"
+        ],
+        "h2": [],
+        "h3": []
+      },
+      "links": {
+        "internal": [
+          {
+            "text": "ABN",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/australian-business-number-abn"
+          },
+          {
+            "text": "Financials",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/bookkeaping-best-practices"
+          },
+          {
+            "text": "<",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/australian-business-number-abn"
+          },
+          {
+            "text": ">",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/bookkeaping-best-practices"
+          },
+          {
+            "text": "Understanding GST for Independent Support Providers in the NDIS",
+            "href": "https://www.bugal.com.au/post/understanding-gst-for-independent-support-providers-in-the-ndis"
+          },
+          {
+            "text": "Pricing",
+            "href": "https://www.bugal.com.au/#pricing"
+          },
+          {
+            "text": "Contact",
+            "href": "https://www.bugal.com.au/#contact"
+          },
+          {
+            "text": "Blog",
+            "href": "https://www.bugal.com.au/category/support-provider-starting-out"
+          },
+          {
+            "text": "Log In",
+            "href": "https://app.bugal.com.au/sign-in"
+          },
+          {
+            "text": "free trial",
+            "href": "https://app.bugal.com.au/sign-up"
+          }
+        ],
+        "external": [
+          {
+            "text": "Registering for GST (ATO)",
+            "href": "https://www.ato.gov.au/Business/GST/Registering-for-GST/"
+          },
+          {
+            "text": "",
+            "href": "https://www.facebook.com/BugalSupportSoftware"
+          }
+        ]
+      },
+      "qualityScore": 20
+    },
+    {
+      "url": "https://www.bugal.com.au/starting-a-support-provider-journey/bookkeaping-best-practices",
+      "title": "Bookkeeping Best Practices",
+      "slug": "bookkeaping-best-practices",
+      "status": "success",
+      "pageTitle": "Bookkeeping Best Practices",
+      "metaDescription": "Discover the importance of solid financial record-keeping practices for Independent Support Providers. Learn why opening a dedicated business bank account and implementing a robust bookkeeping system are essential for business success. Bugal can assist with your financial management, but maintaining organized and accurate records serves multiple purposes. Consider going paperless for cost savings, efficiency, and eco-friendliness, while enhancing client communication and compliance",
+      "h1": "Financial Recording",
+      "h2Count": 0,
+      "h3Count": 0,
+      "wordCount": 80,
+      "imageCount": 2,
+      "imageAltCount": 2,
+      "linkCount": 17,
+      "internalLinkCount": 12,
+      "externalLinkCount": 2,
+      "hasTableOfContents": false,
+      "hasCallToAction": false,
+      "hasFAQ": false,
+      "hasSchema": false,
+      "hasBreadcrumbs": false,
+      "hasLists": true,
+      "hasImages": true,
+      "hasVideos": true,
+      "mainContent": "Financial RecordingGST5 of 14Certification<>From our BlogMake your Business FlowEmpowering Independent Support Providers: Why Choose Bugal as Your Software ProviderUseful LinksReviews of Business Bank AccountsStart your 30 Day Free trial of BugalSetting up a seperate bank account will save you many hours in the near future.Financial Recording Software is a must for efficiency.Try to keep it all digital.AboutfeaturesPricingContactBlogLog Infree trial\n\n;(function(o,l,a,r,k,y){if(o.olark)return;\nr=\"script\";y=l.createElement(r);r=l.getElementsByTagName(r)[0];\ny.async=1;y.src=\"//\"+a;r.parentNode.insertBefore(y,r);\ny=o.olark=function(){k.s.push(arguments);k.t.push(+new Date)};\ny.extend=function(i,j){y(\"extend\",i,j)};\ny.identify=function(i){y(\"identify\",k.i=i)};\ny.configure=function(i,j){y(\"configure\",i,j);k.c[i]=j};\nk=y._={s:[],t:[+new Date],c:{},l:a};\n})(window,document,\"static.olark.com/jsclient/loader.js\");\n/* Add configuration calls below this comment */\nolark.identify('9249-420-10-4842');",
+      "headings": {
+        "h1": [
+          "Financial Recording"
+        ],
+        "h2": [],
+        "h3": []
+      },
+      "links": {
+        "internal": [
+          {
+            "text": "GST",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/goods-and-services-tax-gst"
+          },
+          {
+            "text": "Certification",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/support-provider-certifications"
+          },
+          {
+            "text": "<",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/goods-and-services-tax-gst"
+          },
+          {
+            "text": ">",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/support-provider-certifications"
+          },
+          {
+            "text": "Make your Business Flow",
+            "href": "https://www.bugal.com.au/post/make-your-business-flow"
+          },
+          {
+            "text": "Empowering Independent Support Providers: Why Choose Bugal as Your Software Provider",
+            "href": "https://www.bugal.com.au/post/empowering-independent-support-providers-why-choose-bugal-as-your-software-provider"
+          },
+          {
+            "text": "Start your 30 Day Free trial of Bugal",
+            "href": "https://app.staging.bugal.com.au/sign-up"
+          },
+          {
+            "text": "Pricing",
+            "href": "https://www.bugal.com.au/#pricing"
+          },
+          {
+            "text": "Contact",
+            "href": "https://www.bugal.com.au/#contact"
+          },
+          {
+            "text": "Blog",
+            "href": "https://www.bugal.com.au/category/support-provider-starting-out"
+          },
+          {
+            "text": "Log In",
+            "href": "https://app.bugal.com.au/sign-in"
+          },
+          {
+            "text": "free trial",
+            "href": "https://app.bugal.com.au/sign-up"
+          }
+        ],
+        "external": [
+          {
+            "text": "Reviews of Business Bank Accounts",
+            "href": "https://www.crazydomains.com.au/learn/bank-accounts-for-your-business-au/"
+          },
+          {
+            "text": "",
+            "href": "https://www.facebook.com/BugalSupportSoftware"
+          }
+        ]
+      },
+      "qualityScore": 20
+    },
+    {
+      "url": "https://www.bugal.com.au/starting-a-support-provider-journey/support-provider-certifications",
+      "title": "Support Provider Certifications",
+      "slug": "support-provider-certifications",
+      "status": "success",
+      "pageTitle": "Support Provider Certifications",
+      "metaDescription": "Discover the essential certifications and checks for Independent Support Providers in Australia. From National Police Checks to First Aid Certificates and NDIS Workers Screening Checks, learn why these credentials are crucial for establishing trust and competence. We simplify the application process by providing direct links to state-specific application sites. Maintain digital copies for easy sharing when needed",
+      "h1": "Certifications",
+      "h2Count": 0,
+      "h3Count": 0,
+      "wordCount": 664,
+      "imageCount": 2,
+      "imageAltCount": 2,
+      "linkCount": 118,
+      "internalLinkCount": 10,
+      "externalLinkCount": 97,
+      "hasTableOfContents": false,
+      "hasCallToAction": false,
+      "hasFAQ": false,
+      "hasSchema": false,
+      "hasBreadcrumbs": false,
+      "hasLists": false,
+      "hasImages": true,
+      "hasVideos": true,
+      "mainContent": "CertificationsFinancials6 of 14Qualificaition<>From our BlogEssential Certifications and Checks for Independent Support WorkersNSWVICQLDWASATASNTACTTypeLinkAny costPolice CheckApply for a National Police CheckStarting from $54.50First Aid/CPRSt Johns Ambulance CourseStarting from $79.00Working with Children Apply for a Working with Children Check$80.00NDIS Worker ScreeningApplying for your NDISWC$80.00Drivers LicenceNSW driver licenceVariableCOVID Vaccination Get proof of COVID-19 vaccinationFreeTypeLinkAny costPolice CheckApply for a National Police CheckStarting from $52.50First Aid/CPRSt Johns Ambulance CourseStarting from $85.00Working with Children Apply for a Working with Children Check$128.20NDIS Worker ScreeningApply for NDIS Worker Screening Check$128.20Drivers LicenceVIC driver licenceVariableCOVID Vaccination Get proof of COVID-19 vaccinationFreeTypeLinkAny costPolice CheckApply for a National Police CertificateStarting from $67.90First Aid/CPRSt Johns Ambulance CourseStarting from $69.00Working with Children Apply for a Blue Card$101.30*NDIS Worker ScreeningApplying for your Yellow Card$138*Drivers LicenceQLD driver licenceVariableCOVID Vaccination Get proof of COVID-19 vaccinationFree*Combined NDIS worker screening application and blue card application: $153TypeLinkAny costPolice CheckApply for a National Police CertificateStarting from $58.70First Aid/CPRSt Johns Ambulance CoursesStarting from $89.00Working with Children Apply for a Working with Children Check$87.00NDIS Worker ScreeningApplying for your NDISWC$145.00Drivers LicenceWA driver licenceVariableCOVID Vaccination Get proof of COVID-19 vaccinationFreeTypeLinkAny costPolice CheckApply for a National Police CheckStarting from $53.50First Aid/CPRSt Johns Ambulance CoursesStarting from $65.00Working with Children Apply for a Working with Children Check$114.00NDIS Worker ScreeningApplying for your NDISWC$114.00Drivers LicenceSA driver licenceVariableCOVID Vaccination Get proof of COVID-19 vaccinationFreeTypeLinkAny costPolice CheckApply for a National Police CertificateStarting from $45.00First Aid/CPRSt Johns Ambulance CoursesStarting from $65.00Working with Children Registration to work with vulnerable people$124.60NDIS Worker ScreeningRegistration to work with vulnerable people$124.60Drivers LicenceTAS driver licenceVariableCOVID Vaccination Get proof of COVID-19 vaccinationFreeTypeLinkAny costPolice CheckApply for a National Police Check$81.00First Aid/CPRSt Johns Ambulance CoursesStarting from $95.00Working with Children Apply for a Working with Children Check$81.00NDIS Worker ScreeningApply for a NDIS Worker Screening Check$81.00Drivers LicenceNT driver licenceVariableCOVID Vaccination Get proof of COVID-19 vaccinationFreeTypeLinkAny costPolice CheckApply for a National Police Check$42.00First Aid/CPRSt Johns Ambulance CoursesStarting from $85.00Working with Children Working with vulnerable people (WWVP) registration$146.00NDIS Worker ScreeningWorking with vulnerable people (WWVP) registration$146.00Drivers LicenceACT driver licenceVariableCOVID Vaccination Get proof of COVID-19 vaccinationFreeNew South WalesPolice CheckApply for a National Police CheckStarting from $54.50First Aid/CPRSt Johns Ambulance CourseStarting from $79.00Working with Children Apply for a Working with Children Check$80.00NDIS Worker ScreeningApplying for your NDISWC$80.00Drivers LicenceNSW driver licenceVariableCOVID Vaccination Get proof of COVID-19 vaccinationFreeVictoriaPolice CheckApply for a National Police CheckStarting from $52.50First Aid/CPRSt Johns Ambulance CourseStarting from $85.00Working with Children Apply for a Working with Children Check$128.20NDIS Worker ScreeningApply for NDIS Worker Screening Check$128.20Drivers LicenceVIC driver licenceVariableCOVID Vaccination Get proof of COVID-19 vaccinationFreeQueenslandPolice CheckApply for a National Police CertificateStarting from $67.90First Aid/CPRSt Johns Ambulance CourseStarting from $69.00Working with Children Apply for a Blue Card$101.30*NDIS Worker ScreeningApplying for your Yellow Card$138*Drivers LicenceQLD driver licenceVariableCOVID Vaccination Get proof of COVID-19 vaccinationFree*Combined NDIS worker screening application and blue card application: $153Western AustraliaPolice CheckApply for a National Police CertificateStarting from $58.70First Aid/CPRSt Johns Ambulance CoursesStarting from $89.00Working with Children Apply for a Working with Children Check$87.00NDIS Worker ScreeningApplying for your NDISWC$145.00Drivers LicenceWA driver licenceVariableCOVID Vaccination Get proof of COVID-19 vaccinationFreeSouth AustraliaPolice CheckApply for a National Police CheckStarting from $53.50First Aid/CPRSt Johns Ambulance CoursesStarting from $65.00Working with Children Apply for a Working with Children Check$114.00NDIS Worker ScreeningApplying for your NDISWC$114.00Drivers LicenceSA driver licenceVariableCOVID Vaccination Get proof of COVID-19 vaccinationFreeTasmaniaPolice CheckApply for a National Police CertificateStarting from $45.00First Aid/CPRSt Johns Ambulance CoursesStarting from $65.00Working with Children Registration to work with vulnerable people$124.60NDIS Worker ScreeningRegistration to work with vulnerable people$124.60Drivers LicenceTAS driver licenceVariableCOVID Vaccination Get proof of COVID-19 vaccinationFreeNothern TerritoryPolice CheckApply for a National Police Check$81.00First Aid/CPRSt Johns Ambulance CoursesStarting from $95.00Working with Children Apply for a Working with Children Check$81.00NDIS Worker ScreeningApply for a NDIS Worker Screening Check$81.00Drivers LicenceNT driver licenceVariableCOVID Vaccination Get proof of COVID-19 vaccinationFreeAustralian Capital TerritoryPolice CheckApply for a National Police Check$42.00First Aid/CPRSt Johns Ambulance CoursesStarting from $85.00Working with Children Working with vulnerable people (WWVP) registration$146.00NDIS Worker ScreeningWorking with vulnerable people (WWVP) registration$146.00Drivers LicenceACT driver licenceVariableCOVID Vaccination Get proof of COVID-19 vaccinationFreeAboutfeaturesPricingContactBlogLog Infree trial\n\n;(function(o,l,a,r,k,y){if(o.olark)return;\nr=\"script\";y=l.createElement(r);r=l.getElementsByTagName(r)[0];\ny.async=1;y.src=\"//\"+a;r.parentNode.insertBefore(y,r);\ny=o.olark=function(){k.s.push(arguments);k.t.push(+new Date)};\ny.extend=function(i,j){y(\"extend\",i,j)};\ny.identify=function(i){y(\"identify\",k.i=i)};\ny.configure=function(i,j){y(\"configure\",i,j);k.c[i]=j};\nk=y._={s:[],t:[+new Date],c:{},l:a};\n})(window,document,\"static.olark.com/jsclient/loader.js\");\n/* Add configuration calls below this comment */\nolark.identify('9249-420-10-4842');",
+      "headings": {
+        "h1": [
+          "Certifications"
+        ],
+        "h2": [],
+        "h3": []
+      },
+      "links": {
+        "internal": [
+          {
+            "text": "Financials",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/bookkeaping-best-practices"
+          },
+          {
+            "text": "Qualificaition",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/support-provider-qualifications"
+          },
+          {
+            "text": "<",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/bookkeaping-best-practices"
+          },
+          {
+            "text": ">",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/support-provider-qualifications"
+          },
+          {
+            "text": "Essential Certifications and Checks for Independent Support Workers",
+            "href": "https://www.bugal.com.au/post/essential-certifications-and-checks-for-independent-support-workers"
+          },
+          {
+            "text": "Pricing",
+            "href": "https://www.bugal.com.au/#pricing"
+          },
+          {
+            "text": "Contact",
+            "href": "https://www.bugal.com.au/#contact"
+          },
+          {
+            "text": "Blog",
+            "href": "https://www.bugal.com.au/category/support-provider-starting-out"
+          },
+          {
+            "text": "Log In",
+            "href": "https://app.bugal.com.au/sign-in"
+          },
+          {
+            "text": "free trial",
+            "href": "https://app.bugal.com.au/sign-up"
+          }
+        ],
+        "external": [
+          {
+            "text": "Apply for a National Police Check",
+            "href": "https://www.service.nsw.gov.au/transaction/apply-national-police-check"
+          },
+          {
+            "text": "St Johns Ambulance Course",
+            "href": "https://stjohnnsw.com.au/first-aid-courses#s-eea54ade-c10d-4785-8739-6f39e49ddae3"
+          },
+          {
+            "text": "Apply for a Working with Children Check",
+            "href": "https://www.service.nsw.gov.au/transaction/apply-for-a-working-with-children-check"
+          },
+          {
+            "text": "Applying for your NDISWC",
+            "href": "https://www.service.nsw.gov.au/ndiswc"
+          },
+          {
+            "text": "NSW driver licence",
+            "href": "https://www.service.nsw.gov.au/services/nsw-driver-licence"
+          },
+          {
+            "text": "Get proof of COVID-19 vaccination",
+            "href": "https://www.nsw.gov.au/covid-19/vaccination/proof"
+          },
+          {
+            "text": "Apply for a National Police Check",
+            "href": "https://www.police.vic.gov.au/apply-national-police-check"
+          },
+          {
+            "text": "St Johns Ambulance Course",
+            "href": "https://www.stjohnvic.com.au/first-aid-training/first-aid-courses/"
+          },
+          {
+            "text": "Apply for a Working with Children Check",
+            "href": "https://service.vic.gov.au/services/working-with-children"
+          },
+          {
+            "text": "Apply for NDIS Worker Screening Check",
+            "href": "https://www.vic.gov.au/ndis-worker-screening-check"
+          },
+          {
+            "text": "VIC driver licence",
+            "href": "https://www.vicroads.vic.gov.au/licences"
+          },
+          {
+            "text": "Get proof of COVID-19 vaccination",
+            "href": "https://service.vic.gov.au/vacc-cert/changes#:~:text=You%20no%20longer%20need%20to,to%20access%20your%20vaccination%20certificate."
+          },
+          {
+            "text": "Apply for a National Police Certificate",
+            "href": "https://www.police.qld.gov.au/documents-for-purchase/national-police-certificates"
+          },
+          {
+            "text": "St Johns Ambulance Course",
+            "href": "https://www.stjohnqld.com.au/courses/?_course_categories=first-aid-and-cpr"
+          },
+          {
+            "text": "Apply for a Blue Card",
+            "href": "https://www.qld.gov.au/law/laws-regulated-industries-and-accountability/queensland-laws-and-regulations/regulated-industries-and-licensing/blue-card-services"
+          },
+          {
+            "text": "Applying for your Yellow Card",
+            "href": "https://www.service.nsw.gov.au/ndiswc"
+          },
+          {
+            "text": "QLD driver licence",
+            "href": "https://www.qld.gov.au/transport/licensing/driver-licensing"
+          },
+          {
+            "text": "Get proof of COVID-19 vaccination",
+            "href": "https://www.qld.gov.au/health/conditions/health-alerts/coronavirus-covid-19/covid-19-vaccine/get-vaccinated/proof-of-vaccination"
+          },
+          {
+            "text": "Apply for a National Police Certificate",
+            "href": "https://www.police.wa.gov.au/police-direct/national-police-certificates"
+          },
+          {
+            "text": "St Johns Ambulance Courses",
+            "href": "https://stjohnnsw.com.au/first-aid-courses#s-eea54ade-c10d-4785-8739-6f39e49ddae3"
+          },
+          {
+            "text": "Apply for a Working with Children Check",
+            "href": "https://www.wa.gov.au/organisation/department-of-communities/working-children-check"
+          },
+          {
+            "text": "Applying for your NDISWC",
+            "href": "https://www.service.nsw.gov.au/ndiswc"
+          },
+          {
+            "text": "WA driver licence",
+            "href": "https://www.transport.wa.gov.au/licensing/my-drivers-licence.asp"
+          },
+          {
+            "text": "Get proof of COVID-19 vaccination",
+            "href": "https://www.wa.gov.au/government/multi-step-guides/servicewa-app-support/access-and-import-your-covid-19-digital-certificate-the-servicewa-app"
+          },
+          {
+            "text": "Apply for a National Police Check",
+            "href": "https://www.police.sa.gov.au/services-and-events/apply-for-a-police-record-check"
+          },
+          {
+            "text": "St Johns Ambulance Courses",
+            "href": "https://www.stjohnsa.com.au/shop-our-courses#courses-list"
+          },
+          {
+            "text": "Apply for a Working with Children Check",
+            "href": "https://www.sa.gov.au/topics/rights-and-law/rights-and-responsibilities/screening-checks/apply-for-a-screening-check"
+          },
+          {
+            "text": "Applying for your NDISWC",
+            "href": "https://www.sa.gov.au/topics/rights-and-law/rights-and-responsibilities/screening-checks/apply-for-a-screening-check"
+          },
+          {
+            "text": "SA driver licence",
+            "href": "https://www.sa.gov.au/topics/driving-and-transport/licences"
+          },
+          {
+            "text": "Get proof of COVID-19 vaccination",
+            "href": "https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/conditions/immunisation/immunisation+records+and+registers"
+          },
+          {
+            "text": "Apply for a National Police Certificate",
+            "href": "https://www.police.tas.gov.au/services-online/police-history-record-checks/"
+          },
+          {
+            "text": "St Johns Ambulance Courses",
+            "href": "https://www.stjohntas.org.au/book-a-course/"
+          },
+          {
+            "text": "Registration to work with vulnerable people",
+            "href": "https://www.service.tas.gov.au/services/education-and-skills/working-with-vulnerable-people-including-children/apply-for-registration-to-work-with-vulnerable-people"
+          },
+          {
+            "text": "Registration to work with vulnerable people",
+            "href": "https://www.service.tas.gov.au/services/education-and-skills/working-with-vulnerable-people-including-children/apply-for-registration-to-work-with-vulnerable-people"
+          },
+          {
+            "text": "TAS driver licence",
+            "href": "https://www.transport.tas.gov.au/licensing"
+          },
+          {
+            "text": "Get proof of COVID-19 vaccination",
+            "href": "https://www.premier.tas.gov.au/site_resources_2015/additional_releases/helping_tasmanians_access_their_covid-19_digital_vaccination_certificate"
+          },
+          {
+            "text": "Apply for a National Police Check",
+            "href": "https://forms.pfes.nt.gov.au/safent/Apply.aspx?App=CHC"
+          },
+          {
+            "text": "St Johns Ambulance Courses",
+            "href": "https://www.stjohnnt.org.au/courses/2021-provide-first-aid-/"
+          },
+          {
+            "text": "Apply for a Working with Children Check",
+            "href": "https://forms.pfes.nt.gov.au/safent/Apply.aspx?App=WWC"
+          },
+          {
+            "text": "Apply for a NDIS Worker Screening Check",
+            "href": "https://forms.pfes.nt.gov.au/ntpfes.NDIS.ExternalPortal/"
+          },
+          {
+            "text": "NT driver licence",
+            "href": "https://nt.gov.au/driving/licence/getting-an-nt-licence/get-your-driver-licence"
+          },
+          {
+            "text": "Get proof of COVID-19 vaccination",
+            "href": "https://health.nt.gov.au/covid-19/vaccine/proof-of-vaccination"
+          },
+          {
+            "text": "Apply for a National Police Check",
+            "href": "https://www.afp.gov.au/what-we-do/national-police-checks"
+          },
+          {
+            "text": "St Johns Ambulance Courses",
+            "href": "https://stjohnact.com.au/available-courses-booking/"
+          },
+          {
+            "text": "Working with vulnerable people (WWVP) registration",
+            "href": "https://www.accesscanberra.act.gov.au/s/article/working-with-vulnerable-people-wwvp-registration-tab-how-to-apply"
+          },
+          {
+            "text": "Working with vulnerable people (WWVP) registration",
+            "href": "https://www.accesscanberra.act.gov.au/s/article/national-disability-insurance-scheme-ndis-tab-overview-tab-how-to-apply-for-an-ndis-worker-screening-check-in-the-act"
+          },
+          {
+            "text": "ACT driver licence",
+            "href": "https://www.accesscanberra.act.gov.au/s/article/act-driver-licence-information-tab-overview"
+          },
+          {
+            "text": "Get proof of COVID-19 vaccination",
+            "href": "https://www.cmtedd.act.gov.au/open_government/inform/act_government_media_releases/rachel-stephen-smith-mla-media-releases/2021/covid-19-vaccination-certificates-now-available-in-the-check-in-cbr-app"
+          },
+          {
+            "text": "Apply for a National Police Check",
+            "href": "https://www.service.nsw.gov.au/transaction/apply-national-police-check"
+          },
+          {
+            "text": "St Johns Ambulance Course",
+            "href": "https://stjohnnsw.com.au/first-aid-courses#s-eea54ade-c10d-4785-8739-6f39e49ddae3"
+          },
+          {
+            "text": "Apply for a Working with Children Check",
+            "href": "https://www.service.nsw.gov.au/transaction/apply-for-a-working-with-children-check"
+          },
+          {
+            "text": "Applying for your NDISWC",
+            "href": "https://www.service.nsw.gov.au/ndiswc"
+          },
+          {
+            "text": "NSW driver licence",
+            "href": "https://www.service.nsw.gov.au/services/nsw-driver-licence"
+          },
+          {
+            "text": "Get proof of COVID-19 vaccination",
+            "href": "https://www.nsw.gov.au/covid-19/vaccination/proof"
+          },
+          {
+            "text": "Apply for a National Police Check",
+            "href": "https://www.police.vic.gov.au/apply-national-police-check"
+          },
+          {
+            "text": "St Johns Ambulance Course",
+            "href": "https://www.stjohnvic.com.au/first-aid-training/first-aid-courses/"
+          },
+          {
+            "text": "Apply for a Working with Children Check",
+            "href": "https://service.vic.gov.au/services/working-with-children"
+          },
+          {
+            "text": "Apply for NDIS Worker Screening Check",
+            "href": "https://www.vic.gov.au/ndis-worker-screening-check"
+          },
+          {
+            "text": "VIC driver licence",
+            "href": "https://www.vicroads.vic.gov.au/licences"
+          },
+          {
+            "text": "Get proof of COVID-19 vaccination",
+            "href": "https://service.vic.gov.au/vacc-cert/changes#:~:text=You%20no%20longer%20need%20to,to%20access%20your%20vaccination%20certificate."
+          },
+          {
+            "text": "Apply for a National Police Certificate",
+            "href": "https://www.police.qld.gov.au/documents-for-purchase/national-police-certificates"
+          },
+          {
+            "text": "St Johns Ambulance Course",
+            "href": "https://www.stjohnqld.com.au/courses/?_course_categories=first-aid-and-cpr"
+          },
+          {
+            "text": "Apply for a Blue Card",
+            "href": "https://www.qld.gov.au/law/laws-regulated-industries-and-accountability/queensland-laws-and-regulations/regulated-industries-and-licensing/blue-card-services"
+          },
+          {
+            "text": "Applying for your Yellow Card",
+            "href": "https://www.service.nsw.gov.au/ndiswc"
+          },
+          {
+            "text": "QLD driver licence",
+            "href": "https://www.qld.gov.au/transport/licensing/driver-licensing"
+          },
+          {
+            "text": "Get proof of COVID-19 vaccination",
+            "href": "https://www.qld.gov.au/health/conditions/health-alerts/coronavirus-covid-19/covid-19-vaccine/get-vaccinated/proof-of-vaccination"
+          },
+          {
+            "text": "Apply for a National Police Certificate",
+            "href": "https://www.police.wa.gov.au/police-direct/national-police-certificates"
+          },
+          {
+            "text": "St Johns Ambulance Courses",
+            "href": "https://stjohnnsw.com.au/first-aid-courses#s-eea54ade-c10d-4785-8739-6f39e49ddae3"
+          },
+          {
+            "text": "Apply for a Working with Children Check",
+            "href": "https://www.wa.gov.au/organisation/department-of-communities/working-children-check"
+          },
+          {
+            "text": "Applying for your NDISWC",
+            "href": "https://www.service.nsw.gov.au/ndiswc"
+          },
+          {
+            "text": "WA driver licence",
+            "href": "https://www.transport.wa.gov.au/licensing/my-drivers-licence.asp"
+          },
+          {
+            "text": "Get proof of COVID-19 vaccination",
+            "href": "https://www.wa.gov.au/government/multi-step-guides/servicewa-app-support/access-and-import-your-covid-19-digital-certificate-the-servicewa-app"
+          },
+          {
+            "text": "Apply for a National Police Check",
+            "href": "https://www.police.sa.gov.au/services-and-events/apply-for-a-police-record-check"
+          },
+          {
+            "text": "St Johns Ambulance Courses",
+            "href": "https://www.stjohnsa.com.au/shop-our-courses#courses-list"
+          },
+          {
+            "text": "Apply for a Working with Children Check",
+            "href": "https://www.sa.gov.au/topics/rights-and-law/rights-and-responsibilities/screening-checks/apply-for-a-screening-check"
+          },
+          {
+            "text": "Applying for your NDISWC",
+            "href": "https://www.sa.gov.au/topics/rights-and-law/rights-and-responsibilities/screening-checks/apply-for-a-screening-check"
+          },
+          {
+            "text": "SA driver licence",
+            "href": "https://www.sa.gov.au/topics/driving-and-transport/licences"
+          },
+          {
+            "text": "Get proof of COVID-19 vaccination",
+            "href": "https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/conditions/immunisation/immunisation+records+and+registers"
+          },
+          {
+            "text": "Apply for a National Police Certificate",
+            "href": "https://www.police.tas.gov.au/services-online/police-history-record-checks/"
+          },
+          {
+            "text": "St Johns Ambulance Courses",
+            "href": "https://www.stjohntas.org.au/book-a-course/"
+          },
+          {
+            "text": "Registration to work with vulnerable people",
+            "href": "https://www.service.tas.gov.au/services/education-and-skills/working-with-vulnerable-people-including-children/apply-for-registration-to-work-with-vulnerable-people"
+          },
+          {
+            "text": "Registration to work with vulnerable people",
+            "href": "https://www.service.tas.gov.au/services/education-and-skills/working-with-vulnerable-people-including-children/apply-for-registration-to-work-with-vulnerable-people"
+          },
+          {
+            "text": "TAS driver licence",
+            "href": "https://www.transport.tas.gov.au/licensing"
+          },
+          {
+            "text": "Get proof of COVID-19 vaccination",
+            "href": "https://www.premier.tas.gov.au/site_resources_2015/additional_releases/helping_tasmanians_access_their_covid-19_digital_vaccination_certificate"
+          },
+          {
+            "text": "Apply for a National Police Check",
+            "href": "https://forms.pfes.nt.gov.au/safent/Apply.aspx?App=CHC"
+          },
+          {
+            "text": "St Johns Ambulance Courses",
+            "href": "https://www.stjohnnt.org.au/courses/2021-provide-first-aid-/"
+          },
+          {
+            "text": "Apply for a Working with Children Check",
+            "href": "https://forms.pfes.nt.gov.au/safent/Apply.aspx?App=WWC"
+          },
+          {
+            "text": "Apply for a NDIS Worker Screening Check",
+            "href": "https://forms.pfes.nt.gov.au/ntpfes.NDIS.ExternalPortal/"
+          },
+          {
+            "text": "NT driver licence",
+            "href": "https://nt.gov.au/driving/licence/getting-an-nt-licence/get-your-driver-licence"
+          },
+          {
+            "text": "Get proof of COVID-19 vaccination",
+            "href": "https://health.nt.gov.au/covid-19/vaccine/proof-of-vaccination"
+          },
+          {
+            "text": "Apply for a National Police Check",
+            "href": "https://www.afp.gov.au/what-we-do/national-police-checks"
+          },
+          {
+            "text": "St Johns Ambulance Courses",
+            "href": "https://stjohnact.com.au/available-courses-booking/"
+          },
+          {
+            "text": "Working with vulnerable people (WWVP) registration",
+            "href": "https://www.accesscanberra.act.gov.au/s/article/working-with-vulnerable-people-wwvp-registration-tab-how-to-apply"
+          },
+          {
+            "text": "Working with vulnerable people (WWVP) registration",
+            "href": "https://www.accesscanberra.act.gov.au/s/article/national-disability-insurance-scheme-ndis-tab-overview-tab-how-to-apply-for-an-ndis-worker-screening-check-in-the-act"
+          },
+          {
+            "text": "ACT driver licence",
+            "href": "https://www.accesscanberra.act.gov.au/s/article/act-driver-licence-information-tab-overview"
+          },
+          {
+            "text": "Get proof of COVID-19 vaccination",
+            "href": "https://www.cmtedd.act.gov.au/open_government/inform/act_government_media_releases/rachel-stephen-smith-mla-media-releases/2021/covid-19-vaccination-certificates-now-available-in-the-check-in-cbr-app"
+          },
+          {
+            "text": "",
+            "href": "https://www.facebook.com/BugalSupportSoftware"
+          }
+        ]
+      },
+      "qualityScore": 30
+    },
+    {
+      "url": "https://www.bugal.com.au/starting-a-support-provider-journey/support-provider-qualifications",
+      "title": "Support Provider Qualifications",
+      "slug": "support-provider-qualifications",
+      "status": "success",
+      "pageTitle": "Support Provider Qualifications",
+      "metaDescription": "Show your dedication to the disability sector by acquiring qualifications and completing essential courses. Explore NDIS Quality and Safeguards Commission eLearning modules, like 'Quality Safety and You,' to gain vital knowledge about NDIS worker obligations. Consider TAFE qualifications such as Certificate III in Individual Support or a Diploma of Community Services to boost your skills and credibility. Join industry groups to connect with a community of like-minded professionals dedicated to delivering high-quality support.",
+      "h1": "Qualifications",
+      "h2Count": 0,
+      "h3Count": 0,
+      "wordCount": 111,
+      "imageCount": 2,
+      "imageAltCount": 2,
+      "linkCount": 16,
+      "internalLinkCount": 10,
+      "externalLinkCount": 3,
+      "hasTableOfContents": false,
+      "hasCallToAction": false,
+      "hasFAQ": false,
+      "hasSchema": false,
+      "hasBreadcrumbs": false,
+      "hasLists": false,
+      "hasImages": true,
+      "hasVideos": true,
+      "mainContent": "QualificationsCertification7 of 14Insurance<>From our BlogThe Importance of the NDIS Quality and Safeguards Commission's ELearning ModulesUseful LinksNDIS Quality and Safeguards Commission eLearningNational Disability Practitioners TAFE institutes operate in multiple states and territories, including New South Wales, Victoria, Queensland, Western Australia, South Australia, and the Australian Capital Territory. TAFE offers disability-related courses, ranging from disability support to allied health programs. To find these courses, explore the official TAFE websites in your respective state or territory, where you'll discover comprehensive information on available disability courses, enrolment procedures, and campus locations. AboutfeaturesPricingContactBlogLog Infree trial\n\n;(function(o,l,a,r,k,y){if(o.olark)return;\nr=\"script\";y=l.createElement(r);r=l.getElementsByTagName(r)[0];\ny.async=1;y.src=\"//\"+a;r.parentNode.insertBefore(y,r);\ny=o.olark=function(){k.s.push(arguments);k.t.push(+new Date)};\ny.extend=function(i,j){y(\"extend\",i,j)};\ny.identify=function(i){y(\"identify\",k.i=i)};\ny.configure=function(i,j){y(\"configure\",i,j);k.c[i]=j};\nk=y._={s:[],t:[+new Date],c:{},l:a};\n})(window,document,\"static.olark.com/jsclient/loader.js\");\n/* Add configuration calls below this comment */\nolark.identify('9249-420-10-4842');",
+      "headings": {
+        "h1": [
+          "Qualifications"
+        ],
+        "h2": [],
+        "h3": []
+      },
+      "links": {
+        "internal": [
+          {
+            "text": "Certification",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/support-provider-certifications"
+          },
+          {
+            "text": "Insurance",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/support-provider-insurance"
+          },
+          {
+            "text": "<",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/support-provider-certifications"
+          },
+          {
+            "text": ">",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/support-provider-insurance"
+          },
+          {
+            "text": "The Importance of the NDIS Quality and Safeguards Commission's ELearning Modules",
+            "href": "https://www.bugal.com.au/post/the-importance-of-the-ndis-quality-and-safeguards-commissions-elearning-modules"
+          },
+          {
+            "text": "Pricing",
+            "href": "https://www.bugal.com.au/#pricing"
+          },
+          {
+            "text": "Contact",
+            "href": "https://www.bugal.com.au/#contact"
+          },
+          {
+            "text": "Blog",
+            "href": "https://www.bugal.com.au/category/support-provider-starting-out"
+          },
+          {
+            "text": "Log In",
+            "href": "https://app.bugal.com.au/sign-in"
+          },
+          {
+            "text": "free trial",
+            "href": "https://app.bugal.com.au/sign-up"
+          }
+        ],
+        "external": [
+          {
+            "text": "NDIS Quality and Safeguards Commission eLearning",
+            "href": "https://training.ndiscommission.gov.au/"
+          },
+          {
+            "text": "National Disability Practitioners",
+            "href": "https://www.ndp.org.au/"
+          },
+          {
+            "text": "",
+            "href": "https://www.facebook.com/BugalSupportSoftware"
+          }
+        ]
+      },
+      "qualityScore": 10
+    },
+    {
+      "url": "https://www.bugal.com.au/starting-a-support-provider-journey/support-provider-insurance",
+      "title": "Support Provider Insurance",
+      "slug": "support-provider-insurance",
+      "status": "success",
+      "pageTitle": "Support Provider Insurance",
+      "metaDescription": "Discover the essential coverage options for Independent Support Providers, including public liability insurance, professional indemnity insurance, and income protection insurance. Ensure your financial stability and safeguard your business and clients. Get expert advice from insurance professionals to select the right policies for your specific needs.",
+      "h1": "Insurance",
+      "h2Count": 0,
+      "h3Count": 0,
+      "wordCount": 46,
+      "imageCount": 2,
+      "imageAltCount": 2,
+      "linkCount": 15,
+      "internalLinkCount": 10,
+      "externalLinkCount": 2,
+      "hasTableOfContents": false,
+      "hasCallToAction": false,
+      "hasFAQ": false,
+      "hasSchema": false,
+      "hasBreadcrumbs": false,
+      "hasLists": true,
+      "hasImages": true,
+      "hasVideos": true,
+      "mainContent": "InsuranceQualification8 of 14Marketing<>From our BlogThe Importance of Being InsuredUseful LinksReceive a Discount with BizcoverImportant reasons to be adequately insured.Risk MitigationProfessional CredibilityPeace of MindAboutfeaturesPricingContactBlogLog Infree trial\n\n;(function(o,l,a,r,k,y){if(o.olark)return;\nr=\"script\";y=l.createElement(r);r=l.getElementsByTagName(r)[0];\ny.async=1;y.src=\"//\"+a;r.parentNode.insertBefore(y,r);\ny=o.olark=function(){k.s.push(arguments);k.t.push(+new Date)};\ny.extend=function(i,j){y(\"extend\",i,j)};\ny.identify=function(i){y(\"identify\",k.i=i)};\ny.configure=function(i,j){y(\"configure\",i,j);k.c[i]=j};\nk=y._={s:[],t:[+new Date],c:{},l:a};\n})(window,document,\"static.olark.com/jsclient/loader.js\");\n/* Add configuration calls below this comment */\nolark.identify('9249-420-10-4842');",
+      "headings": {
+        "h1": [
+          "Insurance"
+        ],
+        "h2": [],
+        "h3": []
+      },
+      "links": {
+        "internal": [
+          {
+            "text": "Qualification",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/support-provider-qualifications"
+          },
+          {
+            "text": "Marketing",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/marketing-for-support-provider"
+          },
+          {
+            "text": "<",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/support-provider-qualifications"
+          },
+          {
+            "text": ">",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/marketing-for-support-provider"
+          },
+          {
+            "text": "The Importance of Being Insured",
+            "href": "https://www.bugal.com.au/post/the-importance-of-being-insured"
+          },
+          {
+            "text": "Pricing",
+            "href": "https://www.bugal.com.au/#pricing"
+          },
+          {
+            "text": "Contact",
+            "href": "https://www.bugal.com.au/#contact"
+          },
+          {
+            "text": "Blog",
+            "href": "https://www.bugal.com.au/category/support-provider-starting-out"
+          },
+          {
+            "text": "Log In",
+            "href": "https://app.bugal.com.au/sign-in"
+          },
+          {
+            "text": "free trial",
+            "href": "https://app.bugal.com.au/sign-up"
+          }
+        ],
+        "external": [
+          {
+            "text": "Receive a Discount with Bizcover",
+            "href": "https://insure.bizcover.com.au/OccupationSelection?utm_source=BUGAL&amp;utm_medium=Form&amp;utm_campaign=BUGAL"
+          },
+          {
+            "text": "",
+            "href": "https://www.facebook.com/BugalSupportSoftware"
+          }
+        ]
+      },
+      "qualityScore": 20
+    },
+    {
+      "url": "https://www.bugal.com.au/starting-a-support-provider-journey/marketing-for-support-provider",
+      "title": "Marketing for Support Provider",
+      "slug": "marketing-for-support-provider",
+      "status": "success",
+      "pageTitle": "Marketing for Support Provider",
+      "metaDescription": "Explore cost-effective marketing and networking strategies for Independent Support Providers. Learn how to create an engaging online profile, join NDIS-related social media groups, connect with Support Coordinators, and leverage word-of-mouth referrals. Strengthen your industry presence and attract clients and growth opportunities with these valuable tactics.",
+      "h1": "Marketing & Networking",
+      "h2Count": 0,
+      "h3Count": 0,
+      "wordCount": 116,
+      "imageCount": 2,
+      "imageAltCount": 2,
+      "linkCount": 16,
+      "internalLinkCount": 11,
+      "externalLinkCount": 2,
+      "hasTableOfContents": false,
+      "hasCallToAction": false,
+      "hasFAQ": false,
+      "hasSchema": false,
+      "hasBreadcrumbs": false,
+      "hasLists": true,
+      "hasImages": true,
+      "hasVideos": true,
+      "mainContent": "Marketing & NetworkingInsurance9 of 14Participants<>From our BlogStand Out with an Irresistible ProfileUnlocking the Power of Social Media: Finding Clients as an Independent Support WorkerUseful LinksFinding a support coordinatorVisibility through Marketing: Effectively market your services to attract potential clients and raise awareness of the support you offer.Networking for Connections: Build valuable connections with peers and professionals in the field through networking, which can provide insights and referral opportunities.Word-of-Mouth Referrals: Deliver exceptional service to clients, as their satisfaction can lead to word-of-mouth referrals, one of the most powerful ways to expand your business and reputation.AboutfeaturesPricingContactBlogLog Infree trial\n\n;(function(o,l,a,r,k,y){if(o.olark)return;\nr=\"script\";y=l.createElement(r);r=l.getElementsByTagName(r)[0];\ny.async=1;y.src=\"//\"+a;r.parentNode.insertBefore(y,r);\ny=o.olark=function(){k.s.push(arguments);k.t.push(+new Date)};\ny.extend=function(i,j){y(\"extend\",i,j)};\ny.identify=function(i){y(\"identify\",k.i=i)};\ny.configure=function(i,j){y(\"configure\",i,j);k.c[i]=j};\nk=y._={s:[],t:[+new Date],c:{},l:a};\n})(window,document,\"static.olark.com/jsclient/loader.js\");\n/* Add configuration calls below this comment */\nolark.identify('9249-420-10-4842');",
+      "headings": {
+        "h1": [
+          "Marketing & Networking"
+        ],
+        "h2": [],
+        "h3": []
+      },
+      "links": {
+        "internal": [
+          {
+            "text": "Insurance",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/support-provider-insurance"
+          },
+          {
+            "text": "Participants",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/taking-on-new-participants"
+          },
+          {
+            "text": "<",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/support-provider-insurance"
+          },
+          {
+            "text": ">",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/taking-on-new-participants"
+          },
+          {
+            "text": "Stand Out with an Irresistible Profile",
+            "href": "https://www.bugal.com.au/post/stand-out-with-an-irresistible-profile"
+          },
+          {
+            "text": "Unlocking the Power of Social Media: Finding Clients as an Independent Support Worker",
+            "href": "https://www.bugal.com.au/post/unlocking-the-power-of-social-media-finding-clients-as-an-independent-support-worker"
+          },
+          {
+            "text": "Pricing",
+            "href": "https://www.bugal.com.au/#pricing"
+          },
+          {
+            "text": "Contact",
+            "href": "https://www.bugal.com.au/#contact"
+          },
+          {
+            "text": "Blog",
+            "href": "https://www.bugal.com.au/category/support-provider-starting-out"
+          },
+          {
+            "text": "Log In",
+            "href": "https://app.bugal.com.au/sign-in"
+          },
+          {
+            "text": "free trial",
+            "href": "https://app.bugal.com.au/sign-up"
+          }
+        ],
+        "external": [
+          {
+            "text": "Finding a support coordinator",
+            "href": "https://www.ndis.gov.au/participants/using-your-plan/who-can-help-start-your-plan/support-coordination/finding-support-coordinator"
+          },
+          {
+            "text": "",
+            "href": "https://www.facebook.com/BugalSupportSoftware"
+          }
+        ]
+      },
+      "qualityScore": 20
+    },
+    {
+      "url": "https://www.bugal.com.au/starting-a-support-provider-journey/taking-on-new-participants",
+      "title": "Taking on New Participants",
+      "slug": "taking-on-new-participants",
+      "status": "success",
+      "pageTitle": "Taking on New Clients",
+      "metaDescription": "Discover the value of a comprehensive Service Agreement, specifying support details, terms, responsibilities, and more. Promote transparency, trust, and alignment with your client's needs and goals from the outset.",
+      "h1": "Taking on New Participants",
+      "h2Count": 0,
+      "h3Count": 0,
+      "wordCount": 130,
+      "imageCount": 2,
+      "imageAltCount": 2,
+      "linkCount": 15,
+      "internalLinkCount": 11,
+      "externalLinkCount": 1,
+      "hasTableOfContents": false,
+      "hasCallToAction": false,
+      "hasFAQ": false,
+      "hasSchema": false,
+      "hasBreadcrumbs": false,
+      "hasLists": true,
+      "hasImages": true,
+      "hasVideos": true,
+      "mainContent": "Taking on New ParticipantsMarketing10 of 14Fin Mgt<>From our BlogCrafting a Comprehensive Service Agreement for Support Providers and NDIS Participants.Useful LinksFree Service Agreement Creator in BugalThe Importance of a Service AgreementClear Expectations: A service agreement sets clear expectations, outlining the scope of services, goals, and responsibilities, ensuring both parties are on the same page.Protection: It provides a level of protection by documenting the terms of the agreement, including payment terms, dispute resolution processes, and even a cancellation clauses, reducing potential misunderstandings and disputes.Accountability and Quality: A well-defined service agreement encourages accountability, fostering a commitment to quality service delivery, benefiting both the Independent Support Provider and the NDIS Participant.AboutfeaturesPricingContactBlogLog Infree trial\n\n;(function(o,l,a,r,k,y){if(o.olark)return;\nr=\"script\";y=l.createElement(r);r=l.getElementsByTagName(r)[0];\ny.async=1;y.src=\"//\"+a;r.parentNode.insertBefore(y,r);\ny=o.olark=function(){k.s.push(arguments);k.t.push(+new Date)};\ny.extend=function(i,j){y(\"extend\",i,j)};\ny.identify=function(i){y(\"identify\",k.i=i)};\ny.configure=function(i,j){y(\"configure\",i,j);k.c[i]=j};\nk=y._={s:[],t:[+new Date],c:{},l:a};\n})(window,document,\"static.olark.com/jsclient/loader.js\");\n/* Add configuration calls below this comment */\nolark.identify('9249-420-10-4842');",
+      "headings": {
+        "h1": [
+          "Taking on New Participants"
+        ],
+        "h2": [],
+        "h3": []
+      },
+      "links": {
+        "internal": [
+          {
+            "text": "Marketing",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/marketing-for-support-provider"
+          },
+          {
+            "text": "Fin Mgt",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/financial-management-for-support-providers"
+          },
+          {
+            "text": "<",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/marketing-for-support-provider"
+          },
+          {
+            "text": ">",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/financial-management-for-support-providers"
+          },
+          {
+            "text": "Crafting a Comprehensive Service Agreement for Support Providers and NDIS Participants.",
+            "href": "https://www.bugal.com.au/post/crafting-a-comprehensive-service-agreement-for-support-providers-and-ndis-participants"
+          },
+          {
+            "text": "Free Service Agreement Creator in Bugal",
+            "href": "https://app.staging.bugal.com.au/sign-up"
+          },
+          {
+            "text": "Pricing",
+            "href": "https://www.bugal.com.au/#pricing"
+          },
+          {
+            "text": "Contact",
+            "href": "https://www.bugal.com.au/#contact"
+          },
+          {
+            "text": "Blog",
+            "href": "https://www.bugal.com.au/category/support-provider-starting-out"
+          },
+          {
+            "text": "Log In",
+            "href": "https://app.bugal.com.au/sign-in"
+          },
+          {
+            "text": "free trial",
+            "href": "https://app.bugal.com.au/sign-up"
+          }
+        ],
+        "external": [
+          {
+            "text": "",
+            "href": "https://www.facebook.com/BugalSupportSoftware"
+          }
+        ]
+      },
+      "qualityScore": 20
+    },
+    {
+      "url": "https://www.bugal.com.au/starting-a-support-provider-journey/financial-management-for-support-providers",
+      "title": "Financial Management for Support Providers",
+      "slug": "financial-management-for-support-providers",
+      "status": "success",
+      "pageTitle": "Financial Management for Support Providers",
+      "metaDescription": "Discover the key principles of effective financial management for Independent Support Workers: Habitual, Regular, and Forward-Thinking. Learn how consistency, routine financial tasks, and forward planning can help you navigate your financial responsibilities, ensuring financial peace of mind and empowering you to provide top-notch support to your clients.",
+      "h1": "Financial Management",
+      "h2Count": 0,
+      "h3Count": 0,
+      "wordCount": 132,
+      "imageCount": 2,
+      "imageAltCount": 2,
+      "linkCount": 15,
+      "internalLinkCount": 11,
+      "externalLinkCount": 1,
+      "hasTableOfContents": false,
+      "hasCallToAction": false,
+      "hasFAQ": false,
+      "hasSchema": false,
+      "hasBreadcrumbs": false,
+      "hasLists": true,
+      "hasImages": true,
+      "hasVideos": true,
+      "mainContent": "Financial ManagementParticipants11 of 14Super<>From our BlogA New Financial Year: Things I wish I did last Financial Year that I will do this one!Mastering Your Schedule: A Guide for Independent Support WorkersUseful LinksThe three key concepts explained:Habitual: Establishing good business habits from the start is essential. By making crucial tasks a routine part of your operations, you ensure consistency and reliability in service delivery.Regular: Regularity in tasks such as financial tracking, client communication, and professional development is key to long-term success.Forward-Thinking: While building habits and maintaining regularity are crucial, being forward-thinking is equally vital. It involves keeping an eye on upcoming expenses, anticipating any changes, and planning for the future.AboutfeaturesPricingContactBlogLog Infree trial\n\n;(function(o,l,a,r,k,y){if(o.olark)return;\nr=\"script\";y=l.createElement(r);r=l.getElementsByTagName(r)[0];\ny.async=1;y.src=\"//\"+a;r.parentNode.insertBefore(y,r);\ny=o.olark=function(){k.s.push(arguments);k.t.push(+new Date)};\ny.extend=function(i,j){y(\"extend\",i,j)};\ny.identify=function(i){y(\"identify\",k.i=i)};\ny.configure=function(i,j){y(\"configure\",i,j);k.c[i]=j};\nk=y._={s:[],t:[+new Date],c:{},l:a};\n})(window,document,\"static.olark.com/jsclient/loader.js\");\n/* Add configuration calls below this comment */\nolark.identify('9249-420-10-4842');",
+      "headings": {
+        "h1": [
+          "Financial Management"
+        ],
+        "h2": [],
+        "h3": []
+      },
+      "links": {
+        "internal": [
+          {
+            "text": "Participants",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/taking-on-new-clients"
+          },
+          {
+            "text": "Super",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/superannuation-for-support-providers"
+          },
+          {
+            "text": "<",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/taking-on-new-clients"
+          },
+          {
+            "text": ">",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/superannuation-for-support-providers"
+          },
+          {
+            "text": "A New Financial Year: Things I wish I did last Financial Year that I will do this one!",
+            "href": "https://www.bugal.com.au/post/new-finanical-year"
+          },
+          {
+            "text": "Mastering Your Schedule: A Guide for Independent Support Workers",
+            "href": "https://www.bugal.com.au/post/mastering-your-schedule-a-guide-for-independent-support-workers"
+          },
+          {
+            "text": "Pricing",
+            "href": "https://www.bugal.com.au/#pricing"
+          },
+          {
+            "text": "Contact",
+            "href": "https://www.bugal.com.au/#contact"
+          },
+          {
+            "text": "Blog",
+            "href": "https://www.bugal.com.au/category/support-provider-starting-out"
+          },
+          {
+            "text": "Log In",
+            "href": "https://app.bugal.com.au/sign-in"
+          },
+          {
+            "text": "free trial",
+            "href": "https://app.bugal.com.au/sign-up"
+          }
+        ],
+        "external": [
+          {
+            "text": "",
+            "href": "https://www.facebook.com/BugalSupportSoftware"
+          }
+        ]
+      },
+      "qualityScore": 20
+    },
+    {
+      "url": "https://www.bugal.com.au/starting-a-support-provider-journey/superannuation-for-support-providers",
+      "title": "Superannuation for Support Providers",
+      "slug": "superannuation-for-support-providers",
+      "status": "success",
+      "pageTitle": "Superannuation for Support Providers",
+      "metaDescription": "Explore the importance of superannuation for your retirement and the benefits of contributing as a Independent Support Worker. Learn about the increasing superannuation rates and how contributing can lead to tax savings. Discover the added financial security provided by Total and Permanent Disability Insurance offered by many Superfunds. Secure your financial future with consistent superannuation contributions and start building a financially stable retirement today.",
+      "h1": "Superannuation",
+      "h2Count": 0,
+      "h3Count": 0,
+      "wordCount": 75,
+      "imageCount": 2,
+      "imageAltCount": 2,
+      "linkCount": 16,
+      "internalLinkCount": 10,
+      "externalLinkCount": 3,
+      "hasTableOfContents": false,
+      "hasCallToAction": false,
+      "hasFAQ": false,
+      "hasSchema": false,
+      "hasBreadcrumbs": false,
+      "hasLists": false,
+      "hasImages": true,
+      "hasVideos": true,
+      "mainContent": "SuperannuationFin Mgt12 of 14NDIS Reg<>From our BlogSuperannuation for Independent Support Providers: Your Financial LifelineUseful LinksATO - YourSuper comparison toolChoosing a Super fundSuperannuation is a vital retirement savings plan in Australia, with increasing contributions over time. Contributing offers tax benefits and financial security through insurance, laying a solid foundation for a secure retirement.AboutfeaturesPricingContactBlogLog Infree trial\n\n;(function(o,l,a,r,k,y){if(o.olark)return;\nr=\"script\";y=l.createElement(r);r=l.getElementsByTagName(r)[0];\ny.async=1;y.src=\"//\"+a;r.parentNode.insertBefore(y,r);\ny=o.olark=function(){k.s.push(arguments);k.t.push(+new Date)};\ny.extend=function(i,j){y(\"extend\",i,j)};\ny.identify=function(i){y(\"identify\",k.i=i)};\ny.configure=function(i,j){y(\"configure\",i,j);k.c[i]=j};\nk=y._={s:[],t:[+new Date],c:{},l:a};\n})(window,document,\"static.olark.com/jsclient/loader.js\");\n/* Add configuration calls below this comment */\nolark.identify('9249-420-10-4842');",
+      "headings": {
+        "h1": [
+          "Superannuation"
+        ],
+        "h2": [],
+        "h3": []
+      },
+      "links": {
+        "internal": [
+          {
+            "text": "Fin Mgt",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/financial-management-for-support-providers"
+          },
+          {
+            "text": "NDIS Reg",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/ndis-registration"
+          },
+          {
+            "text": "<",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/financial-management-for-support-providers"
+          },
+          {
+            "text": ">",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/ndis-registration"
+          },
+          {
+            "text": "Superannuation for Independent Support Providers: Your Financial Lifeline",
+            "href": "https://www.bugal.com.au/post/superannuation-for-independent-support-providers-your-financial-lifeline"
+          },
+          {
+            "text": "Pricing",
+            "href": "https://www.bugal.com.au/#pricing"
+          },
+          {
+            "text": "Contact",
+            "href": "https://www.bugal.com.au/#contact"
+          },
+          {
+            "text": "Blog",
+            "href": "https://www.bugal.com.au/category/support-provider-starting-out"
+          },
+          {
+            "text": "Log In",
+            "href": "https://app.bugal.com.au/sign-in"
+          },
+          {
+            "text": "free trial",
+            "href": "https://app.bugal.com.au/sign-up"
+          }
+        ],
+        "external": [
+          {
+            "text": "ATO - YourSuper comparison tool",
+            "href": "https://www.ato.gov.au/Calculators-and-tools/YourSuper-comparison-tool/#AccesstheYourSupercomparisontool"
+          },
+          {
+            "text": "Choosing a Super fund",
+            "href": "https://moneysmart.gov.au/how-super-works/choosing-a-super-fund"
+          },
+          {
+            "text": "",
+            "href": "https://www.facebook.com/BugalSupportSoftware"
+          }
+        ]
+      },
+      "qualityScore": 10
+    },
+    {
+      "url": "https://www.bugal.com.au/starting-a-support-provider-journey/ndis-registration",
+      "title": "NDIS Registration",
+      "slug": "ndis-registration",
+      "status": "success",
+      "pageTitle": "NDIS Registration",
+      "metaDescription": "Explore the process, advantages, and disadvantages of becoming an NDIS Registered Provider as an Independent Support Provider. Learn about the comprehensive steps involved, associated costs, and the potential benefits of broadening your client base and enhancing your reputation. Consider the additional administrative tasks and compliance expenses, and assess if becoming registered aligns with your career goals and available resources.",
+      "h1": "NDIS Registration",
+      "h2Count": 0,
+      "h3Count": 0,
+      "wordCount": 124,
+      "imageCount": 2,
+      "imageAltCount": 2,
+      "linkCount": 18,
+      "internalLinkCount": 11,
+      "externalLinkCount": 4,
+      "hasTableOfContents": false,
+      "hasCallToAction": false,
+      "hasFAQ": false,
+      "hasSchema": false,
+      "hasBreadcrumbs": false,
+      "hasLists": false,
+      "hasImages": true,
+      "hasVideos": true,
+      "mainContent": "NDIS RegistrationSuper13 of 14Growth<>From our BlogTo Be Or Not To Be An NDIS Registered Provider?Guide to Becoming an NDIS Registered ProviderUseful LinksHow to register (NDIS)Becoming an NDIS providerProvider readiness checklistBecoming a registered NDIS Provider is a significant step for Independent Support Workers. It's advisable to consider this step when your business is up and running smoothly and you have the time and resources to dedicate to the registration process. However, researching the process and considering professional assistance during registration are wise steps to take in preparation. This ensures that you're well-prepared to meet NDIS standards and provide top-quality support once registered.AboutfeaturesPricingContactBlogLog Infree trial\n\n;(function(o,l,a,r,k,y){if(o.olark)return;\nr=\"script\";y=l.createElement(r);r=l.getElementsByTagName(r)[0];\ny.async=1;y.src=\"//\"+a;r.parentNode.insertBefore(y,r);\ny=o.olark=function(){k.s.push(arguments);k.t.push(+new Date)};\ny.extend=function(i,j){y(\"extend\",i,j)};\ny.identify=function(i){y(\"identify\",k.i=i)};\ny.configure=function(i,j){y(\"configure\",i,j);k.c[i]=j};\nk=y._={s:[],t:[+new Date],c:{},l:a};\n})(window,document,\"static.olark.com/jsclient/loader.js\");\n/* Add configuration calls below this comment */\nolark.identify('9249-420-10-4842');",
+      "headings": {
+        "h1": [
+          "NDIS Registration"
+        ],
+        "h2": [],
+        "h3": []
+      },
+      "links": {
+        "internal": [
+          {
+            "text": "Super",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/superannuation-for-support-providers"
+          },
+          {
+            "text": "Growth",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/growing-your-support-business"
+          },
+          {
+            "text": "<",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/superannuation-for-support-providers"
+          },
+          {
+            "text": ">",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/growing-your-support-business"
+          },
+          {
+            "text": "To Be Or Not To Be An NDIS Registered Provider?",
+            "href": "https://www.bugal.com.au/post/to-be-or-not-to-be-an-ndis-registered-provider"
+          },
+          {
+            "text": "Guide to Becoming an NDIS Registered Provider",
+            "href": "https://www.bugal.com.au/post/guide-to-becoming-an-ndis-registered-provider"
+          },
+          {
+            "text": "Pricing",
+            "href": "https://www.bugal.com.au/#pricing"
+          },
+          {
+            "text": "Contact",
+            "href": "https://www.bugal.com.au/#contact"
+          },
+          {
+            "text": "Blog",
+            "href": "https://www.bugal.com.au/category/support-provider-starting-out"
+          },
+          {
+            "text": "Log In",
+            "href": "https://app.bugal.com.au/sign-in"
+          },
+          {
+            "text": "free trial",
+            "href": "https://app.bugal.com.au/sign-up"
+          }
+        ],
+        "external": [
+          {
+            "text": "How to register (NDIS)",
+            "href": "https://www.ndis.gov.au/providers/becoming-ndis-provider/how-register"
+          },
+          {
+            "text": "Becoming an NDIS provider",
+            "href": "https://www.ndis.gov.au/providers/becoming-ndis-provider"
+          },
+          {
+            "text": "Provider readiness checklist",
+            "href": "https://www.ndis.gov.au/providers/becoming-ndis-provider/am-i-ready"
+          },
+          {
+            "text": "",
+            "href": "https://www.facebook.com/BugalSupportSoftware"
+          }
+        ]
+      },
+      "qualityScore": 10
+    },
+    {
+      "url": "https://www.bugal.com.au/starting-a-support-provider-journey/growing-your-support-business",
+      "title": "Growing Your Support Business",
+      "slug": "growing-your-support-business",
+      "status": "success",
+      "pageTitle": "Growing your Support Business",
+      "metaDescription": "As an Independent Support Worker, planning for the future is essential. Explore key questions to envision your business's direction and growth potential. Consider further qualifications, expanding your services, and workforce expansion or partnerships. Proactive planning now can lead to future success.",
+      "h1": "Growing your Support Business",
+      "h2Count": 0,
+      "h3Count": 0,
+      "wordCount": 123,
+      "imageCount": 2,
+      "imageAltCount": 2,
+      "linkCount": 14,
+      "internalLinkCount": 10,
+      "externalLinkCount": 1,
+      "hasTableOfContents": false,
+      "hasCallToAction": false,
+      "hasFAQ": false,
+      "hasSchema": false,
+      "hasBreadcrumbs": false,
+      "hasLists": false,
+      "hasImages": true,
+      "hasVideos": true,
+      "mainContent": "Growing your Support BusinessNDIS Reg14 of 14Finish<>From our BlogSetting the Foundation for a Thriving Support Business: Planning for GrowthUseful LinksBuilding a thriving support business can take time, but starting on the right foundation is an investment that yields lasting dividends. It's crucial to invest in yourself and the quality of your services because excellence in support naturally fosters business growth. Expanding your team or services should be a deliberate step, taken only when you can confidently chart a clear path to success. Prioritising exceptional service and organic growth ensures the sustainability and success of your business in the long run.AboutfeaturesPricingContactBlogLog Infree trial\n\n;(function(o,l,a,r,k,y){if(o.olark)return;\nr=\"script\";y=l.createElement(r);r=l.getElementsByTagName(r)[0];\ny.async=1;y.src=\"//\"+a;r.parentNode.insertBefore(y,r);\ny=o.olark=function(){k.s.push(arguments);k.t.push(+new Date)};\ny.extend=function(i,j){y(\"extend\",i,j)};\ny.identify=function(i){y(\"identify\",k.i=i)};\ny.configure=function(i,j){y(\"configure\",i,j);k.c[i]=j};\nk=y._={s:[],t:[+new Date],c:{},l:a};\n})(window,document,\"static.olark.com/jsclient/loader.js\");\n/* Add configuration calls below this comment */\nolark.identify('9249-420-10-4842');",
+      "headings": {
+        "h1": [
+          "Growing your Support Business"
+        ],
+        "h2": [],
+        "h3": []
+      },
+      "links": {
+        "internal": [
+          {
+            "text": "NDIS Reg",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/ndis-registration"
+          },
+          {
+            "text": "Finish",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/completed-bugal-support-worker-series"
+          },
+          {
+            "text": "<",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/ndis-registration"
+          },
+          {
+            "text": ">",
+            "href": "https://www.bugal.com.au/starting-a-support-provider-journey/intro"
+          },
+          {
+            "text": "Setting the Foundation for a Thriving Support Business: Planning for Growth",
+            "href": "https://www.bugal.com.au/post/setting-the-foundation-for-a-thriving-support-business-planning-for-growth"
+          },
+          {
+            "text": "Pricing",
+            "href": "https://www.bugal.com.au/#pricing"
+          },
+          {
+            "text": "Contact",
+            "href": "https://www.bugal.com.au/#contact"
+          },
+          {
+            "text": "Blog",
+            "href": "https://www.bugal.com.au/category/support-provider-starting-out"
+          },
+          {
+            "text": "Log In",
+            "href": "https://app.bugal.com.au/sign-in"
+          },
+          {
+            "text": "free trial",
+            "href": "https://app.bugal.com.au/sign-up"
+          }
+        ],
+        "external": [
+          {
+            "text": "",
+            "href": "https://www.facebook.com/BugalSupportSoftware"
+          }
+        ]
+      },
+      "qualityScore": 10
+    }
+  ]
+}
