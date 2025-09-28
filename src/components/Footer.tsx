@@ -12,6 +12,7 @@ export function Footer() {
       { name: "Blog", href: "/blog" },
       { name: "FAQ", href: "/faq" },
       { name: "Testimonials", href: "/testimonials" },
+      { name: "Support Provider Journey", href: "/starting-a-support-provider-journey" },
     ],
     company: [
       { name: "About", href: "/about" },
