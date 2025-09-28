@@ -73,7 +73,7 @@ export default function SupportProviderInsurancePage() {
           
           <div className="bg-white rounded-lg shadow-md p-8 mb-8">
             <p className="text-lg text-gray-700 mb-6">
-              As an NDIS support provider, you face unique risks that require specialized insurance coverage. Understanding what coverage you need and how much protection is adequate is crucial for your business success and personal security.
+              As an NDIS support provider, you face unique risks that require specialised insurance coverage. Understanding what coverage you need and how much protection is adequate is crucial for your business success and personal security.
             </p>
             
             <div className="grid md:grid-cols-2 gap-8">
@@ -198,7 +198,7 @@ export default function SupportProviderInsurancePage() {
                   
                   <div className="bg-green-50 rounded-lg p-6">
                     <h4 className="font-semibold text-green-900 mb-2">High Coverage: $10 Million+</h4>
-                    <p className="text-green-800 text-sm">Required for support providers working with high-risk participants or in specialized areas.</p>
+                    <p className="text-green-800 text-sm">Required for support providers working with high-risk participants or in specialised areas.</p>
                   </div>
                 </div>
               </div>

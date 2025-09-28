@@ -82,7 +82,7 @@ export default function GrowingYourSupportBusinessPage() {
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" />
-                    <span className="text-gray-700">Expand service offerings and specializations</span>
+                    <span className="text-gray-700">Expand service offerings and specialisations</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" />
@@ -142,7 +142,7 @@ export default function GrowingYourSupportBusinessPage() {
                     <ul className="text-gray-700 space-y-2">
                       <li className="flex items-start">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-1 flex-shrink-0" />
-                        <span className="text-sm">Standardize service delivery procedures</span>
+                        <span className="text-sm">Standardise service delivery procedures</span>
                       </li>
                       <li className="flex items-start">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-1 flex-shrink-0" />
@@ -344,7 +344,7 @@ export default function GrowingYourSupportBusinessPage() {
           
           <div className="bg-white rounded-lg shadow-md p-8">
             <p className="text-lg text-gray-700 mb-8">
-              Strategic partnerships can significantly enhance your business growth by providing access to new markets, shared resources, and complementary services. Building strong relationships with other organizations in the disability sector creates opportunities for mutual benefit.
+              Strategic partnerships can significantly enhance your business growth by providing access to new markets, shared resources, and complementary services. Building strong relationships with other organisations in the disability sector creates opportunities for mutual benefit.
             </p>
 
             <div className="space-y-8">
@@ -378,11 +378,11 @@ export default function GrowingYourSupportBusinessPage() {
                     <ul className="text-gray-700 space-y-2">
                       <li className="flex items-start">
                         <Building className="w-4 h-4 text-blue-500 mr-2 mt-1 flex-shrink-0" />
-                        <span className="text-sm">Local disability organizations</span>
+                        <span className="text-sm">Local disability organisations</span>
                       </li>
                       <li className="flex items-start">
                         <Building className="w-4 h-4 text-blue-500 mr-2 mt-1 flex-shrink-0" />
-                        <span className="text-sm">Community centers and recreation facilities</span>
+                        <span className="text-sm">Community centres and recreation facilities</span>
                       </li>
                       <li className="flex items-start">
                         <Building className="w-4 h-4 text-blue-500 mr-2 mt-1 flex-shrink-0" />
@@ -406,7 +406,7 @@ export default function GrowingYourSupportBusinessPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900">Identify Complementary Services</h4>
-                      <p className="text-gray-700 text-sm">Look for organizations that offer services that complement yours, creating opportunities for referrals and collaborative programs.</p>
+                      <p className="text-gray-700 text-sm">Look for organisations that offer services that complement yours, creating opportunities for referrals and collaborative programs.</p>
                     </div>
                   </div>
 
@@ -416,7 +416,7 @@ export default function GrowingYourSupportBusinessPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900">Develop Mutual Benefits</h4>
-                      <p className="text-gray-700 text-sm">Create partnership arrangements that provide value to both organizations, such as shared resources, joint marketing, or referral programs.</p>
+                      <p className="text-gray-700 text-sm">Create partnership arrangements that provide value to both organisations, such as shared resources, joint marketing, or referral programs.</p>
                     </div>
                   </div>
 
@@ -485,7 +485,7 @@ export default function GrowingYourSupportBusinessPage() {
                     <ul className="text-gray-700 space-y-2">
                       <li className="flex items-start">
                         <TrendingUp className="w-4 h-4 text-blue-500 mr-2 mt-1 flex-shrink-0" />
-                        <span className="text-sm">Analyze market trends and opportunities</span>
+                        <span className="text-sm">Analyse market trends and opportunities</span>
                       </li>
                       <li className="flex items-start">
                         <TrendingUp className="w-4 h-4 text-blue-500 mr-2 mt-1 flex-shrink-0" />
@@ -567,7 +567,7 @@ export default function GrowingYourSupportBusinessPage() {
             <div className="bg-white rounded-lg shadow-md p-6">
               <h3 className="text-xl font-semibold text-gray-900 mb-3">How do I maintain quality while scaling my business?</h3>
               <p className="text-gray-700">
-                Maintain quality through standardized processes, comprehensive training programs, regular supervision, and quality assurance systems. Implement feedback mechanisms, conduct regular reviews, and ensure your team understands and follows your service standards. Don't grow faster than you can maintain quality.
+                Maintain quality through standardised processes, comprehensive training programs, regular supervision, and quality assurance systems. Implement feedback mechanisms, conduct regular reviews, and ensure your team understands and follows your service standards. Don't grow faster than you can maintain quality.
               </p>
             </div>
 

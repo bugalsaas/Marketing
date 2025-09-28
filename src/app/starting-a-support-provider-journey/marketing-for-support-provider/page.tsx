@@ -116,7 +116,7 @@ export default function MarketingForSupportProviderPage() {
                   </li>
                   <li className="flex items-start">
                     <Users className="w-5 h-5 text-blue-500 mr-3 mt-1 flex-shrink-0" />
-                    <span className="text-gray-700">Community organizations</span>
+                    <span className="text-gray-700">Community organisations</span>
                   </li>
                 </ul>
               </div>
@@ -154,7 +154,7 @@ export default function MarketingForSupportProviderPage() {
                       </li>
                       <li className="flex items-start">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-1 flex-shrink-0" />
-                        <span className="text-sm">Specialized skills and training</span>
+                        <span className="text-sm">Specialised skills and training</span>
                       </li>
                     </ul>
                   </div>
@@ -542,7 +542,7 @@ export default function MarketingForSupportProviderPage() {
             <div className="bg-white rounded-lg shadow-md p-6">
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Should I specialize in a particular type of support?</h3>
               <p className="text-gray-700">
-                Specialization can help you stand out and command higher rates. Consider specializing in areas like autism support, mental health, physical disabilities, or age groups. However, being too specialized might limit your client base, so find a balance that works for your market.
+                Specialisation can help you stand out and command higher rates. Consider specialising in areas like autism support, mental health, physical disabilities, or age groups. However, being too specialised might limit your client base, so find a balance that works for your market.
               </p>
             </div>
 

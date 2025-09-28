@@ -304,7 +304,7 @@ export default function SuperannuationForSupportProvidersPage() {
                 <ul className="text-yellow-800 text-sm space-y-1">
                   <li>• Make non-concessional contributions early in the financial year</li>
                   <li>• Keep track of your total income to stay within thresholds</li>
-                  <li>• Consider timing of business income to optimize eligibility</li>
+                  <li>• Consider timing of business income to optimise eligibility</li>
                   <li>• Review your super fund's co-contribution processing</li>
                   <li>• Check ATO website for current thresholds and rates</li>
                 </ul>

@@ -65,7 +65,7 @@ export default function TaxFileNumberPage() {
           
           <div className="bg-white rounded-lg shadow-md p-8 mb-8">
             <p className="text-lg text-gray-700 mb-6">
-              A Tax File Number (TFN) is a unique 9-digit number issued by the Australian Taxation Office (ATO) to individuals and organizations for tax and superannuation purposes. Think of it as your financial identity number in Australia.
+              A Tax File Number (TFN) is a unique 9-digit number issued by the Australian Taxation Office (ATO) to individuals and organisations for tax and superannuation purposes. Think of it as your financial identity number in Australia.
             </p>
             
             <div className="grid md:grid-cols-2 gap-8">

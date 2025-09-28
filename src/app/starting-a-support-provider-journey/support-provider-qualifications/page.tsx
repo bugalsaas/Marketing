@@ -100,7 +100,7 @@ export default function SupportProviderQualificationsPage() {
               </div>
               
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Specialized Training:</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Specialised Training:</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <Award className="w-5 h-5 text-blue-500 mr-3 mt-1 flex-shrink-0" />
@@ -116,7 +116,7 @@ export default function SupportProviderQualificationsPage() {
                   </li>
                   <li className="flex items-start">
                     <Award className="w-5 h-5 text-blue-500 mr-3 mt-1 flex-shrink-0" />
-                    <span className="text-gray-700">Behavioral support training</span>
+                    <span className="text-gray-700">Behavioural support training</span>
                   </li>
                 </ul>
               </div>
@@ -130,7 +130,7 @@ export default function SupportProviderQualificationsPage() {
           
           <div className="bg-white rounded-lg shadow-md p-8">
             <p className="text-lg text-gray-700 mb-8">
-              The Certificate III in Individual Support (Disability) is the most common entry-level qualification for NDIS support providers. This nationally recognized qualification provides the foundational knowledge and skills needed to work effectively with people with disabilities.
+              The Certificate III in Individual Support (Disability) is the most common entry-level qualification for NDIS support providers. This nationally recognised qualification provides the foundational knowledge and skills needed to work effectively with people with disabilities.
             </p>
 
             <div className="grid md:grid-cols-2 gap-8">
@@ -190,7 +190,7 @@ export default function SupportProviderQualificationsPage() {
               <h4 className="font-semibold text-blue-900 mb-2">Where to Study:</h4>
               <ul className="text-blue-800 space-y-1 text-sm">
                 <li>• TAFE colleges (most common)</li>
-                <li>• Registered Training Organizations (RTOs)</li>
+                <li>• Registered Training Organisations (RTOs)</li>
                 <li>• Online providers (ensure they're registered)</li>
                 <li>• Some universities offer diploma pathways</li>
               </ul>
@@ -273,11 +273,11 @@ export default function SupportProviderQualificationsPage() {
 
         {/* Specialized Training Programs */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Specialized Training Programs</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">Specialised Training Programs</h2>
           
           <div className="bg-white rounded-lg shadow-md p-8">
             <p className="text-lg text-gray-700 mb-8">
-              Specialized training can help you develop expertise in specific areas of disability support, making you more valuable to participants and potentially increasing your earning potential.
+              Specialised training can help you develop expertise in specific areas of disability support, making you more valuable to participants and potentially increasing your earning potential.
             </p>
 
             <div className="space-y-8">
@@ -290,7 +290,7 @@ export default function SupportProviderQualificationsPage() {
                     </p>
                     <ul className="text-gray-600 text-sm space-y-1">
                       <li>• 12-hour course (2 days)</li>
-                      <li>• Recognized nationally</li>
+                      <li>• Recognised nationally</li>
                       <li>• Valid for 3 years</li>
                       <li>• Cost: $200-$400</li>
                     </ul>
@@ -312,7 +312,7 @@ export default function SupportProviderQualificationsPage() {
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <p className="text-gray-700 mb-4">
-                      Specialized autism training helps you understand the unique needs of people on the autism spectrum and develop effective support strategies.
+                      Specialised autism training helps you understand the unique needs of people on the autism spectrum and develop effective support strategies.
                     </p>
                     <ul className="text-gray-600 text-sm space-y-1">
                       <li>• Various course lengths available</li>
@@ -327,7 +327,7 @@ export default function SupportProviderQualificationsPage() {
                       <li>• Understanding autism characteristics</li>
                       <li>• Communication strategies</li>
                       <li>• Sensory processing needs</li>
-                      <li>• Behavior support techniques</li>
+                      <li>• Behaviour support techniques</li>
                     </ul>
                   </div>
                 </div>
@@ -352,7 +352,7 @@ export default function SupportProviderQualificationsPage() {
                     <ul className="text-gray-600 text-sm space-y-1">
                       <li>• Understanding dementia</li>
                       <li>• Communication techniques</li>
-                      <li>• Managing challenging behaviors</li>
+                      <li>• Managing challenging behaviours</li>
                       <li>• Supporting families</li>
                     </ul>
                   </div>
@@ -377,7 +377,7 @@ export default function SupportProviderQualificationsPage() {
                 <div className="space-y-4">
                   <div className="border border-gray-200 rounded-lg p-4">
                     <h4 className="font-semibold text-gray-900 mb-2">Short Courses and Workshops</h4>
-                    <p className="text-gray-600 text-sm">1-3 day courses on specific topics like behavior support, communication aids, or assistive technology.</p>
+                    <p className="text-gray-600 text-sm">1-3 day courses on specific topics like behaviour support, communication aids, or assistive technology.</p>
                   </div>
                   
                   <div className="border border-gray-200 rounded-lg p-4">
@@ -454,14 +454,14 @@ export default function SupportProviderQualificationsPage() {
             <div className="bg-white rounded-lg shadow-md p-6">
               <h3 className="text-xl font-semibold text-gray-900 mb-3">How long do qualifications take to complete?</h3>
               <p className="text-gray-700">
-                Certificate III typically takes 6-12 months full-time or 12-18 months part-time. NDIS Commission eLearning modules can be completed in a few hours each. Specialized training varies from a few hours to several days.
+                Certificate III typically takes 6-12 months full-time or 12-18 months part-time. NDIS Commission eLearning modules can be completed in a few hours each. Specialised training varies from a few hours to several days.
               </p>
             </div>
 
             <div className="bg-white rounded-lg shadow-md p-6">
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Do qualifications expire?</h3>
               <p className="text-gray-700">
-                Most formal qualifications don't expire, but some specialized training (like Mental Health First Aid) requires renewal every 3 years. It's important to stay current with best practices through ongoing professional development.
+                Most formal qualifications don't expire, but some specialised training (like Mental Health First Aid) requires renewal every 3 years. It's important to stay current with best practices through ongoing professional development.
               </p>
             </div>
           </div>

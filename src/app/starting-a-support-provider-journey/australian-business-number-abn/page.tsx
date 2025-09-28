@@ -73,7 +73,7 @@ export default function AustralianBusinessNumberPage() {
           
           <div className="bg-white rounded-lg shadow-md p-8 mb-8">
             <p className="text-lg text-gray-700 mb-6">
-              An Australian Business Number (ABN) is a unique 11-digit identifier issued by the Australian Taxation Office (ATO) to businesses and organizations. It's your business's "identity number" that allows you to operate legally and professionally in Australia.
+              An Australian Business Number (ABN) is a unique 11-digit identifier issued by the Australian Taxation Office (ATO) to businesses and organisations. It's your business's "identity number" that allows you to operate legally and professionally in Australia.
             </p>
             
             <div className="grid md:grid-cols-2 gap-8">

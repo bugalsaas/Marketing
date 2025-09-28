@@ -138,7 +138,7 @@ export default function SupportProviderCertificationsPage() {
                 <h3 className="text-2xl font-semibold text-gray-900 mb-6">What is the NDIS Worker Screening Check?</h3>
                 <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
                   <p className="text-blue-800 mb-4">
-                    The NDIS Worker Screening Check is a national background check that verifies your identity and assesses whether you pose a risk to people with disabilities. It replaces individual state-based checks and is recognized across Australia.
+                    The NDIS Worker Screening Check is a national background check that verifies your identity and assesses whether you pose a risk to people with disabilities. It replaces individual state-based checks and is recognised across Australia.
                   </p>
                   <ul className="text-blue-700 text-sm space-y-2">
                     <li>• Required for all NDIS workers</li>

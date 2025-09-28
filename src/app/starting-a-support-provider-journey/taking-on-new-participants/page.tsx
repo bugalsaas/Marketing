@@ -309,7 +309,7 @@ export default function TakingOnNewParticipantsPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900">Use Clear, Objective Language</h4>
-                      <p className="text-gray-700 text-sm">Write in a professional, factual manner that focuses on observable behaviors and outcomes rather than opinions.</p>
+                      <p className="text-gray-700 text-sm">Write in a professional, factual manner that focuses on observable behaviours and outcomes rather than opinions.</p>
                     </div>
                   </div>
 
@@ -319,7 +319,7 @@ export default function TakingOnNewParticipantsPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900">Maintain Security and Privacy</h4>
-                      <p className="text-gray-700 text-sm">Store records securely, use password protection, and ensure only authorized personnel can access sensitive information.</p>
+                      <p className="text-gray-700 text-sm">Store records securely, use password protection, and ensure only authorised personnel can access sensitive information.</p>
                     </div>
                   </div>
 
@@ -459,8 +459,8 @@ export default function TakingOnNewParticipantsPage() {
                 <h3 className="text-2xl font-semibold text-gray-900 mb-6">Common Challenges and Solutions</h3>
                 <div className="space-y-6">
                   <div className="border border-yellow-200 rounded-lg p-6">
-                    <h4 className="text-xl font-semibold text-yellow-900 mb-3">Behavioral Challenges</h4>
-                    <p className="text-gray-700 mb-3">When participants display challenging behaviors, it's important to remain calm and use appropriate de-escalation techniques.</p>
+                    <h4 className="text-xl font-semibold text-yellow-900 mb-3">Behavioural Challenges</h4>
+                    <p className="text-gray-700 mb-3">When participants display challenging behaviours, it's important to remain calm and use appropriate de-escalation techniques.</p>
                     <ul className="text-gray-600 text-sm space-y-1">
                       <li>• Stay calm and use a gentle, non-threatening approach</li>
                       <li>• Identify triggers and work to prevent escalation</li>
@@ -500,7 +500,7 @@ export default function TakingOnNewParticipantsPage() {
                   <li>• When participant needs exceed your expertise or qualifications</li>
                   <li>• If there are concerns about participant safety or wellbeing</li>
                   <li>• When family conflicts cannot be resolved through discussion</li>
-                  <li>• If you need guidance on complex behavioral or medical issues</li>
+                  <li>• If you need guidance on complex behavioural or medical issues</li>
                 </ul>
               </div>
             </div>

@@ -316,7 +316,7 @@ export default function NDISRegistrationPage() {
           
           <div className="bg-white rounded-lg shadow-md p-8">
             <p className="text-lg text-gray-700 mb-8">
-              NDIS registration is organized into specific groups based on the types of services you provide. Understanding which groups apply to your business is essential for the registration process and ongoing compliance.
+              NDIS registration is organised into specific groups based on the types of services you provide. Understanding which groups apply to your business is essential for the registration process and ongoing compliance.
             </p>
 
             <div className="space-y-8">
@@ -494,7 +494,7 @@ export default function NDISRegistrationPage() {
             <div className="bg-white rounded-lg shadow-md p-6">
               <h3 className="text-xl font-semibold text-gray-900 mb-3">How much does NDIS registration cost?</h3>
               <p className="text-gray-700">
-                Registration costs vary based on the number of registration groups and your organization size. For individual providers, costs typically range from $1,000 to $3,000 for the initial application, plus ongoing audit costs of $1,500 to $4,000 annually. These costs are generally tax-deductible business expenses.
+                Registration costs vary based on the number of registration groups and your organisation size. For individual providers, costs typically range from $1,000 to $3,000 for the initial application, plus ongoing audit costs of $1,500 to $4,000 annually. These costs are generally tax-deductible business expenses.
               </p>
             </div>
 

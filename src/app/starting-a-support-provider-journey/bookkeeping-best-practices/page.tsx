@@ -435,7 +435,7 @@ export default function BookkeepingBestPracticesPage() {
           
           <div className="bg-white rounded-lg shadow-md p-8">
             <p className="text-lg text-gray-700 mb-8">
-              Regular bookkeeping tasks help you stay on top of your finances and avoid the stress of year-end catch-up. Here's a monthly checklist to keep your records organized and up-to-date.
+              Regular bookkeeping tasks help you stay on top of your finances and avoid the stress of year-end catch-up. Here's a monthly checklist to keep your records organised and up-to-date.
             </p>
 
             <div className="space-y-6">
@@ -454,8 +454,8 @@ export default function BookkeepingBestPracticesPage() {
                   <CheckCircle className="w-5 h-5 text-green-600" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">2. Categorize All Transactions</h3>
-                  <p className="text-gray-700">Ensure all income and expenses are properly categorized for accurate reporting and tax preparation.</p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">2. Categorise All Transactions</h3>
+                  <p className="text-gray-700">Ensure all income and expenses are properly categorised for accurate reporting and tax preparation.</p>
                 </div>
               </div>
 

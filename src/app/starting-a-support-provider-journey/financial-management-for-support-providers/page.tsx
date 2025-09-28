@@ -284,7 +284,7 @@ export default function FinancialManagementForSupportProvidersPage() {
                       </li>
                       <li className="flex items-start">
                         <TrendingUp className="w-4 h-4 text-blue-500 mr-2 mt-1 flex-shrink-0" />
-                        <span className="text-sm">Specialized skills or services</span>
+                        <span className="text-sm">Specialised skills or services</span>
                       </li>
                     </ul>
                   </div>
@@ -310,7 +310,7 @@ export default function FinancialManagementForSupportProvidersPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900">Value-Based Pricing</h4>
-                      <p className="text-gray-700 text-sm">Price based on the value you provide to participants and families. This approach works well for specialized services or experienced providers.</p>
+                      <p className="text-gray-700 text-sm">Price based on the value you provide to participants and families. This approach works well for specialised services or experienced providers.</p>
                     </div>
                   </div>
 
@@ -418,7 +418,7 @@ export default function FinancialManagementForSupportProvidersPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900">Track Every Expense</h4>
-                      <p className="text-gray-700 text-sm">Use accounting software or apps to record all business expenses immediately. Keep receipts and categorize expenses properly for tax purposes.</p>
+                      <p className="text-gray-700 text-sm">Use accounting software or apps to record all business expenses immediately. Keep receipts and categorise expenses properly for tax purposes.</p>
                     </div>
                   </div>
 
@@ -428,7 +428,7 @@ export default function FinancialManagementForSupportProvidersPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900">Review Expenses Monthly</h4>
-                      <p className="text-gray-700 text-sm">Analyze your spending patterns to identify areas where you can reduce costs or find more cost-effective alternatives.</p>
+                      <p className="text-gray-700 text-sm">Analyse your spending patterns to identify areas where you can reduce costs or find more cost-effective alternatives.</p>
                     </div>
                   </div>
 
@@ -557,7 +557,7 @@ export default function FinancialManagementForSupportProvidersPage() {
                   <li>• Keep detailed records of all business expenses</li>
                   <li>• Set aside money for tax payments throughout the year</li>
                   <li>• Consider making additional superannuation contributions</li>
-                  <li>• Plan major purchases to optimize tax timing</li>
+                  <li>• Plan major purchases to optimise tax timing</li>
                   <li>• Consult with a tax professional for complex situations</li>
                 </ul>
               </div>
