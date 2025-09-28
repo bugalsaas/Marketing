@@ -534,9 +534,9 @@ export default function GoodsAndServicesTaxPage() {
                     <h4 className="font-semibold text-gray-900 mb-3">Reporting Frequency</h4>
                     <p className="text-gray-700 text-sm mb-3">Choose how often you report GST:</p>
                     <ul className="text-gray-600 text-sm space-y-1">
-                      <li>• Monthly (if turnover > $20M)</li>
+                      <li>• Monthly (if turnover &gt; $20M)</li>
                       <li>• Quarterly (most common)</li>
-                      <li>• Annually (if turnover < $75K)</li>
+                      <li>• Annually (if turnover &lt; $75K)</li>
                     </ul>
                   </div>
 
