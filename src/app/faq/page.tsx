@@ -47,16 +47,16 @@ const CATEGORY_CONFIGS: Record<string, CategoryConfig> = {
   "Billing & Subscriptions": {
     label: "Billing & Subscriptions",
     icon: CreditCard,
-    color: "text-yellow-600",
-    bgColor: "bg-yellow-50",
-    borderColor: "border-yellow-200",
+    color: "text-amber-600",
+    bgColor: "bg-amber-50",
+    borderColor: "border-amber-200",
   },
   "Settings & Support": {
     label: "Settings & Support",
     icon: Settings,
-    color: "text-blue-600",
-    bgColor: "bg-blue-50",
-    borderColor: "border-blue-200",
+    color: "text-indigo-600",
+    bgColor: "bg-indigo-50",
+    borderColor: "border-indigo-200",
   },
 };
 
@@ -263,8 +263,8 @@ export default function FAQPage() {
                             className="w-full text-left flex items-start justify-between space-x-4 hover:bg-gray-50 -mx-6 px-6 py-4 rounded-lg transition-colors"
                           >
                             <div className="flex items-start space-x-3 flex-1">
-                              <div className={`p-1 rounded ${config.bgColor} mt-1 flex-shrink-0`}>
-                                <Icon className={`w-4 h-4 ${config.color}`} />
+                              <div className={`p-2 rounded-lg ${config.bgColor} mt-1 flex-shrink-0`}>
+                                <Icon className={`w-5 h-5 ${config.color}`} />
                               </div>
                               <div className="flex-1">
                                 <h4 className="text-base font-medium text-gray-900 mb-2">
