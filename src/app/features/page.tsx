@@ -212,15 +212,10 @@ export default function FeaturesPage() {
               you need to streamline your practice and focus on what matters most - supporting your clients.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex justify-center">
               <Button size="lg" className="text-lg px-8 py-6 bg-[#2563eb] hover:bg-[#1e3a8a]" asChild>
                 <Link href="/pricing">
                   Start Free Trial
-                </Link>
-              </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-6 border-[#2563eb] text-[#2563eb] hover:bg-[#2563eb] hover:text-white" asChild>
-                <Link href="/contact">
-                  Schedule Demo
                 </Link>
               </Button>
             </div>
@@ -391,15 +386,10 @@ export default function FeaturesPage() {
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
             Start your free trial today and discover how Bugal can transform your NDIS practice management.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex justify-center">
             <Button size="lg" variant="secondary" className="text-lg px-8 py-6 bg-white text-[#2563eb] hover:bg-gray-100" asChild>
               <Link href="/pricing">
                 Start Free Trial
-              </Link>
-            </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-white text-white bg-transparent hover:bg-white hover:text-[#2563eb]" asChild>
-              <Link href="/contact">
-                Schedule Demo
               </Link>
             </Button>
           </div>

@@ -516,15 +516,10 @@ export default function BlogPage() {
             Join hundreds of NDIS support workers who trust Bugal to manage their practice efficiently 
             and stay compliant with all requirements.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex justify-center">
             <Button size="lg" variant="secondary" className="text-lg px-8 py-6 bg-white text-[#2563eb] hover:bg-gray-100" asChild>
               <Link href="/pricing">
                 Start Your Free Trial
-              </Link>
-            </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-white text-white bg-transparent hover:bg-white hover:text-[#2563eb]" asChild>
-              <Link href="/contact">
-                Schedule Demo
               </Link>
             </Button>
           </div>

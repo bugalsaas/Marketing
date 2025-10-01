@@ -19,19 +19,18 @@ import {
 
 export const metadata: Metadata = {
   title: "Contact Bugal | NDIS Practice Management Support | Bugal",
-  description: "Get in touch with Bugal for NDIS practice management software support. Contact our team for demos, pricing, and technical assistance.",
+  description: "Get in touch with Bugal for NDIS practice management software support. Contact our team for pricing and technical assistance.",
   keywords: [
     "contact Bugal",
     "NDIS software support",
     "practice management help",
     "Bugal contact information",
-    "NDIS software demo",
     "practice management support",
     "Bugal customer service"
   ],
   openGraph: {
     title: "Contact Bugal | NDIS Practice Management Support | Bugal",
-    description: "Get in touch with Bugal for NDIS practice management software support. Contact our team for demos and assistance.",
+    description: "Get in touch with Bugal for NDIS practice management software support. Contact our team for assistance.",
     type: "website",
     url: "https://bugal.com.au/contact",
     siteName: "Bugal",
@@ -119,13 +118,6 @@ export default function ContactPage() {
       variant: "default"
     },
     {
-      title: "Schedule Demo",
-      description: "Book a personalized demo with our product specialists",
-      icon: Calendar,
-      href: "/contact",
-      variant: "outline"
-    },
-    {
       title: "View Pricing",
       description: "Explore our flexible pricing plans for all practice sizes",
       icon: Users,
@@ -157,7 +149,7 @@ export default function ContactPage() {
             </h1>
             
             <p className="text-xl text-[#1f2937] mb-8 max-w-2xl mx-auto leading-relaxed">
-              Have questions about Bugal? Need help getting started? Want to schedule a demo? 
+              Have questions about Bugal? Need help getting started? 
               Our team is ready to support you every step of the way.
             </p>
             
@@ -352,7 +344,6 @@ export default function ContactPage() {
                     >
                       <option value="">Select a subject</option>
                       <option value="general">General Inquiry</option>
-                      <option value="demo">Schedule Demo</option>
                       <option value="trial">Free Trial Questions</option>
                       <option value="pricing">Pricing Information</option>
                       <option value="support">Technical Support</option>
