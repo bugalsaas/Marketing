@@ -8,7 +8,7 @@ import { ArrowLeft, Calendar, Clock, User } from 'lucide-react';
 import Link from 'next/link';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import BreadcrumbNavigation from '@/components/BreadcrumbNavigation';
-import { DynamicBlogPostSharing, DynamicStickyTableOfContents } from '@/components/DynamicComponents';
+import { DynamicBlogPostSharing, DynamicStickyTableOfContents } from '@/components/ClientDynamicComponents';
 
 const prisma = new PrismaClient();
 
