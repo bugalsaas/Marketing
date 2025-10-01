@@ -20,40 +20,56 @@ export const revalidate = 3600; // Revalidate every hour
 
 const prisma = new PrismaClient();
 
-interface BlogPost {
-  id: string;
-  title: string;
-  slug: string;
+  interface BlogPost {
+    id: string;
+    title: string;
+    slug: string;
   excerpt: string | null;
   coverImage?: string | null;
   category: string | null;
-  tags: string;
-  featured: boolean;
-  publishedAt: string;
-  author: string;
+    tags: string;
+    featured: boolean;
+    publishedAt: string;
+    author: string;
   readTime: string | null;
-}
+  }
 
-interface BlogData {
-  posts: BlogPost[];
-  categories: Array<{
-    id: string;
-    name: string;
-    count: number;
-  }>;
+  interface BlogData {
+    posts: BlogPost[];
+    categories: Array<{
+      id: string;
+      name: string;
+      count: number;
+    }>;
   totalPages: number;
   currentPage: number;
 }
 
 const POSTS_PER_PAGE = 10;
 
-async function getBlogData(page: number = 1): Promise<BlogData> {
+async function getBlogData(page: number = 1, searchTerm: string = '', category: string = ''): Promise<BlogData> {
   try {
     const skip = (page - 1) * POSTS_PER_PAGE;
     
+    // Build where clause for filtering
+    const whereClause: any = { published: true };
+    
+    if (searchTerm) {
+      whereClause.OR = [
+        { title: { contains: searchTerm, mode: 'insensitive' } },
+        { excerpt: { contains: searchTerm, mode: 'insensitive' } },
+        { content: { contains: searchTerm, mode: 'insensitive' } },
+        { tags: { contains: searchTerm, mode: 'insensitive' } }
+      ];
+    }
+    
+    if (category) {
+      whereClause.category = category;
+    }
+    
     const [posts, totalCount, categories] = await Promise.all([
       prisma.blogPost.findMany({
-        where: { published: true },
+        where: whereClause,
         select: {
           id: true,
           title: true,
@@ -77,7 +93,7 @@ async function getBlogData(page: number = 1): Promise<BlogData> {
         take: POSTS_PER_PAGE
       }),
       prisma.blogPost.count({
-        where: { published: true }
+        where: whereClause
       }),
       prisma.blogPost.groupBy({
         by: ['category'],
@@ -131,15 +147,46 @@ export async function generateStaticParams() {
 export default async function BlogPage({
   searchParams,
 }: {
-  searchParams: Promise<{ page?: string }>;
+  searchParams: Promise<{ page?: string; search?: string; category?: string }>;
 }) {
   const resolvedSearchParams = await searchParams;
   const currentPage = parseInt(resolvedSearchParams.page || '1', 10);
-  const blogData = await getBlogData(currentPage);
+  const searchTerm = resolvedSearchParams.search || '';
+  const selectedCategory = resolvedSearchParams.category || '';
+  
+  const blogData = await getBlogData(currentPage, searchTerm, selectedCategory);
   const { posts, categories, totalPages } = blogData;
 
-  // Featured posts (first 3)
-  const featuredPosts = posts.filter(post => post.featured).slice(0, 3);
+  // Featured posts (always show 2-3, get from all posts, not just current page)
+  const allFeaturedPosts = await prisma.blogPost.findMany({
+    where: { published: true, featured: true },
+    select: {
+      id: true,
+      title: true,
+      slug: true,
+      excerpt: true,
+      coverImage: true,
+      category: true,
+      tags: true,
+      featured: true,
+      publishedAt: true,
+      authorId: true,
+      readTime: true,
+      author: {
+        select: {
+          name: true
+        }
+      }
+    },
+    orderBy: { publishedAt: 'desc' },
+    take: 3
+  });
+
+  const featuredPosts = allFeaturedPosts.map(post => ({
+    ...post,
+    author: post.author?.name || 'Bugal Team',
+    publishedAt: post.publishedAt?.toISOString() || new Date().toISOString()
+  }));
   
   // Regular posts (excluding featured)
   const regularPosts = posts.filter(post => !post.featured);
@@ -180,42 +227,39 @@ export default async function BlogPage({
         </div>
       </section>
 
-      {/* Search and Filters */}
-      <section className="py-12 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <BlogSearch />
-            <BlogFilters categories={categories} />
-          </div>
-        </div>
-      </section>
 
       {/* Featured Posts */}
       {featuredPosts.length > 0 && (
         <section className="py-16 bg-[#f9fafb]">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e3a8a] mb-4">
-                Featured Articles
-              </h2>
-              <p className="text-xl text-[#1f2937] max-w-2xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#1e3a8a] mb-4">
+              Featured Articles
+            </h2>
+            <p className="text-xl text-[#1f2937] max-w-2xl mx-auto">
                 Hand-picked articles to help you excel in your NDIS practice
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            </p>
+          </div>
+          
+            <div className={`grid gap-8 max-w-7xl mx-auto ${
+              featuredPosts.length === 1 
+                ? 'grid-cols-1 max-w-md' 
+                : featuredPosts.length === 2 
+                ? 'grid-cols-1 md:grid-cols-2 max-w-4xl' 
+                : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
+            }`}>
               {featuredPosts.map((post, index) => (
                 <Card key={post.id} className="border-0 shadow-lg hover:shadow-xl transition-shadow group">
                   <div className="relative overflow-hidden rounded-t-lg">
-                    <Image
+                      <Image
                       src={post.coverImage || '/images/blog/default-blog.jpg'}
                       alt={post.title}
                       width={400}
                       height={250}
                       className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                       priority={index === 0} // Priority only for first image
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    />
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      />
                     <div className="absolute top-4 left-4">
                       <Badge className="bg-[#2563eb] text-white">
                         Featured
@@ -225,7 +269,7 @@ export default async function BlogPage({
                   <CardHeader className="pb-4">
                     <div className="flex items-center gap-4 text-sm text-[#6b7280] mb-3">
                       <div className="flex items-center gap-1">
-                        <Calendar className="w-4 h-4" />
+                          <Calendar className="w-4 h-4" />
                         <span>{new Date(post.publishedAt).toLocaleDateString('en-AU', { 
                           day: 'numeric', 
                           month: 'short', 
@@ -254,15 +298,15 @@ export default async function BlogPage({
                         <Link href={`/blog/${post.slug}`}>
                           Read More
                           <ArrowRight className="w-4 h-4 ml-1" />
-                        </Link>
-                      </Button>
-                    </div>
+                      </Link>
+                    </Button>
+                  </div>
                   </CardContent>
-                </Card>
-              ))}
-            </div>
+              </Card>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
       )}
 
       {/* All Posts */}
@@ -276,18 +320,24 @@ export default async function BlogPage({
               Explore our complete collection of NDIS practice management resources
             </p>
           </div>
+
+          {/* Search and Filters */}
+          <div className="max-w-4xl mx-auto mb-12">
+            <BlogSearch searchTerm={searchTerm} />
+            <BlogFilters categories={categories} selectedCategory={selectedCategory} />
+          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {regularPosts.map((post) => (
               <Card key={post.id} className="border-0 shadow-lg hover:shadow-xl transition-shadow group">
                 <div className="relative overflow-hidden rounded-t-lg">
-                  <Image
+                        <Image
                     src={post.coverImage || '/images/blog/default-blog.jpg'}
                     alt={post.title}
                     width={400}
                     height={250}
                     className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                 </div>
                 <CardHeader className="pb-4">
@@ -299,11 +349,11 @@ export default async function BlogPage({
                         month: 'short', 
                         year: 'numeric' 
                       })}</span>
-                    </div>
+                        </div>
                     <div className="flex items-center gap-1">
                       <Clock className="w-4 h-4" />
                       <span>{post.readTime || '5 min read'}</span>
-                    </div>
+                      </div>
                   </div>
                   <CardTitle className="text-xl text-[#1e3a8a] group-hover:text-[#2563eb] transition-colors line-clamp-2">
                     {post.title}
@@ -320,15 +370,15 @@ export default async function BlogPage({
                     </div>
                     <Button variant="ghost" size="sm" className="text-[#2563eb] hover:text-[#1e3a8a]" asChild>
                       <Link href={`/blog/${post.slug}`}>
-                        Read More
+                          Read More
                         <ArrowRight className="w-4 h-4 ml-1" />
-                      </Link>
-                    </Button>
+                        </Link>
+                      </Button>
                   </div>
                 </CardContent>
-              </Card>
-            ))}
-          </div>
+                </Card>
+              ))}
+            </div>
 
           {/* Pagination */}
           <div className="mt-12">
@@ -336,7 +386,7 @@ export default async function BlogPage({
               currentPage={currentPage} 
               totalPages={totalPages} 
             />
-          </div>
+            </div>
         </div>
       </section>
 
@@ -346,11 +396,11 @@ export default async function BlogPage({
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-[#1e3a8a] mb-4">
               Popular Topics
-            </h2>
+              </h2>
             <p className="text-xl text-[#1f2937] max-w-2xl mx-auto">
               Explore articles by category to find exactly what you need
-            </p>
-          </div>
+              </p>
+            </div>
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-6xl mx-auto">
             {popularCategories.map((category) => (

@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
@@ -13,24 +14,42 @@ interface Category {
 
 interface BlogFiltersProps {
   categories: Category[];
-  onCategoryChange?: (selectedCategories: string[]) => void;
+  selectedCategory?: string;
 }
 
-export default function BlogFilters({ categories, onCategoryChange }: BlogFiltersProps) {
-  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+export default function BlogFilters({ categories, selectedCategory = '' }: BlogFiltersProps) {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const [currentCategory, setCurrentCategory] = useState(selectedCategory);
 
-  const handleCategoryToggle = (categoryId: string) => {
-    const newSelected = selectedCategories.includes(categoryId)
-      ? selectedCategories.filter(id => id !== categoryId)
-      : [...selectedCategories, categoryId];
+  useEffect(() => {
+    setCurrentCategory(selectedCategory);
+  }, [selectedCategory]);
+
+  const handleCategoryClick = (categoryName: string) => {
+    const current = new URLSearchParams(Array.from(searchParams.entries()));
     
-    setSelectedCategories(newSelected);
-    onCategoryChange?.(newSelected);
+    if (currentCategory === categoryName) {
+      current.delete('category');
+      setCurrentCategory('');
+    } else {
+      current.set('category', categoryName);
+      setCurrentCategory(categoryName);
+    }
+    current.set('page', '1'); // Reset to first page on new filter
+    
+    const query = current.toString();
+    router.push(`/blog?${query}`);
   };
 
   const clearFilters = () => {
-    setSelectedCategories([]);
-    onCategoryChange?.([]);
+    const current = new URLSearchParams(Array.from(searchParams.entries()));
+    current.delete('category');
+    current.set('page', '1');
+    setCurrentCategory('');
+    
+    const query = current.toString();
+    router.push(`/blog?${query}`);
   };
 
   return (
@@ -40,18 +59,18 @@ export default function BlogFilters({ categories, onCategoryChange }: BlogFilter
         {categories.map((category) => (
           <Badge
             key={category.id}
-            variant={selectedCategories.includes(category.id) ? "default" : "outline"}
+            variant={currentCategory === category.name ? "default" : "outline"}
             className={`cursor-pointer transition-colors ${
-              selectedCategories.includes(category.id)
+              currentCategory === category.name
                 ? "bg-[#2563eb] text-white hover:bg-[#1e3a8a]"
                 : "border-[#2563eb] text-[#2563eb] hover:bg-[#2563eb] hover:text-white"
             }`}
-            onClick={() => handleCategoryToggle(category.id)}
+            onClick={() => handleCategoryClick(category.name)}
           >
             {category.name} ({category.count})
           </Badge>
         ))}
-        {selectedCategories.length > 0 && (
+        {currentCategory && (
           <Button
             variant="ghost"
             size="sm"

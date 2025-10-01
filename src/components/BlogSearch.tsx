@@ -1,19 +1,36 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
 
 interface BlogSearchProps {
-  onSearch?: (term: string) => void;
+  searchTerm?: string;
 }
 
-export default function BlogSearch({ onSearch }: BlogSearchProps) {
-  const [searchTerm, setSearchTerm] = useState('');
+export default function BlogSearch({ searchTerm: initialSearchTerm = '' }: BlogSearchProps) {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const [searchTerm, setSearchTerm] = useState(initialSearchTerm);
+
+  useEffect(() => {
+    setSearchTerm(initialSearchTerm);
+  }, [initialSearchTerm]);
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    onSearch?.(searchTerm);
+    const current = new URLSearchParams(Array.from(searchParams.entries()));
+    
+    if (searchTerm) {
+      current.set('search', searchTerm);
+    } else {
+      current.delete('search');
+    }
+    current.set('page', '1'); // Reset to first page on new search
+    
+    const query = current.toString();
+    router.push(`/blog?${query}`);
   };
 
   return (
