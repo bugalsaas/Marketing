@@ -202,7 +202,7 @@ export const FAQ_DATA: FAQData = [
           "We recommend downgrading to <strong>Free</strong> so you keep access to records for tax/audit. Do this under <strong>Subscriptions</strong>.",
       },
       {
-        question: "What does "2 per month" mean on the Free plan?",
+        question: "What does \"2 per month\" mean on the Free plan?",
         answer:
           "You can send <strong>up to two invoices per calendar month</strong> on Free.",
       },
