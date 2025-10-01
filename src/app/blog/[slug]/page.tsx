@@ -335,7 +335,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button size="lg" className="bg-[#2563eb] hover:bg-[#1e3a8a]" asChild>
-                <Link href="/pricing">
+                <Link href="https://app.bugal.com.au/sign-up">
                   Start Free Trial
                 </Link>
               </Button>

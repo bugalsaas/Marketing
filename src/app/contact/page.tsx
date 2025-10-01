@@ -114,7 +114,7 @@ export default function ContactPage() {
       title: "Start Free Trial",
       description: "Begin your 30-day free trial with no credit card required",
       icon: Zap,
-      href: "/pricing",
+      href: "https://app.bugal.com.au/sign-up",
       variant: "default"
     },
     {
@@ -509,7 +509,7 @@ export default function ContactPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button size="lg" variant="secondary" className="text-lg px-8 py-6 bg-white text-[#2563eb] hover:bg-gray-100" asChild>
-              <Link href="/pricing">
+              <Link href="https://app.bugal.com.au/sign-up">
                 Start Free Trial
               </Link>
             </Button>

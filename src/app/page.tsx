@@ -141,7 +141,7 @@ export default function Home() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button size="lg" className="text-lg px-8 py-6 bg-[#2563eb] hover:bg-[#1e3a8a] shadow-2xl font-semibold" asChild>
-                <Link href="/pricing">
+                <Link href="https://app.bugal.com.au/sign-up">
                   Start Free Trial - No Credit Card Required
                 </Link>
               </Button>
@@ -258,7 +258,7 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button size="lg" variant="secondary" className="text-lg px-8 py-6 bg-white text-[#2563eb] hover:bg-gray-100" asChild>
-              <Link href="/pricing">
+              <Link href="https://app.bugal.com.au/sign-up">
                 Start Your Free Trial Today
               </Link>
             </Button>

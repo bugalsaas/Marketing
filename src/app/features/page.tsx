@@ -213,7 +213,7 @@ export default function FeaturesPage() {
             
             <div className="flex justify-center">
               <Button size="lg" className="text-lg px-8 py-6 bg-[#2563eb] hover:bg-[#1e3a8a]" asChild>
-                <Link href="/pricing">
+                <Link href="https://app.bugal.com.au/sign-up">
                   Start Free Trial
                 </Link>
               </Button>
@@ -387,7 +387,7 @@ export default function FeaturesPage() {
           </p>
           <div className="flex justify-center">
             <Button size="lg" variant="secondary" className="text-lg px-8 py-6 bg-white text-[#2563eb] hover:bg-gray-100" asChild>
-              <Link href="/pricing">
+              <Link href="https://app.bugal.com.au/sign-up">
                 Start Free Trial
               </Link>
             </Button>

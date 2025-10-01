@@ -370,7 +370,7 @@ export default function PricingPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button size="lg" variant="secondary" className="text-lg px-8 py-6 bg-white text-[#2563eb] hover:bg-gray-100" asChild>
-              <Link href="/contact">
+              <Link href="https://app.bugal.com.au/sign-up">
                 Start Your Free Trial
               </Link>
             </Button>
