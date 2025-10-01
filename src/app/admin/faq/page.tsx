@@ -16,6 +16,11 @@ import {
   Eye, 
   HelpCircle, 
   Zap,
+  Clock,
+  FileText,
+  Users,
+  CreditCard,
+  Settings,
   Filter,
   MoreHorizontal,
   ChevronDown,
@@ -146,11 +151,11 @@ export default function AdminFAQPage() {
   const getCategoryColor = (category: string) => {
     switch (category) {
       case "Getting Started": return "bg-blue-100 text-blue-800";
-      case "Billing & Payments": return "bg-green-100 text-green-800";
-      case "Compliance": return "bg-purple-100 text-purple-800";
-      case "Security & Privacy": return "bg-red-100 text-red-800";
-      case "Support & Training": return "bg-orange-100 text-orange-800";
-      case "Features & Functionality": return "bg-indigo-100 text-indigo-800";
+      case "Shifts & Invoicing": return "bg-purple-100 text-purple-800";
+      case "Service Agreements & Reporting": return "bg-green-100 text-green-800";
+      case "Managing Staff": return "bg-red-100 text-red-800";
+      case "Billing & Subscriptions": return "bg-yellow-100 text-yellow-800";
+      case "Settings & Support": return "bg-blue-100 text-blue-800";
       default: return "bg-gray-100 text-gray-800";
     }
   };
@@ -158,12 +163,12 @@ export default function AdminFAQPage() {
   const getCategoryIcon = (category: string): React.ReactNode => {
     switch (category) {
       case "Getting Started": return <Zap className="w-4 h-4" />;
-      case "Billing & Payments": return "💰";
-      case "Compliance": return "✅";
-      case "Security & Privacy": return "🔒";
-      case "Support & Training": return "🎓";
-      case "Features & Functionality": return "⚙️";
-      default: return "❓";
+      case "Shifts & Invoicing": return <Clock className="w-4 h-4" />;
+      case "Service Agreements & Reporting": return <FileText className="w-4 h-4" />;
+      case "Managing Staff": return <Users className="w-4 h-4" />;
+      case "Billing & Subscriptions": return <CreditCard className="w-4 h-4" />;
+      case "Settings & Support": return <Settings className="w-4 h-4" />;
+      default: return <HelpCircle className="w-4 h-4" />;
     }
   };
 
