@@ -15,11 +15,17 @@ import { generateOrganizationSchema, generateWebsiteSchema } from "@/lib/structu
 const geist = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+  preload: true,
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  weight: ["400", "500"],
+  display: "swap",
+  preload: true,
 });
 
 export const metadata: Metadata = {

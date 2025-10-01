@@ -1,5 +1,9 @@
 import type { NextConfig } from "next";
 
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+});
+
 const nextConfig: NextConfig = {
   // Performance optimizations
   experimental: {
@@ -19,6 +23,20 @@ const nextConfig: NextConfig = {
   
   // Powered by header removal
   poweredByHeader: false,
+  
+  // Bundle optimization
+  webpack: (config, { isServer }) => {
+    // Optimize for production
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+        net: false,
+        tls: false,
+      };
+    }
+    return config;
+  },
 };
 
-export default nextConfig;
+export default withBundleAnalyzer(nextConfig);

@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
+import Script from "next/script";
 
 interface GoogleAnalyticsProps {
   GA_MEASUREMENT_ID: string;
@@ -21,31 +22,6 @@ export function GoogleAnalytics({ GA_MEASUREMENT_ID }: GoogleAnalyticsProps) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
-  useEffect(() => {
-    // Load Google Analytics script
-    const script = document.createElement("script");
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
-    script.async = true;
-    document.head.appendChild(script);
-
-    // Initialize gtag
-    (window as any).dataLayer = (window as any).dataLayer || [];
-    function gtag(...args: any[]) {
-      (window as any).dataLayer.push(args);
-    }
-    window.gtag = gtag;
-
-    gtag("js", new Date());
-    gtag("config", GA_MEASUREMENT_ID, {
-      page_title: document.title,
-      page_location: window.location.href,
-    });
-
-    return () => {
-      document.head.removeChild(script);
-    };
-  }, [GA_MEASUREMENT_ID]);
-
   // Track page views
   useEffect(() => {
     if (window.gtag) {
@@ -56,7 +32,25 @@ export function GoogleAnalytics({ GA_MEASUREMENT_ID }: GoogleAnalyticsProps) {
     }
   }, [pathname, searchParams, GA_MEASUREMENT_ID]);
 
-  return null;
+  return (
+    <>
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${GA_MEASUREMENT_ID}', {
+            page_title: document.title,
+            page_location: window.location.href,
+          });
+        `}
+      </Script>
+    </>
+  );
 }
 
 // Hook for tracking custom events
