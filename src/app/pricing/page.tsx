@@ -355,6 +355,15 @@ export default function PricingPage() {
               </Card>
             ))}
           </div>
+          
+          {/* View All FAQs Button */}
+          <div className="text-center mt-12">
+            <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-[#2563eb] text-[#2563eb] hover:bg-[#2563eb] hover:text-white" asChild>
+              <Link href="/faq">
+                View All FAQs
+              </Link>
+            </Button>
+          </div>
         </div>
       </section>
 
