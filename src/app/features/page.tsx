@@ -108,7 +108,6 @@ export default function FeaturesPage() {
       icon: AlertTriangle,
       title: "Incident Reports",
       description: "Comprehensive incident reporting with NDIS compliance and follow-up tracking.",
-      badge: "NEW",
       features: ["Incident logging", "Witness statements", "Follow-up actions", "NDIS reporting"]
     },
     {
