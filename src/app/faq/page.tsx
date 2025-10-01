@@ -182,17 +182,20 @@ export default function FAQPage() {
                 <button
                   key={categoryKey}
                   onClick={() => setSelectedCategory(isSelected ? null : categoryKey)}
-                  className={`p-4 rounded-lg border-2 transition-all duration-200 hover:shadow-md ${
+                  className={`p-4 rounded-lg border-2 transition-all duration-200 hover:shadow-md h-32 flex flex-col ${
                     isSelected
                       ? `${config.bgColor} ${config.borderColor} border-2`
                       : 'bg-white border-gray-200 hover:border-gray-300'
                   }`}
                 >
-                  <div className="flex flex-col items-center space-y-2">
-                    <div className={`p-3 rounded-lg ${isSelected ? config.bgColor : 'bg-gray-100'}`}>
+                  <div className="flex flex-col items-center h-full">
+                    {/* Icon container - fixed height from top */}
+                    <div className={`p-3 rounded-lg mb-3 ${isSelected ? config.bgColor : 'bg-gray-100'}`}>
                       <Icon className={`w-6 h-6 ${isSelected ? config.color : 'text-gray-600'}`} />
                     </div>
-                    <div className="text-center">
+                    
+                    {/* Text container - anchored to bottom */}
+                    <div className="text-center mt-auto">
                       <div className={`text-sm font-medium ${isSelected ? config.color : 'text-gray-900'}`}>
                         {config.label}
                       </div>
