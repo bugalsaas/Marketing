@@ -282,9 +282,9 @@ export default function FeaturesPage() {
                     <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
                       <feature.icon className="w-6 h-6 text-[#2563eb]" />
                     </div>
-                    {'badge' in feature && feature.badge && (
+                    {'badge' in feature && (feature as any).badge && (
                       <Badge className="bg-green-100 text-green-800">
-                        {feature.badge}
+                        {(feature as any).badge}
                       </Badge>
                     )}
                   </div>
