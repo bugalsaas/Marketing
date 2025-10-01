@@ -8,6 +8,7 @@ import { ArrowLeft, Calendar, Clock, User } from 'lucide-react';
 import Link from 'next/link';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import BreadcrumbNavigation from '@/components/BreadcrumbNavigation';
+import { DynamicBlogPostSharing, DynamicStickyTableOfContents } from '@/components/DynamicComponents';
 
 const prisma = new PrismaClient();
 
@@ -283,9 +284,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         {/* Blog Content */}
         <section className="py-12">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto">
-              <Card className="border-0 shadow-lg">
-                <CardContent className="p-8">
+            <div className="max-w-6xl mx-auto">
+              <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                {/* Main Content */}
+                <div className="lg:col-span-3">
+                  <Card className="border-0 shadow-lg">
+                    <CardContent className="p-8">
                   {/* Featured Image */}
                   {post.coverImage && (
                     <div className="mb-8">
@@ -318,8 +322,29 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                       </div>
                     </div>
                   )}
-                </CardContent>
-              </Card>
+
+                  {/* Social Sharing */}
+                  <div className="mt-8 pt-6 border-t border-gray-200">
+                    <DynamicBlogPostSharing
+                      title={post.title}
+                      url={`/blog/${post.slug}`}
+                      description={post.excerpt || ''}
+                      image={post.coverImage || ''}
+                      author={post.author?.name || 'Bugal Admin'}
+                      publishedAt={post.publishedAt?.toISOString() || post.updatedAt.toISOString()}
+                    />
+                  </div>
+                    </CardContent>
+                  </Card>
+                </div>
+
+                {/* Sidebar with Table of Contents */}
+                <div className="lg:col-span-1">
+                  <div className="sticky top-24">
+                    <DynamicStickyTableOfContents content={post.content} />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
