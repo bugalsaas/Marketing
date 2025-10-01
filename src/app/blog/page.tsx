@@ -16,7 +16,6 @@ import BlogFilters from '@/components/BlogFilters';
 import BlogPagination from '@/components/BlogPagination';
 
 // Make this page static with revalidation
-export const dynamic = 'error';
 export const revalidate = 3600; // Revalidate every hour
 
 const prisma = new PrismaClient();
@@ -25,15 +24,14 @@ interface BlogPost {
   id: string;
   title: string;
   slug: string;
-  excerpt: string;
-  coverImage?: string;
-  category: string;
+  excerpt: string | null;
+  coverImage?: string | null;
+  category: string | null;
   tags: string;
   featured: boolean;
   publishedAt: string;
   author: string;
   readTime: string | null;
-  image: string;
 }
 
 interface BlogData {
@@ -68,7 +66,6 @@ async function getBlogData(page: number = 1): Promise<BlogData> {
           publishedAt: true,
           authorId: true,
           readTime: true,
-          image: true,
           author: {
             select: {
               name: true
@@ -134,9 +131,10 @@ export async function generateStaticParams() {
 export default async function BlogPage({
   searchParams,
 }: {
-  searchParams: { page?: string };
+  searchParams: Promise<{ page?: string }>;
 }) {
-  const currentPage = parseInt(searchParams.page || '1', 10);
+  const resolvedSearchParams = await searchParams;
+  const currentPage = parseInt(resolvedSearchParams.page || '1', 10);
   const blogData = await getBlogData(currentPage);
   const { posts, categories, totalPages } = blogData;
 
@@ -210,7 +208,7 @@ export default async function BlogPage({
                 <Card key={post.id} className="border-0 shadow-lg hover:shadow-xl transition-shadow group">
                   <div className="relative overflow-hidden rounded-t-lg">
                     <Image
-                      src={post.coverImage || post.image || '/images/blog/default-blog.jpg'}
+                      src={post.coverImage || '/images/blog/default-blog.jpg'}
                       alt={post.title}
                       width={400}
                       height={250}
@@ -243,7 +241,7 @@ export default async function BlogPage({
                       {post.title}
                     </CardTitle>
                     <CardDescription className="text-[#1f2937] line-clamp-3">
-                      {post.excerpt}
+                      {post.excerpt || 'No excerpt available'}
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="pt-0">
@@ -284,7 +282,7 @@ export default async function BlogPage({
               <Card key={post.id} className="border-0 shadow-lg hover:shadow-xl transition-shadow group">
                 <div className="relative overflow-hidden rounded-t-lg">
                   <Image
-                    src={post.coverImage || post.image || '/images/blog/default-blog.jpg'}
+                    src={post.coverImage || '/images/blog/default-blog.jpg'}
                     alt={post.title}
                     width={400}
                     height={250}
@@ -311,7 +309,7 @@ export default async function BlogPage({
                     {post.title}
                   </CardTitle>
                   <CardDescription className="text-[#1f2937] line-clamp-3">
-                    {post.excerpt}
+                    {post.excerpt || 'No excerpt available'}
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="pt-0">
