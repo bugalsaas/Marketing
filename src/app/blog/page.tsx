@@ -7,8 +7,7 @@ import {
   Calendar, 
   User, 
   Clock, 
-  ArrowRight, 
-  FileText
+  ArrowRight
 } from "lucide-react";
 import { PrismaClient } from '@prisma/client';
 import BlogSearch from '@/components/BlogSearch';
@@ -190,11 +189,6 @@ export default async function BlogPage({
   
   // Regular posts (excluding featured)
   const regularPosts = posts.filter(post => !post.featured);
-
-  // Popular categories
-  const popularCategories = categories
-    .sort((a, b) => b.count - a.count)
-    .slice(0, 6);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50">
@@ -390,37 +384,6 @@ export default async function BlogPage({
         </div>
       </section>
 
-      {/* Popular Categories */}
-      <section className="py-16 bg-[#f9fafb]">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#1e3a8a] mb-4">
-              Popular Topics
-              </h2>
-            <p className="text-xl text-[#1f2937] max-w-2xl mx-auto">
-              Explore articles by category to find exactly what you need
-              </p>
-            </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-6xl mx-auto">
-            {popularCategories.map((category) => (
-              <Card key={category.id} className="border-0 shadow-lg hover:shadow-xl transition-shadow text-center group cursor-pointer">
-                <CardContent className="p-6">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-[#2563eb] transition-colors">
-                    <FileText className="w-6 h-6 text-[#2563eb] group-hover:text-white transition-colors" />
-                  </div>
-                  <h3 className="font-semibold text-[#1e3a8a] mb-2 group-hover:text-[#2563eb] transition-colors">
-                    {category.name}
-                  </h3>
-                  <p className="text-sm text-[#6b7280]">
-                    {category.count} article{category.count !== 1 ? 's' : ''}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-[#2563eb]">
