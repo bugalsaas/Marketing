@@ -1,5 +1,8 @@
+'use client';
+
 import type { Metadata } from "next";
 import Link from "next/link";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -46,6 +49,48 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      firstName: formData.get('firstName'),
+      lastName: formData.get('lastName'),
+      email: formData.get('email'),
+      phone: formData.get('phone'),
+      company: formData.get('company'),
+      subject: formData.get('subject'),
+      message: formData.get('message'),
+      newsletter: formData.get('newsletter') === 'on'
+    };
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        (e.target as HTMLFormElement).reset();
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <div className="min-h-screen">
@@ -94,7 +139,7 @@ export default function ContactPage() {
             
             <Card className="border-0 shadow-xl">
               <CardContent className="p-8">
-                <form action="mailto:info@bugal.com.au?subject=Bugal Website Message" method="post" encType="text/plain" className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="firstName" className="block text-sm font-medium text-[#1f2937] mb-2">
@@ -211,10 +256,33 @@ export default function ContactPage() {
                     </label>
                   </div>
                   
+                  {/* Status Messages */}
+                  {submitStatus === 'success' && (
+                    <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg">
+                      <div className="flex items-center">
+                        <CheckCircle className="w-5 h-5 mr-2" />
+                        <span>Message sent successfully! We'll get back to you within 2 hours.</span>
+                      </div>
+                    </div>
+                  )}
+                  
+                  {submitStatus === 'error' && (
+                    <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg">
+                      <div className="flex items-center">
+                        <span>❌ Failed to send message. Please try again or contact us directly.</span>
+                      </div>
+                    </div>
+                  )}
+                  
                   <div className="text-center">
-                    <Button type="submit" size="lg" className="text-lg px-12 py-4 bg-[#2563eb] hover:bg-[#1e3a8a]">
-                      Send Message
-                      <ArrowRight className="w-5 h-5 ml-2" />
+                    <Button 
+                      type="submit" 
+                      size="lg" 
+                      disabled={isSubmitting}
+                      className="text-lg px-12 py-4 bg-[#2563eb] hover:bg-[#1e3a8a] disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                      {isSubmitting ? 'Sending...' : 'Send Message'}
+                      {!isSubmitting && <ArrowRight className="w-5 h-5 ml-2" />}
                     </Button>
                   </div>
                   
