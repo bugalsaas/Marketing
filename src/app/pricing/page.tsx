@@ -40,8 +40,7 @@ export default function PricingPage() {
       ],
       popular: false,
       cta: "Try for Free",
-      ctaVariant: "outline" as const,
-      highlight: "FREE FOREVER"
+      ctaVariant: "outline" as const
     },
     {
       name: "Solo",
@@ -181,13 +180,6 @@ export default function PricingPage() {
                   </div>
                 )}
                 
-                {plan.highlight && !plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <Badge variant="secondary" className="bg-green-100 text-green-800 px-4 py-2 text-sm font-semibold">
-                      {plan.highlight}
-                    </Badge>
-                  </div>
-                )}
 
                 <CardHeader className="text-center pb-6">
                   <CardTitle className="text-2xl mb-2 text-[#1e3a8a]">{plan.name}</CardTitle>
