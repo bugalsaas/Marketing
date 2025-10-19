@@ -161,6 +161,96 @@ async function generateStaticData() {
       JSON.stringify(sitemapData, null, 2)
     );
 
+    // Create a basic routes-manifest.json for Vercel compatibility
+    console.log('📋 Creating routes-manifest.json for Vercel compatibility...');
+    const routesManifest = {
+      version: 3,
+      pages404: true,
+      caseSensitive: false,
+      routes: [
+        {
+          page: "/",
+          regex: "^/$"
+        },
+        {
+          page: "/blog",
+          regex: "^/blog$"
+        },
+        {
+          page: "/blog/[slug]",
+          regex: "^/blog/([^/]+?)(?:/)?$"
+        },
+        {
+          page: "/contact",
+          regex: "^/contact$"
+        },
+        {
+          page: "/faq",
+          regex: "^/faq$"
+        },
+        {
+          page: "/features",
+          regex: "^/features$"
+        },
+        {
+          page: "/pricing",
+          regex: "^/pricing$"
+        },
+        {
+          page: "/testimonials",
+          regex: "^/testimonials$"
+        }
+      ],
+      dynamicRoutes: [
+        {
+          page: "/blog/[slug]",
+          regex: "^/blog/([^/]+?)(?:/)?$"
+        }
+      ],
+      staticRoutes: [
+        {
+          page: "/",
+          regex: "^/$"
+        },
+        {
+          page: "/blog",
+          regex: "^/blog$"
+        },
+        {
+          page: "/contact",
+          regex: "^/contact$"
+        },
+        {
+          page: "/faq",
+          regex: "^/faq$"
+        },
+        {
+          page: "/features",
+          regex: "^/features$"
+        },
+        {
+          page: "/pricing",
+          regex: "^/pricing$"
+        },
+        {
+          page: "/testimonials",
+          regex: "^/testimonials$"
+        }
+      ]
+    };
+
+    // Write routes-manifest.json to the output directory
+    const outDir = path.join(process.cwd(), 'out');
+    try {
+      await fs.access(outDir);
+    } catch (error) {
+      await fs.mkdir(outDir, { recursive: true });
+    }
+    await fs.writeFile(
+      path.join(outDir, 'routes-manifest.json'),
+      JSON.stringify(routesManifest, null, 2)
+    );
+
     console.log('✅ Static data generation complete!');
     console.log(`📊 Generated data for:`);
     console.log(`   - ${staticBlogPosts.length} blog posts`);

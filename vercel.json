@@ -1,11 +1,6 @@
 {
   "buildCommand": "npm run build:static",
   "outputDirectory": "out",
-  "functions": {
-    "src/app/blog/[slug]/page.tsx": {
-      "maxDuration": 30
-    }
-  },
   "build": {
     "env": {
       "VERCEL_BYPASS_FALLBACK_OVERSIZED_ERROR": "1"
