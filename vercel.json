@@ -1,4 +1,6 @@
 {
+  "buildCommand": "npm run build:static",
+  "outputDirectory": "out",
   "functions": {
     "src/app/blog/[slug]/page.tsx": {
       "maxDuration": 30
