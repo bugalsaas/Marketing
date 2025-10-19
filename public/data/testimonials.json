@@ -1,0 +1,58 @@
+[
+  {
+    "id": "cmezhmuvy0001c9gqu60kkr2n",
+    "name": "Luke Baldock",
+    "role": "Support Provider",
+    "company": "Thrive Southwest",
+    "content": "Bugal has made invoicing and scheduling so much easier for my business. It's simple to use and gets the job done quickly. There are a few things I’d love to see as it grows, but even now, it’s a solid and valuable tool. Keep up the great work team!",
+    "rating": 5,
+    "photo": "",
+    "category": "independent",
+    "visible": true,
+    "featured": true,
+    "createdAt": "2025-08-31T09:28:18.910Z",
+    "updatedAt": "2025-09-19T08:34:59.836Z"
+  },
+  {
+    "id": "cmezhmuvy0002c9gqsyypofky",
+    "name": "Melanie",
+    "role": " Independent Support Worker",
+    "company": "Melanie Support Services",
+    "content": "Bugal makes invoicing easy once you know your way around, and the customer support has been excellent. It’s simple, effective, and has everything I need!",
+    "rating": 5,
+    "photo": "",
+    "category": "independent",
+    "visible": true,
+    "featured": true,
+    "createdAt": "2025-08-31T09:28:18.910Z",
+    "updatedAt": "2025-09-19T08:38:56.532Z"
+  },
+  {
+    "id": "cmezhmuvy0003c9gqi4s5413m",
+    "name": "Megan",
+    "role": "Independent Support Worker",
+    "company": "Megan Supports",
+    "content": "I have gone from spreadsheets and word documents which took time and had mistakes to doing things straight away, keeping on top of things and getting my weekends back!",
+    "rating": 5,
+    "photo": "",
+    "category": "independent",
+    "visible": true,
+    "featured": true,
+    "createdAt": "2025-08-31T09:28:18.910Z",
+    "updatedAt": "2025-09-19T10:29:31.343Z"
+  },
+  {
+    "id": "cmezhmuvy0000c9gqvlozfhhp",
+    "name": "Snezana Vranic",
+    "role": "Independent Support Worker",
+    "company": "Snezana Support Services",
+    "content": "I’ve been using Bugal for over a year now, and I love that I can handle both invoicing and shift notes all in one place. It just makes things easier!",
+    "rating": 5,
+    "photo": "",
+    "category": "independent",
+    "visible": true,
+    "featured": true,
+    "createdAt": "2025-08-31T09:28:18.910Z",
+    "updatedAt": "2025-09-19T08:27:22.556Z"
+  }
+]

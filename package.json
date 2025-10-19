@@ -7,10 +7,22 @@
     "dev:turbo": "next dev --turbopack",
     "build": "prisma generate && next build --no-lint",
     "build:analyze": "ANALYZE=true npm run build",
+    "build:static": "node scripts/prepare-static-build.js && BUILD_TARGET=static prisma generate && cp next.config.static.ts next.config.ts && next build --no-lint && node scripts/restore-routes.js",
+    "build:admin": "BUILD_TARGET=admin prisma generate && next build --no-lint",
+    "build:all": "npm run build:static && npm run build:admin",
     "start": "next start",
+    "start:admin": "BUILD_TARGET=admin next start",
     "lint": "eslint",
     "deploy": "vercel --prod",
-    "deploy:preview": "vercel"
+    "deploy:preview": "vercel",
+    "generate:static-data": "node scripts/generate-static-data.js",
+    "deploy:static": "npm run build:static && npm run generate:static-data",
+    "deploy:admin": "npm run build:admin",
+    "deploy:aws:static": "chmod +x scripts/aws-deploy-static.sh && ./scripts/aws-deploy-static.sh",
+    "deploy:aws:admin": "chmod +x scripts/aws-deploy-admin.sh && ./scripts/aws-deploy-admin.sh",
+    "docker:admin:build": "docker build -f Dockerfile.admin -t bugal-admin .",
+    "docker:admin:run": "docker-compose -f docker-compose.admin.yml up",
+    "docker:admin:stop": "docker-compose -f docker-compose.admin.yml down"
   },
   "dependencies": {
     "@auth/prisma-adapter": "^2.10.0",

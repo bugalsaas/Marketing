@@ -1,0 +1,22 @@
+[
+  {
+    "id": "Growth",
+    "name": "Growth",
+    "count": 4
+  },
+  {
+    "id": "Best Practice",
+    "name": "Best Practice",
+    "count": 18
+  },
+  {
+    "id": "Education",
+    "name": "Education",
+    "count": 8
+  },
+  {
+    "id": "Starting Out",
+    "name": "Starting Out",
+    "count": 7
+  }
+]

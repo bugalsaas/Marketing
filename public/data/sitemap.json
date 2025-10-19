@@ -1,0 +1,268 @@
+{
+  "staticPages": [
+    {
+      "url": "https://bugal.com.au",
+      "priority": 1,
+      "changeFreq": "weekly"
+    },
+    {
+      "url": "https://bugal.com.au/features",
+      "priority": 0.9,
+      "changeFreq": "monthly"
+    },
+    {
+      "url": "https://bugal.com.au/pricing",
+      "priority": 0.9,
+      "changeFreq": "monthly"
+    },
+    {
+      "url": "https://bugal.com.au/faq",
+      "priority": 0.8,
+      "changeFreq": "monthly"
+    },
+    {
+      "url": "https://bugal.com.au/testimonials",
+      "priority": 0.8,
+      "changeFreq": "weekly"
+    },
+    {
+      "url": "https://bugal.com.au/blog",
+      "priority": 0.9,
+      "changeFreq": "daily"
+    },
+    {
+      "url": "https://bugal.com.au/contact",
+      "priority": 0.7,
+      "changeFreq": "monthly"
+    },
+    {
+      "url": "https://bugal.com.au/about",
+      "priority": 0.8,
+      "changeFreq": "monthly"
+    }
+  ],
+  "blogPages": [
+    {
+      "url": "https://bugal.com.au/blog/how-to-start-independent-support-provider",
+      "priority": 0.9,
+      "changeFreq": "monthly",
+      "lastModified": "2025-09-28T00:47:37.415Z"
+    },
+    {
+      "url": "https://bugal.com.au/blog/empowering-independent-support-providers-why-choose-bugal-as-your-software-provider",
+      "priority": 0.9,
+      "changeFreq": "monthly",
+      "lastModified": "2025-09-28T00:33:35.852Z"
+    },
+    {
+      "url": "https://bugal.com.au/blog/the-importance-of-the-ndis-quality-and-safeguards-commissions-elearning-modules",
+      "priority": 0.9,
+      "changeFreq": "monthly",
+      "lastModified": "2025-09-28T00:18:14.259Z"
+    },
+    {
+      "url": "https://bugal.com.au/blog/the-bugal-starting-out-series-for-independent-support-providers",
+      "priority": 0.9,
+      "changeFreq": "monthly",
+      "lastModified": "2025-09-27T01:51:07.677Z"
+    },
+    {
+      "url": "https://bugal.com.au/blog/creating-an-effective-business-plan-for-your-ndis-independent-support-business",
+      "priority": 0.9,
+      "changeFreq": "monthly",
+      "lastModified": "2025-09-27T01:40:02.919Z"
+    },
+    {
+      "url": "https://bugal.com.au/blog/getting-started-as-a-support-provider",
+      "priority": 0.9,
+      "changeFreq": "monthly",
+      "lastModified": "2025-09-26T08:09:05.159Z"
+    },
+    {
+      "url": "https://bugal.com.au/blog/ndis-independent-support-workers-qualifications-and-online-courses",
+      "priority": 0.8,
+      "changeFreq": "monthly",
+      "lastModified": "2025-09-28T03:34:45.280Z"
+    },
+    {
+      "url": "https://bugal.com.au/blog/abn-and-tfn-registration-for-support-providers-in-australia",
+      "priority": 0.8,
+      "changeFreq": "monthly",
+      "lastModified": "2025-09-28T03:16:58.251Z"
+    },
+    {
+      "url": "https://bugal.com.au/blog/sole-trader-or-partnership-or-company",
+      "priority": 0.8,
+      "changeFreq": "monthly",
+      "lastModified": "2025-09-28T00:58:34.827Z"
+    },
+    {
+      "url": "https://bugal.com.au/blog/new-finanical-year",
+      "priority": 0.8,
+      "changeFreq": "monthly",
+      "lastModified": "2025-09-28T03:16:58.354Z"
+    },
+    {
+      "url": "https://bugal.com.au/blog/make-your-business-flow",
+      "priority": 0.8,
+      "changeFreq": "monthly",
+      "lastModified": "2025-09-28T00:46:19.631Z"
+    },
+    {
+      "url": "https://bugal.com.au/blog/to-be-or-not-to-be-an-ndis-registered-provider",
+      "priority": 0.8,
+      "changeFreq": "monthly",
+      "lastModified": "2025-09-28T03:16:58.973Z"
+    },
+    {
+      "url": "https://bugal.com.au/blog/guide-to-becoming-an-ndis-registered-provider",
+      "priority": 0.8,
+      "changeFreq": "monthly",
+      "lastModified": "2025-09-28T00:39:46.267Z"
+    },
+    {
+      "url": "https://bugal.com.au/blog/stand-out-with-an-irresistible-profile",
+      "priority": 0.8,
+      "changeFreq": "monthly",
+      "lastModified": "2025-09-28T03:16:59.312Z"
+    },
+    {
+      "url": "https://bugal.com.au/blog/crafting-a-comprehensive-service-agreement-for-support-providers-and-ndis-participants",
+      "priority": 0.8,
+      "changeFreq": "monthly",
+      "lastModified": "2025-09-28T00:35:09.987Z"
+    },
+    {
+      "url": "https://bugal.com.au/blog/unlocking-the-power-of-social-media-finding-clients-as-an-independent-support-worker",
+      "priority": 0.8,
+      "changeFreq": "monthly",
+      "lastModified": "2025-09-28T00:32:10.452Z"
+    },
+    {
+      "url": "https://bugal.com.au/blog/the-importance-of-being-insured",
+      "priority": 0.8,
+      "changeFreq": "monthly",
+      "lastModified": "2025-09-28T00:30:11.597Z"
+    },
+    {
+      "url": "https://bugal.com.au/blog/understanding-gst-for-independent-support-providers-in-the-ndis",
+      "priority": 0.8,
+      "changeFreq": "monthly",
+      "lastModified": "2025-09-28T00:28:33.173Z"
+    },
+    {
+      "url": "https://bugal.com.au/blog/essential-certifications-and-checks-for-independent-support-workers",
+      "priority": 0.8,
+      "changeFreq": "monthly",
+      "lastModified": "2025-09-28T00:21:02.602Z"
+    },
+    {
+      "url": "https://bugal.com.au/blog/mastering-your-schedule-a-guide-for-independent-support-workers",
+      "priority": 0.8,
+      "changeFreq": "monthly",
+      "lastModified": "2025-09-27T01:58:00.399Z"
+    },
+    {
+      "url": "https://bugal.com.au/blog/superannuation-for-independent-support-providers-your-financial-lifeline",
+      "priority": 0.8,
+      "changeFreq": "monthly",
+      "lastModified": "2025-09-27T01:55:32.882Z"
+    },
+    {
+      "url": "https://bugal.com.au/blog/setting-the-foundation-for-a-thriving-support-business-planning-for-growth",
+      "priority": 0.8,
+      "changeFreq": "monthly",
+      "lastModified": "2025-09-27T01:53:36.120Z"
+    },
+    {
+      "url": "https://bugal.com.au/blog/crafting-your-hourly-rate-as-an-independent-support-worker",
+      "priority": 0.8,
+      "changeFreq": "monthly",
+      "lastModified": "2025-09-28T03:16:59.065Z"
+    },
+    {
+      "url": "https://bugal.com.au/blog/top-10-tips-for-managing-your-ndis-independent-support-business-finances",
+      "priority": 0.8,
+      "changeFreq": "monthly",
+      "lastModified": "2025-09-27T01:44:31.126Z"
+    },
+    {
+      "url": "https://bugal.com.au/blog/the-vitality-of-self-care-a-guide-for-ndis-independent-support-workers",
+      "priority": 0.8,
+      "changeFreq": "monthly",
+      "lastModified": "2025-09-27T01:43:29.777Z"
+    },
+    {
+      "url": "https://bugal.com.au/blog/time-management-tips-for-ndis-independent-support-workers",
+      "priority": 0.8,
+      "changeFreq": "monthly",
+      "lastModified": "2025-09-27T01:41:45.262Z"
+    },
+    {
+      "url": "https://bugal.com.au/blog/share-the-love-with-bugals-refer-earn-program",
+      "priority": 0.8,
+      "changeFreq": "monthly",
+      "lastModified": "2025-09-27T01:37:43.518Z"
+    },
+    {
+      "url": "https://bugal.com.au/blog/innovative-ways-to-market-your-ndis-independent-support-services",
+      "priority": 0.8,
+      "changeFreq": "monthly",
+      "lastModified": "2025-09-27T01:35:38.897Z"
+    },
+    {
+      "url": "https://bugal.com.au/blog/the-ethical-landscape-of-ndis-independent-support-work-principles-and-best-practices",
+      "priority": 0.8,
+      "changeFreq": "monthly",
+      "lastModified": "2025-09-27T01:32:14.242Z"
+    },
+    {
+      "url": "https://bugal.com.au/blog/the-wedding-tax-ethical-pricing-practices-for-ndis-service-providers",
+      "priority": 0.8,
+      "changeFreq": "monthly",
+      "lastModified": "2025-09-27T01:28:30.318Z"
+    },
+    {
+      "url": "https://bugal.com.au/blog/2024-federal-budget-what-independent-support-workers-need-to-know",
+      "priority": 0.8,
+      "changeFreq": "monthly",
+      "lastModified": "2025-09-27T01:26:12.682Z"
+    },
+    {
+      "url": "https://bugal.com.au/blog/preparing-your-independent-support-worker-business-for-the-end-of-the-financial-year",
+      "priority": 0.8,
+      "changeFreq": "monthly",
+      "lastModified": "2025-09-27T01:23:51.320Z"
+    },
+    {
+      "url": "https://bugal.com.au/blog/ndis-review-what-it-means-for-independent-support-workers",
+      "priority": 0.8,
+      "changeFreq": "monthly",
+      "lastModified": "2025-09-27T01:22:47.202Z"
+    },
+    {
+      "url": "https://bugal.com.au/blog/celebrating-milestones-and-achievements-in-your-independent-support-worker-journey",
+      "priority": 0.8,
+      "changeFreq": "monthly",
+      "lastModified": "2025-09-27T01:21:05.289Z"
+    },
+    {
+      "url": "https://bugal.com.au/blog/new-financial-year-what-to-do-as-an-independent-support-providers",
+      "priority": 0.8,
+      "changeFreq": "monthly",
+      "lastModified": "2025-09-28T03:16:59.150Z"
+    },
+    {
+      "url": "https://bugal.com.au/blog/essential-steps-for-preparing-your-financial-year-information-as-an-independent-support-provider",
+      "priority": 0.8,
+      "changeFreq": "monthly",
+      "lastModified": "2025-09-26T08:09:08.955Z"
+    },
+    {
+      "url": "https://bugal.com.au/blog/the-essentials-of-invoicing-for-support-providers-ensuring-prompt-payment",
+      "priority": 0.8,
+      "changeFreq": "monthly",
+      "lastModified": "2025-09-26T08:09:04.282Z"
+    }
+  ]
+}

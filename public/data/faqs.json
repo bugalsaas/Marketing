@@ -1,0 +1,442 @@
+[
+  {
+    "id": "cmg7jouae00002gtjidqvhfog",
+    "question": "How do I set up my business in Bugal?",
+    "answer": "Click your avatar (top right) → <strong>Business Settings</strong>. Complete business details including <strong>Banking</strong> — these flow into invoices and documents.",
+    "category": "Getting Started",
+    "order": 1,
+    "visible": true,
+    "createdAt": "2025-10-01T05:27:42.423Z",
+    "updatedAt": "2025-10-01T05:27:42.423Z"
+  },
+  {
+    "id": "cmg7joud000012gtjpptm2yp6",
+    "question": "What happens after my 30‑day free trial ends?",
+    "answer": "You can switch to the <strong>Free</strong> plan (up to 2 invoices/month): Avatar → <strong>Subscriptions</strong> → select <strong>Free</strong>.",
+    "category": "Getting Started",
+    "order": 2,
+    "visible": true,
+    "createdAt": "2025-10-01T05:27:42.516Z",
+    "updatedAt": "2025-10-01T05:27:42.516Z"
+  },
+  {
+    "id": "cmg7joudv00022gtjy3ec0j9i",
+    "question": "How do I create a new organisation (e.g., for a new business)?",
+    "answer": "Open the left menu → scroll to the <strong>Business</strong> icon → <strong>New Business</strong>. Then finish setup in <strong>Business Settings</strong>.",
+    "category": "Getting Started",
+    "order": 3,
+    "visible": true,
+    "createdAt": "2025-10-01T05:27:42.548Z",
+    "updatedAt": "2025-10-01T05:27:42.548Z"
+  },
+  {
+    "id": "cmg7joueq00032gtj6ht1ji8q",
+    "question": "Can Bugal be used for Support Coordination?",
+    "answer": "Yes. Many Support Coordinators create <strong>time‑block shifts</strong> for their activities, complete them, and invoice by client.",
+    "category": "Getting Started",
+    "order": 4,
+    "visible": true,
+    "createdAt": "2025-10-01T05:27:42.579Z",
+    "updatedAt": "2025-10-01T05:27:42.579Z"
+  },
+  {
+    "id": "cmg7joufm00042gtjv7j40wx6",
+    "question": "Is there a getting‑started video or guide?",
+    "answer": "Yes — you'll receive an intro email with a video. We also have a <strong>Getting Started Guide</strong> and short courses.",
+    "category": "Getting Started",
+    "order": 5,
+    "visible": true,
+    "createdAt": "2025-10-01T05:27:42.610Z",
+    "updatedAt": "2025-10-01T05:27:42.610Z"
+  },
+  {
+    "id": "cmg7jougf00052gtjgq97f88g",
+    "question": "I'm changing from a sole trader to a company — anything special to do?",
+    "answer": "Pricing is per user (not entity). We recommend creating a <strong>new organisation</strong> for the company to keep tax records clear.",
+    "category": "Getting Started",
+    "order": 6,
+    "visible": true,
+    "createdAt": "2025-10-01T05:27:42.639Z",
+    "updatedAt": "2025-10-01T05:27:42.639Z"
+  },
+  {
+    "id": "cmg7jouhb00062gtjztnus63c",
+    "question": "How do I create and send an invoice?",
+    "answer": "1) Mark shifts <strong>Completed</strong> → 2) Go to <strong>Invoices</strong> → choose the client → select shifts and any reclaimable expenses → <strong>Generate</strong> → <strong>Notify</strong> (arrow icon) to send.",
+    "category": "Shifts & Invoicing",
+    "order": 7,
+    "visible": true,
+    "createdAt": "2025-10-01T05:27:42.671Z",
+    "updatedAt": "2025-10-01T05:27:42.671Z"
+  },
+  {
+    "id": "cmg7jouic00072gtjmsspcnfy",
+    "question": "How do I invoice the plan manager rather than the client?",
+    "answer": "Edit the <strong>Client</strong> → <strong>Who will receive the invoices</strong> → add the Plan Manager's email and role. When sending, select them in the Notify list.",
+    "category": "Shifts & Invoicing",
+    "order": 8,
+    "visible": true,
+    "createdAt": "2025-10-01T05:27:42.709Z",
+    "updatedAt": "2025-10-01T05:27:42.709Z"
+  },
+  {
+    "id": "cmg7jouj600082gtj5sialsoy",
+    "question": "How do I mark an invoice as paid?",
+    "answer": "Open the invoice → click <strong>…</strong> → <strong>$</strong> → record the payment method and date. You can record full, partial, or write‑off.",
+    "category": "Shifts & Invoicing",
+    "order": 9,
+    "visible": true,
+    "createdAt": "2025-10-01T05:27:42.739Z",
+    "updatedAt": "2025-10-01T05:27:42.739Z"
+  },
+  {
+    "id": "cmg7jouk200092gtjof2prjxg",
+    "question": "I marked an invoice as paid by mistake. How do I undo it?",
+    "answer": "Open the invoice → scroll to the bottom → <strong>Delete the receipt</strong>. Status reverts to <strong>Unpaid</strong>.",
+    "category": "Shifts & Invoicing",
+    "order": 10,
+    "visible": true,
+    "createdAt": "2025-10-01T05:27:42.770Z",
+    "updatedAt": "2025-10-01T05:27:42.770Z"
+  },
+  {
+    "id": "cmg7joul4000a2gtjbed6uppp",
+    "question": "Why is my paid invoice still showing as overdue on the dashboard?",
+    "answer": "Invoices must be <strong>marked as paid</strong> in Bugal (see above). This ensures the dashboard reflects the correct status.",
+    "category": "Shifts & Invoicing",
+    "order": 11,
+    "visible": true,
+    "createdAt": "2025-10-01T05:27:42.809Z",
+    "updatedAt": "2025-10-01T05:27:42.809Z"
+  },
+  {
+    "id": "cmg7joulz000b2gtjasheq5cj",
+    "question": "Can I retrieve a deleted invoice?",
+    "answer": "You can <strong>recreate</strong> it. The associated shifts automatically become available again to add to a new invoice.",
+    "category": "Shifts & Invoicing",
+    "order": 12,
+    "visible": true,
+    "createdAt": "2025-10-01T05:27:42.839Z",
+    "updatedAt": "2025-10-01T05:27:42.839Z"
+  },
+  {
+    "id": "cmg7joums000c2gtj6773ir7g",
+    "question": "Do NDIS item numbers auto‑populate invoice descriptions?",
+    "answer": "No. Requirements vary across plan managers. Enter what works for your workflow; then <strong>Duplicate</strong> or set <strong>Recurring</strong> to reuse details.",
+    "category": "Shifts & Invoicing",
+    "order": 13,
+    "visible": true,
+    "createdAt": "2025-10-01T05:27:42.868Z",
+    "updatedAt": "2025-10-01T05:27:42.868Z"
+  },
+  {
+    "id": "cmg7jounm000d2gtjc3gtq5le",
+    "question": "Can I include shift notes or client addresses on invoices?",
+    "answer": "Invoices intentionally exclude detailed shift notes and client addresses. Generate a <strong>Shift Report</strong> PDF and send it separately if required.",
+    "category": "Shifts & Invoicing",
+    "order": 14,
+    "visible": true,
+    "createdAt": "2025-10-01T05:27:42.898Z",
+    "updatedAt": "2025-10-01T05:27:42.898Z"
+  },
+  {
+    "id": "cmg7jouoh000e2gtji65mn8em",
+    "question": "How do I add kilometres (KMs) to an invoice?",
+    "answer": "Add KMs on the <strong>shift</strong> (car icon). When the shift is completed and invoiced, KMs are included automatically.",
+    "category": "Shifts & Invoicing",
+    "order": 15,
+    "visible": true,
+    "createdAt": "2025-10-01T05:27:42.929Z",
+    "updatedAt": "2025-10-01T05:27:42.929Z"
+  },
+  {
+    "id": "cmg7joupa000f2gtjny5nif1h",
+    "question": "Why aren't my older shifts visible in the list?",
+    "answer": "Clear filters (red dot near <strong>New Shift</strong>), set <strong>Status: Completed</strong>, optionally filter by <strong>Contact</strong>, then click <strong>Load More</strong> at the top for older items.",
+    "category": "Shifts & Invoicing",
+    "order": 16,
+    "visible": true,
+    "createdAt": "2025-10-01T05:27:42.959Z",
+    "updatedAt": "2025-10-01T05:27:42.959Z"
+  },
+  {
+    "id": "cmg7jouqd000g2gtjtqhjb9sn",
+    "question": "How do I edit a shift that has already been invoiced?",
+    "answer": "Delete any <strong>payment</strong> on the invoice, then <strong>delete the invoice</strong>. Affected shifts will show <strong>Amend</strong> so you can edit, re‑complete, and re‑invoice.",
+    "category": "Shifts & Invoicing",
+    "order": 17,
+    "visible": true,
+    "createdAt": "2025-10-01T05:27:42.997Z",
+    "updatedAt": "2025-10-01T05:27:42.997Z"
+  },
+  {
+    "id": "cmg7jour9000h2gtjowwvtk4x",
+    "question": "Can I backdate shifts?",
+    "answer": "Yes. Set the past <strong>date/time</strong>, confirm <strong>contact</strong>, <strong>category</strong>, and <strong>rate</strong> as needed, then mark <strong>Completed</strong>.",
+    "category": "Shifts & Invoicing",
+    "order": 18,
+    "visible": true,
+    "createdAt": "2025-10-01T05:27:43.029Z",
+    "updatedAt": "2025-10-01T05:27:43.029Z"
+  },
+  {
+    "id": "cmg7jouse000i2gtj2p79m0m2",
+    "question": "Does Bugal support clock‑in/clock‑out?",
+    "answer": "Not currently. Adjust start/end to the nearest <strong>15 minutes</strong> before completing the shift.",
+    "category": "Shifts & Invoicing",
+    "order": 19,
+    "visible": true,
+    "createdAt": "2025-10-01T05:27:43.070Z",
+    "updatedAt": "2025-10-01T05:27:43.070Z"
+  },
+  {
+    "id": "cmg7jouth000j2gtjvpy0004u",
+    "question": "Can I issue quotes in Bugal?",
+    "answer": "Not yet. Most users create a <strong>Service Agreement</strong> with a cost breakdown. Quoting is on our roadmap.",
+    "category": "Service Agreements & Reporting",
+    "order": 20,
+    "visible": true,
+    "createdAt": "2025-10-01T05:27:43.110Z",
+    "updatedAt": "2025-10-01T05:27:43.110Z"
+  },
+  {
+    "id": "cmg7jouub000k2gtjf3eru3b4",
+    "question": "Can I create separate agreements for services like STA?",
+    "answer": "Yes. Create additional Service Agreements with specific schedules, inclusions, and pricing for each service.",
+    "category": "Service Agreements & Reporting",
+    "order": 21,
+    "visible": true,
+    "createdAt": "2025-10-01T05:27:43.140Z",
+    "updatedAt": "2025-10-01T05:27:43.140Z"
+  },
+  {
+    "id": "cmg7jouv4000l2gtj17jxq0f3",
+    "question": "How do I upload a signed Service Agreement?",
+    "answer": "Open the Service Agreement (in <strong>Draft</strong>) → click <strong>Complete</strong> → upload the signed PDF.",
+    "category": "Service Agreements & Reporting",
+    "order": 22,
+    "visible": true,
+    "createdAt": "2025-10-01T05:27:43.169Z",
+    "updatedAt": "2025-10-01T05:27:43.169Z"
+  },
+  {
+    "id": "cmg7jouvy000m2gtjj2cgqgzl",
+    "question": "Can I change the Service Agreement cancellation policy?",
+    "answer": "In‑app wording follows NDIS best practice and can't be edited. You can amend a <strong>PDF copy</strong> externally, then upload the signed version.",
+    "category": "Service Agreements & Reporting",
+    "order": 23,
+    "visible": true,
+    "createdAt": "2025-10-01T05:27:43.199Z",
+    "updatedAt": "2025-10-01T05:27:43.199Z"
+  },
+  {
+    "id": "cmg7joux2000n2gtjm14qqpai",
+    "question": "How do I generate and share shift notes?",
+    "answer": "Go to <strong>Reports → Shift Reports</strong>, select date range and client, <strong>Generate</strong> and save as <strong>PDF</strong>. Share with clients, plan managers, or support coordinators as needed.",
+    "category": "Service Agreements & Reporting",
+    "order": 24,
+    "visible": true,
+    "createdAt": "2025-10-01T05:27:43.239Z",
+    "updatedAt": "2025-10-01T05:27:43.239Z"
+  },
+  {
+    "id": "cmg7jouxv000o2gtjct0sfddu",
+    "question": "Is there incident reporting?",
+    "answer": "No dedicated module yet. Record incidents in <strong>shift notes</strong> and include them in <strong>Shift Reports</strong> where appropriate.",
+    "category": "Service Agreements & Reporting",
+    "order": 25,
+    "visible": true,
+    "createdAt": "2025-10-01T05:27:43.268Z",
+    "updatedAt": "2025-10-01T05:27:43.268Z"
+  },
+  {
+    "id": "cmg7jouz4000p2gtj2fkx71kw",
+    "question": "How do I add staff?",
+    "answer": "Avatar → <strong>Staff → New</strong>. Assign a role (<strong>Read Only, Junior, Senior, Admin</strong>). They'll receive an email invite.",
+    "category": "Managing Staff",
+    "order": 26,
+    "visible": true,
+    "createdAt": "2025-10-01T05:27:43.312Z",
+    "updatedAt": "2025-10-01T05:27:43.312Z"
+  },
+  {
+    "id": "cmg7jov07000q2gtj9ohl5rhx",
+    "question": "Can staff enter shifts/KMs without seeing my financials?",
+    "answer": "Today, even <strong>Junior</strong> roles can see some business data. Finer‑grained role permissions are in development.",
+    "category": "Managing Staff",
+    "order": 27,
+    "visible": true,
+    "createdAt": "2025-10-01T05:27:43.351Z",
+    "updatedAt": "2025-10-01T05:27:43.351Z"
+  },
+  {
+    "id": "cmg7jov19000r2gtjsfc1imku",
+    "question": "My staff saw a referral code prompt — what is it?",
+    "answer": "It's optional. They can leave it blank. If used and they later create a paid business, you get a <strong>referral credit</strong>.",
+    "category": "Managing Staff",
+    "order": 28,
+    "visible": true,
+    "createdAt": "2025-10-01T05:27:43.390Z",
+    "updatedAt": "2025-10-01T05:27:43.390Z"
+  },
+  {
+    "id": "cmg7jov2d000s2gtjszx7lq2o",
+    "question": "Can I switch between monthly and annual payments?",
+    "answer": "Yes. Avatar → <strong>Subscriptions</strong> → toggle <strong>Monthly/Yearly</strong> and pick your plan.",
+    "category": "Billing & Subscriptions",
+    "order": 29,
+    "visible": true,
+    "createdAt": "2025-10-01T05:27:43.429Z",
+    "updatedAt": "2025-10-01T05:27:43.429Z"
+  },
+  {
+    "id": "cmg7jov3k000t2gtjyoirinah",
+    "question": "How do I cancel my subscription?",
+    "answer": "We recommend downgrading to <strong>Free</strong> so you keep access to records for tax/audit. Do this under <strong>Subscriptions</strong>.",
+    "category": "Billing & Subscriptions",
+    "order": 30,
+    "visible": true,
+    "createdAt": "2025-10-01T05:27:43.472Z",
+    "updatedAt": "2025-10-01T05:27:43.472Z"
+  },
+  {
+    "id": "cmg7jov86000u2gtj265hv8l1",
+    "question": "What does \"2 per month\" mean on the Free plan?",
+    "answer": "You can send <strong>up to two invoices per calendar month</strong> on Free.",
+    "category": "Billing & Subscriptions",
+    "order": 31,
+    "visible": true,
+    "createdAt": "2025-10-01T05:27:43.638Z",
+    "updatedAt": "2025-10-01T05:27:43.638Z"
+  },
+  {
+    "id": "cmg7jov98000v2gtjz1uwv2xb",
+    "question": "Can I transfer my subscription to a new company?",
+    "answer": "Yes — contact us with the <strong>current</strong> and <strong>new</strong> business details and we'll guide the transfer.",
+    "category": "Billing & Subscriptions",
+    "order": 32,
+    "visible": true,
+    "createdAt": "2025-10-01T05:27:43.676Z",
+    "updatedAt": "2025-10-01T05:27:43.676Z"
+  },
+  {
+    "id": "cmg7jova2000w2gtjbxdv300k",
+    "question": "I selected Annual by mistake — how do I switch to Monthly?",
+    "answer": "Return to <strong>Subscriptions</strong>, select the <strong>Monthly</strong> plan, and proceed. If you hit issues, contact support.",
+    "category": "Billing & Subscriptions",
+    "order": 33,
+    "visible": true,
+    "createdAt": "2025-10-01T05:27:43.706Z",
+    "updatedAt": "2025-10-01T05:27:43.706Z"
+  },
+  {
+    "id": "cmg7jovb8000x2gtjcckex5rp",
+    "question": "Do I need a new plan when moving from Sole Trader to Company?",
+    "answer": "No price change is needed. For clarity, we recommend a <strong>new organisation</strong> for the Company.",
+    "category": "Billing & Subscriptions",
+    "order": 34,
+    "visible": true,
+    "createdAt": "2025-10-01T05:27:43.749Z",
+    "updatedAt": "2025-10-01T05:27:43.749Z"
+  },
+  {
+    "id": "cmg7jovc6000y2gtjasv8ggi3",
+    "question": "How do I change my password?",
+    "answer": "Sign out → click <strong>Forgot your password?</strong> on the sign‑in page → follow the email link.",
+    "category": "Settings & Support",
+    "order": 35,
+    "visible": true,
+    "createdAt": "2025-10-01T05:27:43.782Z",
+    "updatedAt": "2025-10-01T05:27:43.782Z"
+  },
+  {
+    "id": "cmg7jovde000z2gtjrdr8a12z",
+    "question": "How do I update business name or address on invoices?",
+    "answer": "Go to <strong>Business Settings</strong> → update details. Future invoices will reflect the changes.",
+    "category": "Settings & Support",
+    "order": 36,
+    "visible": true,
+    "createdAt": "2025-10-01T05:27:43.826Z",
+    "updatedAt": "2025-10-01T05:27:43.826Z"
+  },
+  {
+    "id": "cmg7jovea00102gtjpbodzhi9",
+    "question": "How do I update banking details on invoices?",
+    "answer": "Avatar → <strong>Business Settings</strong> → <strong>Banking</strong> section → save.",
+    "category": "Settings & Support",
+    "order": 37,
+    "visible": true,
+    "createdAt": "2025-10-01T05:27:43.858Z",
+    "updatedAt": "2025-10-01T05:27:43.858Z"
+  },
+  {
+    "id": "cmg7jovf400112gtjpqxje7zk",
+    "question": "I can't sign in — what should I try?",
+    "answer": "Try another browser/device or <strong>Incognito</strong>. Disable extensions or antivirus (e.g., <strong>Norton</strong>) temporarily. No outages? Contact us with details.",
+    "category": "Settings & Support",
+    "order": 38,
+    "visible": true,
+    "createdAt": "2025-10-01T05:27:43.888Z",
+    "updatedAt": "2025-10-01T05:27:43.888Z"
+  },
+  {
+    "id": "cmg7jovg400122gtjncags3ji",
+    "question": "Desktop invoice issues but mobile works — why?",
+    "answer": "Clear filters (see red dot near <strong>New Shift</strong>), click <strong>Load More</strong>, and confirm <strong>Plan Manager</strong> is set on the client's contact card.",
+    "category": "Settings & Support",
+    "order": 39,
+    "visible": true,
+    "createdAt": "2025-10-01T05:27:43.925Z",
+    "updatedAt": "2025-10-01T05:27:43.925Z"
+  },
+  {
+    "id": "cmg7jovh300132gtj3noycvur",
+    "question": "Can I import data from other software?",
+    "answer": "No automated import yet, but share your data and we'll assist where possible.",
+    "category": "Settings & Support",
+    "order": 40,
+    "visible": true,
+    "createdAt": "2025-10-01T05:27:43.959Z",
+    "updatedAt": "2025-10-01T05:27:43.959Z"
+  },
+  {
+    "id": "cmg7jovhw00142gtjegf6gzp1",
+    "question": "Does Bugal integrate with Xero/MYOB or include payroll?",
+    "answer": "No payroll and no direct accounting integrations yet. Many users handle contractors via <strong>supplier invoices</strong> and reconcile with <strong>Shift Reports</strong>.",
+    "category": "Settings & Support",
+    "order": 41,
+    "visible": true,
+    "createdAt": "2025-10-01T05:27:43.988Z",
+    "updatedAt": "2025-10-01T05:27:43.988Z"
+  },
+  {
+    "id": "cmg7joviw00152gtjea1n4vmf",
+    "question": "When will estimated income tax show on the dashboard?",
+    "answer": "When recorded <strong>net income</strong> (income minus expenses) exceeds <strong>$18,200</strong>. If you expect it and don't see it, contact us.",
+    "category": "Settings & Support",
+    "order": 42,
+    "visible": true,
+    "createdAt": "2025-10-01T05:27:44.024Z",
+    "updatedAt": "2025-10-01T05:27:44.024Z"
+  },
+  {
+    "id": "cmg7jovjt00162gtj5kzpa4d2",
+    "question": "Can I delete old clients?",
+    "answer": "Not yet. An <strong>archive</strong> feature is planned to hide them from view while retaining history for reporting.",
+    "category": "Settings & Support",
+    "order": 43,
+    "visible": true,
+    "createdAt": "2025-10-01T05:27:44.057Z",
+    "updatedAt": "2025-10-01T05:27:44.057Z"
+  },
+  {
+    "id": "cmg7jovkv00172gtjuom43glv",
+    "question": "Where can I send feature requests?",
+    "answer": "We love feedback. Tell us what would help your workflow and we'll prioritise accordingly.",
+    "category": "Settings & Support",
+    "order": 44,
+    "visible": true,
+    "createdAt": "2025-10-01T05:27:44.095Z",
+    "updatedAt": "2025-10-01T05:27:44.095Z"
+  }
+]

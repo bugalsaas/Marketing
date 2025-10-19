@@ -46,7 +46,7 @@ export function Footer() {
               The most trusted and easiest to use practice management tool for independent NDIS support workers in Australia.
             </p>
             <Button asChild>
-              <Link href="/pricing">Start Free Trial</Link>
+              <Link href="https://app.bugal.com.au/sign-up">Start Free Trial</Link>
             </Button>
           </div>
 

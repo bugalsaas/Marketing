@@ -29,13 +29,34 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Bugal - NDIS Practice Management Software",
-  description: "The most trusted and easiest to use practice management tool for independent NDIS support workers in Australia.",
-  keywords: ["NDIS software", "support worker admin tool", "practice management", "NDIS support", "disability support"],
+  title: "NDIS Practice Management Software Australia | Bugal - #1 Support Worker Tool",
+  description: "Australia's #1 NDIS practice management software for support workers. Streamline client management, billing, scheduling & compliance. Start free trial today.",
+  keywords: [
+    "NDIS software Australia",
+    "support worker management",
+    "NDIS practice management",
+    "disability support software",
+    "NDIS billing software",
+    "support worker admin tool",
+    "NDIS client management",
+    "disability support worker software",
+    "NDIS compliance software",
+    "practice management Australia"
+  ],
   authors: [{ name: "Bugal" }],
   creator: "Bugal",
   publisher: "Bugal",
-  robots: "index, follow",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
@@ -49,32 +70,37 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_AU",
-    url: "https://www.bugal.com.au",
-    title: "Bugal - NDIS Practice Management Software",
-    description: "The most trusted and easiest to use practice management tool for independent NDIS support workers in Australia.",
+    url: "https://bugal.com.au",
+    title: "NDIS Practice Management Software Australia | Bugal - #1 Support Worker Tool",
+    description: "Australia's #1 NDIS practice management software for support workers. Streamline client management, billing, scheduling & compliance. Start free trial today.",
     siteName: "Bugal",
     images: [
       {
-        url: "/Bugal_Full_Logo.png",
+        url: "/images/og-homepage.jpg",
         width: 1200,
         height: 630,
-        alt: "Bugal - NDIS Practice Management Software",
+        alt: "Bugal NDIS Practice Management Software - Australia's #1 Support Worker Tool",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bugal - NDIS Practice Management Software",
-    description: "The most trusted and easiest to use practice management tool for independent NDIS support workers in Australia.",
-    images: ["/Bugal_Full_Logo.png"],
+    title: "NDIS Practice Management Software Australia | Bugal",
+    description: "Australia's #1 NDIS practice management software for support workers. Streamline client management, billing, scheduling & compliance.",
+    images: ["/images/og-homepage.jpg"],
+    creator: "@bugal_au",
+    site: "@bugal_au",
   },
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 5,
-    userScalable: true,
-    viewportFit: 'cover'
-  },
+  // Viewport and themeColor moved to separate export below
+};
+
+// Separate viewport export to fix Next.js warnings
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+  viewportFit: 'cover',
   themeColor: "#0f172a",
 };
 
@@ -133,6 +159,51 @@ export default function RootLayout({
         {/* Structured Data */}
         <ServerStructuredData data={organizationSchema} />
         <ServerStructuredData data={websiteSchema} />
+        
+        {/* FAQ Schema for better SERP presence */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "How much does Bugal cost?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Bugal starts from $29/month with no setup fees. We offer three plans: Starter ($29), Professional ($59), and Enterprise ($99). All plans include core features with no hidden costs."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is Bugal suitable for independent NDIS support workers?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes! Bugal is specifically designed for independent NDIS support workers and small practices. Our Starter plan is perfect for individual support workers managing their own clients."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Does Bugal handle NDIS billing and compliance?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Absolutely. Bugal includes comprehensive NDIS billing features, compliance tracking, and reporting tools to help you stay compliant with NDIS requirements."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Can I try Bugal before committing?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes! We offer a free trial with no credit card required. You can explore all features and see how Bugal can streamline your practice management."
+                  }
+                }
+              ]
+            })
+          }}
+        />
       </head>
       <body className="min-h-screen bg-background font-sans antialiased">
         <NextAuthProvider>

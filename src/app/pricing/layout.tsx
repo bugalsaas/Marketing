@@ -1,37 +1,37 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "NDIS Practice Management Pricing | Affordable Plans | Bugal",
-  description: "Simple, transparent pricing for NDIS practice management software. Start free forever or choose from our affordable plans designed for independent support workers.",
+  title: "NDIS Software Pricing | Affordable Support Worker Tools | Bugal",
+  description: "Transparent NDIS software pricing starting from $29/month. No hidden fees, cancel anytime. Perfect for independent support workers & small practices.",
   keywords: [
     "NDIS software pricing",
-    "practice management cost",
-    "support worker software pricing",
-    "NDIS software plans",
+    "support worker software cost",
+    "NDIS practice management price",
+    "disability support software pricing",
+    "NDIS billing software cost",
     "affordable NDIS software",
-    "free NDIS software",
-    "NDIS practice management cost"
+    "NDIS software subscription"
   ],
   openGraph: {
-    title: "NDIS Practice Management Pricing | Affordable Plans | Bugal",
-    description: "Simple, transparent pricing for NDIS practice management software. Start free forever or choose from our affordable plans.",
+    title: "NDIS Software Pricing | Bugal",
+    description: "Transparent NDIS software pricing starting from $29/month. No hidden fees, cancel anytime.",
     type: "website",
     url: "https://bugal.com.au/pricing",
     siteName: "Bugal",
     images: [
       {
-        url: "/Bugal_Full_Logo.png",
+        url: "/images/og-pricing.jpg",
         width: 1200,
         height: 630,
-        alt: "NDIS Practice Management Pricing - Bugal",
+        alt: "Bugal NDIS Software Pricing - Transparent & Affordable",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "NDIS Practice Management Pricing | Affordable Plans | Bugal",
-    description: "Simple, transparent pricing for NDIS practice management software. Start free forever.",
-    images: ["/Bugal_Full_Logo.png"],
+    title: "NDIS Software Pricing | Bugal",
+    description: "Transparent NDIS software pricing starting from $29/month. No hidden fees, cancel anytime.",
+    images: ["/images/og-pricing.jpg"],
   },
   alternates: {
     canonical: "https://bugal.com.au/pricing",
@@ -43,5 +43,5 @@ export default function PricingLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return <>{children}</>;
 }

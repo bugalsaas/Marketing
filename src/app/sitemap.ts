@@ -1,4 +1,9 @@
 import { MetadataRoute } from 'next';
+import fs from 'fs';
+import path from 'path';
+
+// Required for static export
+export const dynamic = 'force-static';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://bugal.com.au';
@@ -56,25 +61,32 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ];
 
-  // Fetch blog posts from database
+  // Try to load blog posts from static data first
   let blogSitemap: MetadataRoute.Sitemap = [];
   try {
-    const { PrismaClient } = require('@prisma/client');
-    const prisma = new PrismaClient();
-    
-    const blogPosts = await prisma.blogPost.findMany({
-      where: { published: true },
-      select: { slug: true, updatedAt: true, publishedAt: true }
-    });
-    
-    blogSitemap = blogPosts.map((post: { slug: string; updatedAt: Date; publishedAt: Date | null }) => ({
-      url: `${baseUrl}/blog/${post.slug}`,
-      lastModified: post.updatedAt.toISOString(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.6,
-    }));
-    
-    await prisma.$disconnect();
+    const sitemapDataPath = path.join(process.cwd(), 'public', 'data', 'sitemap.json');
+    if (fs.existsSync(sitemapDataPath)) {
+      const sitemapData = JSON.parse(fs.readFileSync(sitemapDataPath, 'utf8'));
+      blogSitemap = sitemapData.blogPages || [];
+    } else {
+      // Fallback to database if static data not available
+      const { PrismaClient } = require('@prisma/client');
+      const prisma = new PrismaClient();
+      
+      const blogPosts = await prisma.blogPost.findMany({
+        where: { published: true },
+        select: { slug: true, updatedAt: true, publishedAt: true }
+      });
+      
+      blogSitemap = blogPosts.map((post: { slug: string; updatedAt: Date; publishedAt: Date | null }) => ({
+        url: `${baseUrl}/blog/${post.slug}`,
+        lastModified: post.updatedAt.toISOString(),
+        changeFrequency: 'monthly' as const,
+        priority: 0.6,
+      }));
+      
+      await prisma.$disconnect();
+    }
   } catch (error) {
     console.log('Could not fetch blog posts for sitemap:', error);
   }
