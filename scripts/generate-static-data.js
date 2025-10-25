@@ -257,12 +257,12 @@ async function generateStaticData() {
 
     console.log('✅ Static data generation complete!');
     console.log(`📊 Generated data for:`);
-    console.log(`   - ${staticBlogPosts.length} blog posts`);
-    console.log(`   - ${categories.length} categories`);
-    console.log(`   - ${testimonials.length} testimonials`);
-    console.log(`   - ${faqs.length} FAQs`);
-    console.log(`   - ${offers.length} offers`);
-    console.log(`   - ${highlights.length} homepage highlights`);
+    console.log(`   - ${(staticBlogPosts || []).length} blog posts`);
+    console.log(`   - ${(categories || []).length} categories`);
+    console.log(`   - ${(testimonials || []).length} testimonials`);
+    console.log(`   - ${(faqs || []).length} FAQs`);
+    console.log(`   - ${(offers || []).length} offers`);
+    console.log(`   - ${(highlights || []).length} homepage highlights`);
 
   } catch (error) {
     console.error('❌ Error generating static data:', error);
