@@ -29,6 +29,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://bugal.com.au'),
   title: "NDIS Practice Management Software Australia | Bugal - #1 Support Worker Tool",
   description: "Australia's #1 NDIS practice management software for support workers. Streamline client management, billing, scheduling & compliance. Start free trial today.",
   keywords: [
